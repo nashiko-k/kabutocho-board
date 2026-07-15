@@ -1,0 +1,50 @@
+{
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T12:20:00+09:00",
+  "note": "スケジューラ遅延でバッチ起動が12:10（本来11:38）。12:15風向きチェックを昼バッチに統合",
+  "market": {
+    "nikkei_maebike": 68353.91,
+    "nikkei_maebike_change": 610.41,
+    "nikkei_prev_close": 67743.50,
+    "breadth_prime": {"advancers": 1024, "decliners": 488},
+    "futures_noon": 68480, "futures_noon_change": 640,
+    "usdjpy_noon": 162.10,
+    "mood": "米半導体高＋韓国株高でリスクオン続伸。AI・半導体の復権（キオクシア大幅高・アドテスト東エレク上値追い）、SBGは軟調。68,000円台後半は戻り売り帯。ASML・TSMC決算前",
+    "strategy": {
+      "jiai": "リスクオン続伸だが戻り売り圧力帯に接近",
+      "do_dont": "追いかけ買いは高値掴みゾーン＝押し目待ち。空売り見送り。ASML/TSMC前に大きな玉は持たない",
+      "chumoku": "安川電機——3日目で値下がり言及から消えた。引けでA条件初判定"
+    }
+  },
+  "predictions": [
+    {"code": "581A", "name": "GO", "quadrant": "push", "quadrant_ja": "押せ押せ", "confidence": 4,
+     "maebike_price": 2950, "prev_close": 2450, "morning_change_pct": 20.4,
+     "material": "27年5月期営業+84.6%計画のS高（決算実弾・ガイダンス強気型）",
+     "action": "👀観察のみ（S高張り付き）", "expected": "S高張り付き維持または高値圏引け"},
+    {"code": "285A", "name": "キオクシアHD", "quadrant": "push", "quadrant_ja": "押せ押せ", "confidence": 2,
+     "maebike_price": null, "price_note": "前引け値未取得（昨日終値69,100から大幅高）",
+     "material": "米半導体・韓国メモリー高の買い戻し加速",
+     "action": "⏸待ち推奨（ASML/TSMC通過後）", "expected": "大引け>=前引け（続伸維持）※外部要因依存が極端に高く低確信"},
+    {"code": "7599", "name": "IDOM", "quadrant": "bottomless", "quadrant_ja": "底なし", "confidence": 3,
+     "maebike_price": 1266, "prev_close": 1366, "morning_change_pct": -7.3,
+     "material": "決算の営業利益が市場予想未達で大幅反落",
+     "action": "🚫触らない（決算ミス初日）", "expected": "大引け<=前引け（戻り薄）"},
+    {"code": "6701", "name": "NEC", "quadrant": "oversold", "quadrant_ja": "下げすぎ", "confidence": 3,
+     "maebike_price": 4220, "prev_close": 4463, "morning_change_pct": -5.4,
+     "material": "米IBM暴落の連想売り。個別開示なし",
+     "action": "⏸待ち推奨（IBM暴落の中身確認後）", "expected": "後場に下げ渋り〜反発（大引け>前引け）"}
+  ],
+  "no_candidates": {"stall": "失速警戒3日連続該当なし（上げ組は決算実弾か半導体本流）"},
+  "yaskawa_checklist_status": {
+    "A": "PENDING（引け判定：5,436円超え）",
+    "B": "PENDING（前場値未取得、引け後に検証）",
+    "C": "前場時点で達成の形（3日目で売り側言及から消滅）",
+    "note": "3条件成立時はプッシュ通知"
+  },
+  "watches": {
+    "9983": "ファストリ：言及なし＝静か。解除条件79,790円超え引け、引け後判定",
+    "8136": "サンリオ：言及なし、協業波及未確認",
+    "9984": "SBG：全面高の中で軟調",
+    "6474": "不二越：FA仲間が決算後伸び悩み＝機械セクター警戒継続（安川の重し）"
+  }
+}

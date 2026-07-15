@@ -1,0 +1,12 @@
+{
+  "name": "兜町ボード",
+  "short_name": "兜町",
+  "display": "standalone",
+  "start_url": "/",
+  "background_color": "#efede4",
+  "theme_color": "#efede4",
+  "icons": [
+    {"src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}

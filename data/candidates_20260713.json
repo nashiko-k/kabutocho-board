@@ -1,0 +1,83 @@
+{
+  "date": "2026-07-13",
+  "generated_at": "2026-07-13T11:56:00+09:00",
+  "market": {
+    "nikkei_maebike": 67786.86,
+    "nikkei_maebike_change": -770.87,
+    "nikkei_prev_close": 68557.73,
+    "topix_maebike": null,
+    "topix_note": "鮮度問題で取得不可",
+    "growth250_note": "値下がり優勢(↑244/↓281)、指数値は取得不可",
+    "futures_ose_sep": 67800,
+    "futures_change": -1010,
+    "breadth": {"advancers": 752, "decliners": 755},
+    "mood": "中東情勢で先物主導の売り、ただしリターンリバーサル＋決算ラッシュの選別相場"
+  },
+  "judging": {
+    "criteria": "dual",
+    "close_based": "前引け値→大引け値の方向が見立てと一致したか",
+    "intraday_based": "後場高値が前引け比+2%以上（伸びる瞬間があったか）※下げ読みは後場安値が-2%以下"
+  },
+  "predictions": [
+    {
+      "code": "7453", "name": "良品計画", "regular": true,
+      "quadrant": "push", "quadrant_ja": "押せ押せ", "confidence": 4,
+      "maebike_price": 4229, "prev_close": 3623, "morning_change_pct": 16.7,
+      "material": "Q3営業益357億(予想290億超)・通期13%上方修正・上場来高値",
+      "mitate": "質の良い決算サプライズ＋高値ブレイク。後場も高値圏キープ〜続伸",
+      "expected": "後場続伸または高値維持（大引け>=前引け）"
+    },
+    {
+      "code": "6814", "name": "古野電気", "regular": false,
+      "quadrant": "push", "quadrant_ja": "押せ押せ", "confidence": 4,
+      "maebike_price": 7390, "prev_close": 6390, "morning_change_pct": 15.6,
+      "material": "Q1営業益+65%、上期計画に超好進捗。S高張り付き",
+      "mitate": "上方修正連想でS高剥がれにくい",
+      "expected": "S高張り付き維持"
+    },
+    {
+      "code": "6506", "name": "安川電機", "regular": false,
+      "quadrant": "bottomless", "quadrant_ja": "底なし", "confidence": 4,
+      "maebike_price": 5972, "prev_close": 6972, "morning_change_pct": -14.3,
+      "material": "Q1営業益-19%・市場予想未達の決算ショック、S安張り付き",
+      "mitate": "高値圏の決算ミス初日は投げが終わらない。後場も戻り薄",
+      "expected": "S安付近のまま、戻っても限定的（大引け<=前引け+1%）"
+    },
+    {
+      "code": "285A", "name": "キオクシアHD", "regular": false,
+      "quadrant": "bottomless", "quadrant_ja": "底なし", "confidence": 3,
+      "maebike_price": 70130, "prev_close": 76980, "morning_change_pct": -8.9,
+      "material": "AI半導体からの資金流出継続・7万円防衛ライン攻防。当日新規開示なし",
+      "mitate": "ライン割れなら投げ加速。中東地合いで後場も下値模索",
+      "expected": "大引け<=前引け（続落または軟調もみ合い）"
+    },
+    {
+      "code": "6976", "name": "太陽誘電", "regular": false,
+      "quadrant": "oversold", "quadrant_ja": "下げすぎ", "confidence": 2,
+      "maebike_price": 12835, "prev_close": 14735, "morning_change_pct": -12.9,
+      "material": "当日個別開示なし。AIサプライチェーン利確＝リターンリバーサル直撃とみられる",
+      "mitate": "需給主導の下げすぎ。中東沈静化なら後場自律反発の芽。確信低め",
+      "expected": "後場のどこかで前引け比+2%以上の反発、または大引け>前引け"
+    }
+  ],
+  "no_candidates": {
+    "stall": "失速警戒は該当なし（上昇銘柄は決算実弾持ちばかり。SUMCO・レーザーテックは当日値取得不可で判定保留）"
+  },
+  "freshness_log": {
+    "ng": [
+      "Yahoo!ランキング(7/7・7/10・6/17キャッシュ、バスター無効)",
+      "Yahoo!個別銘柄ページ(500エラー)",
+      "松井証券個別(6/3キャッシュ)",
+      "みんかぶランキング(6/30キャッシュ)",
+      "s.kabutan個別銘柄ページ(4/20キャッシュ)",
+      "s.kabutan銘柄ニュース一覧(5/8キャッシュ)"
+    ],
+    "ok": [
+      "s.kabutan市場ニュース一覧＋記事本文(当日11:33-11:54の記事を11:40-11:50に取得成功)",
+      "nikkei225jp.com先物(準リアルタイム)",
+      "Yahoo!週足時系列(本日は7/10分まで反映、ただし鮮度は日により不安定)",
+      "WebSearch(当日記事の発見に有効、前場記事は11:45頃からインデックス)"
+    ],
+    "design_note": "昼バッチの背骨は株探の記事フロー(市場ニュース一覧→記事ID→本文)。11:38起動→市況・材料収集→11:45以降にランキング記事取得の順が最適"
+  }
+}

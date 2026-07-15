@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兜町ボード（仮）— 7/14（火）ドライラン2日目</title>
+<style>
+  :root{
+    --page:#efede4;
+    --surface:#faf9f5;
+    --surface-2:#ffffff;
+    --ink:#1a1915;
+    --ink-2:#52514e;
+    --muted:#8a8880;
+    --hairline:rgba(26,25,21,0.12);
+    --up:#c93a3a;
+    --down:#0c7a4d;
+    --warn:#9a6700;
+    --accent:#2a78d6;
+    --spark:#5598e7;
+    --grid:#e3e1d8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--page);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans",sans-serif;font-size:14px;line-height:1.5;padding:12px 10px 40px}
+  .wrap{max-width:520px;margin:0 auto}
+  a{color:inherit;text-decoration:none}
+  header{display:flex;justify-content:space-between;align-items:baseline;padding:2px 4px 10px}
+  h1{font-size:17px;font-weight:700;letter-spacing:.02em}
+  h1 .sub{font-size:11px;color:var(--muted);font-weight:400;margin-left:6px}
+  .stamp{font-size:11px;color:var(--muted);text-align:right}
+  .stamp .fresh{color:var(--down)}
+  .strategy{background:var(--surface-2);border:2px solid var(--accent);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+  .strategy .stitle{font-size:11px;font-weight:700;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}
+  .strategy .srow{font-size:12px;color:var(--ink);padding:3px 0;border-bottom:1px dashed var(--grid)}
+  .strategy .srow:last-child{border-bottom:none}
+  .strategy .srow b{color:var(--ink)}
+  .strategy .slabel{display:inline-block;font-size:10px;color:var(--muted);width:5.5em;flex:none}
+  .market{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
+  .mtile{background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:8px 10px}
+  .mtile .name{font-size:10px;color:var(--muted)}
+  .mtile .val{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums}
+  .mtile .chg{font-size:11px;font-variant-numeric:tabular-nums}
+  .u{color:var(--up)} .d{color:var(--down)}
+  .mood{background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:8px 12px;font-size:12px;color:var(--ink-2);margin-bottom:8px}
+  .mood b{color:var(--ink)}
+  .lunch{background:var(--surface);border:1px dashed var(--hairline);border-radius:10px;padding:7px 12px;font-size:11px;color:var(--muted);margin-bottom:14px}
+  .qgrid{display:grid;grid-template-columns:1fr;gap:10px}
+  @media(min-width:480px){.qgrid{grid-template-columns:1fr 1fr}}
+  .quad{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:10px 10px 6px}
+  .qhead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;padding:0 2px}
+  .qtitle{font-size:13px;font-weight:700}
+  .qnote{font-size:10px;color:var(--muted)}
+  .card{background:var(--surface-2);border:1px solid var(--hairline);border-radius:10px;padding:9px 10px;margin-bottom:8px}
+  .row1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .tick{font-size:13px;font-weight:700;min-width:0}
+  .tick .code{font-size:10px;color:var(--muted);font-weight:400;margin-left:4px}
+  .newface{font-size:9px;padding:1px 6px;border-radius:99px;background:rgba(42,120,214,.10);border:1px solid rgba(42,120,214,.40);color:#1c5cab;margin-left:5px;vertical-align:1px;white-space:nowrap}
+  .watch{font-size:9px;padding:1px 6px;border-radius:99px;background:rgba(154,103,0,.10);border:1px solid rgba(154,103,0,.40);color:#9a6700;margin-left:5px;vertical-align:1px;white-space:nowrap}
+  .pct{font-size:15px;font-weight:700;font-variant-numeric:tabular-nums;flex:none}
+  .rowprice{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:3px}
+  .price{font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+  .price b{font-size:13px;color:var(--ink)}
+  .matzai{font-size:11.5px;color:var(--ink-2);margin-top:5px}
+  .mitate{font-size:11.5px;color:var(--ink);margin-top:5px;padding-left:8px;border-left:2px solid var(--accent)}
+  .action{font-size:11.5px;margin-top:6px;padding:5px 8px;border-radius:8px;background:rgba(26,25,21,.04);color:var(--ink)}
+  .action b{font-size:11px}
+  .row2{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;align-items:center}
+  .badge{font-size:9.5px;padding:1px 7px;border-radius:99px;border:1px solid var(--hairline);color:var(--ink-2)}
+  .badge.warn{border-color:rgba(154,103,0,.45);color:var(--warn);background:rgba(250,178,25,.12)}
+  .conf{margin-left:auto;font-size:9.5px;color:var(--muted);letter-spacing:1.5px;white-space:nowrap}
+  .ylink{font-size:10px;color:var(--accent);border:1px solid rgba(42,120,214,.4);border-radius:6px;padding:1px 6px;flex:none}
+  .empty{font-size:11.5px;color:var(--muted);padding:6px 8px 10px}
+  section.block{margin-top:16px}
+  .bhead{font-size:12px;color:var(--muted);font-weight:700;padding:0 4px 6px;letter-spacing:.04em}
+  footer{margin-top:22px;text-align:center;font-size:10px;color:var(--muted)}
+  .samplebanner{background:rgba(12,122,77,.08);border:1px solid rgba(12,122,77,.35);color:#0c6a44;border-radius:8px;font-size:11px;text-align:center;padding:5px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="samplebanner">🔴 ドライラン2日目 — 2026年7月14日（火）前引け・作戦サマリー＆アクション示唆 初実装</div>
+
+  <header>
+    <h1>兜町ボード<span class="sub">（仮）</span></h1>
+    <div class="stamp">7/14（火）11:55 更新<br><span class="fresh">● データ時点 11:30 前引け（一部未取得あり）</span></div>
+  </header>
+
+  <div class="strategy">
+    <div class="stitle">⚔️ 後場の作戦</div>
+    <div class="srow"><span class="slabel">地合い</span>指数は3日続落だが<b>中身は真逆＝値上がり1,033／値下がり483の買い優勢</b>。下げの正体は東エレク・ファストリ・SBGの3銘柄だけで約418円分。米ハイテク安を受けたAI主力の投げ2日目×回転先買いの日</div>
+    <div class="srow"><span class="slabel">やる/やらない</span>AI主力の逆張り買いは今日も<b>待ち</b>（米CPI・ASML/TSMC決算週で外部要因が読めない）。動くなら回転先の内需・好決算組を小さく。<b>無理をしない日</b></div>
+    <div class="srow"><span class="slabel">注目筆頭</span><b>安川電機</b>——S安翌日、連続S安は回避した模様（値下がり主要言及に不在）。投げ枯れの初動かどうか、12:15版で確報</div>
+  </div>
+
+  <div class="market">
+    <div class="mtile"><div class="name">日経平均</div><div class="val">66,678</div><div class="chg d">−564 (−0.84%) 3日続落</div></div>
+    <div class="mtile"><div class="name">プライム騰落</div><div class="val u">↑1,033</div><div class="chg d">↓483（買い優勢！）</div></div>
+    <div class="mtile"><div class="name">グロース250</div><div class="val">拮抗</div><div class="chg">monoAI等に買い</div></div>
+  </div>
+
+  <div class="mood"><b>指数と中身のねじれ：</b>米ハイテク株安を受けて東エレク（−222円分）・ファストリ（−124円分）・SBG（−72円分）が日経を押し下げる一方、リクルート・KDDIなど内需にプラス寄与。昨日始まった「AI売り→出遅れ買い」ローテーションが本格化。<b>指数の弱さに気を取られると、市場の多数派（買い優勢）を見誤る日。</b></div>
+
+  <div class="lunch" style="border-style:solid;color:var(--ink-2)">⏱ <b style="color:var(--ink)">12:20 後場直前チェック（一部のみ）：</b>外部データの取得承認が切れ、先物・ドル円の実測は取得できず（運用課題として記録）。断片情報として、株式新聞の朝方速報で<b style="color:var(--ink)">安川電が値下がり率上位に登場</b>＝寄りで「2日目の投げ」が出た可能性が高い。前引けの主要言及に不在だったことと合わせると<b style="color:var(--ink)">「朝安→持ち直し」の底入れ初動パターンに近い形</b>か——ただし確定値なし、15:45便で回収。</div>
+
+  <div class="qgrid">
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🔥 押せ押せ</div><div class="qnote">急騰 × 後場も続く</div></div>
+      <div class="card">
+        <div class="row1"><div class="tick">ドトール・日レスHD<span class="code">3087</span><span class="newface">🆕 新顔</span></div><div class="pct u">上値追い</div></div>
+        <div class="rowprice"><div class="price"><b>前引け値は12:15版で追記</b>（※本日データ制約）</div></div>
+        <div class="matzai">材料：Q1営業益+35.2%。高付加価値商品と客単価引き上げが奏功。ローテーションの受け皿（内需×好決算）ど真ん中</div>
+        <div class="mitate">昨日の良品計画と同型の「内需×決算実弾」。指数が重い日ほどこの型に資金が寄る。後場も堅調と見る</div>
+        <div class="action"><b>🟢 乗るなら今日</b>：ただし値動きは地味め。打診サイズで押し目を拾う型</div>
+        <div class="row2"><span class="badge">内需回転先</span><span class="badge">決算実弾</span><span class="conf">確信 ●●●○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/3087.T">Y!チャート ↗</a></div>
+      </div>
+    </div>
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🎈 失速警戒</div><div class="qnote">急騰 × 後場は反転 → 空売り候補</div></div>
+      <div class="empty">本日は該当なし。値上がり優勢の日だが個々の上げ幅は小さく、「急騰して剥落しそうな主力」が見当たらない。無理に出しません。</div>
+    </div>
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🌀 底なし</div><div class="qnote">急落 × 後場も下げる</div></div>
+      <div class="card">
+        <div class="row1"><div class="tick">東京エレクトロン<span class="code">8035</span><span class="newface">🆕 新顔</span></div><div class="pct d">寄与−222円分</div></div>
+        <div class="rowprice"><div class="price"><b>下げ幅は数%規模とみられる</b>（正確な値は12:15版で）</div></div>
+        <div class="matzai">材料：米ハイテク・半導体株安の直撃。本日の日経押し下げの主犯。当日の個別開示はなし</div>
+        <div class="mitate">昨日のキオクシアと同じ「AI資金流出」の流れの中心。今週は米CPI＋ASML・TSMC決算と外部イベントが続き、下げ止まりの根拠を持てない。後場も重い</div>
+        <div class="action"><b>🚫 触らない</b>：イベント週の主力半導体は上下どちらにも跳ぶ。読みの土台が弱い局面</div>
+        <div class="row2"><span class="badge">外部要因ドリブン</span><span class="badge warn">今週CPI・ASML/TSMC</span><span class="conf">確信 ●●●○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/8035.T">Y!チャート ↗</a></div>
+      </div>
+      <div class="card">
+        <div class="row1"><div class="tick">ファーストリテイリング<span class="code">9983</span><span class="watch">👀 ウォッチ</span></div><div class="pct d">寄与−124円分</div></div>
+        <div class="rowprice"><div class="price"><b>出尽くし3日目も続落中</b>（正確な値は12:15版で）</div></div>
+        <div class="matzai">材料：新規開示なし。金曜の「最高益でも出尽くし」の需給消化が継続、本日は日経押し下げ2位</div>
+        <div class="mitate">昨日の「静かに耐えた」から一転、今日ははっきり売られている。投げはまだ済んでいなかった。反発シナリオは「まだ」</div>
+        <div class="action"><b>⏸ 待ち推奨</b>：解除条件＝日経寄与がプラスに転じる日（＝売り圧が枯れた証拠）。それまで逆張りは分が悪い</div>
+        <div class="row2"><span class="badge">出尽くし3日目</span><span class="conf">確信 ●●●○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/9983.T">Y!チャート ↗</a></div>
+      </div>
+    </div>
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🩹 下げすぎ</div><div class="qnote">急落 × 後場は反発 → 信用買い候補</div></div>
+      <div class="card">
+        <div class="row1"><div class="tick">安川電機<span class="code">6506</span><span class="watch">⭐ 特別ウォッチ</span></div><div class="pct">判定保留</div></div>
+        <div class="rowprice"><div class="price"><b>前引け値未取得</b>（値下がり主要言及に不在＝連続S安は回避か）</div></div>
+        <div class="matzai">昨日S安5,972円。減益の中身は基幹システム移行＋欧州構造改革費＝<b>①一過性費用型</b>の読み解き（需要は無傷）</div>
+        <div class="mitate">①型なら投げが枯れれば戻りやすく、「下げすぎ」入りの初候補。ただし2日目の寄りで投げが出たかどうかが確認できておらず、判定は保留</div>
+        <div class="action"><b>⏸ 待ち推奨（継続）</b>：解除条件＝前日終値5,972円を上回って引ける日。焦らなくても、投げ枯れ反発は1日では終わらない</div>
+        <div class="row2"><span class="badge">①一過性費用型</span><span class="badge warn">当日値 12:15版で確報</span><span class="conf">確信 保留</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/6506.T">Y!チャート ↗</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="block">
+    <div class="bhead">常連リストの今日（判明分）</div>
+    <div class="mood" style="margin-bottom:0">🎀 <b>サンリオ関連</b>：ワンダープラネットがサンリオIPの新作ゲーム共同開発を発表しS高買い気配（本体への波及は前引け時点で未確認）。📉 <b>SBG</b>は−72円分の押し下げと軟調継続。他の常連はランキング・市況記事の主要言及に不在＝通常圏とみられる。</div>
+  </section>
+
+  <section class="block">
+    <div class="bhead">答え合わせ 確定（18:45）— 2勝0敗・判定不能1　※日経は後場+1,065円の大逆転→終値67,743円（+500）</div>
+    <div class="rescard" style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:4px 12px">
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;border-bottom:1px solid var(--grid);font-size:11.5px"><span style="width:15px">✅</span><b style="flex:none">ファストリ</b><span style="color:var(--ink-2);flex:1">+500円の日に押し下げ1位、8万円割れ。底なし的中</span><span style="color:var(--muted);font-size:10.5px;white-space:nowrap">終値79,790（−1,440）</span></div>
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;border-bottom:1px solid var(--grid);font-size:11.5px"><span style="width:15px">✅</span><b style="flex:none">東エレク</b><span style="color:var(--ink-2);flex:1">「冴えず」で方向的中——ただし−0.2%の小幅で弱い勝ち</span><span style="color:var(--muted);font-size:10.5px;white-space:nowrap">終値71,130（−170）</span></div>
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;border-bottom:1px solid var(--grid);font-size:11.5px"><span style="width:15px">❓</span><b style="flex:none">ドトール日レス</b><span style="color:var(--ink-2);flex:1">終値がどのルートでも取得できず判定不能</span><span style="color:var(--muted);font-size:10.5px;white-space:nowrap">検証可能性も課題</span></div>
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;font-size:11.5px"><span style="width:15px">⭐</span><b style="flex:none">安川電機</b><span style="color:var(--ink-2);flex:1"><b>続急落−9.0%・4月以来の安値圏</b>。解除条件（5,972円超え）は未達。⏸待ち推奨の継続が2日連続で正解</span><span style="color:var(--muted);font-size:10.5px;white-space:nowrap">終値5,436（−536）</span></div>
+    </div>
+    <div class="mood" style="margin-top:6px;margin-bottom:0"><b>累計成績（2日間）：6勝1敗・判定不能1。</b>今日の学び：①安川は「一過性費用」でも<b>通期据え置き＝上方修正期待の剥落</b>が重なると投げが多日化する（読み解きに「期待剥落型」を追加）。②「触らない」としたアドテスト・キオクシアは後場急反発——守りの判断は資産を守ったが機会も逃した。<b>機会損失も正直に記録する。</b>③朝の「底入れ初動の輪郭」観測は誤りだった——断片情報からの楽観は憲法違反スレスレ、反省。</div>
+  </section>
+
+  <section class="block">
+    <div class="bhead">昨日（7/13）の成績</div>
+    <div class="mood" style="margin-bottom:0"><b>4勝1敗</b>（押せ押せ2勝・底なし2勝・下げすぎ1敗）。確信●●●●は4戦4勝、●●の低確信1件が1敗——較正は良好。累計：<b>4勝1敗</b>（記録2日目）</div>
+  </section>
+
+  <section class="block">
+    <div class="bhead">⚙ データ運用ノート（ドライランの透明性）</div>
+    <div class="mood" style="margin-bottom:0">本日は前場ランキング記事が公開時刻（11:46）を過ぎてもbot向けに開放されず、<b>発掘枠の網羅性が低下</b>（昨日は11:45に取得できており、開放挙動が日によって不安定と判明）。安川・ドトール等の前引け値は12:15版のランチタイム記事ルートで補完します。憲法③により、取れなかった数字は取れなかったと明示しています。</div>
+  </section>
+
+  <footer>兜町ボード（仮）ドライラン2日目 ｜ 2026.7.14 11:55 JST生成 ｜ 12:15風向き → 15:45速報 → 18:30確定</footer>
+</div>
+</body>
+</html>

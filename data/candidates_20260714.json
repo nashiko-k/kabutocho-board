@@ -1,0 +1,56 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T11:55:00+09:00",
+  "market": {
+    "nikkei_maebike": 66678.36,
+    "nikkei_maebike_change": -564.37,
+    "nikkei_prev_close": 67242.73,
+    "breadth_prime": {"advancers": 1033, "decliners": 483},
+    "contribution_negative": {"8035": -222.25, "9983": -123.9, "9984": -71.6, "5803": -62.15, "4062": -48.94},
+    "contribution_positive": {"6098": 50.28, "9433": 21.32},
+    "mood": "指数3日続落だが中身は買い優勢のねじれ。AI主力の投げ2日目×内需ローテーション。米CPI・ASML/TSMC決算週",
+    "strategy": {
+      "jiai": "AI主力売り×出遅れ買いのローテーション本格化",
+      "do_dont": "AI主力の逆張りは待ち。動くなら内需・好決算組を小さく。無理をしない日",
+      "chumoku": "安川電機（S安翌日、連続S安は回避か。投げ枯れ初動の見極め）"
+    }
+  },
+  "data_constraints": "前場ランキング記事がbot向けに未開放（開放挙動が日によって不安定と判明）。個別前引け値の一部が未取得＝12:15版で補完予定",
+  "judging": {"criteria": "close_based", "note": "終値ベース主軸（前引け→大引けの方向）。後場高値基準は計測不能のため停止中"},
+  "predictions": [
+    {
+      "code": "3087", "name": "ドトール・日レスHD", "regular": false,
+      "quadrant": "push", "quadrant_ja": "押せ押せ", "confidence": 3,
+      "maebike_price": null, "price_note": "未取得（12:15版で補完）",
+      "material": "Q1営業+35.2%、内需×好決算のローテーション受け皿",
+      "action": "🟢 乗るなら今日（打診サイズ）",
+      "expected": "大引け>=前引け（堅調維持）"
+    },
+    {
+      "code": "8035", "name": "東京エレクトロン", "regular": false,
+      "quadrant": "bottomless", "quadrant_ja": "底なし", "confidence": 3,
+      "maebike_price": null, "price_note": "寄与-222円分＝数%規模の下落（概算）",
+      "material": "米ハイテク安直撃、本日の日経押し下げ主犯。個別開示なし",
+      "action": "🚫 触らない（イベント週の主力半導体）",
+      "expected": "大引け<=前引け（続落または軟調もみ合い）"
+    },
+    {
+      "code": "9983", "name": "ファーストリテイリング", "regular": false,
+      "quadrant": "bottomless", "quadrant_ja": "底なし", "confidence": 3,
+      "maebike_price": null, "price_note": "寄与-124円分＝出尽くし3日目の続落（概算）",
+      "material": "新規開示なし。決算出尽くしの需給消化が継続",
+      "action": "⏸ 待ち推奨（解除条件＝日経寄与プラス転換の日）",
+      "expected": "大引け<=前引け（戻り薄）"
+    },
+    {
+      "code": "6506", "name": "安川電機", "regular": false,
+      "quadrant": "oversold_watch", "quadrant_ja": "下げすぎ（判定保留）", "confidence": null,
+      "maebike_price": null, "price_note": "未取得。値下がり主要言及に不在＝連続S安は回避の可能性",
+      "material": "S安翌日。①一過性費用型の読み解き済み",
+      "action": "⏸ 待ち推奨継続（解除条件＝前日終値5,972円を上回って引ける日）",
+      "expected": "判定対象外（ウォッチのみ）"
+    }
+  ],
+  "no_candidates": {"stall": "失速警戒は該当なし（急騰主力不在）"},
+  "regulars_note": "サンリオ関連：ワンプラがサンリオIP新作ゲーム共同開発でS高買い気配（本体波及は未確認）。SBG-72円分と軟調継続"
+}

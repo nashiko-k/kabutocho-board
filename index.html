@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兜町ボード</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="兜町ボード">
+<style>
+  :root{
+    --page:#efede4; --surface:#faf9f5; --surface-2:#ffffff;
+    --ink:#1a1915; --ink-2:#52514e; --muted:#8a8880;
+    --hairline:rgba(26,25,21,0.12);
+    --up:#c93a3a; --down:#0c7a4d; --warn:#9a6700;
+    --accent:#2a78d6; --grid:#e3e1d8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--page);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","Hiragino Sans",sans-serif;font-size:16px;line-height:1.55;padding:12px 10px 40px}
+  .wrap{max-width:560px;margin:0 auto}
+  a{color:inherit;text-decoration:none}
+  header{display:flex;justify-content:space-between;align-items:baseline;padding:2px 4px 10px}
+  h1{font-size:19px;font-weight:700}
+  h1 .sub{font-size:12.5px;color:var(--muted);font-weight:400;margin-left:6px}
+  .stamp{font-size:12.5px;color:var(--muted);text-align:right}
+  .stamp .fresh{color:var(--down)}
+  .strategy{background:var(--surface-2);border:2px solid var(--accent);border-radius:12px;padding:10px 12px;margin-bottom:10px}
+  .strategy .stitle{font-size:12.5px;font-weight:700;color:var(--accent);letter-spacing:.06em;margin-bottom:4px}
+  .strategy .srow{font-size:13.5px;padding:3px 0;border-bottom:1px dashed var(--grid)}
+  .strategy .srow:last-child{border-bottom:none}
+  .strategy .slabel{display:inline-block;font-size:11.5px;color:var(--muted);width:5.5em}
+  .market{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px}
+  .mtile{background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:8px 10px}
+  .mtile .name{font-size:11.5px;color:var(--muted)}
+  .mtile .val{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums}
+  .mtile .chg{font-size:12.5px;font-variant-numeric:tabular-nums}
+  .u{color:var(--up)} .d{color:var(--down)}
+  .mood{background:var(--surface);border:1px solid var(--hairline);border-radius:10px;padding:8px 12px;font-size:13.5px;color:var(--ink-2);margin-bottom:14px}
+  .mood b{color:var(--ink)}
+  .qgrid{display:grid;grid-template-columns:1fr;gap:10px}
+  @media(min-width:480px){.qgrid{grid-template-columns:1fr 1fr}}
+  .quad{background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:10px 10px 6px}
+  .qhead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;padding:0 2px}
+  .qtitle{font-size:15px;font-weight:700}
+  .qnote{font-size:11.5px;color:var(--muted)}
+  .card{background:var(--surface-2);border:1px solid var(--hairline);border-radius:10px;padding:9px 10px;margin-bottom:8px}
+  .row1{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+  .tick{font-size:15px;font-weight:700;min-width:0}
+  .tick .code{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:4px}
+  .newface{font-size:10.5px;padding:1px 6px;border-radius:99px;background:rgba(42,120,214,.10);border:1px solid rgba(42,120,214,.40);color:#1c5cab;margin-left:5px;white-space:nowrap}
+  .pct{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;flex:none}
+  .price{font-size:13.5px;color:var(--ink-2);margin-top:3px;font-variant-numeric:tabular-nums}
+  .price b{font-size:15px;color:var(--ink)}
+  .matzai{font-size:13px;color:var(--ink-2);margin-top:5px}
+  .mitate{font-size:13px;color:var(--ink);margin-top:5px;padding-left:8px;border-left:2px solid var(--accent)}
+  .action{font-size:13px;margin-top:6px;padding:5px 8px;border-radius:8px;background:rgba(26,25,21,.04)}
+  .action b{font-size:12.5px}
+  .row2{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;align-items:center}
+  .badge{font-size:11px;padding:1px 7px;border-radius:99px;border:1px solid var(--hairline);color:var(--ink-2)}
+  .badge.warn{border-color:rgba(154,103,0,.45);color:var(--warn);background:rgba(250,178,25,.12)}
+  .conf{margin-left:auto;font-size:11px;color:var(--muted);letter-spacing:1.5px;white-space:nowrap}
+  .ylink{font-size:11.5px;color:var(--accent);border:1px solid rgba(42,120,214,.4);border-radius:6px;padding:1px 6px;flex:none}
+  .empty{font-size:13px;color:var(--muted);padding:6px 8px 10px}
+  section.block{margin-top:16px}
+  .bhead{font-size:13.5px;color:var(--muted);font-weight:700;padding:0 4px 6px;letter-spacing:.04em}
+  .checklist{background:var(--surface-2);border:2px solid rgba(154,103,0,.45);border-radius:12px;padding:10px 12px}
+  .checklist .crow{display:flex;gap:8px;align-items:baseline;font-size:13.5px;padding:4px 0;border-bottom:1px dashed var(--grid)}
+  .checklist .crow:last-child{border-bottom:none}
+  .checklist .cmark{flex:none;width:1.4em;text-align:center}
+  footer{margin-top:22px;text-align:center;font-size:11.5px;color:var(--muted)}
+  .samplebanner{background:rgba(12,122,77,.08);border:1px solid rgba(12,122,77,.35);color:#0c6a44;border-radius:8px;font-size:12.5px;text-align:center;padding:5px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="samplebanner">🏯 兜町ボード 本番稼働 — 2026年7月15日（水）分（ドライラン3日目のデータで開局）</div>
+
+  <header>
+    <h1>兜町ボード<span class="sub">（仮）</span></h1>
+    <div class="stamp">7/15（水）12:20 更新<br><span class="fresh">● 前引け＋正午先物・為替まで反映</span></div>
+  </header>
+
+  <div class="strategy">
+    <div class="stitle">⚔️ 後場の作戦</div>
+    <div class="srow"><span class="slabel">地合い</span>米半導体高＋韓国株高で<b>リスクオン続伸</b>（前引け+610円・3分の2が上昇）。正午の先物は+640円とさらに強く、後場も堅調スタートへ。ただし<b>68,000円台後半は戻り売り圧力帯</b></div>
+    <div class="srow"><span class="slabel">やる/やらない</span>ここからの<b>追いかけ買いは高値掴みゾーン</b>——押し目待ち。空売りはトレンドに逆らう日で見送り。今夜以降のASML・TSMC決算前に新規の大きな玉は持たない</div>
+    <div class="srow"><span class="slabel">注目筆頭</span><b>安川電機</b>——3日目にして値下がり主要言及から消えた（売り圧枯れの兆し）。今日の引けでエントリー条件A（5,436円超え）の初判定</div>
+  </div>
+
+  <div class="market">
+    <div class="mtile"><div class="name">日経平均（前引け）</div><div class="val">68,353</div><div class="chg u">+610 (+0.90%)</div></div>
+    <div class="mtile"><div class="name">先物（12:00）</div><div class="val">68,480</div><div class="chg u">+640 後場強含み</div></div>
+    <div class="mtile"><div class="name">ドル円（12:00）</div><div class="val">162.10</div><div class="chg">やや円高も高水準</div></div>
+  </div>
+
+  <div class="mood"><b>今日の構図：</b>昨日の後場に始まった切り返しがそのまま続伸。主役はAI・半導体の復権（キオクシア大幅高、アドテスト・東エレク上値追い）で、プライムは値上がり1,024／値下がり488。SBGは軟調で蚊帳の外。<b>2日で振り子が「AI売り」→「AI買い」へ完全に反転——外部要因（米株・韓国株）次第で日替わりの相場が続く。</b></div>
+
+  <div class="qgrid">
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🔥 押せ押せ</div><div class="qnote">急騰 × 後場も続く</div></div>
+      <div class="card">
+        <div class="row1"><div class="tick">ＧＯ<span class="code">581A</span><span class="newface">🆕 新顔</span></div><div class="pct u">S高 +20.4%</div></div>
+        <div class="price"><b>2,950円</b>（+500円）ストップ高</div>
+        <div class="matzai">材料：27年5月期の営業利益計画を+84.6%の130億円と発表。タクシーアプリの収益化が本格化</div>
+        <div class="mitate">決算実弾のS高張り付き型。良品計画・古野電と同じ「内需×ガイダンス強気」パターンで、剥がれにくい</div>
+        <div class="action"><b>👀 観察のみ</b>：S高張り付きで物理的に買えない。明日の寄りの過熱には注意</div>
+        <div class="row2"><span class="badge warn">S高張り付き</span><span class="badge">決算実弾（ガイダンス強気）</span><span class="conf">確信 ●●●●○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/581A.T">Y!チャート ↗</a></div>
+      </div>
+      <div class="card">
+        <div class="row1"><div class="tick">キオクシアＨＤ<span class="code">285A</span><span class="newface">🆕 新顔</span></div><div class="pct u">大幅高</div></div>
+        <div class="price"><b>前引け値未取得</b>（昨日終値69,100円から続伸2日目）</div>
+        <div class="matzai">材料：米半導体株高＋韓国メモリー株高。月曜の「7万円ライン割れ」から一転、投げた分の買い戻しが加速</div>
+        <div class="mitate">流れは強いが、これで3日間「暴落→急反発」の往復。外部要因（今夜以降の米決算・韓国株）への依存が極端に高く、読みの土台は薄い</div>
+        <div class="action"><b>⏸ 待ち推奨</b>：乗るならASML・TSMC決算通過後。いま入るのは決算ギャンブルの回数券</div>
+        <div class="row2"><span class="badge">外部要因依存・高</span><span class="conf">確信 ●●○○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/285A.T">Y!チャート ↗</a></div>
+      </div>
+    </div>
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🎈 失速警戒</div><div class="qnote">急騰 × 後場は反転 → 空売り候補</div></div>
+      <div class="empty">本日も該当なし。上げ組は決算実弾（GO・三光合成）か半導体の本流で、「材料なき連れ高」が見当たらない。3日連続で空売り候補ゼロ＝今週は売り方に分の悪い週。</div>
+    </div>
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🌀 底なし</div><div class="qnote">急落 × 後場も下げる</div></div>
+      <div class="card">
+        <div class="row1"><div class="tick">ＩＤＯＭ<span class="code">7599</span><span class="newface">🆕 新顔</span></div><div class="pct d">−7.3%</div></div>
+        <div class="price"><b>1,266円</b>（−100円）</div>
+        <div class="matzai">材料：決算の営業利益が市場予想を下回り大幅反落（中古車販売）</div>
+        <div class="mitate">決算ミス初日の定石＝当日中は戻り売り優勢。指数が強い日に売られている分、需給の悪さは本物</div>
+        <div class="action"><b>🚫 触らない</b>：決算ミス初日の逆張りは安川で学んだばかり</div>
+        <div class="row2"><span class="badge">決算ミス初日</span><span class="conf">確信 ●●●○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/7599.T">Y!チャート ↗</a></div>
+      </div>
+    </div>
+
+    <div class="quad">
+      <div class="qhead"><div class="qtitle">🩹 下げすぎ</div><div class="qnote">急落 × 後場は反発 → 信用買い候補</div></div>
+      <div class="card">
+        <div class="row1"><div class="tick">ＮＥＣ<span class="code">6701</span><span class="newface">🆕 新顔</span></div><div class="pct d">−5.4%</div></div>
+        <div class="price"><b>4,220円</b>（−243円）</div>
+        <div class="matzai">材料：米IBMの暴落を受けた情報サービス連想売り。NEC自身の新規開示はなし</div>
+        <div class="mitate">連想売りだけで−5%は下げすぎの匂い。国内SI需要はIBMの決算と直接関係が薄い。ただし外国人の機械的な売りが続く可能性はあり、確信は中の下</div>
+        <div class="action"><b>⏸ 待ち推奨</b>：解除条件＝IBM暴落の中身（AI事業の失速か一過性か）を確認してから。今日の引けで下げ止まれば明日が拾い場の候補</div>
+        <div class="row2"><span class="badge">連想売り</span><span class="badge">個別悪材料なし</span><span class="conf">確信 ●●●○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/6701.T">Y!チャート ↗</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="block">
+    <div class="bhead">⭐ 安川電機（6506）エントリー条件チェックリスト — 7/14の冷静な夜に制定</div>
+    <div class="checklist">
+      <div class="crow"><span class="cmark">🕒</span><span><b>A. 前日終値5,436円を上回って引ける</b> — 判定は15:30の大引けで（今日の引け後に確報）</span></div>
+      <div class="crow"><span class="cmark">🕒</span><span><b>B. 5,400〜5,500の出来高帯の上で寄り・前場維持</b> — 前場の値が未取得のため引け後に検証</span></div>
+      <div class="crow"><span class="cmark">🟡</span><span><b>C. 値下がり上位・マイナス寄与上位から消える</b> — <b>前場時点で達成の形</b>（3日目にして市況記事の売り側言及から消えた＝売り圧枯れの兆し）</span></div>
+      <div class="crow"><span class="cmark">📋</span><span>撤退線：5,265円割れ（7/14安値）／ 入り方：3条件成立後に打診→本体の2段。<b>3条件成立時はプッシュ通知でお知らせ</b></span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="bhead">ウォッチ・常連メモ</div>
+    <div class="mood" style="margin-bottom:0"><b>ファストリ</b>：前引け市況の言及なし＝静かな日（解除条件は「前日終値79,790円超えの引け」、引け後判定）。<b>サンリオ</b>：言及なし、ワンプラ協業の本体波及は今日も未確認。<b>SBG</b>：全面高の中で軟調と名指し——2日前の主役が今日の出遅れ。<b>不二越</b>（FA仲間）：決算後に伸び悩み＝機械セクターの決算警戒はまだ続く（安川の戻りにも重し）。</div>
+  </section>
+
+  <section class="block">
+    <div class="bhead">答え合わせ 確定（19:20）— 3勝0敗1分（安川・ファストリのみ21:30最終便へ）</div>
+    <div class="rescard" style="background:var(--surface);border:1px solid var(--hairline);border-radius:12px;padding:4px 12px">
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;border-bottom:1px solid var(--grid);font-size:13px"><span style="width:15px">✅</span><b style="flex:none">GO</b><span style="color:var(--ink-2);flex:1">S高張り付き維持（S高型は4戦4勝）</span><span style="color:var(--muted);font-size:12px;white-space:nowrap">2,950円のまま大引け</span></div>
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;border-bottom:1px solid var(--grid);font-size:13px"><span style="width:15px">✅</span><b style="flex:none">キオクシア</b><span style="color:var(--ink-2);flex:1">続伸維持（低確信●●での勝ち）</span><span style="color:var(--muted);font-size:12px;white-space:nowrap">終値73,100（+5.8%）</span></div>
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;border-bottom:1px solid var(--grid);font-size:13px"><span style="width:15px">✅</span><b style="flex:none">NEC</b><span style="color:var(--ink-2);flex:1">下げすぎ反発的中（後場+50円戻す）</span><span style="color:var(--muted);font-size:12px;white-space:nowrap">前引4,220 → 終値4,270</span></div>
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;border-bottom:1px solid var(--grid);font-size:13px"><span style="width:15px">➖</span><b style="flex:none">IDOM</b><span style="color:var(--ink-2);flex:1">実態は戻り薄だが+0.3%の僅差逆行＝引き分け（±0.5%デッドバンド導入）</span><span style="color:var(--muted);font-size:12px;white-space:nowrap">前引1,266 → 終値1,270</span></div>
+      <div style="display:flex;align-items:baseline;gap:7px;padding:8px 0;font-size:13px"><span style="width:15px">⏳</span><b style="flex:none">安川・ファストリ</b><span style="color:var(--ink-2);flex:1">21:30便でも夜間ミラーに終値が出ず→<b>明朝の昼バッチ冒頭で確定</b>。消極的証拠（値下がり上位50・話題記事・当日ニュースすべてに不在）から両銘柄とも±4〜5%以内の小動きは確実。安川のC条件は2日連続維持を確定</span><span style="color:var(--muted);font-size:12px;white-space:nowrap">🌅 明朝確定</span></div>
+    </div>
+    <div class="mood" style="margin-top:6px;margin-bottom:0"><b>3日間累計：9勝1敗1分・判定不能1（暫定）。</b>日経は+1,008円の68,751円で3日続伸、月曜の暴落をほぼ全値戻し。正直メモ：「追いかけ買いは高値掴みゾーン」の保守判定はレーザーテック+10.2%を逃した——守り偏重の癖がないか週次で監視します。</div>
+  </section>
+
+  <section class="block">
+    <div class="bhead">成績（累計）</div>
+    <div class="mood" style="margin-bottom:0">2日間で<b>6勝1敗・判定不能1</b>。確信●●●●は6戦6勝、●●は1敗——低確信の負けは織り込み済みの負け。今日の見立て4件（押せ押せ2・底なし1・下げすぎ1）は15:45速報→18:30確定で答え合わせ。</div>
+  </section>
+
+  <footer>兜町ボード（仮）ドライラン3日目 ｜ 2026.7.15 12:20 JST生成（起動遅延のため12:15風向きを統合） ｜ 15:45速報 → 18:30確定</footer>
+</div>
+</body>
+</html>
