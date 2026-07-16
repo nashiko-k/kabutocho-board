@@ -1,0 +1,14 @@
+{
+  "date": "2026-07-16",
+  "mode": "manual_catchup_full_day",
+  "market": {"nikkei_close": 66835.54, "nikkei_change": -1915.97, "nikkei_low": 66499.49, "note": "3日ぶり大幅反落。韓国レバレッジETF規制で半導体メモリー総崩れ、キオクシア-15%。決算実弾の内需株は逆行高"},
+  "predictions": [
+    {"code":"7581","name":"サイゼリヤ","quadrant":"押せ押せ","confidence":4,"close":6780,"change_pct":17.3,"note":"S高・3Q決算+25.6%・増配。暴落日の逆行S高"},
+    {"code":"6532","name":"ベイカレント","quadrant":"押せ押せ","confidence":3,"close":6755,"change_pct":5.8,"note":"決算・DX/AI/防衛需要で逆行高"},
+    {"code":"285A","name":"キオクシアHD","quadrant":"底なし","confidence":4,"close":62110,"change_pct":-15.0,"note":"韓国ETF規制で需給逆回転。プライム下落率トップ。触らない"},
+    {"code":"7730","name":"マニー","quadrant":"下げすぎ","confidence":3,"close":1601,"change_pct":-7.6,"note":"医療機器の連れ安。地合い下げ止まりが解除条件"}
+  ],
+  "yaskawa": {"code":"6506","new_catalyst":"富士通がファナック・安川・川重とフィジカルAI事業検討を発表(7/16)。決算ショック以来初の好材料","note":"中間帯で正確な終値は明朝バッチで確定。A/B/C判定保留。撤退線5,265据え置き"},
+  "no_candidates": {"stall": "失速警戒4営業日連続なし"},
+  "score_cumulative_dryrun": {"win":9,"lose":1,"draw":1,"unverified":1}
+}
