@@ -1,0 +1,103 @@
+name: 兜町ボード バッチ
+
+# JST(UTC+9)のトリガー時刻:
+#   昼バッチ   11:30 JST = 02:30 UTC
+#   風向き     12:15 JST = 03:15 UTC
+#   速報       15:45 JST = 06:45 UTC
+#   確定       18:30 JST = 09:30 UTC
+# 平日(UTC月-金)のみ。日本の祝日はバッチ内で判定して休場終了する。
+# ※GitHubのスケジュールは負荷時に数分〜十数分遅延することがある(仕様)。
+on:
+  schedule:
+    - cron: '30 2 * * 1-5'
+    - cron: '15 3 * * 1-5'
+    - cron: '45 6 * * 1-5'
+    - cron: '30 9 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: '手動実行するフェーズ'
+        type: choice
+        default: noon
+        options: [noon, wind, flash, final]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: kabutocho-board
+  cancel-in-progress: false
+
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: リポジトリ取得
+        uses: actions/checkout@v4
+
+      - name: Node準備
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Claude Code CLI導入
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: フェーズ判定
+        id: phase
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            PHASE="${{ inputs.phase }}"
+          else
+            case "${{ github.event.schedule }}" in
+              '30 2 * * 1-5') PHASE="noon" ;;
+              '15 3 * * 1-5') PHASE="wind" ;;
+              '45 6 * * 1-5') PHASE="flash" ;;
+              '30 9 * * 1-5') PHASE="final" ;;
+              *) PHASE="noon" ;;
+            esac
+          fi
+          echo "phase=$PHASE" >> "$GITHUB_OUTPUT"
+          echo "実行フェーズ: $PHASE  ($(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST %a'))"
+
+      - name: プロンプト組み立て
+        run: |
+          bash ci/build_prompt.sh "${{ steps.phase.outputs.phase }}" > "$RUNNER_TEMP/prompt.txt"
+          echo "----- prompt.txt (${RUNNER_TEMP}/prompt.txt) -----"
+          cat "$RUNNER_TEMP/prompt.txt"
+
+      - name: Claude実行
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          claude -p "$(cat "$RUNNER_TEMP/prompt.txt")" \
+            --dangerously-skip-permissions \
+            > "$RUNNER_TEMP/claude.log" 2>&1 < /dev/null || true
+          echo "----- Claude出力(末尾) -----"
+          tail -n 60 "$RUNNER_TEMP/claude.log" || true
+
+      - name: 通知(任意・ntfy)
+        env:
+          NTFY_URL: ${{ secrets.NTFY_URL }}
+        run: |
+          if [ -n "$NTFY_URL" ] && [ -f /tmp/notify.txt ]; then
+            curl -s -H "Title: Kabutocho Board" --data-binary @/tmp/notify.txt "$NTFY_URL" || true
+            echo "通知送信: $(cat /tmp/notify.txt)"
+          else
+            echo "通知はスキップ（NTFY_URL未設定 か notify.txt無し）"
+          fi
+
+      - name: commit & push
+        run: |
+          git config user.name "kabutocho-bot"
+          git config user.email "kabutocho-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "変更なし（休場 or 判定保留 or 失敗）。commitしない。"
+          else
+            TS="$(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M JST')"
+            git commit -m "自動更新 [${{ steps.phase.outputs.phase }}] $TS"
+            git push
+            echo "push完了"
+          fi
