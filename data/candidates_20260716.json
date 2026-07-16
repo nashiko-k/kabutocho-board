@@ -1,14 +1,44 @@
 {
   "date": "2026-07-16",
-  "mode": "manual_catchup_full_day",
-  "market": {"nikkei_close": 66835.54, "nikkei_change": -1915.97, "nikkei_low": 66499.49, "note": "3日ぶり大幅反落。韓国レバレッジETF規制で半導体メモリー総崩れ、キオクシア-15%。決算実弾の内需株は逆行高"},
+  "mode": "batch_delayed_full_day_data",
+  "batch_note": "昼バッチが22時台の起動となったため、前引け値の代わりに大引け後の実データで代替生成。次回は通常スケジュールに復帰予定",
+  "market": {
+    "nikkei_close": 66835.54,
+    "nikkei_change": -1915.97,
+    "nikkei_change_pct": -2.79,
+    "nikkei_low": 66499.49,
+    "nikkei_low_time": "11:06",
+    "turnover_yen_oku": 95639.84,
+    "breadth_nikkei225": {"up": 85, "down": 139, "flat": 1},
+    "note": "3日ぶり大幅反落。韓国のレバレッジ型ETF規制強化で半導体メモリー総崩れ、キオクシア-15.0%が象徴。決算実弾の内需株は逆行高"
+  },
   "predictions": [
-    {"code":"7581","name":"サイゼリヤ","quadrant":"押せ押せ","confidence":4,"close":6780,"change_pct":17.3,"note":"S高・3Q決算+25.6%・増配。暴落日の逆行S高"},
-    {"code":"6532","name":"ベイカレント","quadrant":"押せ押せ","confidence":3,"close":6755,"change_pct":5.8,"note":"決算・DX/AI/防衛需要で逆行高"},
-    {"code":"285A","name":"キオクシアHD","quadrant":"底なし","confidence":4,"close":62110,"change_pct":-15.0,"note":"韓国ETF規制で需給逆回転。プライム下落率トップ。触らない"},
-    {"code":"7730","name":"マニー","quadrant":"下げすぎ","confidence":3,"close":1601,"change_pct":-7.6,"note":"医療機器の連れ安。地合い下げ止まりが解除条件"}
+    {"code":"7581","name":"サイゼリヤ","new_face":true,"quadrant":"押せ押せ","confidence":4,"close":6780,"change_yen":1000,"change_pct":17.3,"note":"S高・3Q決算営業益+25.6%・既存店客数客単価増・増配。暴落日の逆行S高","action":"👀観察のみ"},
+    {"code":"6532","name":"ベイカレント","new_face":true,"quadrant":"押せ押せ","confidence":3,"close":6755,"change_yen":372,"change_pct":5.8,"note":"1Q経常増益、DX/AI/防衛需要で逆行高","action":"🟢乗るなら押し目"},
+    {"code":"285A","name":"キオクシアHD","new_face":true,"quadrant":"底なし","confidence":4,"close":62110,"change_yen":-10990,"change_pct":-15.0,"note":"韓国レバレッジETF規制強化で需給逆回転。プライム下落率トップ","action":"🚫触らない","yomitoki_type":"④需給逆回転型"},
+    {"code":"9984","name":"ソフトバンクG","new_face":false,"regular":true,"quadrant":"底なし","confidence":3,"close":5961,"change_yen":-399,"change_pct":-6.27,"note":"個別開示なし、半導体・AIエクスポージャーから連想売り。数値は単一ソースにつき概算","action":"🚫触らない","data_quality":"概算"},
+    {"code":"7730","name":"マニー","new_face":true,"quadrant":"下げすぎ","confidence":3,"close":1610,"change_yen":-122,"change_pct":-7.04,"note":"通期純利益予想を+46%上方修正するも急落。Q4インプライドの弱さを嫌気した期待剥落型とみられる","action":"⏸待ち推奨","yomitoki_type":"⑤期待剥落型"}
   ],
-  "yaskawa": {"code":"6506","new_catalyst":"富士通がファナック・安川・川重とフィジカルAI事業検討を発表(7/16)。決算ショック以来初の好材料","note":"中間帯で正確な終値は明朝バッチで確定。A/B/C判定保留。撤退線5,265据え置き"},
-  "no_candidates": {"stall": "失速警戒4営業日連続なし"},
-  "score_cumulative_dryrun": {"win":9,"lose":1,"draw":1,"unverified":1}
+  "no_candidates": {"stall": "失速警戒5営業日連続なし"},
+  "regulars_check": {
+    "confirmed": [
+      {"code":"7203","name":"トヨタ自動車","change_pct":1.17,"close":2909,"note":"暴落日に逆行高。当日固有の材料は不明確、戻り歩調＋アナリスト格上げの複合とみられる"},
+      {"code":"6954","name":"ファナック","change_pct":-0.98,"close":6939,"note":"富士通フィジカルAI協業の当事者だが反応限定的、材料織り込み済みの気配"},
+      {"code":"8136","name":"サンリオ","note":"後場に反発、IP再評価買いが観測されたが終値は未取得"}
+    ],
+    "unconfirmed": ["8306","4385","3994","6902","3697","7453","9997","215A","7269"],
+    "note": "未確認銘柄は本バッチのデータルートでは有効な当日数値を取得できず。数字は使わない（憲法③）"
+  },
+  "yaskawa": {
+    "code": "6506",
+    "new_catalyst": "富士通がファナック・安川・川重とフィジカルAI事業検討を発表(7/16)。決算ショック以来初の好材料",
+    "resolved_2026_07_15": {"close": 5490, "prev_close": 5436, "change_yen": 54, "change_pct": 0.99, "condition_A": true, "condition_C": true, "condition_B": "unconfirmed", "unlock": false, "note": "AとCは成立もBが未検証のため3条件同時成立とならず解除見送り"},
+    "today_2026_07_16": {"close_approx": 5469, "prev_close": 5490, "change_yen_approx": -21, "change_pct_approx": -0.38, "condition_A": false, "condition_C": true, "condition_B": "unconfirmed", "unlock": false, "data_quality": "概算（単一ソース）", "note": "デッドバンド圏内の僅差未達。フィジカルAI好材料と暴落地合いの綱引き。撤退線5,265円据え置き"}
+  },
+  "fastretailing_watch": {
+    "code": "9983",
+    "resolved_2026_07_15": {"close": 78830, "prev_close": 79790, "change_pct": -1.2, "streak": "6日続落", "threshold_met": false, "note": "反発シナリオの解除条件（前日終値79,790円超え）未達、継続下落"},
+    "today_2026_07_16": {"status": "未取得", "note": "本バッチでは取得できず、次回で確認"}
+  },
+  "score_cumulative_dryrun": {"win": 9, "lose": 1, "draw": 1, "unverified": 1, "as_of": "2026-07-15", "note": "7/14ドトール・日レスHD(3087)は終値取得不能のまま判定不能"}
 }
