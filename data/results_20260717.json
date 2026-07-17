@@ -1,0 +1,74 @@
+{
+  "date": "2026-07-17",
+  "judged_at": "2026-07-17T18:30:00+09:00",
+  "status": "18:30確定スイープのみ実行。本日の昼バッチ(11:38)・風向き(12:15)・速報(15:45)は実行された形跡なし（data/candidates_20260717.json未生成、index.htmlは7/16のまま停滞していた）。原因未特定。新規の4象限候補はゼロ件",
+  "honesty_note": "憲法③『成績への誠実さ』に基づき、実施していない判定をでっち上げない。本日は『見立てを外した日』ではなく『見立てを出せなかった日』として区別して記録する",
+  "market": {
+    "nikkei_close": 64141.12,
+    "nikkei_change": -2694.42,
+    "nikkei_change_pct": -4.03,
+    "nikkei_maebike": 63896.48,
+    "nikkei_maebike_change": -2939.06,
+    "nikkei_intraday_low_change_approx": -4130,
+    "week_change_record_yen": -4416,
+    "week_change_note": "週間下げ幅が過去最大を記録",
+    "day_rank_note": "単日下げ幅として歴代5位",
+    "breadth_note": "値上がり71・値下がり152・変わらず2（記事ベース、対象範囲は日経225寄与度記事による）",
+    "turnover_yen_oku_prime": 109219.77,
+    "top_negative_contributors": [
+      {"code":"6857","name":"アドバンテスト","contribution_yen":-772.35,"change_pct":-10.8},
+      {"code":"8035","name":"東京エレクトロン","contribution_yen":-617.48},
+      {"code":"9984","name":"ソフトバンクG","contribution_yen":-466.63}
+    ],
+    "cause_note": "AI・半導体への過度な成長期待の後退、米半導体株安の波及、対イラン攻撃激化による原油高・米金利上昇が重なった全面安",
+    "sources": ["nikkei.com記事(DGXZQOFL175HO0X10C26A7000000ほか)","gentosha-go.com(GOLD ONLINE)7/17概況(80212)","zaikei.co.jp前場記事2本(861728,861726)","kabushiki.jp速報記事"]
+  },
+  "kioxia_followup_285A": {
+    "close": 52110, "change_yen": -10000, "change_pct": -16.10,
+    "reason": "巨額賠償によりストップ安。プライム値下がり率2日連続1位",
+    "note": "7/16版ボードで『底なし・④需給逆回転型』と見立てた銘柄が2日連続で急落を継続。正式な採点対象ではないが、見立ての方向性は結果的に継続的中していた",
+    "data_quality": "複数ソース一致（nikkei.com・GOLD ONLINE）"
+  },
+  "regulars_confirmed_20260717": [
+    {"code":"6954","name":"ファナック","close":6588,"change_yen":-432,"change_pct":-6.2,"source":"zaikei.co.jp"},
+    {"code":"6506","name":"安川電機","note":"下記yaskawa参照"}
+  ],
+  "yaskawa": {
+    "code": "6506",
+    "today_2026_07_17": {
+      "close_approx": 5116, "prev_close": 5494, "change_yen_approx": -378, "change_pct_approx": -6.88,
+      "maebike_approx": 5068, "maebike_change_pct_approx": -7.8,
+      "conditions": {"A": false, "B": false, "C": "判定不能（速報バッチ未実行）"},
+      "stop_loss_breach": true,
+      "data_quality": "概算（大引け値はnikkei.com単独ソース、前引け値はzaikei.co.jp。方向は2ソース一致、正確な大引け値は翌朝バッチで再クロスチェック推奨）",
+      "note": "撤退線5,265円を明確に下抜けて引けた。半導体・AI関連の全面安に連想売りで巻き込まれた。エントリー条件成立を待つ設計だったため実損はゼロだが、下げ止まりの前提自体が崩れ、チェックリストは仕切り直しフェーズ"
+    }
+  },
+  "fastretailing_watch": {
+    "code": "9983",
+    "today_2026_07_17": {
+      "close_approx": 78840, "prev_close": 78840, "change_pct_approx": 0.0,
+      "intraday_high_approx": 80880, "intraday_low_approx": 78340,
+      "note": "朝高（+2,040円まで）から失速し前日比フラットで引け。解除条件（前日終値超えの明確な引け）は未達",
+      "data_quality": "概算（単一ソース、nikkei.com個別ページの始値・高値・安値表示）"
+    }
+  },
+  "score_cumulative": {"win": 9, "lose": 1, "draw": 1, "unverified": 1, "excluded_20260716": 5, "as_of": "2026-07-17", "note": "本日新規の判定なし。累計は7/13〜7/15確定分から変わらず（9勝1敗1分）。7/16分5件は引き続き採点対象外"},
+  "weekly_self_review": {
+    "period": "2026-07-13〜2026-07-17",
+    "quadrant_bias": "押せ押せ4件・底なし5件・下げすぎ2件・失速警戒0件（0件は5営業日連続）。日経が週間で過去最大の下げ幅を記録した週としては底なし優勢は市況を反映した自然な偏りで、弱気に寄せすぎたとは言えない。ただし『失速警戒（空売り候補）』が5日連続でゼロなのは、本当に該当がないのか、それとも順張り急騰銘柄の中の“材料の軽さ”を見抜く探索が甘いのかを継続監視する",
+    "opportunity_losses": [
+      "7/14：『AI主力の逆張り買いは待ち』の保守判定がアドバンテスト・キオクシアの後場急反発（+955円等）を逃す結果に。守りは機能したが上値は取れず",
+      "7/15：『追いかけ買いは高値掴み』の保守判定がレーザーテック+10%を逃す。同様に守り偏重の癖として記録"
+    ],
+    "wait_recommendation_loss_avoidance": {
+      "count_consecutive_business_days": 5,
+      "detail": "安川電機（6506）で7/13〜7/17の5営業日連続、⏸待ち推奨（3条件同時成立まではエントリーしない設計）を維持。7/13 S安-14.34%→7/14続落-9.0%→7/15+0.99%(条件A初成立)→7/16僅差(条件A僅差成立/未達で綱引き)→7/17-6.88%で撤退線5,265円を明確に下抜け、という乱高下を経ても実弾は投入していないため実損はゼロ。仮に7/15の条件A単独成立時点で打診買いに入っていた場合、7/17時点で撤退ルール水準まで沈んでいた計算になり、『3条件同時成立を待つ』という保守設計そのものが機能した週だったと言える"
+    },
+    "process_reflection": {
+      "issue": "7/17は昼バッチ・風向き・速報バッチのいずれも実行された形跡がなく、日経が過去最大級の下げ幅を記録した当日に見立てを一件も出せなかった",
+      "severity": "設計書8bの運用原則『稼働の確実性を最優先』に反する。見立ての質ではなく稼働そのものの問題であり、成績スコアより優先度の高い課題として記録する",
+      "next_action": "次回稼働時にワークフロー実行ログ（cron・GitHub Actions実行履歴）を点検し、noon/wind/flash各フェーズが正常に起動・commit・pushされているか確認すること"
+    }
+  }
+}
