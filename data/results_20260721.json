@@ -1,0 +1,85 @@
+{
+  "date": "2026-07-21",
+  "judged_at": "2026-07-21T18:30:00+09:00",
+  "batch_note": "15:45速報フェーズとして実行するが、本セッション起動が18:17（大引け後）にずれ込んだため、実質的にはほぼ確定値ベースの判定となった。夕刊の話題株ルート（株探・GOLD ONLINE・日経個別ページ）で全3件とも終値取得に成功したため pending なし",
+  "market": {
+    "nikkei_close": 66232.19,
+    "nikkei_close_change": 2091.07,
+    "nikkei_close_change_pct": 3.26,
+    "nikkei_maehiike": 65255.68,
+    "gogo_move_from_maehiike": 976.51,
+    "breadth_nikkei225_close": {"up": 187, "down": 37, "flat": 1},
+    "stop_high_low_close": {"stop_high": 6, "stop_low": 1, "stop_high_low_maehiike": {"stop_high": 3, "stop_low": 1}},
+    "mood_verdict": "◎ 前引け時点の『自律反発・材料軽い』という地合い読みは方向としては的中（3営業日ぶり急反発、+2,091円の高値引け）。ただし個別の象限判定は3件中1勝2敗——地合いが強すぎて『失速警戒』『底なし』側の逆張り的な見立てが軒並み押し戻された1日だった",
+    "sources": ["s.kabutan.jp/news/n202607211108(大引け記事)", "s.kabutan.jp/news/n202607211055(寄与度ランキング)", "gentosha-go.com/articles/-/80268(GOLD ONLINE概況)"]
+  },
+  "results": [
+    {
+      "code": "285A", "name": "キオクシアＨＤ", "quadrant": "押せ押せ", "confidence": 3,
+      "maehiike": 56440, "maehiike_change_pct": 8.3,
+      "close": 61060, "close_change_yen": 8950, "close_change_pct": 17.18,
+      "afternoon_high": 61920, "afternoon_high_vs_maehiike_pct": 9.71,
+      "close_verdict": "WIN", "intraday_verdict": "WIN",
+      "note": "前引け56,440→大引け61,060と後場さらに+8.2%上乗せ。東証プライム値上がり率1位。『押せ押せ』の見立て通り後場も続伸し、ダブル基準とも的中。ただしアクションは『⏸待ち推奨』だったため実際に取れていたら乗れず、機会損失側の検討対象（企業固有の新規材料はいまだ確認できておらず、読みの土台自体は7/17に外れた翌週の自律反発という説明のまま）",
+      "sources": ["gentosha-go.com(GOLD ONLINE)", "nikkei.com個別ページ", "s.kabutan.jp寄与度ランキング(2ソース一致)"]
+    },
+    {
+      "code": "6857", "name": "アドバンテスト", "quadrant": "失速警戒", "confidence": 3,
+      "maehiike": 28605, "maehiike_change_pct": 4.0,
+      "close": 29630, "close_change_yen": 2125, "close_change_pct": 7.73,
+      "afternoon_high": 29825, "afternoon_high_vs_maehiike_pct": 4.27,
+      "close_verdict": "LOSE", "intraday_verdict": "LOSE",
+      "note": "『失速警戒＝後場は反転』の見立てが明確に外れた。前引け28,605→大引け29,630と後場さらに+3.6%上乗せし、日経寄与度トップ（+512.89pt）に。指数・SOX連動の域を出ないという材料読み自体は妥当だったが、地合いの強さが『反転』を上回った。アクションが『⏸待ち推奨』（空売りは待ち）だったため実損はゼロだが、見立てそのものは負けとして正直に記録する（憲法③）",
+      "sources": ["s.kabutan.jp寄与度ランキング", "nikkei.com個別ページ(単独ソースでOHLC確認)"]
+    },
+    {
+      "code": "6506", "name": "安川電機", "quadrant": "底なし", "confidence": 4,
+      "maehiike": 4981, "maehiike_change_pct": -2.64,
+      "close": 5119, "close_change_yen": 3, "close_change_pct": 0.06,
+      "prev_close": 5116,
+      "afternoon_high": 5150, "afternoon_high_vs_maehiike_pct": 3.39,
+      "close_verdict": "LOSE", "intraday_verdict": "LOSE",
+      "note": "『底なし＝後場も続落』の見立てが外れた。前引け-2.64%(4,981)から大引けは前日比+0.06%(5,119)まで切り返し、後場だけで見ると+2.77%の反発。デッドバンド(±0.5%)の外での明確な方向転換のため引き分けではなく負けとして記録する。確信度4/5と高めに張った分、外れの重みは大きい。ただしアクション『🚫触らない』は結果的に正しく、実弾を入れていないため実損はゼロ——見立ての精度と資産防衛は別軸である点を強調したい",
+      "checklist_impact": "エントリーチェックリストの条件A（前日終値超えで引ける）が7/17の撤退線割れ以来はじめて技術的に成立（+3円・ノイズ水準の僅差のため過信は禁物）。条件Cも明確に成立（値下がり銘柄リストから完全に消え、むしろ小幅高）。条件B（出来高帯攻防）は水準自体が5,400〜5,500から大きく乖離しており定義し直しが必要なまま。3条件同時成立には至らず解除通知は見送り",
+      "sources": ["nikkei.com個別ページ（単独ソース、15:30時点データと明記あり。前日終値5,116円との整合性で内的にクロスチェック済み）"]
+    }
+  ],
+  "score_today": {"win": 1, "lose": 2, "draw": 0, "pending": 0},
+  "score_cumulative": {"win": 10, "lose": 3, "draw": 1, "unverified": 1, "excluded_20260716": 5, "as_of": "2026-07-21", "note": "7/17は昼バッチ未実行のため新規判定なし。本日3件（1勝2敗）を反映。地合いが読みより強く出た日は『失速警戒』『底なし』側の見立てが崩れやすい傾向が今回も出た"},
+  "fastretailing_watch": {
+    "code": "9983",
+    "close": 80840, "close_change_yen": 2000, "close_change_pct": 2.54,
+    "prev_close": 78840,
+    "unlock_condition": "前日終値を上回って引ける",
+    "unlock_status": "達成（80,840円 > 78,840円、+2,000円の明確な上抜けで僅差ではない）",
+    "note": "反発シナリオの解除条件を本日クリア。ただしこれは事実の通知であり売買推奨ではない。7/17終値78,840円が今回も内的クロスチェックで裏付けられた",
+    "sources": ["nikkei.com個別ページ", "検索で確認した日中高安値レンジ(78,340〜80,880)と整合"]
+  },
+  "regulars_close": {
+    "up": [
+      {"code":"9984","name":"ソフトバンクG","close":5751,"change_yen":327,"change_pct":6.03},
+      {"code":"8306","name":"三菱UFJ FG","close":3580,"change_yen":107,"change_pct":3.08},
+      {"code":"3697","name":"SHIFT","close":765.8,"change_yen":22.4,"change_pct":3.01},
+      {"code":"6954","name":"ファナック","close":6776,"change_yen":139,"change_pct":2.09},
+      {"code":"7203","name":"トヨタ自動車","close":2944.5,"change_yen":45.0,"change_pct":1.55},
+      {"code":"6902","name":"デンソー","close":1992.5,"change_yen":28.5,"change_pct":1.45},
+      {"code":"9997","name":"ベルーナ","close":1074,"change_yen":11,"change_pct":1.03},
+      {"code":"7269","name":"スズキ","close":2051.0,"change_yen":0.5,"change_pct":0.02}
+    ],
+    "down": [
+      {"code":"8136","name":"サンリオ","close":1180.0,"change_yen":-24.5,"change_pct":-2.03},
+      {"code":"215A","name":"タイミー","close":1425,"change_yen":-20,"change_pct":-1.38},
+      {"code":"3994","name":"マネーフォワード","close":5255,"change_yen":-79,"change_pct":-1.48},
+      {"code":"4385","name":"メルカリ","close":4567,"change_yen":-49,"change_pct":-1.06},
+      {"code":"7453","name":"良品計画","close":4244,"change_yen":-15,"change_pct":-0.35}
+    ],
+    "note": "全13銘柄の終値を本バッチで初めて全件確認（nikkei.com個別ページ、いずれも15:30時点データと明記）。日経+3.26%の全面高の日にもかかわらず13銘柄中5銘柄（サンリオ・タイミー・マネーフォワード・メルカリ・良品計画）が下落——成長株・内需消費関連が半導体主導の反発から取り残されるローテーションが観察できた。単一ソース(nikkei.com)のため数値は概算の位置づけ",
+    "sources": ["nikkei.com個別ページ13銘柄分"]
+  },
+  "learnings": [
+    "地合いが強い日（+3%超）は『失速警戒』『底なし』のような逆張り系の見立てが崩れやすい。3件中2件がこのパターンで外れた——見立ての癖として『急落・急騰の反動を過大評価し、地合いの持続力を過小評価する』傾向がないか、次回の週次自己分析で確認する",
+    "確信度4/5だった安川電機が外れたのは較正上の注意点。ただし『触らない』のアクション判断自体は資産防衛として機能しており、見立てと実利は別軸で評価すべき",
+    "常連13銘柄の全件終値取得に初めて成功（nikkei.com個別ページ経由）。今後はこのルートを常連チェックの主軸候補にする",
+    "ファーストリテイリングの反発シナリオ解除条件が本日達成。ウォッチ対象からの卒業を検討してよいか次回検討"
+  ]
+}
