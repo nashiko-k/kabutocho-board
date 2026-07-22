@@ -1,0 +1,126 @@
+{
+  "date": "2026-07-22",
+  "judged_at": "2026-07-22T18:16:00+09:00",
+  "batch_note": "15:45速報答え合わせフェーズとして実行するが、本セッション起動が18:16（大引け後2時間半）にずれ込んだため、実質的にはほぼ確定値ベースの判定となった。夕刊の話題株ルート（株探・財経新聞・ゴールドオンライン・日経個別ページ）で5件全ての大引け値・前引け値を取得できたため pending なし。ただし安川電機(6506)の前引け(11:30)値のみ、複数ソースで11:30ちょうどの値を直接確認できず、候補選定時に記録された11:29の高値(5,375円)を前引け値の概算として代用した（単一ソース・概算と明示）",
+  "market": {
+    "nikkei_maehiike": 67511.12,
+    "nikkei_maehiike_change_pct": 1.93,
+    "nikkei_close": 66115.60,
+    "nikkei_close_change": -116.59,
+    "nikkei_close_change_pct": -0.18,
+    "gogo_move_from_maehiike": -1395.52,
+    "topix_close_change": 18.18,
+    "topix_close_change_pct": 0.45,
+    "breadth_prime_close": {"up": 840, "down": 671},
+    "stop_high_low_close": {"stop_high": 6, "stop_low": 2, "stop_high_low_maehiike": {"stop_high": 5, "stop_low": 2}},
+    "mood_verdict": "◎ 前引けの『半導体主役3銘柄が主導した急騰は、後場に持続力を欠く』という失速警戒シナリオが的中。日経平均は前引け+1,278円（67,511円）から失速し、大引けはまさかの前日比マイナス（▲116円・66,115円）まで戻した。個別の失速警戒3件（アドバンテスト・東京エレクトロン・キオクシアHD）はダブル基準とも3戦3勝の完勝。一方『押せ押せ』で拾った三菱UFJ・安川電機は伸び悩み〜反落となり、失速の流れは値がさ半導体に限らず地合い全体に及んだ",
+    "sources": ["s.kabutan.jp/news/n202607221192(大引け記事)", "s.kabutan.jp/news/n202607220979(S高S安引け)", "gentosha-go.com/articles/-/80301(GOLD ONLINE概況)", "zaikei.co.jp/article/20260722/862287.html(前引け寄与度・個別銘柄)"]
+  },
+  "results": [
+    {
+      "code": "6857", "name": "アドバンテスト", "quadrant": "失速警戒", "confidence": 4,
+      "prev_close": 29630,
+      "maehiike": 31570, "maehiike_change_pct": 6.55,
+      "close": 29585, "close_change_yen": -45, "close_change_pct": -0.15,
+      "maehiike_to_close_pct": -6.29,
+      "afternoon_high_note": "後場（12:30以降）に前引け値を上回る新高値は確認できず（本日高値31,580円は10:40=前場中に記録）。前引け+2%＝32,201円には後場中一度も到達していない",
+      "close_verdict": "WIN", "intraday_verdict": "WIN",
+      "note": "前引け31,570円(+6.55%)から大引け29,585円(-0.15%)まで後場だけで-6.29%の急反落。ダブル基準とも『失速警戒』的中。前引け高値圏からの急落は、7/21の同銘柄の『地合いに押し切られて続伸』とは対照的な結果で、連騰3日目の反動売りが優勢だった",
+      "sources": ["zaikei.co.jp/article/20260722/862287.html(前引け値)", "nikkei.com個別ページ(終値、15:30時点データと明記)"]
+    },
+    {
+      "code": "8035", "name": "東京エレクトロン", "quadrant": "失速警戒", "confidence": 4,
+      "prev_close": 66570,
+      "maehiike": 69280, "maehiike_change_pct": 4.07,
+      "close": 65960, "close_change_yen": -610, "close_change_pct": -0.92,
+      "maehiike_to_close_pct": -4.79,
+      "afternoon_high_note": "後場に前引け値を上回る新高値は確認できず（本日高値69,780円は9:09=寄り付き直後に記録）。前引け+2%＝70,666円には後場中一度も到達していない",
+      "close_verdict": "WIN", "intraday_verdict": "WIN",
+      "note": "前引け69,280円(+4.07%)から大引け65,960円(-0.92%)まで後場だけで-4.79%の反落。プラスからマイナスへの明確な転換で、3銘柄中もっとも『反転』が鮮明だった見立て通りの結果",
+      "sources": ["zaikei.co.jp/article/20260722/862287.html(前引け値)", "nikkei.com個別ページ(終値、15:30時点データと明記)"]
+    },
+    {
+      "code": "285A", "name": "キオクシアＨＤ", "quadrant": "失速警戒", "confidence": 3,
+      "prev_close": 61060,
+      "maehiike": 67830, "maehiike_change_pct": 11.09,
+      "close": 64270, "close_change_yen": 3210, "close_change_pct": 5.26,
+      "maehiike_to_close_pct": -5.25,
+      "afternoon_high_note": "後場に前引け値を上回る新高値は確認できず（本日高値68,700円は11:04=前場中に記録）。前引け+2%＝69,187円には後場中一度も到達していない",
+      "close_verdict": "WIN", "intraday_verdict": "WIN",
+      "note": "前引け67,830円(+11.09%)から大引け64,270円(+5.26%)まで後場だけで-5.25%の反落。終値ベースでは前日比プラスを維持しているため『失敗』には見えにくいが、判定基準はあくまで前引け→大引けの方向であり、2日連続急伸の反動売りという見立て通りに失速した。日経大引け記事でも『上昇銘柄・断トツの売買代金』と紹介されており、押し目形成中と見るのが妥当",
+      "sources": ["zaikei.co.jp/article/20260722/862287.html(前引け値)", "nikkei.com個別ページ(終値、15:30時点データと明記)", "s.kabutan.jp/news/n202607221192(大引け記事、上昇銘柄として言及)"]
+    },
+    {
+      "code": "8306", "name": "三菱UFJ FG", "quadrant": "押せ押せ", "confidence": 3,
+      "prev_close": 3580,
+      "maehiike": 3675, "maehiike_change_pct": 2.65,
+      "close": 3668, "close_change_yen": 88, "close_change_pct": 2.46,
+      "maehiike_to_close_pct": -0.19,
+      "afternoon_high": 3685, "afternoon_high_time": "12:32", "afternoon_high_vs_maehiike_pct": 0.27,
+      "close_verdict": "DRAW", "intraday_verdict": "DRAW",
+      "note": "前引け3,675円→大引け3,668円で-0.19%、デッドバンド(±0.5%)内につき引き分け。後場高値3,685円(12:32)も前引け+2%(3,748円)には遠く届かず、『続伸』でも『反転』でもない横ばいで終えた。銀行株ローテーションの受け皿という読み自体は否定されなかったが、新規に乗る材料としては force不足だった一日",
+      "sources": ["zaikei.co.jp/article/20260722/862287.html", "nikkei.com個別ページ(終値、15:30時点データと明記)"]
+    },
+    {
+      "code": "6506", "name": "安川電機", "quadrant": "押せ押せ", "confidence": 3,
+      "prev_close": 5119,
+      "maehiike_approx": 5375, "maehiike_change_pct_approx": 4.99,
+      "close": 5213, "close_change_yen": 94, "close_change_pct": 1.84,
+      "maehiike_to_close_pct_approx": -3.01,
+      "afternoon_high_note": "後場に前引け概算値を上回る新高値は確認できず（本日高値5,375円は11:29=前引け間際に記録）",
+      "close_verdict": "LOSE", "intraday_verdict": "LOSE",
+      "note": "前引け概算5,375円(+4.99%)から大引け5,213円(+1.84%)まで後場だけで-3.01%の反落。終値は前日比+1.84%とプラスを維持し2日連続陽線ではあるが、『後場も続く』という押せ押せの見立てに対しては反落方向のためLOSE。前引け値が11:29の高値による概算のため精度に留保あり。前日終値超えという意味では技術的な下げ止まりの体は保っている",
+      "data_quality": "前引け値は概算（11:29高値を代用、11:30ちょうどの前引け値を直接示すソースは未取得）。終値はnikkei.com単独ソース（15:30時点データと明記）",
+      "checklist_impact": "条件A（前日終値超えで引ける）は5,213>5,119で技術的に成立（2日連続）。条件C（値下がり上位・マイナス寄与上位からの不在）も成立（大引け記事で『しっかり』と上昇銘柄側に言及あり）。条件B（出来高帯攻防）は水準の再定義が引き続き未解決のため、3条件同時成立には至らず解除通知は見送り。詳細はdata/yaskawa_entry_checklist.jsonの本日分を更新済み",
+      "sources": ["s.kabutan.jp/news/n202607221192(大引け記事、上昇銘柄として言及)", "nikkei.com個別ページ(終値、15:30時点データと明記)", "data/candidates_20260722.json(11:29高値)"]
+    }
+  ],
+  "score_today": {"win": 3, "lose": 1, "draw": 1, "pending": 0},
+  "score_cumulative": {
+    "win": 13, "lose": 4, "draw": 2, "unverified": 1, "excluded_20260716": 5,
+    "as_of": "2026-07-22",
+    "note": "7/21終値時点の10勝3敗1分に本日3件（3勝0敗、うち1分は8306）を反映。失速警戒（確信4×2・確信3×1）が3戦3勝でダブル基準とも完勝した一方、押せ押せ側（8306分・6506敗）は伸び悩み。地合い全体が『朝の熱狂→後場失速』のパターンで一日を通したため、逆張り系の見立てが素直に機能した"
+  },
+  "fastretailing_watch": {
+    "code": "9983",
+    "prev_close": 80840,
+    "close": 78580, "close_change_yen": -2260, "close_change_pct": -2.80,
+    "unlock_condition_reference": "前日終値を上回って引ける（7/21に一度達成）",
+    "unlock_status": "本日は前日終値(80,840円)を下回って引け、7/21に達成した解除条件は本日は再現せず",
+    "note": "7/21の解除達成の翌営業日に早くも反落（日経マイナス寄与度トップ）。『解除→翌日即反落』のパターンとして記録し、反発シナリオの卒業判断は時期尚早と修正する（候補選定時点のlearnings_provisionalを確定として反映）",
+    "sources": ["nikkei.com個別ページ(終値、15:30時点データと明記)"]
+  },
+  "regulars_close": {
+    "up": [
+      {"code":"8306","name":"三菱UFJ FG","close":3668,"change_yen":88,"change_pct":2.46},
+      {"code":"3994","name":"マネーフォワード","close":5325,"change_yen":70,"change_pct":1.33},
+      {"code":"6954","name":"ファナック","close":6873,"change_yen":97,"change_pct":1.43},
+      {"code":"3697","name":"SHIFT","close":766.5,"change_yen":0.7,"change_pct":0.09},
+      {"code":"7269","name":"スズキ","close":2056.0,"change_yen":5.0,"change_pct":0.24}
+    ],
+    "down": [
+      {"code":"9984","name":"ソフトバンクG","close":5703,"change_yen":-48,"change_pct":-0.83},
+      {"code":"7203","name":"トヨタ自動車","close":2939.0,"change_yen":-5.5,"change_pct":-0.19},
+      {"code":"8136","name":"サンリオ","close":1131.5,"change_yen":-48.5,"change_pct":-4.11},
+      {"code":"4385","name":"メルカリ","close":4417,"change_yen":-150,"change_pct":-3.28},
+      {"code":"6902","name":"デンソー","close":1989.5,"change_yen":-3.0,"change_pct":-0.15},
+      {"code":"7453","name":"良品計画","close":4161,"change_yen":-83,"change_pct":-1.96},
+      {"code":"9997","name":"ベルーナ","close":1069,"change_yen":-5,"change_pct":-0.47},
+      {"code":"215A","name":"タイミー","close":1373,"change_yen":-52,"change_pct":-3.65}
+    ],
+    "note": "全13銘柄の終値をnikkei.com個別ページ（いずれも15:30時点データと明記）で確認。上昇5・下落8で、7/21・7/22昼バッチ時点から続く『成長株・内需消費系が値がさ半導体主導の相場から置いていかれる』ローテーション傾向がそのまま大引けまで継続した。単一ソースのため数値は概算の位置づけ",
+    "sources": ["nikkei.com個別ページ13銘柄分"]
+  },
+  "stop_high_low_close_detail": {
+    "stop_high_names": ["イメージ情報開発(3803)","シリコンスタジオ(3907)","フィーチャ(4052)","ジィ・シィ企画(4073)","Amazia(4424)","ザイン(6769)"],
+    "stop_low_names": ["チャットプラス(598A)","サクシード(9256)"],
+    "note": "候補銘柄との重複なし。ジィ・シィ企画はキャッシュレス決済端末の大型受注報道が材料（④需給逆回転よりも②を否定する好材料型に近い）",
+    "sources": ["s.kabutan.jp/news/n202607220979"]
+  },
+  "learnings": [
+    "失速警戒3件（アドバンテスト・東京エレクトロン・キオクシアHD）がダブル基準とも3戦3勝の完勝。『急騰の値幅が大きいほど後場の反転リスクも大きい』という7/21の教訓（同じ失速警戒が地合いに押し切られて外れた）とは対照的な結果になった——7/21との違いは、7/22は日経平均自体が後場に失速し地合いが逆風だった点。個別の見立ての精度以上に地合いの向きが結果を左右する傾向は継続して監視する",
+    "押せ押せ側（三菱UFJ・安川電機）は地合い全体の失速に引きずられて伸び悩み〜反落。同じ『前場急騰』でも値がさ半導体からのローテーション先という位置づけは、地合いが崩れると素直に巻き込まれることが分かった",
+    "安川電機の前引け値を正確なソースで取得できなかった（概算代用）。次回以降、11:30ちょうどの前引け値を明示的に記録するプロンプト・ルート整備を検討する（検証可能性の観点、憲法③）",
+    "ファーストリテイリングは解除翌日に反落というパターンを確定として記録。ウォッチ対象の卒業判断は時期尚早"
+  ]
+}
