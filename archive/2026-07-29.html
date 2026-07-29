@@ -73,16 +73,25 @@
   .windbox{background:var(--surface);border:1px dashed var(--accent);border-radius:10px;padding:8px 12px;font-size:13px;color:var(--ink-2);margin-bottom:14px}
   .windbox b{color:var(--ink)}
   .windbox .wtitle{font-size:11.5px;font-weight:700;color:var(--accent);letter-spacing:.04em;margin-bottom:3px}
+  .scorebox{background:var(--surface-2);border:2px solid rgba(12,122,77,.4);border-radius:12px;padding:10px 12px;margin-bottom:14px}
+  .scorebox .stitle{font-size:12.5px;font-weight:700;color:#0c6a44;letter-spacing:.06em;margin-bottom:4px}
+  .scorebox .srow{font-size:13.5px;padding:3px 0;border-bottom:1px dashed var(--grid)}
+  .scorebox .srow:last-child{border-bottom:none}
+  .verdict{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:99px;margin-top:6px;margin-right:5px}
+  .verdict.win{background:rgba(12,122,77,.14);border:1px solid rgba(12,122,77,.45);color:#0c6a44}
+  .verdict.lose{background:rgba(201,58,58,.14);border:1px solid rgba(201,58,58,.45);color:#a52a2a}
+  .verdict.draw{background:rgba(138,136,128,.18);border:1px solid rgba(138,136,128,.45);color:#5c5a54}
+  .anchornote{font-size:11.5px;color:var(--muted);margin-top:3px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <div class="samplebanner" style="background:rgba(154,103,0,.10);border-color:rgba(154,103,0,.4);color:var(--warn)">⏰ 本来11:38起動の昼バッチが14:40台にずれ込みました。前引け値に加え、後場終盤（14:22〜14:41時点）の実勢値を anchor として併記しています。大引け確定は次回バッチで反映します</div>
+  <div class="samplebanner" style="background:rgba(12,122,77,.08);border-color:rgba(12,122,77,.35);color:#0c6a44">✅ 15:45速報答え合わせ完了。大引け確定値で5銘柄すべて判定済み（pendingなし）。本セッションの実行は18時台にずれ込みましたが、取得データ自体は大引け(15:00/15:30)確定値です</div>
 
   <header>
     <h1>兜町ボード<span class="sub"></span></h1>
-    <div class="stamp">7/29（水）14:41時点<br><span class="fresh">● 昼バッチ（後場終盤anchor、大引け未確定）</span></div>
+    <div class="stamp">7/29（水）大引け確定<br><span class="fresh">● 15:45速報答え合わせ済み</span></div>
   </header>
 
   <div class="strategy">
@@ -93,16 +102,18 @@
   </div>
 
   <div class="market">
-    <div class="mtile"><div class="name">日経平均（14:41）</div><div class="val d">61,313</div><div class="chg d">−1,051 (−1.69%)</div></div>
-    <div class="mtile"><div class="name">TOPIX（14:41）</div><div class="val u">3,963.87</div><div class="chg u">+0.28 (+0.01%)</div></div>
-    <div class="mtile"><div class="name">プライム騰落（14時）</div><div class="val u">936/586</div><div class="chg">値上がり優勢</div></div>
+    <div class="mtile"><div class="name">日経平均（大引け）</div><div class="val d">61,434.19</div><div class="chg d">−930.73 (−1.49%)</div></div>
+    <div class="mtile"><div class="name">TOPIX（大引け）</div><div class="val u">3,974.03</div><div class="chg u">+10.44 (+0.26%)</div></div>
+    <div class="mtile"><div class="name">プライム騰落（大引け）</div><div class="val u">1,044/491</div><div class="chg">値上がり優勢</div></div>
   </div>
 
-  <div class="mood"><b>今日の構図：</b>寄り付きは前日(28日)の-2,566円下落からの自律反発狙いで+369円高スタート。しかし韓国KOSPIが朝方の上昇から一転して大幅安（2日連続サーキットブレーカー発動）となったのに歩調を合わせ、日本のAI・半導体関連にも売りが波及した。前引けは-675円(-1.08%)、後場は一時-1,558円（心理的節目6万1000円割れ、5/21以来約2ヶ月ぶり安値）まで下げ幅拡大。ただし昨日の全面安とは様相が異なり、東京エレクトロン・ソフトバンクG・キオクシアなど値がさ半導体株が指数を集中的に押し下げる一方、トヨタなど自動車株を中心に「AI相場調整からの資金シフト」的な買いが観測され、プライムの値上がり銘柄数が値下がりを上回る場面もあるなど裾野は底堅い。TOPIXがほぼ横ばいに対し日経平均が-1.69%という乖離が本日の構図を象徴している。本日は米FOMC結果発表（引け後）も控える</div>
+  <div class="mood"><b>今日の構図（大引け確定）：</b>半導体関連株（東京エレクトロン・キオクシア等）への売りが続き、日経平均は一時−1,900円超・60,448.90円（約2ヶ月ぶり安値）まで下落したが、後場は買い戻しで下げ幅を縮小し−930.73円(−1.49%)で引けた。キーエンス・トヨタなど非半導体・自動車株には買いが入り、TOPIXは+0.26%で引け、プライム値上がり銘柄数(1,044)が値下がり(491)を上回る「指数の見た目ほど地合いは悪くない」構図が終日を通じて維持された。本日夜は米FOMC結果発表を控える</div>
 
-  <div class="windbox">
-    <div class="wtitle">🌬️ 風向き（本来12:15フェーズ、実行が15時台にずれ込んだため15:03時点の延長チェック）</div>
-    日経平均は15:03時点<b>61,218円（−1,147円・−1.84%）</b>で、anchor(14:41)の−1.69%からさらに小幅に下げ幅拡大。ただし12:41安値（60,806円・概算−2.55%）は下回っておらず新安値更新なし。CME日経平均先物は14:55時点<b>61,425円（−1,120円）</b>で現物とほぼ整合的、先物側からの追加サプライズも確認できず。ドル円は13時台の163円台後半（163.60円前後）からやや円高方向の163円台前半（15時頃163.30円前後）で推移し、日本時間未明のFOMC結果待ちで方向感は限定的。<b>TOPIX底堅い・半導体主導安という構図に変化なし。後場の作戦3行は据え置き</b>
+  <div class="scorebox">
+    <div class="stitle">📊 本日の答え合わせ（15:45速報・大引け確定）</div>
+    <div class="srow">本日 <b>2勝1敗2分</b>（判定対象5銘柄・pendingなし）。WIN=コナミグループ・キオクシアHD／LOSE=ソフトバンクグループ／DRAW=トヨタ自動車・SCREEN HD</div>
+    <div class="srow">判定基準：本日の昼バッチも後場終盤(14:22〜14:24)のanchorで見立てを策定した特例日のため、前引け値ではなく「anchor→大引け」の変化率に±0.5%デッドバンドを適用（7/27と同型の代替基準）</div>
+    <div class="srow">累計成績：<b>19勝7敗10分</b>（判定不能1・恒久除外7）／勝率52.8%（引き分け除く分母では73.1%）</div>
   </div>
 
   <div class="qgrid">
@@ -110,54 +121,59 @@
     <div class="quad">
       <div class="qhead"><div class="qtitle">🔥 押せ押せ</div><div class="qnote">急騰 × 後場も続く</div></div>
       <div class="card">
-        <div class="row1"><div class="tick">トヨタ自動車<span class="code">7203</span></div><div class="pct u">+6.68%</div></div>
-        <div class="price"><b>3,209円</b>（+201円）anchor 14:22時点</div>
+        <div class="row1"><div class="tick">トヨタ自動車<span class="code">7203</span></div><div class="pct u">+7.18%</div></div>
+        <div class="price"><b>3,224円</b>（+216円）大引け確定（anchor 14:22時点は3,209円 +6.68%）</div>
         <div class="matzai">材料：半導体関連の全面安を嫌気した資金が自動車などAI・半導体エクスポージャーの薄いセクターに向かう「見直し買い」。ドル円163円台後半の円安も輸出株として追い風。33業種中「輸送用機器」が本日の上昇率トップ業種</div>
         <div class="mitate">銘柄固有の新規開示材料は確認できずセクターローテーション・地合い要因が主。始値3,085円→安値3,059円(9:23)から一貫して切り上がり、高値3,224円は後場（13:20）に付けており値持ちは良いが、半導体の売りが一巡した瞬間に資金が逆流するリスクもある</div>
         <div class="action"><b>⏸ 待ち推奨</b>——ローテーション買いの色が濃く、明日以降も継続するかは半導体の落ち着き次第。飛びつきより押し目待ち</div>
         <div class="row2"><span class="badge">セクターローテーション買い</span><span class="badge">後場に高値</span><span class="conf">確信 ●●●○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/7203.T">Y!チャート ↗</a></div>
+        <div><span class="verdict draw">△ DRAW</span><span class="anchornote">anchor(+6.68%)→大引け(+7.18%)で+0.47%、デッドバンド内の引き分け</span></div>
       </div>
       <div class="card">
-        <div class="row1"><div class="tick">コナミグループ<span class="code">9766</span><span class="newface">🆕 新顔</span></div><div class="pct u">+9.33%</div></div>
-        <div class="price"><b>22,020円</b>（+1,880円）anchor 14:24時点</div>
+        <div class="row1"><div class="tick">コナミグループ<span class="code">9766</span><span class="newface">🆕 新顔</span></div><div class="pct u">+12.74%</div></div>
+        <div class="price"><b>22,705円</b>（+2,565円）大引け確定（anchor 14:24時点は22,020円 +9.33%）</div>
         <div class="matzai">材料：同業カプコン・コーエーテクモHDの1Q決算が大幅増収増益となったことへの連想買いに加え、コナミ自身の1Q決算が明日7/30に控え決算期待の思惑買いも重なった。4営業日続伸で年初来高値圏（1月以来の22,000円台）を回復</div>
         <div class="mitate">同業好決算という裏付けはあるが、本日の伸びの大部分は「明日の自社決算への期待」という思惑要素が大きい。決算内容次第では期待剥落型の反落リスクが高く、ボラティリティが読みにくい</div>
         <div class="action"><b>⏸ 待ち推奨</b>——決算発表前日の思惑買いへの追随は決算リスクをそのまま抱える形。決算通過後の反応を見てから判断</div>
         <div class="row2"><span class="badge">🆕新顔</span><span class="badge warn">決算前日の期待買い</span><span class="badge">4日続伸</span><span class="conf">確信 ●●●○○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/9766.T">Y!チャート ↗</a></div>
+        <div><span class="verdict win">○ WIN</span><span class="anchornote">anchor(+9.33%)→大引け(+12.74%)でさらに+3.11%上乗せし続伸</span></div>
       </div>
     </div>
 
     <div class="quad">
       <div class="qhead"><div class="qtitle">🎈 失速警戒</div><div class="qnote">急騰 × 後場は反転 → 空売り候補</div></div>
       <div class="card">
-        <div class="row1"><div class="tick">キオクシアＨＤ<span class="code">285A</span></div><div class="pct d">−12.57%</div></div>
-        <div class="price"><b>38,950円</b>（−5,600円）高値48,820円(9:12)→安値37,820円(13:16)→anchor 14:23時点</div>
+        <div class="row1"><div class="tick">キオクシアＨＤ<span class="code">285A</span></div><div class="pct d">−13.85%</div></div>
+        <div class="price"><b>38,380円</b>（−6,170円）大引け確定（高値48,820円(9:12)→安値37,820円(13:16)→anchor14:23時点38,950円 −12.57%）</div>
         <div class="matzai">材料：韓国SKハイニックスの4-6月期決算（29日発表）を受けた思惑買いで朝方+9.58%まで急伸したが、四半期営業利益が前年比557%増の四半期最高益ながら市場予想(64.22兆ウォン)に届かず失望売りに転じ、SKハイニックス株は一時17%超安・KOSPIは2日連続サーキットブレーカー発動というパニック局面に。中国CXMTの台頭懸念も重荷</div>
         <div class="matzai"><b>質の読み解き：</b>⑤期待剥落型——記録的増益という好材料が市場予想未達で帳消しになったケース。前場急伸→後場急落という失速警戒の典型パターンで、銘柄固有というより韓国発のマクロ・需給要因が主体</div>
         <div class="mitate">既に前場のうちに高値から-25%近い急落を経ており、値動きの荒さそのものが次の変動リスクを孕む</div>
         <div class="action"><b>⏸ 待ち推奨</b>——新規の空売りは高値覚えでの見送りが無難。SKハイニックス株・KOSPIの落ち着きを確認してから。空売り規制・貸借情報は未確認</div>
         <div class="row2"><span class="badge warn">SKハイニックス決算失望</span><span class="badge warn">KOSPIサーキットブレーカー</span><span class="badge">前場急伸→後場急落</span><span class="conf">確信 ●●●●○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/285A.T">Y!チャート ↗</a></div>
+        <div><span class="verdict win">○ WIN</span><span class="anchornote">anchor(−12.57%)→大引け(−13.85%)でさらに−1.46%下押し、失速が継続</span></div>
       </div>
     </div>
 
     <div class="quad">
       <div class="qhead"><div class="qtitle">🌀 底なし</div><div class="qnote">急落 × 後場も下げる</div></div>
       <div class="card">
-        <div class="row1"><div class="tick">ソフトバンクグループ<span class="code">9984</span></div><div class="pct d">−7.99%</div></div>
-        <div class="price"><b>4,688円</b>（−407円）始値5,083円→安値4,580円(13:17)→anchor 14:22時点</div>
+        <div class="row1"><div class="tick">ソフトバンクグループ<span class="code">9984</span></div><div class="pct d">−6.95%</div></div>
+        <div class="price"><b>4,741円</b>（−354円）大引け確定（始値5,083円→安値4,580円(13:17)→anchor14:22時点4,688円 −7.99%）</div>
         <div class="matzai">材料：7/28に続き2営業日連続の大幅安。傘下キオクシアの株価急変動（本日も前場急伸→後場急落）に伴う含み益の目減りに加え、7/28付日経記事では「キオクシア追い証換金売り警戒」も報じられ、信用取引の強制売り懸念が需給の重荷になっている可能性（断定はしない）</div>
         <div class="mitate">前場は横ばい圏で推移し後場に売りが加速するパターンは「地合い連動の続落」に近く、前場の急騰・急落のどちらにも明確には当てはまらないが、実態としては下値模索が続く底なしに近い。追い証・換金売りが絡む場合、下げが下げを呼ぶ需給悪循環のリスクがある</div>
         <div class="action"><b>🚫 触らない</b>——地合い・傘下企業株の連動・信用需給が絡む複合要因で読みの土台が不安定。新規の信用買いは時期尚早</div>
         <div class="row2"><span class="badge warn">2日連続急落</span><span class="badge warn">追い証懸念（未確定）</span><span class="badge">後場に下げ加速</span><span class="conf">確信 ●●●●○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/9984.T">Y!チャート ↗</a></div>
+        <div><span class="verdict lose">× LOSE</span><span class="anchornote">anchor(−7.99%)→大引け(−6.95%)で+1.13%の戻し。地合い全体の下げ幅縮小に沿った反発。触らない判断のため実損なし</span></div>
       </div>
       <div class="card">
-        <div class="row1"><div class="tick">ＳＣＲＥＥＮ ＨＤ<span class="code">7735</span><span class="newface">🆕 新顔</span></div><div class="pct d">−17.57%</div></div>
-        <div class="price"><b>11,685円</b>（−2,490円）始値12,975円(9:09)→安値11,370円(13:43)→anchor 14:24時点</div>
+        <div class="row1"><div class="tick">ＳＣＲＥＥＮ ＨＤ<span class="code">7735</span><span class="newface">🆕 新顔</span></div><div class="pct d">−17.25%</div></div>
+        <div class="price"><b>11,730円</b>（−2,445円）大引け確定（始値12,975円(9:09)→安値11,370円(13:43)→anchor14:24時点11,685円 −17.57%）</div>
         <div class="matzai">材料：7/28大引け後（15:35）に1Q決算発表。四半期経常利益は前年比37.2%減の154億円となった一方、通期経常利益予想を1500億円→1565億円に上方修正・年間配当も175円→183円に増額——通期は良化させたにもかかわらず、四半期実績が主力の半導体製造装置(SPE)事業の売上減少を伴い市場予想未達で失望売りが先行。プライム値下がり率2位</div>
         <div class="matzai"><b>質の読み解き：</b>⑤期待剥落型——通期上方修正・増配という好材料があっても目先の四半期実績の弱さが優先されて売られた。加えて半導体装置セクター全体安とも重なる二重苦</div>
         <div class="mitate">始値から既に前日比-8.5%で始まり、後場（13:43）にさらに安値を更新するなど「底なし」パターンに合致。決算内容自体はネガティブ一辺倒ではなく、下げの「質」の見極めは難しい</div>
         <div class="action"><b>🚫 触らない</b>——空売り規制の有無・貸借銘柄かは未確認で実務面の準備も不足。通期上方修正という材料の質も複雑で読みの確度が低い</div>
         <div class="row2"><span class="badge">🆕新顔</span><span class="badge warn">決算失望売り(通期は上方修正)</span><span class="badge">セクター安と複合</span><span class="conf">確信 ●●●●○</span><a class="ylink" href="https://finance.yahoo.co.jp/quote/7735.T">Y!チャート ↗</a></div>
+        <div><span class="verdict draw">△ DRAW</span><span class="anchornote">anchor(−17.57%)→大引け(−17.25%)で+0.39%、デッドバンド内の引き分け</span></div>
       </div>
     </div>
 
@@ -169,19 +185,19 @@
   </div>
 
   <section class="block">
-    <div class="bhead">⭐ あなたのウォッチ2銘柄（anchor時点・大引け未確定）</div>
+    <div class="bhead">⭐ あなたのウォッチ2銘柄（大引け確定）</div>
     <div class="checklist">
-      <div class="crow"><span class="cmark">⚖️</span><span><b>安川電機(6506)</b>：anchor(14:22)4,573円（前日比−183円・−3.85%）。始値4,826円→高値4,890円(9:20)→安値4,465円(13:19)。7/28の-9.53%ほどではないが本日も条件A（前日終値超え）は不成立見込み。条件Bは7営業日連続でユーザー未確認のままunconfirmed継続、条件Cは半導体大型株の下げ幅（東エレク▲10%・SCREEN▲17%・キオクシア▲12%）と比べ安川は軽微だが専用ランキングでの確認は未取得のため判定不能。3条件同時成立には程遠く解除通知は見送り</span></div>
-      <div class="crow"><span class="cmark">📈</span><span><b>ファーストリテイリング(9983)</b>：anchor(14:22)80,970円（前日比+1,020円・+1.28%）。前日終値79,950円を上回っており、大引けでも維持すれば7/21・7/27・7/28に続き4回目の条件達成となる（大引け未確定）。半導体安が続く地合いでも底堅く、後場速報のプラス寄与上位にも名前あり</span></div>
+      <div class="crow"><span class="cmark">⚖️</span><span><b>安川電機(6506)</b>：終値4,629円（前日比−127円・−2.67%）。始値4,826円→高値4,890円(9:20)→安値4,465円(13:19)→大引け。anchor(14:22時点−3.85%)からはやや戻して引けた。条件A（前日終値超え）は不成立。条件Bは8営業日連続でユーザー未確認のままunconfirmed継続。条件Cは値下がり率ランキング上位50に名前がなく（SCREEN3位・キオクシア8位より明確に軽微）今回はtrue判定。3条件同時成立には至らず解除通知は見送り</span></div>
+      <div class="crow"><span class="cmark">📈</span><span><b>ファーストリテイリング(9983)</b>：終値80,400円（前日比+450円・+0.56%）。前日終値79,950円を上回って引け、7/21・7/27・7/28に続き4回目の条件達成。半導体安が続く地合いでも底堅く推移した</span></div>
     </div>
   </section>
 
   <section class="block">
-    <div class="bhead">常連13銘柄チェック（14:22〜14:27時点、大引け未確定）</div>
+    <div class="bhead">常連13銘柄チェック（14:22〜14:27時点anchor・参考値、公式判定対象外）</div>
     <div class="mood" style="margin-bottom:0"><b>上昇8銘柄：</b>トヨタ自動車(7203) 3,209円 +6.68%／マネーフォワード(3994) 5,990円 +5.74%／デンソー(6902) 2,190.5円 +5.34%／タイミー(215A) 1,493円 +5.59%／サンリオ(8136) 1,346.5円 +4.34%(年初来高値)／良品計画(7453) 4,444円 +3.23%／ベルーナ(9997) 1,104円 +3.47%(年初来高値)／スズキ(7269) 2,114.5円 +1.73%。<b>下落5銘柄：</b>ソフトバンクグループ(9984) 4,688円 −7.99%（半導体連想売り直撃・2日連続急落）／三菱UFJ FG(8306) 3,640円 −0.57%／SHIFT(3697) 944.9円 −0.54%／メルカリ(4385) 4,520円 −0.48%／ファナック(6954) 6,360円 −0.20%。トヨタ・デンソー・スズキなど輸送用機器勢と非半導体の内需・グロース勢が堅調な一方、ソフトバンクGのみ大幅安、他4銘柄は僅差の調整</div>
   </section>
 
-  <footer>兜町ボード ｜ 2026.7.29（水）14:41時点 昼バッチ（後場終盤anchor・大引け未確定）JST ｜ 公開URL: kabutocho-board.vercel.app</footer>
+  <footer>兜町ボード ｜ 2026.7.29（水）大引け確定・15:45速報答え合わせ済み JST ｜ 公開URL: kabutocho-board.vercel.app</footer>
 </div>
 </body>
 </html>
