@@ -1,0 +1,158 @@
+{
+  "date": "2026-08-03",
+  "judged_at": "2026-08-03T19:31:00+09:00",
+  "batch_note": "15:45速報答え合わせ（本セッションの実行は19:31にずれ込んだが、取得した日経平均・TOPIX・個別6銘柄はいずれも大引け15:30確定値であり、複数ソース—松井証券・nikkei.com個別ページ・GOLD ONLINE（8/3国内株式市場概況記事）—で一致を確認済み。実行時刻の遅れ自体はデータの鮮度に影響していない）。昼バッチ(candidates_20260803.json)のanchorが14:43〜15:00（TOTOのみ11:47）だったため、前引け(11:30)基準の正式ダブル基準のうち終値ベースは『anchor→大引け』の変化率に±0.5%デッドバンドを適用する7/27以降の代替運用を踏襲。後場高値+2%基準は前引け正確値が個別銘柄で構造的に未取得のため引き続き算出不能（憲法③）。候補6銘柄すべて大引け確定・2ソース以上クロスチェック済みでpendingはゼロ",
+  "methodology_note": "close_verdictは『anchor→大引け』の変化率に対し±0.5%デッドバンドを適用。押せ押せ・底なしはanchorから大引けにかけて『同方向へさらに動いたか』を継続=WIN・反転=LOSEとして判定し、失速警戒はanchor時点で既に反転(失速)が始まっている前提のため『反転がさらに進んだか』を継続=WIN・戻し(反発)=LOSEとして判定した。ストップ高で終日（または途中から）張り付いたまま引けた銘柄は設計書ルール通り『維持=的中』とした",
+  "market": {
+    "nikkei_close": 63754.90,
+    "nikkei_close_change": -607.12,
+    "nikkei_close_change_pct": -0.94,
+    "nikkei_prev_close": 64362.02,
+    "nikkei_maehiike_ref": 63240.51,
+    "nikkei_note": "前引け-1,121.51円(-1.74%)から後場にかけて下げ幅を縮小し、-607.12円(-0.94%)の63,754.90円で3営業日ぶり反落。日米協調為替介入を受けた円急伸（164円台→155円台）で自動車・輸出関連中心に売りが優勢となった一方、後場は買い戻しも入り前引けの下げ幅(-1.74%)からは戻す展開。データは日本経済新聞記事(DGXZQOUB0324OTT00C26A8000000)とs.kabutan.jp個別記事(n202608031022)の2ソースで完全一致",
+    "topix_close": 3960.03,
+    "topix_close_change": -43.27,
+    "topix_close_change_pct": -1.08,
+    "topix_note": "s.kabutan.jp記事と松井証券(.TOPX daily-bar)の2ソースで完全一致（3,960.03・-43.27・-1.08%）。日経平均(-0.94%)よりTOPIX(-1.08%)がやや下げがきつく、輸出関連（自動車・鉄鋼等）を含む東証プライム全体の裾野の弱さを示した",
+    "breadth_prime_close": {"up": 464, "down": 1060, "flat": null, "note": "s.kabutan.jp記事(n202608031022)による東証プライム概算。値上がり銘柄比率は464/(464+1060)=約30.4%と、日経平均の下げ幅(-0.94%)以上に裾野が弱い"},
+    "usdjpy_close_approx": "157円51銭前後（単一ソース・概算、外為どっとコム記事）。協調介入直後の安値155円20銭付近からは戻したが、依然として介入前(164円台)からは大幅な円高水準を維持",
+    "stop_high_low": {
+      "stop_high_total": 9,
+      "stop_low_total": 3,
+      "note": "WebSearchのスニペットで総数（S高9・S安3）を確認したが、株探個別記事は本バッチのデータルートでは全銘柄一覧まで到達できず未取得。候補カードのカシオ計算機(6952)はS高組の1銘柄として別途2ソースで終値=ストップ高価格を確認済み"
+    },
+    "sector_note": "s.kabutan.jp記事による業種別：上昇5業種（精密機器・空運業・金属製品・情報通信業・小売業）、下落上位5業種（不動産業・輸送用機器・陸運業・石油石炭・鉱業）。円高直撃の輸送用機器（自動車等）が下落上位に入る一方、精密機器がトップ（カシオ計算機のストップ高等が寄与とみられる）",
+    "mood_verdict": "日米協調為替介入（15年ぶり）による円急伸を受けて輸出関連中心に売りが優勢となり、日経平均は3営業日ぶりに反落（-0.94%、63,754.90円）。ただし前引け(-1.74%)からは後場にかけて下げ幅を縮小した。個別では、好決算にもかかわらずファナックが「物足りなさ」で一時-19%・40年ぶりの日中下落率を演じたのち引けにかけてやや戻して-14.31%、日本電気硝子・TOTOも決算がらみで二桁の下落となった一方、カシオ計算機は好決算の上方修正を材料に東証プライム値上がり率3位でストップ高を守り切り、MIXIも52週高値を更新して引けるなど、地合いの弱さの中でも好材料株の値持ちの良さが際立った1日",
+    "sources": ["https://www.nikkei.com/article/DGXZQOUB0324OTT00C26A8000000/", "https://s.kabutan.jp/news/n202608031022/", "https://finance.matsui.co.jp/stock/.TOPX/daily-bar/index", "https://news.yahoo.co.jp/articles/96236f400c60991d827cb58b09e71735869a40ca"]
+  },
+  "results": [
+    {
+      "code": "6954", "name": "ファナック", "quadrant": "底なし", "confidence": 4, "new_face": false,
+      "prev_close": 7135,
+      "anchor_time": "14:43", "anchor": 6017.0, "anchor_change_pct": -15.67,
+      "close": 6114.0, "close_change_yen": -1021.0, "close_change_pct": -14.31,
+      "anchor_to_close_pct": 1.61,
+      "close_verdict": "LOSE",
+      "note": "前場のうちに一時-19%(1986年以来約40年ぶりの日中下落率)まで下げたのち、anchor(14:43、-15.67%)から大引け(-14.31%)にかけてやや下げ幅を縮小して引けた（anchor→大引け+1.61%、デッドバンドを超えて反発）。好決算・通期上方修正という実質を伴う『期待剥落型』の急落は、下げ止まりかけていたとの見立てのほうが実勢に近く、底なし（さらに下げ続ける）判定はLOSE。ただし🚫触らないのアクション判断だったため実損はゼロ",
+      "data_quality": "終値は松井証券・nikkei.com個別ページ・GOLD ONLINE(8/3国内株式市場概況、値下がり率2位として掲載)の3ソースで完全一致（-1,021円・-14.31%）",
+      "sources": ["https://finance.matsui.co.jp/stock/6954/index", "https://www.nikkei.com/nkd/company/?scode=6954", "https://news.yahoo.co.jp/articles/96236f400c60991d827cb58b09e71735869a40ca"]
+    },
+    {
+      "code": "5214", "name": "日本電気硝子", "quadrant": "底なし", "confidence": 3, "new_face": true,
+      "prev_close_approx": 5323,
+      "anchor_time": "14:44", "anchor": 4415.0, "anchor_change_pct": -17.06,
+      "close": 4394.0, "close_change_yen": -929.0, "close_change_pct": -17.45,
+      "anchor_to_close_pct": -0.48,
+      "close_verdict": "DRAW",
+      "note": "anchor(14:44、-17.06%)から大引け(-17.45%)まで-0.48%とデッドバンド内でDRAW。年初来安値更新後も底打ちの確証がないまま安値圏でほぼ横ばいという『方向感の乏しさ』が数値にそのまま表れた形。🚫触らないのアクション判断は結果的に妥当（値が動かなかったため実損もチャンスロスもほぼなし）",
+      "data_quality": "終値は松井証券・nikkei.com個別ページ・GOLD ONLINE(8/3国内株式市場概況、値下がり率1位として掲載)の3ソースで完全一致（-929円・-17.45%）",
+      "sources": ["https://finance.matsui.co.jp/stock/5214/index", "https://www.nikkei.com/nkd/company/?scode=5214", "https://news.yahoo.co.jp/articles/96236f400c60991d827cb58b09e71735869a40ca"]
+    },
+    {
+      "code": "5332", "name": "TOTO", "quadrant": "底なし", "confidence": 3, "new_face": true,
+      "prev_close_approx": 7010,
+      "anchor_time": "11:47", "anchor": 6263.0, "anchor_change_pct": -10.7,
+      "close": 6171.0, "close_change_yen": -839.0, "close_change_pct": -11.97,
+      "anchor_to_close_pct": -1.47,
+      "close_verdict": "WIN",
+      "note": "anchor(11:47、-10.7%、実質的に前引け相当の値)から大引け(-11.97%)にかけてさらに下げ幅を拡大（-1.47%、デッドバンドを超えて継続）。中東情勢起因とみられる減益による②ガイダンス毀損型の売りが後場も続き底なし判定はWIN。👀観察のみのアクション判断だったため実損はないが、後場データ不足で見送ったこと自体は機会損失（値下がりが読めていれば空売り機会だった可能性）",
+      "data_quality": "終値は松井証券・nikkei.com個別ページ・GOLD ONLINE(8/3国内株式市場概況、値下がり率3位として掲載)の3ソースで完全一致（-839円・-11.97%）。前日終値は確定終値から逆算した約7,010円（候補時点の概算7,016円とは若干の差異）",
+      "sources": ["https://finance.matsui.co.jp/stock/5332/index", "https://www.nikkei.com/nkd/company/?scode=5332", "https://news.yahoo.co.jp/articles/96236f400c60991d827cb58b09e71735869a40ca"]
+    },
+    {
+      "code": "6952", "name": "カシオ計算機", "quadrant": "押せ押せ", "confidence": 3, "new_face": true,
+      "prev_close": 1764.5,
+      "anchor_time": "10:27", "anchor": 2164.5, "anchor_change_pct": 22.67,
+      "close": 2164.5, "close_change_yen": 400.0, "close_change_pct": 22.67,
+      "anchor_to_close_pct": 0.00,
+      "close_verdict": "WIN",
+      "note": "10:27時点で付けたストップ高水準(2,164.5円)を終日維持したまま引けた。設計書の『S高S安張り付きは維持=的中』ルールに準じWIN。決算の実質的な上方修正という裏付けの強さが値持ちにそのまま表れた。👀観察のみのアクション判断（物理的に入りにくい板）は妥当だったが、終日値を下げなかったため『乗れていれば』利益機会ではあった",
+      "data_quality": "終値は松井証券・nikkei.com個別ページ・GOLD ONLINE(8/3国内株式市場概況、値上がり率3位として掲載)の3ソースで完全一致（+400円・+22.67%）",
+      "sources": ["https://finance.matsui.co.jp/stock/6952/index", "https://www.nikkei.com/nkd/company/?scode=6952", "https://news.yahoo.co.jp/articles/96236f400c60991d827cb58b09e71735869a40ca"]
+    },
+    {
+      "code": "2121", "name": "MIXI", "quadrant": "押せ押せ", "confidence": 3, "new_face": true,
+      "prev_close": 2896,
+      "anchor_time": "14:46", "anchor": 3390.0, "anchor_change_pct": 17.06,
+      "close": 3400.0, "close_change_yen": 504.0, "close_change_pct": 17.40,
+      "anchor_to_close_pct": 0.29,
+      "close_verdict": "DRAW",
+      "note": "anchor(14:46、+17.06%)から大引け(+17.40%)にかけて+0.29%とデッドバンド内でDRAW。ただし高値=終値の3,400円で52週高値を更新して引けており、質的には押し目なく地合いの弱さの中でも上げ続けた『継続』に近い。機械的な±0.5%判定ではDRAWとなるが、値持ちの良さ自体は見立て通りだった点は記録しておく。⏸待ち推奨のアクション判断（押し目待ち）は、終日押し目が訪れなかったため結果的に機会損失側だった",
+      "data_quality": "終値は松井証券・nikkei.com個別ページの2ソースで完全一致（+504円・+17.40%）",
+      "sources": ["https://finance.matsui.co.jp/stock/2121/index", "https://www.nikkei.com/nkd/company/?scode=2121"]
+    },
+    {
+      "code": "285A", "name": "キオクシアホールディングス", "quadrant": "失速警戒", "confidence": 3, "new_face": true,
+      "prev_close_approx": 46500,
+      "anchor_time": "14:46", "anchor": 48940.0, "anchor_change_pct": 5.25,
+      "close": 49160.0, "close_change_yen": 2660.0, "close_change_pct": 5.72,
+      "anchor_to_close_pct": 0.45,
+      "close_verdict": "DRAW",
+      "note": "anchor(14:46、+5.25%)から大引け(+5.72%)にかけて+0.45%とデッドバンド内でDRAW。前場高値(+11.8%、51,990円)からは大きく上げ幅を縮小したまま終日横ばいで、失速警戒の見立てのうち『失速』自体は前場のうちに完了・後場はほぼ横ばいという形。⏸待ち推奨のアクション判断は、値がほぼ動かなかったため実損・機会損失ともに限定的だった",
+      "data_quality": "終値は松井証券・nikkei.com個別ページの2ソースで完全一致（+2,660円・+5.72%）。前日終値は複数ソースに幅があるため引き続き概算扱い",
+      "sources": ["https://finance.matsui.co.jp/stock/285A/index", "https://www.nikkei.com/nkd/company/?scode=285A"]
+    }
+  ],
+  "score_today": {
+    "win": 2,
+    "lose": 1,
+    "draw": 3,
+    "pending": 0,
+    "note": "WIN=TOTO(5332、底なし継続)・カシオ計算機(6952、S高張り付き維持)、LOSE=ファナック(6954、底なしがanchorから反発)、DRAW=日本電気硝子(5214)・MIXI(2121)・キオクシアHD(285A、いずれもデッドバンド内)。候補6銘柄すべて確定・pendingゼロ"
+  },
+  "score_cumulative": {
+    "win": 25,
+    "lose": 12,
+    "draw": 17,
+    "unverified": 1,
+    "excluded_20260716": 7,
+    "as_of": "2026-08-03 19:31時点。2026-07-31 18:30確定スイープ時点(23勝11敗14分)に本日確定分(2勝1敗3分)を反映。8/1・8/2は土日休場",
+    "note": "累計勝率＝25/(25+12+17)=46.3%（引き分け除く分母では25/37=67.6%）",
+    "calibration_by_confidence": {
+      "確信4": {"win": 9, "lose": 7, "draw": 3, "n": 19, "win_rate_pct": 47.4},
+      "確信3": {"win": 14, "lose": 4, "draw": 13, "n": 31, "win_rate_pct": 45.2},
+      "確信2": {"win": 2, "lose": 1, "draw": 1, "n": 4, "win_rate_pct": 50.0},
+      "note": "確信4はファナックのLOSEが加わり50.0%→47.4%に低下。確信3はTOTO・カシオのWINと日本電気硝子・MIXI・キオクシアのDRAWが加わり46.2%→45.2%とほぼ横ばい。確信4と確信3の的中率がほぼ同水準という状態が引き続き崩れないままで、確信度が高いほど当たるという単調な関係は依然として成立していない"
+    },
+    "win_rate_by_quadrant": {
+      "押せ押せ": {"win": 12, "lose": 3, "draw": 8, "n": 23, "win_rate_pct": 52.2},
+      "失速警戒": {"win": 5, "lose": 5, "draw": 4, "n": 14, "win_rate_pct": 35.7},
+      "底なし": {"win": 7, "lose": 3, "draw": 5, "n": 15, "win_rate_pct": 46.7},
+      "下げすぎ": {"win": 1, "lose": 1, "draw": 0, "n": 2, "win_rate_pct": 50.0},
+      "note": "失速警戒はキオクシアのDRAWが加わり38.5%→35.7%とさらに低下し、4象限中最低の座を維持。底なしはファナックのLOSE・日本電気硝子のDRAW・TOTOのWINが加わり50.0%→46.7%。下げすぎは今週も候補ゼロで空白が続く（7月中旬以降ずっと空欄）"
+    }
+  },
+  "yaskawa_watch": {
+    "code": "6506",
+    "prev_close": 4867,
+    "open": 4798, "high": 4982, "low": 4726,
+    "anchor_time": "14:43", "anchor_price": 4948, "anchor_change_pct": 1.66,
+    "close": 4935, "close_change_yen": 68, "close_change_pct": 1.40,
+    "anchor_to_close_pct": -0.26,
+    "conditions": {
+      "A": true,
+      "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は13営業日連続でユーザー未確認）",
+      "C": "true（本日の値下がり率ランキングに名前なし。日経平均が反落する中でも安川電機はプラス圏を維持し地合いより底堅い動き）"
+    },
+    "unlock": false,
+    "data_quality": "終値4,935円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点データと明記）",
+    "note": "条件Aが確定的に成立（前日終値4,867円→4,935円、+1.40%）。anchor(14:43、+1.66%)からはやや上げ幅を縮小したが引き続き前日終値超えで引けた。日米協調為替介入で日経平均が反落した地合いの弱い日にもかかわらずプラス圏を維持しており、値動きの相対的な底堅さは目を引く。条件Bが13営業日連続でユーザー未確認のまま長期化しており、条件A成立でも3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
+    "sources": ["https://finance.matsui.co.jp/stock/6506/index", "https://www.nikkei.com/nkd/company/?scode=6506"]
+  },
+  "fastretailing_watch": {
+    "code": "9983",
+    "prev_close": 78190,
+    "open": 78430, "high": 79620, "low": 76510,
+    "close": 79600, "close_change_yen": 1410, "close_change_pct": 1.80,
+    "unlock_condition_reference": "前日終値を上回って引ける（7/30・7/31は2営業日連続で条件未達）",
+    "unlock_status": "終値79,600円は前日終値78,190円を上回り、7/30・7/31の2営業日連続未達から本日条件成立に回復",
+    "note": "円高地合いで日経平均が反落する中、内需・グロース色の強いファーストリテイリングは+1.80%まで買われ高値79,620円圏で引ける底堅さを見せた。前日終値超えの条件成立は7/29以来2営業日ぶり",
+    "data_quality": "終値79,600円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点データと明記）",
+    "sources": ["https://finance.matsui.co.jp/stock/9983/index", "https://www.nikkei.com/nkd/company/?scode=9983"]
+  },
+  "learnings": [
+    "カシオ計算機(6952)・MIXI(2121)はいずれも地合いが弱い日（円高でプライム全面安の中）にもかかわらず、好決算の上方修正という実質的な材料でストップ高・52週高値を守り切った。地合いに逆らって値持ちする銘柄は好材料の『質』が本物であることの傍証になり得る",
+    "TOTO(5332)は数少ない11:47時点(実質前引け相当)のanchorが取れた候補で、後場も-1.47%と見立て通り下げ続けてWINとなった。一方で他5銘柄は14:4x台のanchorしか取れず、前引け(11:30)基準の正式ダブル基準を計算できないままの運用が続いている。11:30値のスナップショット取得の仕組み化は依然として最優先の積み残し課題",
+    "ファナック(6954)は好決算の期待剥落型急落について『底なし（さらに下げる）』と見立てたが、実際にはanchor時点で下げ止まりかけており、大引けにかけてやや戻す展開でLOSEとなった。期待剥落型の急落は、前場のうちに下げが最大化した後は反発リスクも相応にある点を次回以降の見立てに反映すべき"
+  ]
+}
