@@ -1,0 +1,189 @@
+{
+  "date": "2026-08-05",
+  "phase": "15:45速報答え合わせ",
+  "judged_at": "2026-08-05T18:34:00+09:00",
+  "batch_note": "本来15:45起動の速報答え合わせだが、本セッションの実行が18:27にずれ込んだ。ただし取得した日経平均・TOPIX・個別7銘柄の値はいずれも松井証券・nikkei.com個別ページの2ソースで完全一致する大引け(15:30)確定値であり、実行時刻の遅れ自体はデータの鮮度に影響していない。pendingはゼロ",
+  "methodology_note": "本日は株探の前場ランキング記事（値上がり率・値下がり率、11:30〜11:47配信）と注目銘柄ダイジェスト記事から、候補7銘柄すべての真の前引け(11:30)個別値を事後的に発見・取得できた（従来は個別銘柄の前引け値が構造的に未取得のためanchor(14:xx)→大引けの代替運用が続いていた）。そのため本日はcandidates_20260805.json記載のanchor(14:14〜14:17時点)に加え、設計書が本来定めるダブル基準の一次基準——真の前引け(11:30)→大引け——で終値ベースの判定(close_verdict)を行った（±0.5%デッドバンド）。二次基準「後場に伸びる瞬間があったか」（前引け比+2%以上、下落系は前引け比-2%以下）は、取得できた高値・安値に記録時刻が付与されていなかったため、終日の高値・安値を参考値として代用し、後場中に記録されたものかは確認できていない点を明記した上でstretch_verdictとして併記する（憲法③）。ストップ高で終日（または前引け前から）張り付いたまま引けた銘柄は設計書ルール通り「維持=的中」とした",
+  "market": {
+    "nikkei_close": 66300.44,
+    "nikkei_close_change": 2342.91,
+    "nikkei_close_change_pct": 3.66,
+    "nikkei_prev_close": 63957.53,
+    "nikkei_maehiike_ref": 65861.00,
+    "nikkei_note": "前引け+1,903.47円(+2.98%)から後場にかけてさらに上げ幅を拡大し、+2,342.91円(+3.66%)の66,300.44円で大幅続伸（7/23以来約2週間ぶりの高値水準）。前日の米SOX指数+6%超を受けた半導体・AIラリー再燃が終日持続し、日米好決算（村田製作所・イビデン等）も追い風となった。データはnikkei.com記事(DGXZQOFL050JX0V00C26A8000000)とWebSearch経由の複数記事（株式新聞Web・日経電子版）で一致確認済み",
+    "topix_close": 4046.17,
+    "topix_close_change": 84.39,
+    "topix_close_change_pct": 2.13,
+    "topix_note": "前引け+60.62(+1.53%)から後場にかけて上げ幅を拡大し+84.39(+2.13%)で引けたが、日経平均の伸び率(+3.66%)には届かず、値がさ半導体株中心の相場だったことを裏付ける",
+    "breadth_prime_close": {"up": 1019, "down": 491, "flat": 48, "note": "nikkei.com記事より。前引け時点(1,023/489、14:04時点)からほぼ同水準で推移し、大引けにかけて裾野の強さは維持された"},
+    "mood_verdict": "前日の米SOX指数+6%超を受けた半導体・AIラリー再燃で、日経平均は寄り付きから買われ前引け+2.98%・14時台+3.43%・大引け+3.66%(66,300.44円)と一段と上げ幅を拡大して引けた。イビデン(ストップ高、通期上方修正+株式分割)・村田製作所(+9.82%、Q1大幅増収増益)・ヤマハ発動機(+19.46%、2日連続の決算好感)・ソフトバンクグループ(+13.96%、Arm株高・AI思惑)が牽引役となった一方、横河電機・ダイキン工業・日清食品HDのように好決算・増収でも「通期据え置き」「利益率悪化」を理由に売られた銘柄も相次ぎ、地合い全体の強さの中でも決算の質による明暗が最後まで残った1日だった"
+  },
+  "results": [
+    {
+      "code": "9984", "name": "ソフトバンクグループ", "quadrant": "押せ押せ", "confidence": 4, "action": "⏸ 待ち推奨",
+      "prev_close": 5228.0,
+      "maehiike_time": "11:30", "maehiike": 5803.0, "maehiike_change_pct": 11.00,
+      "anchor_time": "14:14", "anchor": 5880.0, "anchor_change_pct": 12.47,
+      "close": 5958.0, "close_change_yen": 730.0, "close_change_pct": 13.96,
+      "maehiike_to_close_pct": 2.67,
+      "close_verdict": "WIN",
+      "day_high": 5958.0, "day_low": 5605.0, "day_open": 5628.0,
+      "stretch_change_pct_vs_maehiike": 2.67,
+      "stretch_verdict": "WIN（高値=終値のため、後場も伸び続けたまま引けたとみられる）",
+      "note": "前引け(+11.00%)から大引け(+13.96%)にかけてさらに+2.67%伸びて引け、押せ押せ判定はWIN。高値も終値と同値で、後場に押し目なく最後まで買われ続けた形。⏸待ち推奨（押し目待ち）のアクション判断は、終日押し目が訪れなかったため結果的に機会損失側だった",
+      "data_quality": "終値5,958円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点表記）。前引け値5,803円(+11.00%)はzaikei.co.jp「注目銘柄ダイジェスト（前場）」記事による",
+      "sources": ["https://finance.matsui.co.jp/stock/9984/index", "https://www.nikkei.com/nkd/company/?scode=9984", "https://www.zaikei.co.jp/article/20260805/864487.html"]
+    },
+    {
+      "code": "4062", "name": "イビデン", "quadrant": "押せ押せ", "confidence": 4, "action": "👀 観察のみ",
+      "prev_close": 16330.0,
+      "maehiike_time": "10:58頃(推定)", "maehiike": 20330.0, "maehiike_change_pct": 24.49,
+      "anchor_time": "10:58", "anchor": 20330.0, "anchor_change_pct": 24.49,
+      "close": 20330.0, "close_change_yen": 4000.0, "close_change_pct": 24.49,
+      "maehiike_to_close_pct": 0.00,
+      "close_verdict": "WIN",
+      "day_high": 20330.0, "day_low": null,
+      "stretch_verdict": "WIN（S高張り付き）",
+      "note": "10:58時点で既にストップ高(20,330円)に到達しており、株探の話題株ピックアップ夕刊(1)・S高銘柄一覧(引け時点10銘柄)でも終値がストップ高価格と一致していることを確認。終日その水準を維持したまま引け、設計書の「S高S安張り付きは維持=的中」ルールに準じ押せ押せ判定はWIN。👀観察のみ（物理的に入りにくい板）のアクション判断は妥当だったが、終日値を下げなかったため『乗れていれば』利益機会ではあった",
+      "data_quality": "終値20,330円は松井証券・nikkei.com個別ページ・株探「話題株ピックアップ【夕刊】（1）」(n202608051175)・S高銘柄一覧(n202608051144)の4ソースで完全一致",
+      "sources": ["https://finance.matsui.co.jp/stock/4062/index", "https://www.nikkei.com/nkd/company/?scode=4062", "https://s.kabutan.jp/news/n202608051175/", "https://s.kabutan.jp/news/n202608051144/"]
+    },
+    {
+      "code": "6981", "name": "村田製作所", "quadrant": "押せ押せ", "confidence": 4, "action": "⏸ 待ち推奨",
+      "prev_close": 7129.0,
+      "maehiike_time": "11:30", "maehiike": 7785.0, "maehiike_change_pct": 9.20,
+      "anchor_time": "14:16", "anchor": 7866.0, "anchor_change_pct": 10.34,
+      "close": 7829.0, "close_change_yen": 700.0, "close_change_pct": 9.82,
+      "maehiike_to_close_pct": 0.57,
+      "close_verdict": "WIN",
+      "day_open": 7351.0, "day_high": 7915.0, "day_low": 7305.0,
+      "stretch_change_pct_vs_maehiike": 1.67,
+      "stretch_verdict": "LOSE（終日高値7,915円でも前引け比+1.67%にとどまり、後場に+2%以上伸びる瞬間は確認できず）",
+      "note": "前引け(+9.20%)から大引け(+9.82%)にかけて+0.57%とデッドバンドをわずかに超えて続伸し、終値ベースの押せ押せ判定はWIN。ただし終日の高値(7,915円)でも前引け比+1.67%どまりで、二次基準（後場+2%以上の伸び）は満たさず、値動きとしては『じわ高』で三菱自型の派手な後場スパイクではなかった。⏸待ち推奨（押し目待ち）のアクション判断は、終日大きな押し目が訪れなかったため結果的に機会損失側だった",
+      "data_quality": "終値7,829円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点表記）。前引け値7,785円(+9.20%)はWebSearch経由（複数のミラー記事で一致）",
+      "sources": ["https://finance.matsui.co.jp/stock/6981/index", "https://www.nikkei.com/nkd/company/?scode=6981"]
+    },
+    {
+      "code": "7272", "name": "ヤマハ発動機", "quadrant": "押せ押せ", "confidence": 3, "action": "⏸ 待ち推奨",
+      "prev_close": 1511.0,
+      "maehiike_time": "11:30", "maehiike": 1784.5, "maehiike_change_pct": 18.10,
+      "anchor_time": "14:16", "anchor": 1802.5, "anchor_change_pct": 19.29,
+      "close": 1805.0, "close_change_yen": 294.0, "close_change_pct": 19.46,
+      "maehiike_to_close_pct": 1.15,
+      "close_verdict": "WIN",
+      "day_high": 1832.0, "day_low": 1692.5,
+      "stretch_change_pct_vs_maehiike": 2.66,
+      "stretch_verdict": "WIN（終日高値1,832円が前引け比+2.66%で二次基準を満たすが、後場中の記録かは時刻未確認・参考値）",
+      "note": "前引け(+18.10%)から大引け(+19.46%)にかけて+1.15%さらに伸びて引け、押せ押せ判定はWIN。中間決算増益+88.6%を材料に8/4・8/5と2営業日連続の続伸で年初来高値も更新。⏸待ち推奨のアクション判断は、2日間で+35%超という急伸の高値覚えリスクを警戒したものだったが、結果的には押し目なく伸び続けたため機会損失側だった",
+      "data_quality": "終値1,805円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点表記）。前引け値1,784.5円(+18.10%)はzaikei.co.jp記事による",
+      "sources": ["https://finance.matsui.co.jp/stock/7272/index", "https://www.nikkei.com/nkd/company/?scode=7272", "https://www.zaikei.co.jp/article/20260805/864487.html"]
+    },
+    {
+      "code": "6841", "name": "横河電機", "quadrant": "底なし", "confidence": 4, "action": "🚫 触らない",
+      "prev_close": 5894.0,
+      "maehiike_time": "11:30ごろ(11:47配信の前場ランキングより)", "maehiike": 5447.0, "maehiike_change_pct": -7.60,
+      "anchor_time": "14:17", "anchor": 5279.0, "anchor_change_pct": -10.43,
+      "close": 5302.0, "close_change_yen": -592.0, "close_change_pct": -10.04,
+      "maehiike_to_close_pct": -2.66,
+      "close_verdict": "WIN",
+      "day_open": 5460.0, "day_high": 5581.0, "day_low": 5253.0,
+      "stretch_change_pct_vs_maehiike": -3.56,
+      "stretch_verdict": "WIN（終日安値5,253円が前引け比-3.56%で二次基準を満たすが、後場中の記録かは時刻未確認・参考値）",
+      "note": "前引け(-7.60%)から大引け(-10.04%)にかけてさらに-2.66%下落し、底なし判定はWIN。東証プライム値下がり率ランキングでも終日上位に留まり、⑤期待剥落型（受注は堅調も通期据え置きで失望）の売りが後場も続いた。🚫触らないのアクション判断は結果的に妥当（実損ゼロ）",
+      "data_quality": "終値5,302円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点表記）。前引け値5,447円(-7.6%)はYahoo!ファイナンス経由の株探「前場のランキング【値下がり率】」記事(5位)による",
+      "sources": ["https://finance.matsui.co.jp/stock/6841/index", "https://www.nikkei.com/nkd/company/?scode=6841", "https://finance.yahoo.co.jp/news/detail/419c46eac01a0c762e86d14d6764b27fad9c29a7"]
+    },
+    {
+      "code": "6367", "name": "ダイキン工業", "quadrant": "底なし", "confidence": 3, "action": "🚫 触らない",
+      "prev_close": 23765.0,
+      "maehiike_time": "11:30ごろ(11:47配信の前場ランキングより)", "maehiike": 22000.0, "maehiike_change_pct": -7.40,
+      "anchor_time": "14:17", "anchor": 22035.0, "anchor_change_pct": -7.28,
+      "close": 22265.0, "close_change_yen": -1500.0, "close_change_pct": -6.31,
+      "maehiike_to_close_pct": 1.20,
+      "close_verdict": "LOSE",
+      "day_high": 22290.0, "day_low": 21200.0,
+      "stretch_change_pct_vs_maehiike": -3.64,
+      "stretch_verdict": "参考（終日安値21,200円は前引け比-3.64%で二次基準の水準に達するが、大引けが前引けを上回っていることから、この安値は前引け前＝前場のうちに記録された可能性が高いとみられる。後場に限れば下げが続かず反発した側面が強い）",
+      "note": "前引け(-7.40%)から大引け(-6.31%)にかけて+1.20%反発し、デッドバンドを超えて底なし判定はLOSE。増収も利益コンセンサス未達という⑤期待剥落型に近い形で急落したが、後場は下げ止まって切り返した。🚫触らないのアクション判断だったため実損はゼロだが、逆張り信用買いの機会損失ではあった",
+      "data_quality": "終値22,265円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点表記）。前引け値22,000円(-7.4%)はYahoo!ファイナンス経由の株探「前場のランキング【値下がり率】」記事(7位)による",
+      "sources": ["https://finance.matsui.co.jp/stock/6367/index", "https://www.nikkei.com/nkd/company/?scode=6367", "https://finance.yahoo.co.jp/news/detail/419c46eac01a0c762e86d14d6764b27fad9c29a7"]
+    },
+    {
+      "code": "2897", "name": "日清食品ホールディングス", "quadrant": "底なし", "confidence": 2, "action": "🚫 触らない",
+      "prev_close": 2970.0,
+      "maehiike_time": "11:30ごろ(11:47配信の前場ランキングより)", "maehiike": 2767.0, "maehiike_change_pct": -6.80,
+      "anchor_time": "14:17", "anchor": 2755.0, "anchor_change_pct": -7.24,
+      "close": 2775.0, "close_change_yen": -195.0, "close_change_pct": -6.57,
+      "maehiike_to_close_pct": 0.29,
+      "close_verdict": "DRAW",
+      "day_open": 2896.0, "day_high": 2899.5, "day_low": 2754.0,
+      "stretch_change_pct_vs_maehiike": -0.47,
+      "stretch_verdict": "DRAW（終日安値も前引け比-0.47%でデッドバンド内、後場の伸びも縮みもほぼなし）",
+      "note": "前引け(-6.80%)から大引け(-6.57%)まで+0.29%とデッドバンド内でDRAW。増益(+18.3%)にもかかわらず売られた理由は本バッチのデータルートでは特定できないまま（憲法③）だったが、後場は方向感なく安値圏で膠着。🚫触らないのアクション判断は結果的に妥当（値がほぼ動かず実損・機会損失とも限定的）",
+      "data_quality": "終値2,775円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点表記）。前引け値2,767円(-6.8%)はYahoo!ファイナンス経由の株探「前場のランキング【値下がり率】」記事(9位)による",
+      "sources": ["https://finance.matsui.co.jp/stock/2897/index", "https://www.nikkei.com/nkd/company/?scode=2897", "https://finance.yahoo.co.jp/news/detail/419c46eac01a0c762e86d14d6764b27fad9c29a7"]
+    }
+  ],
+  "score_today": {
+    "win": 5,
+    "lose": 1,
+    "draw": 1,
+    "pending": 0,
+    "note": "WIN=ソフトバンクグループ(9984)・イビデン(4062、S高張り付き)・村田製作所(6981)・ヤマハ発動機(7272)・横河電機(6841)、LOSE=ダイキン工業(6367、前引けから反発)、DRAW=日清食品HD(2897、デッドバンド内)。候補7銘柄すべて大引け確定・2ソース以上クロスチェック済みでpendingゼロ"
+  },
+  "score_cumulative": {
+    "win": 30,
+    "lose": 13,
+    "draw": 18,
+    "unverified": 1,
+    "excluded_20260716": 7,
+    "as_of": "2026-08-05 18:34時点。2026-08-03 21:40確定スイープ時点(25勝12敗17分、8/4は候補なしのため増減なし)に本日確定分(5勝1敗1分)を反映",
+    "note": "累計勝率＝30/(30+13+18)=49.2%（引き分け除く分母では30/43=69.8%）",
+    "calibration_by_confidence": {
+      "確信4": {"win": 13, "lose": 7, "draw": 3, "n": 23, "win_rate_pct": 56.5},
+      "確信3": {"win": 15, "lose": 5, "draw": 13, "n": 33, "win_rate_pct": 45.5},
+      "確信2": {"win": 2, "lose": 1, "draw": 2, "n": 5, "win_rate_pct": 40.0},
+      "note": "確信4はソフトバンクG・イビデン・村田製作所・横河電機の4件WINが加わり47.4%→56.5%に上昇。確信3はヤマハ発動機のWINとダイキン工業のLOSEが加わり45.2%→45.5%とほぼ横ばい。確信2は日清食品HDのDRAWが加わり50.0%→40.0%に低下。本日は確信4が最も的中率の高い区分となったが、これまでの数十日単位の傾向（確信度と的中率の単調関係の崩れ）を覆すにはサンプル不足で、引き続き数十日単位で評価すべき"
+    },
+    "win_rate_by_quadrant": {
+      "押せ押せ": {"win": 16, "lose": 3, "draw": 8, "n": 27, "win_rate_pct": 59.3},
+      "失速警戒": {"win": 5, "lose": 5, "draw": 4, "n": 14, "win_rate_pct": 35.7},
+      "底なし": {"win": 8, "lose": 4, "draw": 6, "n": 18, "win_rate_pct": 44.4},
+      "下げすぎ": {"win": 1, "lose": 1, "draw": 0, "n": 2, "win_rate_pct": 50.0},
+      "note": "押せ押せは本日4件全勝(ソフトバンクG・イビデン・村田製作所・ヤマハ発動機)が加わり52.2%→59.3%に上昇し4象限中トップを維持・拡大。底なしは横河電機のWIN・ダイキン工業のLOSE・日清食品HDのDRAWが加わり46.7%→44.4%とやや低下。失速警戒は今週も候補ゼロで35.7%のまま4象限中最低の座を維持。下げすぎは7月中旬以降ずっと候補が出ておらず空白が続く"
+    }
+  },
+  "yaskawa_watch": {
+    "code": "6506",
+    "prev_close": 5133.0,
+    "open": 5231.0, "high": 5405.0, "high_time": "11:02", "low": 5211.0, "low_time": "9:00",
+    "close": 5382.0, "close_change_yen": 249.0, "close_change_pct": 4.85,
+    "anchor_time": "14:14", "anchor_price": 5356.0, "anchor_change_pct": 4.34,
+    "anchor_to_close_pct": 0.49,
+    "conditions": {
+      "A": true,
+      "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は16営業日連続でユーザー未確認）",
+      "C": "true（本日は日経平均が記録的な大幅高で安川電機も上昇日のため値下がり率ランキングは当然圏外）"
+    },
+    "unlock": false,
+    "data_quality": "終値5,382円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点データと明記）",
+    "note": "条件Aが確定的に成立（前日終値5,133円→5,382円、+4.85%）。anchor(14:14、+4.34%)からはやや上げ幅を拡大して引けた。半導体・AIラリーの地合いに沿った動きで、ロボット・FA関連としての固有材料は本バッチのデータルートでは確認できず。条件Bが16営業日連続でユーザー未確認のまま長期化しており、条件A成立でも3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
+    "sources": ["https://finance.matsui.co.jp/stock/6506/index", "https://www.nikkei.com/nkd/company/?scode=6506"]
+  },
+  "fastretailing_watch": {
+    "code": "9983",
+    "prev_close": 78700.0,
+    "open": 78100.0, "high": 78480.0, "low": 76750.0,
+    "close": 76870.0, "close_change_yen": -1830.0, "close_change_pct": -2.33,
+    "unlock_condition_reference": "前日終値を上回って引ける（8/4は前日終値79,600円を下回る78,700円で引け条件未達）",
+    "unlock_status": "終値76,870円は前日終値78,700円を下回り、8/4に続き2営業日連続で条件未達",
+    "note": "半導体・AI関連の全面高（地合い+3.66%）とは対照的に内需・グロース色の強いファーストリテイリングは-2.33%と逆行安。地合いが強い日でも資金が半導体・AI関連に集中し、値がさグロース株が置いていかれる構図が続いている。銘柄固有の新規材料は本バッチのデータルートでは確認できず",
+    "data_quality": "終値76,870円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点データと明記）",
+    "sources": ["https://finance.matsui.co.jp/stock/9983/index", "https://www.nikkei.com/nkd/company/?scode=9983"]
+  },
+  "learnings": [
+    "本日は株探の前場ランキング記事（11:30〜11:47配信）を事後的に検索・発見することで、候補7銘柄すべての真の前引け(11:30)個別値を取得できた。これにより設計書が本来定める『前引け→大引け』のダブル基準を初めて厳密な形で適用できた。今後の15:45バッチでも、昼バッチのanchorが14:xx台にずれ込んだ日は同様に事後検索で前引け値を補完できる可能性があり、次回以降も試すべき手法として記録する",
+    "村田製作所(6981)は終値ベースでは僅差(+0.57%)のWINだったが、終日の高値でも前引け比+1.67%止まりで二次基準（後場+2%以上の伸び）は満たさなかった。地合い全体が強い日でも、決算好感の『じわ高』銘柄と、後場に一段ギアが上がる銘柄とでは値動きの質が異なることが今回のダブル基準運用で可視化された",
+    "ダイキン工業(6367)は前引け時点で-7.40%まで売られたが、大引けにかけて+1.20%反発しLOSEとなった一方、横河電機(6841)は前引けからさらに-2.66%売られ続けWINとなった。同じ『増収も利益面でコンセンサス未達』という⑤期待剥落型の決算内容でも、銘柄によって後場の値動きの帰趨が分かれた。次回以降、期待剥落型を一律に『底なし』と見立てず、下げ幅の大きさ（ダイキンは-7%台、横河電機も-7%台とほぼ同水準だった点は要注意）だけでなく個別の需給・信用残なども併せて検討する余地がある"
+  ]
+}
