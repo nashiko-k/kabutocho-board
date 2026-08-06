@@ -7,9 +7,19 @@
     "intraday_note": "7/14は13:20に5,265（4月以来安値）まで投げ→引けにかけV字、15分足で短期・中期MA上で引け。セリクラ候補だが日足では未確認"
   },
   "conditions": {
-    "A": {"desc": "前日終値を上回って引ける（下げ止まりの一次証拠）", "reference": "7/15なら5,436円超えで引け"},
-    "B": {"desc": "5,400〜5,500の出来高帯の上で寄り付き、前場それを維持", "reference": "7/14に形成された攻防ライン", "redefinition_proposal_20260723": "旧5,400〜5,500円帯は7/17の暴落で完全に無効化されたまま7営業日放置されていた。7/21〜7/23の3営業日の実勢（安値4,981〜5,289円・高値5,150〜5,421円）から、新たな攻防帯を『5,150〜5,420円』と仮置きする案を提示する。ただしこれは冷静な判断が必要な条件変更であり、AIが busy dayの流れで一存で確定させるべきではないため、あくまで提案（unconfirmed）としてここに記録し、ユーザーの追認を待つ"},
-    "C": {"desc": "値下がり率上位・日経マイナス寄与上位から名前が消える（売り圧の枯れ）", "reference": "市況記事ベースで判定"}
+    "A": {
+      "desc": "前日終値を上回って引ける（下げ止まりの一次証拠）",
+      "reference": "7/15なら5,436円超えで引け"
+    },
+    "B": {
+      "desc": "5,400〜5,500の出来高帯の上で寄り付き、前場それを維持",
+      "reference": "7/14に形成された攻防ライン",
+      "redefinition_proposal_20260723": "旧5,400〜5,500円帯は7/17の暴落で完全に無効化されたまま7営業日放置されていた。7/21〜7/23の3営業日の実勢（安値4,981〜5,289円・高値5,150〜5,421円）から、新たな攻防帯を『5,150〜5,420円』と仮置きする案を提示する。ただしこれは冷静な判断が必要な条件変更であり、AIが busy dayの流れで一存で確定させるべきではないため、あくまで提案（unconfirmed）としてここに記録し、ユーザーの追認を待つ"
+    },
+    "C": {
+      "desc": "値下がり率上位・日経マイナス寄与上位から名前が消える（売り圧の枯れ）",
+      "reference": "市況記事ベースで判定"
+    }
   },
   "entry_plan": {
     "style": "打診→本体の2段構え。打診は外れても諦められるサイズ",
@@ -23,7 +33,11 @@
       "prev_close": 5436,
       "change_yen": 54,
       "change_pct": 0.99,
-      "conditions": {"A": true, "B": "unconfirmed", "C": true},
+      "conditions": {
+        "A": true,
+        "B": "unconfirmed",
+        "C": true
+      },
       "unlock": false,
       "note": "条件A初達成（前日終値5,436円を上回って引け）。条件Cも達成の形（値下がり上位・話題株から3日連続で不在）。条件B（5,400〜5,500出来高帯の攻防）は前場データ未取得のため未検証のまま。3条件同時成立に至らず解除通知は見送り"
     },
@@ -33,7 +47,11 @@
       "prev_close": 5490,
       "change_yen_approx": -21,
       "change_pct_approx": -0.38,
-      "conditions": {"A": false, "B": "unconfirmed", "C": true},
+      "conditions": {
+        "A": false,
+        "B": "unconfirmed",
+        "C": true
+      },
       "unlock": false,
       "data_quality": "概算（単一ソースのみで確認、複数ミラーでのクロスチェック未達成）",
       "note": "富士通がファナック・安川・川重とフィジカルAI事業検討開始を発表（決算ショック以来初の好材料）。ただし発表当日が日経-1,916円の暴落日と重なり、終値は前日比僅差未達（デッドバンド圏内）。条件Cは維持。3条件同時成立に至らず、撤退線5,265円据え置き"
@@ -44,7 +62,11 @@
       "prev_close": 5490,
       "change_yen": 4,
       "change_pct": 0.07,
-      "conditions": {"A": true, "B": "unconfirmed", "C": true},
+      "conditions": {
+        "A": true,
+        "B": "unconfirmed",
+        "C": true
+      },
       "unlock": false,
       "data_quality": "18:30確定スイープでnikkei.com個別ページ値に修正（2回の取得で同値、単一サイトのため概算表記は継続）",
       "revision_note": "7/16当日の速報では単一ソースの概算5,469円（-0.38%）としていたが、確定スイープで5,494円（+0.07%）に訂正。条件Aは『僅差未達』から『僅差達成』に変わるが、デッドバンド圏内の僅差である性質は変わらないため過信は禁物",
@@ -57,7 +79,11 @@
       "change_yen_approx": -378,
       "change_pct_approx": -6.88,
       "maebike_approx": 5068,
-      "conditions": {"A": false, "B": false, "C": "判定不能（本日は昼・風向き・速報バッチが未実行で市況記事の値下がり上位チェックができず）"},
+      "conditions": {
+        "A": false,
+        "B": false,
+        "C": "判定不能（本日は昼・風向き・速報バッチが未実行で市況記事の値下がり上位チェックができず）"
+      },
       "unlock": false,
       "stop_loss_breach": true,
       "data_quality": "概算（大引け値はnikkei.com単独ソース15:30更新、前引け値はzaikei.co.jp。方向は2ソース一致だが正確な大引け値は翌朝バッチでの再クロスチェック推奨）",
@@ -88,9 +114,14 @@
     {
       "date": "2026-07-22",
       "prev_close": 5119,
-      "open": 5294, "high": 5375, "low": 5152,
-      "maehiike_approx": 5375, "maehiike_change_pct_approx": 4.99,
-      "close": 5213, "close_change_yen": 94, "close_change_pct": 1.84,
+      "open": 5294,
+      "high": 5375,
+      "low": 5152,
+      "maehiike_approx": 5375,
+      "maehiike_change_pct_approx": 4.99,
+      "close": 5213,
+      "close_change_yen": 94,
+      "close_change_pct": 1.84,
       "maehiike_to_close_pct_approx": -3.01,
       "conditions": {
         "A": true,
@@ -106,9 +137,15 @@
       "date": "2026-07-23",
       "batch": "15:45速報答え合わせで大引け確定値を反映（本セッション起動が18:14にずれ込んだため実質確定値ベース）。18:30確定スイープで再確認、数値・条件判定に変更なし",
       "prev_close": 5213,
-      "open": 5355, "high": 5421, "high_time": "9:03", "low": 5289,
-      "maehiike": 5347, "maehiike_change_pct": 2.57,
-      "close": 5335, "close_change_yen": 122, "close_change_pct": 2.34,
+      "open": 5355,
+      "high": 5421,
+      "high_time": "9:03",
+      "low": 5289,
+      "maehiike": 5347,
+      "maehiike_change_pct": 2.57,
+      "close": 5335,
+      "close_change_yen": 122,
+      "close_change_pct": 2.34,
       "maehiike_to_close_pct": -0.22,
       "conditions": {
         "A": true,
@@ -123,8 +160,12 @@
       "date": "2026-07-24",
       "batch": "15:45速報答え合わせ（本日は11:38昼バッチが未実行のため4象限候補選定なし。本ウォッチは独立ウォッチとして継続判定）",
       "prev_close": 5335,
-      "open": 5263, "high": 5305, "low": 5078,
-      "close": 5117, "close_change_yen": -218, "close_change_pct": -4.09,
+      "open": 5263,
+      "high": 5305,
+      "low": 5078,
+      "close": 5117,
+      "close_change_yen": -218,
+      "close_change_pct": -4.09,
       "conditions": {
         "A": false,
         "B": "未定義のまま（unconfirmed継続、ユーザー未確認）",
@@ -138,8 +179,12 @@
       "date": "2026-07-27",
       "batch": "18:30確定スイープ。昼バッチ実行が15:04にずれ込んだため14:51時点の速報値を経由したが、本エントリーは大引け15:30確定値に更新済み",
       "prev_close": 5117,
-      "open": 5222, "high": 5307, "low": 5171,
-      "close": 5257, "close_change_yen": 140, "close_change_pct": 2.74,
+      "open": 5222,
+      "high": 5307,
+      "low": 5171,
+      "close": 5257,
+      "close_change_yen": 140,
+      "close_change_pct": 2.74,
       "conditions": {
         "A": true,
         "B": "未定義のまま（7/23昼バッチ提示の5,150〜5,420円再定義案は5営業日経過してもユーザー未確認のためunconfirmed継続）",
@@ -153,8 +198,14 @@
       "date": "2026-07-28",
       "batch": "15:45速報答え合わせ（本日は11:38昼バッチが未実行のため4象限候補選定なし。7/24に続き2回目の欠測日。本ウォッチは独立ウォッチとして継続判定）",
       "prev_close": 5257,
-      "open": 5140, "high": 5140, "high_time": "9:03", "low": 4732, "low_time": "15:14",
-      "close": 4756, "close_change_yen": -501, "close_change_pct": -9.53,
+      "open": 5140,
+      "high": 5140,
+      "high_time": "9:03",
+      "low": 4732,
+      "low_time": "15:14",
+      "close": 4756,
+      "close_change_yen": -501,
+      "close_change_pct": -9.53,
       "conditions": {
         "A": false,
         "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は6営業日連続でユーザー未確認。本日終値4,756円はこの仮置き帯自体を大きく下抜けており、再定義案の水準見直しが必要になった可能性がある）",
@@ -163,15 +214,26 @@
       "unlock": false,
       "data_quality": "終値4,756円はnikkei.com個別ページ('15:30'表記)と松井証券('2026年7月28日 15:30'表記)の2ソース完全一致",
       "note": "半導体・AI関連の全面安（韓国KOSPI急落・米SOX続落を受けた連想売り、日経平均-3.95%）に直接巻き込まれ、前日終値比-9.53%の大幅安。条件Aは明確に不成立に転落し、7/21〜7/27で積み上がっていた『前日終値超え』の技術的な下げ止まり感はほぼ消えた。条件Cも本日は非該当（値下がり上位格に位置）。7/24の急落時と同様、地合い急変（半導体中心の全面安）に巻き込まれた側面が大きいとみられるが銘柄固有の新規悪材料は確認できず、断定は避ける（憲法①）。3条件同時成立には程遠く、解除通知は見送り",
-      "sources": ["www.nikkei.com/nkd/company/?scode=6506", "finance.matsui.co.jp/stock/6506/index"]
+      "sources": [
+        "www.nikkei.com/nkd/company/?scode=6506",
+        "finance.matsui.co.jp/stock/6506/index"
+      ]
     },
     {
       "date": "2026-07-29",
       "batch": "15:45速報答え合わせで大引け確定値に更新（昼バッチのanchor14:22時点-3.85%から、大引けにかけて下げ幅がやや縮小）",
       "prev_close": 4756,
-      "open": 4826, "high": 4890, "high_time": "9:20", "low": 4465, "low_time": "13:19",
-      "close": 4629, "close_change_yen": -127, "close_change_pct": -2.67,
-      "anchor_time": "14:22", "anchor_price": 4573, "anchor_change_pct": -3.85,
+      "open": 4826,
+      "high": 4890,
+      "high_time": "9:20",
+      "low": 4465,
+      "low_time": "13:19",
+      "close": 4629,
+      "close_change_yen": -127,
+      "close_change_pct": -2.67,
+      "anchor_time": "14:22",
+      "anchor_price": 4573,
+      "anchor_change_pct": -3.85,
       "anchor_to_close_pct": 1.22,
       "conditions": {
         "A": false,
@@ -181,15 +243,26 @@
       "unlock": false,
       "data_quality": "終値4,629円はnikkei.com個別ページ・松井証券の2ソースで完全一致（いずれも15:30時点データと明記）",
       "note": "半導体・AI関連銘柄への売りが2日連続で続く地合いの中、anchor(14:22,-3.85%)から大引けにかけては+1.22%とやや戻して引けた（-2.67%）。条件Aは本日も不成立で、7/28の急落(-9.53%)からの回復は道半ば。条件Cは値下がり率ランキング圏外という間接証拠から今回はtrueと判定したが、条件Bが8営業日連続で未確認のまま放置されており、3条件同時成立には至らず解除通知は見送り。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要が長期化している",
-      "sources": ["www.nikkei.com/nkd/company/?scode=6506", "finance.matsui.co.jp/stock/6506/index"]
+      "sources": [
+        "www.nikkei.com/nkd/company/?scode=6506",
+        "finance.matsui.co.jp/stock/6506/index"
+      ]
     },
     {
       "date": "2026-07-30",
       "batch": "15:45速報答え合わせで大引け確定値に更新（本セッションの実行が18:19にずれ込んだが、取得データはnikkei.com個別ページ表記の15:30大引け確定値）。昼バッチのanchor(14:10時点-1.45%)から後場終盤にかけてやや下げ幅を拡大",
       "prev_close": 4629,
-      "open": 4559, "high": 4745, "high_time": "10:09", "low": 4507, "low_time": "15:20",
-      "close": 4544, "close_change_yen": -85, "close_change_pct": -1.84,
-      "anchor_time": "14:10", "anchor_price": 4562, "anchor_change_pct": -1.45,
+      "open": 4559,
+      "high": 4745,
+      "high_time": "10:09",
+      "low": 4507,
+      "low_time": "15:20",
+      "close": 4544,
+      "close_change_yen": -85,
+      "close_change_pct": -1.84,
+      "anchor_time": "14:10",
+      "anchor_price": 4562,
+      "anchor_change_pct": -1.45,
       "anchor_to_close_pct": -0.39,
       "conditions": {
         "A": false,
@@ -199,14 +272,23 @@
       "unlock": false,
       "data_quality": "終値4,544円はnikkei.com個別ページ・松井証券の2ソースで完全一致（いずれも15:30時点データと明記）",
       "note": "半導体テーマの祭り（アドバンテスト決算）の陰で軽微な下落にとどまった一日。始値4,559円から一時高値4,745円(10:09、+2.5%)まで戻す場面もあったが、後場にかけて上げ幅を失い、安値4,507円は後場終盤(15:20)に更新して-1.84%で引けた。条件Aは本日も不成立で7/28急落からの回復は道半ば。条件Cはランキング圏外という間接証拠からtrue判定。条件Bが10営業日連続で未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["www.nikkei.com/nkd/company/?scode=6506", "finance.matsui.co.jp/stock/6506/index"]
+      "sources": [
+        "www.nikkei.com/nkd/company/?scode=6506",
+        "finance.matsui.co.jp/stock/6506/index"
+      ]
     },
     {
       "date": "2026-07-31",
       "batch": "昼バッチ（本来11:38起動が本セッションの実行で14:49台にずれ込み、anchorは14:38時点。大引け(15:30)未確定）",
       "prev_close": 4544,
-      "open": 4850, "high": 4977, "high_time": "10:43", "low": 4744, "low_time": "9:18",
-      "anchor_time": "14:38", "anchor_price": 4895, "anchor_change_pct": 7.72,
+      "open": 4850,
+      "high": 4977,
+      "high_time": "10:43",
+      "low": 4744,
+      "low_time": "9:18",
+      "anchor_time": "14:38",
+      "anchor_price": 4895,
+      "anchor_change_pct": 7.72,
       "conditions": {
         "A": "anchor時点でtrue見込み（+7.72%で前日終値を上回っているが大引け未確定）",
         "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は11営業日連続でユーザー未確認）",
@@ -215,15 +297,25 @@
       "unlock": false,
       "data_quality": "anchor値4,895円はnikkei.com個別ページ単一ソース（14:38時点データと明記）。大引け確定値は次回バッチで反映予定",
       "note": "半導体祭りで日経平均が記録的な大幅高となる中、安川電機もAI・半導体テーマの連想で+7.72%まで買われた。条件Aはanchor時点でtrue見込みだが大引け未確定のため確定は次回バッチ待ち。条件Cは本日が上昇日のため実質的にtrue（値下がり方向の売り圧が枯れているかを問う条件の趣旨からは外れるが、機械的な判定基準としてはtrue）。条件Bが11営業日連続で未確認のまま長期化しており、条件Aが大引けで確定したとしても3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["www.nikkei.com/nkd/company/?scode=6506"]
+      "sources": [
+        "www.nikkei.com/nkd/company/?scode=6506"
+      ]
     },
     {
       "date": "2026-07-31",
       "batch": "15:45速報答え合わせ（本セッションの実行は18:33にずれ込んだが、取得データはnikkei.com個別ページ・松井証券いずれも15:30大引け確定値の2ソース一致）",
       "prev_close": 4544,
-      "open": 4850, "high": 4977, "high_time": "10:43", "low": 4744, "low_time": "9:18",
-      "close": 4867, "close_change_yen": 323, "close_change_pct": 7.11,
-      "anchor_time": "14:38", "anchor_price": 4895, "anchor_change_pct": 7.72,
+      "open": 4850,
+      "high": 4977,
+      "high_time": "10:43",
+      "low": 4744,
+      "low_time": "9:18",
+      "close": 4867,
+      "close_change_yen": 323,
+      "close_change_pct": 7.11,
+      "anchor_time": "14:38",
+      "anchor_price": 4895,
+      "anchor_change_pct": 7.72,
       "anchor_to_close_pct": -0.57,
       "conditions": {
         "A": true,
@@ -233,13 +325,18 @@
       "unlock": false,
       "data_quality": "終値4,867円はnikkei.com個別ページと松井証券の2ソースで完全一致（いずれも15:30時点データと明記）",
       "note": "条件Aが確定的に成立（前日終値4,544円→4,867円、+7.11%）。anchor(14:38、+7.72%)からは-0.57%とやや上げ幅を縮小したが引き続き大幅高で引けた。銘柄固有の新規材料は確認できず、半導体・AIテーマの地合い連想が主因とみられる。条件Bが12営業日連続でユーザー未確認のまま長期化しており、条件A成立でも3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["www.nikkei.com/nkd/company/?scode=6506", "finance.matsui.co.jp/stock/6506/index"]
+      "sources": [
+        "www.nikkei.com/nkd/company/?scode=6506",
+        "finance.matsui.co.jp/stock/6506/index"
+      ]
     },
     {
       "date": "2026-08-03",
       "batch": "昼バッチ（本来11:38起動が本セッションの実行で14:56台にずれ込み、anchorは14:43時点。大引け(15:30)未確定）。8/1・8/2は土日休場",
       "prev_close": 4867,
-      "anchor_time": "14:43", "anchor_price": 4948, "anchor_change_pct": 1.66,
+      "anchor_time": "14:43",
+      "anchor_price": 4948,
+      "anchor_change_pct": 1.66,
       "conditions": {
         "A": "anchor時点でtrue見込み（+1.66%で前日終値を上回っているが大引け未確定）",
         "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は13営業日連続でユーザー未確認）",
@@ -248,15 +345,23 @@
       "unlock": false,
       "data_quality": "anchor値4,948円は松井証券単一ソース（14:43時点データと明記）。大引け確定値は次回バッチで反映予定",
       "note": "本日は日米協調為替介入による円急伸（164円台→155〜157円台）を受けてプライム全面安（前場33業種中32業種下落）となる中、安川電機はanchor時点で前日終値をわずかに上回る堅調さを見せている。地合いが弱い日にもかかわらずプラス圏を維持している点は目を引くが、銘柄固有の新規材料は本バッチのデータルートでは確認できていない。条件Aはanchor時点でtrue見込みだが大引け未確定のため確定は次回バッチ待ち。条件Bが13営業日連続でユーザー未確認のまま長期化しており、条件Aが大引けで確定したとしても3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["finance.matsui.co.jp/stock/6506/index"]
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index"
+      ]
     },
     {
       "date": "2026-08-03",
       "batch": "15:45速報答え合わせ（本セッションの実行は19:31にずれ込んだが、取得データは松井証券・nikkei.com個別ページの2ソースで大引け15:30確定値が完全一致）",
       "prev_close": 4867,
-      "open": 4798, "high": 4982, "low": 4726,
-      "close": 4935, "close_change_yen": 68, "close_change_pct": 1.40,
-      "anchor_time": "14:43", "anchor_price": 4948, "anchor_change_pct": 1.66,
+      "open": 4798,
+      "high": 4982,
+      "low": 4726,
+      "close": 4935,
+      "close_change_yen": 68,
+      "close_change_pct": 1.4,
+      "anchor_time": "14:43",
+      "anchor_price": 4948,
+      "anchor_change_pct": 1.66,
       "anchor_to_close_pct": -0.26,
       "conditions": {
         "A": true,
@@ -266,14 +371,21 @@
       "unlock": false,
       "data_quality": "終値4,935円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点データと明記）",
       "note": "条件Aが確定的に成立（前日終値4,867円→4,935円、+1.40%）。anchor(14:43、+1.66%)からはやや上げ幅を縮小したが引き続き前日終値超えで引けた。日米協調為替介入で日経平均が反落した地合いの弱い日にもかかわらずプラス圏を維持しており、値動きの相対的な底堅さは目を引く。条件Bが13営業日連続でユーザー未確認のまま長期化しており、条件A成立でも3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["finance.matsui.co.jp/stock/6506/index", "www.nikkei.com/nkd/company/?scode=6506"]
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index",
+        "www.nikkei.com/nkd/company/?scode=6506"
+      ]
     },
     {
       "date": "2026-08-04",
       "batch": "18:30確定スイープ（本日は11:38昼バッチ・12:15風向き・15:45速報のいずれも実行記録がなく、本ウォッチのanchor値も存在しないため、18:30フェーズで大引け確定値を直接取得。data/results_20260804.json参照）",
       "prev_close": 4935,
-      "open": 4987, "high": 5147, "low": 4942,
-      "close": 5133, "close_change_yen": 198, "close_change_pct": 4.01,
+      "open": 4987,
+      "high": 5147,
+      "low": 4942,
+      "close": 5133,
+      "close_change_yen": 198,
+      "close_change_pct": 4.01,
       "conditions": {
         "A": true,
         "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は14営業日連続でユーザー未確認）",
@@ -282,13 +394,18 @@
       "unlock": false,
       "data_quality": "終値5,133円はnikkei.com個別ページと松井証券の2ソースで完全一致（いずれも15:30時点データと明記）",
       "note": "条件Aが確定的に成立（前日終値4,935円→5,133円、+4.01%）。半導体・AI関連への物色や日経平均の反発地合い（+0.32%）に沿った動きとみられるが、日経平均の上げ幅以上に大きく上昇しており銘柄固有の追い風があった可能性もある（本バッチのデータルートでは材料未確認）。条件Bが14営業日連続でユーザー未確認のまま長期化しており、条件A成立でも3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["finance.matsui.co.jp/stock/6506/index", "www.nikkei.com/nkd/company/?scode=6506"]
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index",
+        "www.nikkei.com/nkd/company/?scode=6506"
+      ]
     },
     {
       "date": "2026-08-05",
       "batch": "昼バッチ（11:38起動予定が本セッションの実行で14:29台にずれ込み、anchorは14:14時点。大引け(15:30)未確定）",
       "prev_close": 5133,
-      "anchor_time": "14:14", "anchor_price": 5356, "anchor_change_pct": 4.34,
+      "anchor_time": "14:14",
+      "anchor_price": 5356,
+      "anchor_change_pct": 4.34,
       "conditions": {
         "A": "anchor時点でtrue見込み（+4.34%で前日終値を上回っているが大引け未確定）",
         "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は15営業日連続でユーザー未確認。参考：本日のanchor価格5,356円はこの仮置き帯の範囲内に収まっているが、帯自体がunconfirmedのため条件成立の根拠には使わない）",
@@ -297,15 +414,25 @@
       "unlock": false,
       "data_quality": "anchor値5,356円は松井証券単一ソース（14:14時点データと明記）。大引け確定値は次回バッチで反映予定",
       "note": "半導体・AI関連の全面高（村田製作所+10%超、イビデン+24%超などが牽引）の地合いに沿って安川電機も+4.34%まで買われている。ロボット・FA関連としての値動きか単なる指数連動かは本バッチのデータルートでは切り分けられず、銘柄固有の新規材料も確認できていない。条件Aはanchor時点でtrue見込みだが大引け未確定のため確定は次回バッチ待ち。条件Bが15営業日連続でユーザー未確認のまま長期化しており、条件Aが大引けで確定したとしても3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["finance.matsui.co.jp/stock/6506/index"]
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index"
+      ]
     },
     {
       "date": "2026-08-05",
       "batch": "15:45速報答え合わせで大引け確定値を反映（本セッションの実行は18:34にずれ込んだが、取得データは松井証券・nikkei.com個別ページの2ソースで大引け15:30確定値が完全一致）",
       "prev_close": 5133,
-      "open": 5231, "high": 5405, "high_time": "11:02", "low": 5211, "low_time": "9:00",
-      "close": 5382, "close_change_yen": 249, "close_change_pct": 4.85,
-      "anchor_time": "14:14", "anchor_price": 5356, "anchor_change_pct": 4.34,
+      "open": 5231,
+      "high": 5405,
+      "high_time": "11:02",
+      "low": 5211,
+      "low_time": "9:00",
+      "close": 5382,
+      "close_change_yen": 249,
+      "close_change_pct": 4.85,
+      "anchor_time": "14:14",
+      "anchor_price": 5356,
+      "anchor_change_pct": 4.34,
       "anchor_to_close_pct": 0.49,
       "conditions": {
         "A": true,
@@ -315,13 +442,18 @@
       "unlock": false,
       "data_quality": "終値5,382円は松井証券とnikkei.com個別ページの2ソースで完全一致（いずれも15:30時点データと明記）",
       "note": "条件Aが確定的に成立（前日終値5,133円→5,382円、+4.85%）。anchor(14:14、+4.34%)からはやや上げ幅を拡大して引けた。半導体・AIラリーの地合いに沿った動きで、ロボット・FA関連としての固有材料は本バッチのデータルートでは確認できず。条件Bが16営業日連続でユーザー未確認のまま長期化しており、条件A成立でも3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["finance.matsui.co.jp/stock/6506/index", "www.nikkei.com/nkd/company/?scode=6506"]
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index",
+        "www.nikkei.com/nkd/company/?scode=6506"
+      ]
     },
     {
       "date": "2026-08-05",
       "batch": "18:30確定スイープ（15:45速報時点で終値5,382円は松井証券・nikkei.comの2ソースで確定済みだったため、本スイープでの数値変更なし。再確認のみの記録）",
       "prev_close": 5133,
-      "close": 5382, "close_change_yen": 249, "close_change_pct": 4.85,
+      "close": 5382,
+      "close_change_yen": 249,
+      "close_change_pct": 4.85,
       "conditions": {
         "A": true,
         "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は17営業日連続でユーザー未確認）",
@@ -330,7 +462,29 @@
       "unlock": false,
       "data_quality": "終値5,382円は松井証券・nikkei.com個別ページの2ソースで完全一致（15:45速報時点から変更なし）",
       "note": "18:30確定スイープで再確認した結果、15:45速報時点の終値5,382円(+4.85%)に変更なし。条件Aは確定的に成立、条件Cも成立（本日は日経平均+3.66%の記録的大幅高で値下がり率ランキングは当然圏外）。条件Bが17営業日連続でユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
-      "sources": ["finance.matsui.co.jp/stock/6506/index", "www.nikkei.com/nkd/company/?scode=6506"]
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index",
+        "www.nikkei.com/nkd/company/?scode=6506"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "batch": "昼バッチ（14:32起動予定が本セッションの実行で14:32台にずれ込み、anchorは14:18時点。大引け(15:30)未確定）",
+      "prev_close": 5382,
+      "anchor_time": "14:18",
+      "anchor_price": 5283,
+      "anchor_change_pct": -1.84,
+      "conditions": {
+        "A": "anchor時点でfalse見込み（前日終値5,382円を下回る5,283円で推移。大引け未確定なので確定は次回バッチ待ち）",
+        "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は18営業日連続でユーザー未確認）",
+        "C": "true見込み（本日の値下がり率上位・日経平均マイナス寄与上位のいずれにも安川電機の名前は確認できず）"
+      },
+      "unlock": false,
+      "data_quality": "anchor値5,283円は松井証券単一ソース（14:18時点データと明記）。大引け確定値は次回バッチで反映予定",
+      "note": "本日は前日の米ナスダック・SOX安を受けた半導体・AI関連への利益確定売りが先行し日経平均が前引け-1.56%まで下落する中、安川電機も-1.84%と上昇一服。条件Aがanchor時点でfalse見込みとなるのはここ最近では珍しく、直近の記録は連日true成立が続いていた。ロボット・FA関連としての固有材料は本バッチのデータルートでは確認できず、地合い（半導体テーマの利益確定売り）に沿った動きとみられる。条件Bは18営業日連続でユーザー未確認のまま長期化しており、条件A・Cが仮に大引けで確定しても条件B未確定のため3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index"
+      ]
     }
   ]
 }
