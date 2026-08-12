@@ -1,0 +1,94 @@
+{
+  "date": "2026-08-12",
+  "phase": "18:30確定スイープ",
+  "judged_at": "2026-08-12T19:32:00+09:00",
+  "confirmed_at": "2026-08-12T19:32:00+09:00",
+  "pipeline_gap_note": "本日は11:38昼バッチ・12:15風向き・15:45速報答え合わせのいずれも本セッションでは実行されなかった（このリポジトリに data/candidates_20260812.json 相当のファイルが存在せず、直前のコミットも8/10のもの）。そのため本日は候補銘柄の選定自体が行われていない。18:30確定スイープの役割は「速報で保留だった銘柄の終値確定」だが、保留銘柄も候補銘柄も存在しないため確定対象がゼロ。市場に押し目や急変が無かったからではなく、パイプラインの欠落によるデータ欠落である点を明記する（憲法③：成績への誠実さ／未確認の数字は使わない）。取得済みの市況実況値と、候補選定とは独立した毎日監視のウォッチ銘柄（安川電機・ファーストリテイリング）のみ、18:30時点で新たに大引け確定値を取得し記録した。8/11(火)は山の日で休場",
+  "batch_note": "18:30確定スイープ単独で起動。事後に(結果を知った上で)候補銘柄を選び「見立て」を捏造することは、確信度別較正・象限別勝率という成績表の前提（事前予測の的中率）を汚染するため行わない",
+  "market": {
+    "nikkei_close": 67524.06,
+    "nikkei_close_change": 553.84,
+    "nikkei_close_change_pct": 0.83,
+    "nikkei_close_note": "約1カ月ぶりの高値水準・5営業日続伸",
+    "topix_close": 4139.00,
+    "topix_close_change": 38.39,
+    "topix_close_change_pct": 0.94,
+    "topix_close_note": "6日続伸で史上最高値を更新",
+    "breadth_prime_close": {"up": 983, "down": 530, "flat": 43, "note": "日経電子版記事・株探(s.kabutan.jp)記事の値上がり/値下がり銘柄数が完全一致"},
+    "top_push_note": "米国市場のAI・半導体関連高（フィラデルフィア半導体株指数SOX反発）を受け東京市場も同セクターに買い。リクルートホールディングスが上場来高値を更新、アドバンテスト・イビデンなども上昇",
+    "top_drag_note": "ファーストリテイリング・ダイキン工業が下落",
+    "mood_verdict": "日経平均は+553.84円(+0.83%)の67,524.06円で5営業日続伸、約1カ月ぶりの高値水準を回復。TOPIXは+38.39pt(+0.94%)の4,139.00で6日続伸となり史上最高値を更新。値上がり983・値下がり530・変わらず43と値上がり優勢の全面高型。米国発のAI・半導体関連買いが指数を押し上げる一方、値がさのファーストリテイリング・ダイキン工業は下落側という選別も一部見られた",
+    "sources": [
+      "https://www.nikkei.com/article/DGXZQOFL105BH0Q6A810C2000000/",
+      "https://finance.yahoo.co.jp/news/detail/847c6e1718971118fa1345307a447ee72cba1439",
+      "https://s.kabutan.jp/news/n202608121265/"
+    ]
+  },
+  "results": [],
+  "score_today": {
+    "win": 0,
+    "lose": 0,
+    "draw": 0,
+    "pending": 0,
+    "candidates": 0,
+    "note": "本日は候補銘柄の選定自体が行われなかったため判定対象なし。0勝0敗0分はパイプライン欠落による欠測であり、候補が全て外れた／保留になったという意味ではない"
+  },
+  "score_cumulative": {
+    "win": 40,
+    "lose": 17,
+    "draw": 22,
+    "unverified": 1,
+    "excluded_20260716": 7,
+    "as_of": "2026-08-10 18:30確定スイープ時点の値を据え置き。本日(8/12)は判定対象銘柄がゼロのため累計は変化なし。8/11(火)は山の日で休場",
+    "note": "累計勝率＝40/(40+17+22)=50.6%（引き分け除く分母では40/57=70.2%）。数値は8/10確定スイープ時点からの単純据え置きであり本日分の追加なし",
+    "calibration_by_confidence": {
+      "確信4": {"win": 16, "lose": 8, "draw": 5, "n": 29, "win_rate_pct": 55.2},
+      "確信3": {"win": 20, "lose": 8, "draw": 15, "n": 43, "win_rate_pct": 46.5},
+      "確信2": {"win": 4, "lose": 1, "draw": 2, "n": 7, "win_rate_pct": 57.1},
+      "note": "8/10時点から変化なし（本日judgeなし）"
+    },
+    "win_rate_by_quadrant": {
+      "押せ押せ": {"win": 22, "lose": 4, "draw": 11, "n": 37, "win_rate_pct": 59.5},
+      "失速警戒": {"win": 6, "lose": 5, "draw": 4, "n": 15, "win_rate_pct": 40.0},
+      "底なし": {"win": 9, "lose": 6, "draw": 6, "n": 21, "win_rate_pct": 42.9},
+      "下げすぎ": {"win": 3, "lose": 2, "draw": 1, "n": 6, "win_rate_pct": 50.0},
+      "note": "8/10時点から変化なし（本日judgeなし）"
+    }
+  },
+  "yaskawa_watch": {
+    "code": "6506",
+    "prev_close": 5365.0,
+    "open": 5357.0, "high": 5484.0, "low": 5295.0,
+    "close": 5454.0, "close_change_yen": 89.0, "close_change_pct": 1.66,
+    "conditions": {
+      "A": true,
+      "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は24営業日連続でユーザー未確認）",
+      "C": true
+    },
+    "unlock": false,
+    "data_quality": "終値5,454円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/12 15:30時点データと明記）。概算フラグなし",
+    "sources": ["finance.matsui.co.jp/stock/6506/index", "www.nikkei.com/nkd/company/?scode=6506"],
+    "note": "条件Aが成立（前日終値5,365円→5,454円、+1.66%）。日経平均+0.83%・TOPIX最高値更新の全面高地合いの中でプラス圏を維持。条件Cはs.kabutan.jp大引け記事の値下がり率上位10銘柄に安川電機の名前がなく、自身がプラス圏で引けたこととあわせてtrue。条件Bは24営業日連続でユーザー未確認のまま長期化しており、条件A・C成立でも3条件同時成立には至らず解除通知は見送り。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している"
+  },
+  "fastretailing_watch": {
+    "code": "9983",
+    "prev_close": 78720.0,
+    "open": 79320.0, "high": 79520.0, "low": 77050.0,
+    "close": 78050.0, "close_change_yen": -670.0, "close_change_pct": -0.85,
+    "unlock_condition_reference": "前日終値を上回って引ける",
+    "unlock_status": "終値78,050円は前日終値78,720円を下回り、「前日終値超え」条件は不成立",
+    "note": "日経電子版の大引け記事でも本日の下落銘柄として名指しされており、全面高の地合いの中で値がさ株のファストリはやや蚊帳の外の一日となり反落",
+    "data_quality": "終値78,050円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/12 15:30時点データと明記）",
+    "sources": ["finance.matsui.co.jp/stock/9983/index", "www.nikkei.com/nkd/company/?scode=9983"]
+  },
+  "data_quality_note": "安川電機・ファーストリテイリングは終値を松井証券・日経電子版の2ソース完全一致で確認、概算フラグなし。日経平均・TOPIX・騰落銘柄数は日経電子版記事とs.kabutan.jp記事の2ソースで完全一致。候補銘柄については本日パイプライン(11:38/12:15/15:45)が実行されなかったため、選定・判定いずれも存在しない（憲法③：未確認の数字は使わない）",
+  "sources_summary": [
+    "https://www.nikkei.com/article/DGXZQOFL105BH0Q6A810C2000000/",
+    "https://finance.yahoo.co.jp/news/detail/847c6e1718971118fa1345307a447ee72cba1439",
+    "https://s.kabutan.jp/news/n202608121265/",
+    "https://finance.matsui.co.jp/stock/6506/index",
+    "https://www.nikkei.com/nkd/company/?scode=6506",
+    "https://finance.matsui.co.jp/stock/9983/index",
+    "https://www.nikkei.com/nkd/company/?scode=9983"
+  ]
+}
