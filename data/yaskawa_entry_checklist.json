@@ -821,7 +821,7 @@
       "low_time": "15:30",
       "close": 5171.0,
       "close_change_yen": -301.0,
-      "close_change_pct": -5.50,
+      "close_change_pct": -5.5,
       "conditions": {
         "A": false,
         "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は30営業日連続でユーザー未確認）",
@@ -834,6 +834,26 @@
         "https://finance.matsui.co.jp/stock/6506/index",
         "https://www.nikkei.com/nkd/company/?scode=6506",
         "https://www.nikkei.com/marketdata/ranking-jp/price-drop/"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "batch": "18:30確定スイープ（15:45速報時点で終値5,171円は松井証券・日経電子版の2ソースで確定済みだったため、本スイープでの数値変更なし。再確認のみの記録）",
+      "prev_close": 5472,
+      "close": 5171,
+      "close_change_yen": -301,
+      "close_change_pct": -5.5,
+      "conditions": {
+        "A": false,
+        "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は30営業日連続でユーザー未確認）",
+        "C": true
+      },
+      "unlock": false,
+      "data_quality": "終値5,171円は松井証券・日経電子版の2ソース完全一致（15:45速報時点から変更なし）",
+      "note": "18:30確定スイープで再確認した結果、15:45速報時点の終値5,171円(-5.50%)に変更なし。条件Aは確定的に不成立（前日終値5,472円→終値5,171円）、条件Cは成立。条件Bが30営業日連続でユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
+      "sources": [
+        "finance.matsui.co.jp/stock/6506/index",
+        "www.nikkei.com/nkd/company/?scode=6506"
       ]
     }
   ]
