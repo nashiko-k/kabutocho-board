@@ -1,0 +1,337 @@
+{
+  "date": "2026-08-20",
+  "phase": "15:45速報答え合わせ",
+  "judged_at": "2026-08-20T16:28:00+09:00",
+  "batch_note": "本来15:45起動想定だが本セッションの実行は16:2x台。夕刊ルート（株探・動意株大引け記事n202608200903、話題株ピックアップ夕刊(1)n202608200945、ストップ高ストップ安引け記事n202608200931、東京株式(大引け)記事n202608201027、日経平均寄与度ランキングn202608201024、東証グロース大引けn202608200899）に加え、候補5銘柄・安川電機・ファーストリテイリングは松井証券・日経電子版の個別銘柄ページ（いずれも2026/8/20 15:30時点データと明記）を2ソースクロスチェックし、全銘柄で完全一致を確認できたためpendingはゼロ。市場は15:00に引けているため15:30データは実質的に大引け確定値として扱う（前日までと同一の運用基準）。まだ18:30確定スイープ（別フェーズ）による独立再検証は実施していないため、本ファイルはあくまで速報時点の暫定確定であり、18:30スイープで値の変更があれば上書きされる",
+  "market": {
+    "nikkei_close": 66216.79,
+    "nikkei_close_change": 890.37,
+    "nikkei_close_change_pct": 1.36,
+    "nikkei_close_note": "前引け+656.07円(+1.00%)からさらに上げ幅を拡大して3日ぶり反発。8/18(-2.54%)・8/19(-3.16%)の2営業日大幅安から一転、米財務省の国債買い入れ消却拡大による米長期金利急低下を受けた値ごろ感の買い戻しが幅広い銘柄に波及。東京株式(大引け)記事(n202608201027、15:38配信)・日経平均寄与度ランキング記事(n202608201024)・Yahoo!ニュース(共同通信配信)の3ソースで66,216.79円(+890.37円)完全一致確認",
+    "topix_close": 4059.73,
+    "topix_close_change": 47.42,
+    "topix_close_change_pct": 1.18,
+    "topix_close_note": "東京株式(大引け)記事・Yahoo!ニュース(共同通信配信)の2ソースで4,059.73(+47.42pt)完全一致。日経平均の上昇率(+1.36%)をやや下回るが、値上がりの裾野は広い",
+    "breadth_prime_close": {
+      "up": 1320,
+      "down": 204,
+      "flat": 32,
+      "note": "東京株式(大引け)記事(n202608201027)で確認。前引け(1,143/367)からさらに値上がり銘柄が増え、東証プライムの85%が値上がりする全面高で引けた"
+    },
+    "stop_high_low": {
+      "up_limit": 7,
+      "down_limit": 0,
+      "note": "本日のストップ高／ストップ安引け記事(n202608200931)で確認。S高7銘柄（WT商品総合1684・Schoo264A・Aバランス3856・monoAI5240・ティアフォー593A・誠建設8995・クオンツ総研9552）、S安0銘柄。候補5銘柄・安川電機・ファーストリテイリングはいずれも該当なし",
+      "sources": ["https://s.kabutan.jp/news/n202608200931/"]
+    },
+    "sector_note": "押し上げ上位はソフトバンクG(寄与度約+128円)・ファーストリテイリング(約+108円)・キオクシアHD(約+70円)・住友金属鉱山(約+17円)。押し下げは東京エレクトロン(約-64円)・イビデン・京セラなど半導体製造装置株の一部（日経平均寄与度ランキング記事n202608201024）。金利低下追い風の不動産株が堅調、グロース市場250指数は4%超上昇（東証グロース大引け記事n202608200899）",
+    "mood_verdict": "日経平均は前日比+890.37円(+1.36%)の66,216.79円で3日ぶり大幅反発。前引け(+656.07円)からさらに上げ幅を拡大した。TOPIXも+47.42pt(+1.18%)の4,059.73。プライムの値上がり1,320・値下がり204（85%高）と全面高が終日続き、8/18-8/19の2営業日累計-3,893.83円安を1日でほぼ帳消しにする戻り",
+    "sources": [
+      "https://s.kabutan.jp/news/n202608201027/",
+      "https://s.kabutan.jp/news/n202608201024/",
+      "https://news.yahoo.co.jp/articles/28685f2568413f935ae5141dc0e815637ce780e2",
+      "https://s.kabutan.jp/news/n202608200931/",
+      "https://s.kabutan.jp/news/n202608200899/"
+    ]
+  },
+  "results": [
+    {
+      "code": "285A",
+      "name": "キオクシアホールディングス",
+      "quadrant": "押せ押せ",
+      "confidence": 3,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 49950.0,
+      "reference_basis": "anchor(前引け11:30)値。松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+      "anchor_time": "11:30",
+      "anchor": 52300.0,
+      "anchor_change_pct": 4.70,
+      "close": 52950.0,
+      "close_change_yen": 3000.0,
+      "close_change_pct": 6.01,
+      "anchor_to_close_pct": 1.24,
+      "close_verdict": "WIN（anchor(11:30)の52,300円から大引け52,950円まで+1.24%と±0.5%デッドバンドを超えて上昇継続。押せ押せ＝後場も続く想定が的中）",
+      "day_open": 50500.0,
+      "day_open_time": "9:00（anchor以前）",
+      "day_high": 53980.0,
+      "day_high_time": "14:02（anchor以降）",
+      "day_low": 50000.0,
+      "day_low_time": "9:00（anchor以前）",
+      "stretch_verdict": "WIN（anchor以降14:02の高値53,980円はanchor比+3.21%と二次基準+2%を上回るスパイクを記録。話題株ピックアップ夕刊でもSKハイニックスの自社株買い発表を追加材料に取り上げられ、後場も上値を試す展開が実現）",
+      "note": "決算・株式分割・自社株買いという実質を伴った反発が後場も継続。⏸待ち推奨としていたため見立て的中に対しては機会損失側の判断だったが、初日の急伸を見極めるという判断自体は妥当だった",
+      "data_quality": "終値52,950.0円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）。話題株ピックアップ夕刊(1)(n202608200945)でも同値",
+      "sources": [
+        "https://finance.matsui.co.jp/stock/285A/index",
+        "https://www.nikkei.com/nkd/company/?scode=285A",
+        "https://s.kabutan.jp/news/n202608200945/"
+      ]
+    },
+    {
+      "code": "6027",
+      "name": "弁護士ドットコム",
+      "quadrant": "失速警戒",
+      "confidence": 3,
+      "action": "🚫 触らない",
+      "prev_close": 4420.0,
+      "reference_basis": "anchor(前引け11:30)値。松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+      "anchor_time": "11:30",
+      "anchor": 4355.0,
+      "anchor_change_pct": -1.47,
+      "close": 4320.0,
+      "close_change_yen": -100.0,
+      "close_change_pct": -2.26,
+      "anchor_to_close_pct": -0.80,
+      "close_verdict": "WIN（anchor(11:30)の4,355円から大引け4,320円まで-0.80%と±0.5%デッドバンドを超えてさらに下落。失速警戒＝後場は反転〈下落〉の想定が的中）",
+      "day_open": 4400.0,
+      "day_open_time": "9:00（anchor以前）",
+      "day_high": 4535.0,
+      "day_high_time": "12:32（anchor以降、年初来高値更新）",
+      "day_low": 4155.0,
+      "day_low_time": "9:35（anchor以前）",
+      "stretch_verdict": "WIN扱い（anchor以降12:32に高値4,535円を記録、anchor比+4.13%と二次基準+2%を上回る戻りの場面があった。ただしその後失速し終値は反転安。デイトレ視点では一時的な戻り局面を利用できた可能性がある一方、最終的な失速警戒シナリオ自体は終値ベースで的中）",
+      "note": "6営業日連続高値追いの反動という見立て通り、前引けの反落基調がそのまま後場も継続。🚫触らないの判断は、anchor以降の一時的な戻り(+4.13%)を空売りで追いかけていれば含み損を抱えたタイミングだっただけに、結果的に妥当だった",
+      "data_quality": "終値4,320.0円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+      "sources": [
+        "https://finance.matsui.co.jp/stock/6027/index",
+        "https://www.nikkei.com/nkd/company/?scode=6027"
+      ]
+    },
+    {
+      "code": "3778",
+      "name": "さくらインターネット",
+      "quadrant": "底なし",
+      "confidence": 4,
+      "action": "🚫 触らない",
+      "prev_close": 3915.0,
+      "reference_basis": "anchor(前引け11:30)値。松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+      "anchor_time": "11:30",
+      "anchor": 3525.0,
+      "anchor_change_pct": -9.96,
+      "close": 3570.0,
+      "close_change_yen": -345.0,
+      "close_change_pct": -8.81,
+      "anchor_to_close_pct": 1.28,
+      "close_verdict": "LOSE（anchor(11:30)の3,525円から大引け3,570円まで+1.28%と±0.5%デッドバンドを超えて反発。底なし＝後場も下げ続ける想定に反し、地合いの全面高に引っ張られる形で下げ止まった）",
+      "day_open": 3705.0,
+      "day_open_time": "9:06（anchor以前）",
+      "day_high": 3715.0,
+      "day_high_time": "9:06（anchor以前）",
+      "day_low": 3500.0,
+      "day_low_time": "12:30（anchor以降）",
+      "stretch_verdict": "該当外（下落方向の見立てのため+2%上昇スパイク基準は適用対象外）。ただしanchor以降の12:30に新安値3,500円(anchor比-0.71%)を一度記録しており、後場の途中までは底なしのシナリオ通り下げが続いていた。そこから地合いの全面高（東証プライム85%高）に引きずられる形で終値まで70円切り返した",
+      "note": "「③不祥事・事故型」の下げは後場前半まで継続したが、市場全体の強い地合い（日経+1.36%）が個別の悪材料を一部相殺する形で終値は切り返し、見立て（底なし）は外れた。🚫触らないの判断自体は、不祥事の影響範囲がまだ確定していない銘柄に手を出さずに済んだという意味で結果的に妥当",
+      "data_quality": "終値3,570.0円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+      "sources": [
+        "https://finance.matsui.co.jp/stock/3778/index",
+        "https://www.nikkei.com/nkd/company/?scode=3778"
+      ]
+    },
+    {
+      "code": "9503",
+      "name": "関西電力",
+      "quadrant": "押せ押せ",
+      "confidence": 3,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 2360.0,
+      "reference_basis": "anchor(前引け11:30)値。松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+      "anchor_time": "11:30",
+      "anchor": 2551.0,
+      "anchor_change_pct": 8.09,
+      "close": 2557.5,
+      "close_change_yen": 197.5,
+      "close_change_pct": 8.37,
+      "anchor_to_close_pct": 0.25,
+      "close_verdict": "DRAW（anchor(11:30)の2,551円から大引け2,557.5円まで+0.25%と±0.5%デッドバンド内で引き分け。初動の急伸(+8.09%)がそのまま高値圏でこう着した形）",
+      "day_open": 2500.0,
+      "day_open_time": "9:06（anchor以前）",
+      "day_high": 2576.5,
+      "day_high_time": "10:19（anchor以前）",
+      "day_low": 2481.5,
+      "day_low_time": "9:06（anchor以前）",
+      "stretch_verdict": "未達（高値2,576.5円はanchor以前の10:19に記録済みで、anchor以降に新値を更新した形跡はない。後場は前引け水準で値動きがほぼ止まった）",
+      "note": "電気料金値上げという構造的な好材料の質は良かったが、初日の急伸を後場でさらに伸ばすほどの勢いはなく、値持ちに終始。⏸待ち推奨は「値持ちを見極めたい」という判断に対し実際にこう着したため中立的に妥当だった",
+      "data_quality": "終値2,557.5円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）。話題株ピックアップ夕刊(1)(n202608200945)でも同値",
+      "sources": [
+        "https://finance.matsui.co.jp/stock/9503/index",
+        "https://www.nikkei.com/nkd/company/?scode=9503",
+        "https://s.kabutan.jp/news/n202608200945/"
+      ]
+    },
+    {
+      "code": "5713",
+      "name": "住友金属鉱山",
+      "quadrant": "押せ押せ",
+      "confidence": 2,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 9597.0,
+      "reference_basis": "anchor(前引け11:30)値。松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+      "anchor_time": "11:30",
+      "anchor": 10530.0,
+      "anchor_change_pct": 9.72,
+      "close": 10630.0,
+      "close_change_yen": 1033.0,
+      "close_change_pct": 10.76,
+      "anchor_to_close_pct": 0.95,
+      "close_verdict": "WIN（anchor(11:30)の10,530円から大引け10,630円まで+0.95%と±0.5%デッドバンドを超えて上昇継続。押せ押せ＝後場も続く想定が的中）",
+      "day_open": 10000.0,
+      "day_open_time": "9:06（anchor以前）",
+      "day_high": 10675.0,
+      "day_high_time": "13:53（anchor以降）",
+      "day_low": 9972.0,
+      "day_low_time": "9:06（anchor以前）",
+      "stretch_verdict": "未達（anchor以降13:53の高値10,675円はanchor比+1.38%にとどまり二次基準+2%には届かず。ただし高値の記録自体は13:53とanchor以降で、後場に入っても上げ幅を伸ばす動きはあった）",
+      "note": "金価格上昇に連動した動きが後場も続き、確信度2ながら押せ押せが的中。⏸待ち推奨としていたため見立て的中に対しては機会損失側の判断だった可能性がある",
+      "data_quality": "終値10,630.0円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）。話題株ピックアップ夕刊(1)(n202608200945)でも同値",
+      "sources": [
+        "https://finance.matsui.co.jp/stock/5713/index",
+        "https://www.nikkei.com/nkd/company/?scode=5713",
+        "https://s.kabutan.jp/news/n202608200945/"
+      ]
+    }
+  ],
+  "score_today": {
+    "win": 3,
+    "lose": 1,
+    "draw": 1,
+    "pending": 0,
+    "candidates": 5,
+    "note": "WIN=キオクシアHD(285A、押せ押せ的中・二次基準も達成)・弁護士ドットコム(6027、失速警戒的中)・住友金属鉱山(5713、押せ押せ的中)。LOSE=さくらインターネット(3778、底なし外れ・地合いの全面高に引っ張られ後場反発)。DRAW=関西電力(9503、+0.25%でデッドバンド内)。地合いが前場の全面高からさらに上げ幅を拡大する一日で、個別の悪材料（さくらインターネット）が地合いに部分的に相殺された点が本日唯一のLOSEの背景。アクション示唆は5銘柄中4銘柄が⏸待ち推奨／🚫触らない、うち285A・5713はWINだったため見立て的中に対し機会損失側の判断だった"
+  },
+  "score_cumulative": {
+    "win": 58,
+    "lose": 24,
+    "draw": 30,
+    "unverified": 1,
+    "excluded_20260716": 7,
+    "as_of": "2026-08-20 15:45速報時点（暫定）。8/19 18:30確定スイープ時点(55勝23敗29分)に本日5銘柄分（3勝1敗1分、pendingゼロ）を反映。18:30確定スイープでの独立再検証は未実施のため暫定値",
+    "note": "累計勝率＝58/(58+24+30)=51.8%（引き分け除く分母では58/82=70.7%）。本日の3勝1敗1分で累計勝率は51.4%→51.8%に上昇",
+    "calibration_by_confidence": {
+      "確信4": {
+        "win": 22,
+        "lose": 12,
+        "draw": 6,
+        "n": 40,
+        "win_rate_pct": 55.0
+      },
+      "確信3": {
+        "win": 28,
+        "lose": 10,
+        "draw": 20,
+        "n": 58,
+        "win_rate_pct": 48.3
+      },
+      "確信2": {
+        "win": 8,
+        "lose": 2,
+        "draw": 4,
+        "n": 14,
+        "win_rate_pct": 57.1
+      },
+      "note": "確信4はさくらインターネットの1LOSEが加わり56.4%→55.0%にやや低下。確信3はキオクシアHD・弁護士ドットコムの2WINと関西電力の1DRAWが加わり47.3%→48.3%に上昇。確信2は住友金属鉱山の1WINが加わり53.8%→57.1%に上昇"
+    },
+    "win_rate_by_quadrant": {
+      "押せ押せ": {
+        "win": 28,
+        "lose": 8,
+        "draw": 13,
+        "n": 49,
+        "win_rate_pct": 57.1
+      },
+      "失速警戒": {
+        "win": 9,
+        "lose": 6,
+        "draw": 6,
+        "n": 21,
+        "win_rate_pct": 42.9
+      },
+      "底なし": {
+        "win": 17,
+        "lose": 7,
+        "draw": 9,
+        "n": 33,
+        "win_rate_pct": 51.5
+      },
+      "下げすぎ": {
+        "win": 4,
+        "lose": 3,
+        "draw": 2,
+        "n": 9,
+        "win_rate_pct": 44.4
+      },
+      "note": "押せ押せはキオクシアHD・住友金属鉱山の2WINと関西電力の1DRAWが加わり56.5%→57.1%に上昇。失速警戒は弁護士ドットコムの1WINが加わり40.0%→42.9%に上昇。底なしはさくらインターネットの1LOSEが加わり53.1%→51.5%にやや低下。下げすぎは本日該当なしのため変化なし"
+    }
+  },
+  "yaskawa_watch": {
+    "code": "6506",
+    "prev_close": 4929.0,
+    "anchor_time": "11:30",
+    "anchor_price": 5020.0,
+    "anchor_change_pct": 1.85,
+    "open": 4999.0,
+    "open_time": "9:02（anchor以前）",
+    "high": 5092.0,
+    "high_time": "10:03（anchor以前）",
+    "low": 4934.0,
+    "low_time": "9:05（anchor以前）",
+    "close": 5023.0,
+    "close_change_yen": 94.0,
+    "close_change_pct": 1.91,
+    "conditions": {
+      "A": true,
+      "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は35営業日連続でユーザー未確認）",
+      "C": true
+    },
+    "unlock": false,
+    "data_quality": "終値5,023円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+    "note": "条件Aが確定成立（前日終値4,929円→終値5,023円、+1.91%）。条件Cも確定成立（本日は全面高で値下がり率ランキングとは無縁）。条件Bは35営業日連続でユーザー未確認のまま長期化しており、条件A・Cが両方成立している本日も3条件同時成立には至らず解除通知は見送り。anchor(11:30)の5,020円から終値5,023円までは+0.06%とほぼ横ばいで、高値(10:03)・安値(9:05)ともanchor以前に記録済み。前場のうちに上下動を終え、後場は追加の値動きなくこう着した。地合い全体の反発（日経+1.36%）に比べれば上昇率は控えめで、FA・産業機械セクターは主役級の戻りではなかった。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
+    "sources": [
+      "https://finance.matsui.co.jp/stock/6506/index",
+      "https://www.nikkei.com/nkd/company/?scode=6506"
+    ]
+  },
+  "fastretailing_watch": {
+    "code": "9983",
+    "prev_close": 74940.0,
+    "open": 75810.0,
+    "open_time": "9:00",
+    "high": 76940.0,
+    "high_time": "13:01",
+    "low": 75510.0,
+    "low_time": "9:33",
+    "close": 76280.0,
+    "close_change_yen": 1340.0,
+    "close_change_pct": 1.79,
+    "unlock_condition_reference": "前日終値を上回って引ける",
+    "unlock_status": "終値76,280円は前日終値74,940円を1,340円上回って引け、「前日終値超え」条件が本日確定成立。7営業日続落からの反発初日となった",
+    "note": "地合いの全面高（日経+1.36%）に加え、日経平均寄与度ランキングで押し上げ2位（寄与度約+108円）と主力株の中でも強い戻りを見せた。反発シナリオが1日分だけ成立した形で、継続性の確認は今後の課題として観察を継続する。anchor(11:30)時点のデータは本セッションでは未取得（前日終値との比較で条件判定は可能なため、この点は判定に影響しない）",
+    "data_quality": "終値76,280円は松井証券・日経電子版の2ソース完全一致（いずれも2026/8/20 15:30時点データと明記）",
+    "sources": [
+      "https://finance.matsui.co.jp/stock/9983/index",
+      "https://www.nikkei.com/nkd/company/?scode=9983"
+    ]
+  },
+  "data_quality_note": "候補5銘柄・安川電機・ファーストリテイリングとも松井証券・日経電子版の2ソース完全一致で15:30時点データ（大引け後の実質確定値）を取得。pendingゼロ。キオクシアHD・関西電力・住友金属鉱山は話題株ピックアップ夕刊(1)(n202608200945)とも一致し3ソースクロスチェック済み。日経平均・TOPIX・騰落銘柄数は東京株式(大引け)記事(n202608201027)・日経平均寄与度ランキング記事(n202608201024)・Yahoo!ニュース(共同通信配信)の複数ソースで確認。ストップ高／ストップ安引け記事(n202608200931)で候補銘柄・ウォッチ銘柄がいずれも値幅制限に該当していないことも確認。本ファイルは15:45速報フェーズの結果であり、18:30確定スイープ（別フェーズ）による独立再検証は未実施",
+  "sources_summary": [
+    "https://s.kabutan.jp/news/n202608201027/",
+    "https://s.kabutan.jp/news/n202608201024/",
+    "https://news.yahoo.co.jp/articles/28685f2568413f935ae5141dc0e815637ce780e2",
+    "https://s.kabutan.jp/news/n202608200931/",
+    "https://s.kabutan.jp/news/n202608200899/",
+    "https://s.kabutan.jp/news/n202608200945/",
+    "https://s.kabutan.jp/news/n202608200903/",
+    "https://finance.matsui.co.jp/stock/285A/index",
+    "https://finance.matsui.co.jp/stock/6027/index",
+    "https://finance.matsui.co.jp/stock/3778/index",
+    "https://finance.matsui.co.jp/stock/9503/index",
+    "https://finance.matsui.co.jp/stock/5713/index",
+    "https://finance.matsui.co.jp/stock/6506/index",
+    "https://finance.matsui.co.jp/stock/9983/index",
+    "https://www.nikkei.com/nkd/company/?scode=285A",
+    "https://www.nikkei.com/nkd/company/?scode=6027",
+    "https://www.nikkei.com/nkd/company/?scode=3778",
+    "https://www.nikkei.com/nkd/company/?scode=9503",
+    "https://www.nikkei.com/nkd/company/?scode=5713",
+    "https://www.nikkei.com/nkd/company/?scode=6506",
+    "https://www.nikkei.com/nkd/company/?scode=9983"
+  ]
+}
