@@ -1085,6 +1085,37 @@
     "https://www.nikkei.com/nkd/company/?scode=6506",
     "https://finance.matsui.co.jp/stock/9983/index"
    ]
+  },
+  {
+   "date": "2026-08-24",
+   "batch": "15:45速報答え合わせ（取得データはnikkei.com個別ページ・松井証券の大引け15:30確定値、2ソース完全一致）",
+   "prev_close": 4979.0,
+   "open": 4987.0,
+   "high": 5060.0,
+   "high_time": "9:04（anchor以前）",
+   "low": 4924.0,
+   "low_time": "12:51（anchor以降）",
+   "close": 4950.0,
+   "close_change_yen": -29.0,
+   "close_change_pct": -0.58,
+   "anchor_time": "11:30",
+   "anchor_price": 4994.0,
+   "anchor_change_pct": 0.3,
+   "anchor_to_close_pct": -0.88,
+   "conditions": {
+    "A": false,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は39営業日連続でユーザー未確認）",
+    "C": "true（本日の日経平均寄与度ランキング・下落要因記事のいずれにも安川電機の言及なし。ただし東証プライム値下がり率ランキングの全件は本バッチのデータルートでは未取得のため間接証拠にとどまる）"
+   },
+   "unlock": false,
+   "data_quality": "終値4,950円はnikkei.com個別ページ・松井証券の2ソース完全一致（いずれも2026/8/24 15:30時点データと明記）",
+   "note": "条件Aが確定不成立（前日終値4,979円→終値4,950円、-0.58%）。前引け時点でtrue見込みだった条件A(+0.30%)が12:48更新でfalseに反転し（-0.88%）、そのまま確定した。条件Cは間接証拠ながら成立。条件Bが39営業日連続でユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り。ファーストリテイリング(9983)も終値72,840円(-0.91%)で前日終値割れが確定し、反発シナリオはまたも届かなかった",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index",
+    "https://www.nikkei.com/nkd/company/?scode=9983",
+    "https://finance.matsui.co.jp/stock/9983/index"
+   ]
   }
  ]
 }
