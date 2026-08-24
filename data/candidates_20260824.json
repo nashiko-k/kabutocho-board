@@ -198,11 +198,36 @@
  "quadrant_note_shissoku": "失速警戒はマルマエ(6264)の1銘柄のみ。実質を伴う好材料だが寄り付き高値から前引けにかけてすでに上げ幅の半分近くを失っており、後場の失速継続を警戒する形での計上",
  "quadrant_note_sagesugi": "下げすぎ（急落×後場反発、信用買い候補）は該当なし。本日は前引け時点で急落から切り返す動きを見せている大型株が見当たらず、無理に計上しない（憲法①）",
  "data_quality_note": "候補6銘柄はいずれも松井証券単独または松井証券・日経電子版の2ソースでデータ時点2026-08-24 11:30を確認。インフォマートのオアシス・マネジメント最新保有比率(12.13%との情報)のみ一次資料を確認できず概算・未確認と明記。株探の値上がり率・値下がり率ランキング記事および話題株ピックアップ昼刊はプレミアムゲート・404エラーで直接アクセスできず、Yahoo!ファイナンスのランキングページ（データ時点確認済み）と複数のWebSearchで代替した",
+ "wind_1215": {
+  "time": "13:03",
+  "nikkei_1300": {"value": 65598.41, "change_yen": -417.95, "change_pct": -0.63, "source": "株探n202608240506（13:00:10配信）", "note": "前引け-47.65円(-0.07%)から後場に入り下げ加速。後場寄り付き(12:54配信n202608240499)は-386.29円の65,630.07円で、前場の安値を割り込み本日安値を更新"},
+  "nikkei_drag_top": [
+   {"name": "アドバンテスト", "code": "6857", "contribution_yen": -209.98},
+   {"name": "ソフトバンクG", "code": "9984", "contribution_yen": -198.72},
+   {"name": "キオクシアHD", "code": "285A", "contribution_yen": -89.17},
+   {"name": "フジクラ", "code": "5803", "contribution_yen": -58.33},
+   {"name": "イビデン", "code": "4062", "contribution_yen": -35.2}
+  ],
+  "futures_1247": {"value": 65585, "change_yen": -505, "source": "nikkei225jp.com/cme 12:47時点（単一ソースのため概算）", "note": "12:16時点-255円からさらに軟化"},
+  "candidate_repricing": [
+   {"code": "9984", "name": "ソフトバンクグループ", "anchor_pct": -3.81, "now_pct": -4.74, "now_time": "12:48", "source": "松井証券"},
+   {"code": "285A", "name": "キオクシアホールディングス", "anchor_pct": -4.12, "now_pct": -6.26, "now_time": "12:48", "source": "松井証券"},
+   {"code": "9692", "name": "シーイーシー", "anchor_pct": 4.55, "now_pct": 4.18, "now_time": "12:48", "source": "松井証券", "note": "全体軟化の中でも底堅い"},
+   {"code": "5444", "name": "大和工業", "anchor_pct": 5.38, "now_pct": 5.01, "now_time": "12:47", "source": "松井証券"},
+   {"code": "2492", "name": "インフォマート", "anchor_pct": 4.24, "now_pct": 4.24, "now_time": "12:47", "source": "松井証券", "note": "ほぼ横ばい"},
+   {"code": "6264", "name": "マルマエ", "anchor_pct": 6.45, "now_pct": 4.30, "now_time": "12:48", "source": "松井証券", "note": "上げ幅さらに縮小、失速警戒の色が濃くなった"}
+  ],
+  "yaskawa_6506_update": {"anchor_price": 4994.0, "anchor_pct": 0.30, "anchor_condition_a": true, "now_price": 4935.0, "now_pct": -0.88, "now_time": "12:48", "now_condition_a": false, "source": "松井証券", "note": "条件A（前日終値超え）が前引けのtrue見込みから反転しfalseに。前日終値4,979円を下回った"},
+  "fastretailing_9983_update": {"anchor_price": 73340.0, "anchor_pct": -0.23, "now_price": 73130.0, "now_pct": -0.52, "now_time": "12:48", "source": "松井証券", "note": "下げ幅拡大、前日終値超えの反発シナリオはさらに遠のいた"},
+  "verdict": "前引け時点の「指数ほぼ変わらずのねじれ」から、半導体・AI関連の値がさ株（アドバンテスト・ソフトバンクG・キオクシアHD）中心の下げが指数全体に波及する形へ変化。押せ押せ候補3銘柄は相対的に底堅く材料の実質が支えている一方、マルマエは失速継続、安川電機は条件A反転。後場の作戦3行を更新し、notify.txtに警告を記載"
+ },
  "sources_summary": [
   "https://s.kabutan.jp/news/n202608240416/",
   "https://s.kabutan.jp/news/n202608240452/",
   "https://s.kabutan.jp/news/n202608240018/",
   "https://nikkei225jp.com/cme/",
+  "https://s.kabutan.jp/news/n202608240499/",
+  "https://s.kabutan.jp/news/n202608240506/",
   "https://finance.matsui.co.jp/stock/9692/index",
   "https://finance.matsui.co.jp/stock/5444/index",
   "https://finance.matsui.co.jp/stock/2492/index",
