@@ -1171,6 +1171,26 @@
     "https://www.nikkei.com/nkd/company/?scode=6506",
     "https://finance.matsui.co.jp/stock/6506/index"
    ]
+  },
+  {
+   "date": "2026-08-25",
+   "batch": "18:30確定スイープ。15:45速報答え合わせ時点でnikkei.com個別ページ・松井証券の2ソース完全一致取得済みのため数値の変更なし。確定版として記録",
+   "prev_close": 4950.0,
+   "close": 4966.0,
+   "close_change_yen": 16.0,
+   "close_change_pct": 0.32,
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は41営業日連続でユーザー未確認。参考：本日終値4,966円はこの仮置き帯を依然として下回っている）",
+    "C": true
+   },
+   "unlock": false,
+   "data_quality": "終値4,966円はnikkei.com個別ページ・松井証券の2ソース完全一致（いずれも2026/8/25 15:30時点データと明記）",
+   "note": "条件A・Cは確定成立、条件Bが41営業日連続でユーザー未確認のまま長期化しており3条件同時成立には至らず、解除通知は見送り。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index"
+   ]
   }
  ]
 }
