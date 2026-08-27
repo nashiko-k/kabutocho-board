@@ -1,0 +1,325 @@
+{
+ "date": "2026-08-27",
+ "phase": "18:30確定スイープ",
+ "judged_at": "2026-08-28T04:58:00+09:00",
+ "confirmed_at": "2026-08-28T04:58:00+09:00",
+ "batch_note": "18:30確定スイープ。本来18:30起動だが、本日はトリガー遅延が11:38昼バッチ(実行22:17)・12:15風向き(実行23:20)と累積し、本確定スイープの実際の実行は日本時間翌28日(金)04:50頃までずれ込んだ。市場は完全に大引け済みで、GOLD ONLINE「8月27日の国内株式市場概況」（翌朝公開）など翌朝の総括記事も既に読める時間帯だったため、これを積極活用し複数ソースでのクロスチェックを実施した。候補4銘柄・常連13銘柄・安川電機・ファーストリテイリングとも大引け(15:30)確定値を取得しpendingゼロ。翌朝への持ち越しなし。対象トレーディングデーは2026-08-27(木)であり金曜ではないため、週次「見立ての癖」自己分析は次の金曜(次回営業日以降)に実施する",
+ "market": {
+  "nikkei_close": 66131.98,
+  "nikkei_close_change": -130.18,
+  "nikkei_close_change_pct": -0.20,
+  "nikkei_close_note": "前引け66,164.19円(-97.97円)からさらに軟化し、-130.18円(-0.20%)の66,131.98円で3営業日ぶり反落。日中高値66,954.69円(9:06)・安値65,782.59円(10:13)。財経新聞(15:32配信)・Investing.com(Fisco配信)・株式ちゃんねる(16:23配信)の3ソース一致",
+  "topix_close": 4117.22,
+  "topix_close_change": 6.20,
+  "topix_close_change_pct": 0.15,
+  "topix_close_note": "前引け4,114.70pt(+3.68pt)からプラス幅をやや拡大して4,117.22pt(+6.20pt、+0.15%)で着地。財経新聞・Investing.com過去データページの2ソース一致。日経平均は続落もTOPIXはプラス圏を維持し指数間の乖離が続いた",
+  "breadth_prime_close": {
+   "note": "東証プライム市場全体の値上がり・値下がり・変わらずの実数は本バッチのデータルートでは未取得（憲法③）。参考値①：日経平均構成銘柄(225銘柄)ベースで値上がり106・値下がり116・変わらず3（合計225で整合確認、GOLD ONLINE単一ソース）。参考値②：プライム市場全体の比率で値上がり45.7%・値下がり49.4%（財経新聞16:17配信、単一ソース）。①②は対象母数が異なる別数字であり、実数としての確定値ではない点に留意"
+  },
+  "sector_note": "日経平均寄与度ランキング（大引け確定、財経新聞16:40配信・Investing.com/Fisco同記事）：押し上げ上位はキオクシアHD(285A)+58.66円・東京エレクトロン(8035)+50.28円・フジクラ(5803)+39.22円・イビデン(4062)+31.18円・ソフトバンクG(9984)+29.77円。押し下げ上位はアドバンテスト(6857)-263.08円・ファーストリテイリング(9983)-46.66円・リクルートHD(6098)-18.60円・コナミG(9766)-16.93円・中外製薬(4519)-10.46円。前引け時点で押し上げトップだったアドバンテストが後場に失速し押し下げトップへ転落する逆転が起きた",
+  "sh_ss_note": "ストップ高・ストップ安の銘柄リストは単一ソース（株式ちゃんねる、18時台配信）のみで確度が低く概算扱い。同リストには第一稀元素化学工業(4082)がS高として掲載されているが、nikkei.com・松井証券・GOLD ONLINEいずれも終値3,000円（S高水準3,291円には未到達）と確認しており矛盾するため、S高S安リストの当該銘柄掲載は誤りとみなし採用しない（憲法③：不確かな数字は無理に確定を装わない）",
+  "nvidia_note": "エヌビディア決算を好感した寄り付き高（+513.62円、一時+700円近い場面も）から、ジャクソンホール会議(28日まで)を控えた持ち高調整売りに押されて終日じり安となり、3営業日ぶりの反落で終えた。押し上げ材料が出た日にもかかわらず指数が下げて引けるという『材料は良いが上値を追えない』構図が前引けに続き大引けまで一貫した",
+  "mood_verdict": "寄り付きはエヌビディア好決算を好感し高値66,954.69円(9:06、+700円近い場面)まで買われたが、ジャクソンホール会議を控えた持ち高調整売りに押されて失速し、前引け-97.97円からさらに軟化して-130.18円(-0.20%)の66,131.98円で3営業日ぶり反落。TOPIXは+6.20pt(+0.15%)とプラス圏を維持し指数間の乖離が拡大。個別ではアドバンテスト・ファーストリテイリングなど値がさグロース株が押し下げの主因となる一方、キオクシアHD・東京エレクトロンなど一部半導体株や内需株は堅調で、指数と切り離して銘柄ごとに見る必要がある一日だった"
+ },
+ "results": [
+  {
+   "code": "4082",
+   "name": "第一稀元素化学工業",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 2591.0,
+   "reference_basis": "anchor(9:20、前場高値。11:30ちょうどの値は未取得のため代用)値。nikkei.com個別ページ・松井証券・GOLD ONLINEで終値3,000円を複数ソース一致確認",
+   "anchor_time": "9:20",
+   "anchor": 3095.0,
+   "anchor_change_pct": 19.45,
+   "close": 3000.0,
+   "close_change_yen": 409.0,
+   "close_change_pct": 15.79,
+   "anchor_to_close_pct": -3.07,
+   "close_verdict": "LOSE（anchor(9:20)の3,095円から大引け3,000円まで-3.07%とデッドバンドを超えて反落。押せ押せ＝後場も続く想定に反し、2日連続の値上がり率上位で膨らんだ過熱がやや剥落した形。前日終値比では依然+15.79%と高値圏を維持しており「行き過ぎの調整」の域を出ないが、見立て単体としてはLOSE）",
+   "day_open": 2906.0,
+   "day_open_time": "9:18",
+   "day_high": 3095.0,
+   "day_high_time": "9:20（anchorと同時刻）",
+   "day_low": 2600.0,
+   "day_low_time": "12:35",
+   "stretch_verdict": "未達（anchor(9:20)自体が本日高値のため、anchor以降に上振れは発生していない。むしろ12:35に安値2,600円(anchor比-16.0%)まで下押しする場面があった）",
+   "note": "昼バッチで『高値を追わず押し目を確認できたら』と⏸待ち推奨としていた判断は、結果的に高値追いを回避する形で機会損失を防いだ。2日間で前日終値比+40%超まで買われた過熱への警戒（憲法①）が的中した形",
+   "data_quality": "終値3,000.0円はnikkei.com個別ページ・松井証券・GOLD ONLINEの複数ソース一致（いずれも2026/8/27 15:30時点データと明記）",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=4082",
+    "https://finance.matsui.co.jp/stock/4082/index",
+    "https://gentosha-go.com/articles/-/81312"
+   ]
+  },
+  {
+   "code": "285A",
+   "name": "キオクシアホールディングス",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "👀 観察のみ",
+   "prev_close": 50000.0,
+   "reference_basis": "anchor(10:14、前場安値)値。nikkei.com個別ページ・松井証券・財経新聞・Investing.comの複数ソース一致",
+   "anchor_time": "10:14",
+   "anchor": 50580.0,
+   "anchor_change_pct": 1.16,
+   "close": 52500.0,
+   "close_change_yen": 2500.0,
+   "close_change_pct": 5.00,
+   "anchor_to_close_pct": 3.80,
+   "close_verdict": "WIN（anchor(10:14)の50,580円から大引け52,500円まで+3.80%とデッドバンドを超えて上昇継続、押せ押せ的中。日経平均寄与度ランキングでも押し上げ首位(+58.66円)と確定確認され整合）",
+   "day_open": 52400.0,
+   "day_open_time": "9:06",
+   "day_high": 53450.0,
+   "day_high_time": "9:07",
+   "day_low": 50580.0,
+   "day_low_time": "10:14（anchorと同時刻）",
+   "stretch_verdict": "達成（大引け自体がanchor比+3.80%で二次基準+2%を上回った。10:14の伸び悩みから切り返して大引けにかけて上げ幅を拡大）",
+   "note": "前場のうちに一度伸び悩んだ後、後場にかけて切り返して上げ幅を拡大した。エヌビディア好決算に加え10/1の株式3分割・大型自社株買い観測という材料が後場も支持された形。👀観察のみとしていたため実損はないが、見立て自体は的中",
+   "data_quality": "終値52,500.0円はnikkei.com個別ページ・松井証券・財経新聞・Investing.comの複数ソース一致（いずれも2026/8/27 15:30時点データと明記）",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=285A",
+    "https://finance.matsui.co.jp/stock/285A/index",
+    "https://www.zaikei.co.jp/article/20260827/867612.html"
+   ]
+  },
+  {
+   "code": "6857",
+   "name": "アドバンテスト",
+   "newface": true,
+   "quadrant": "失速警戒",
+   "confidence": 2,
+   "action": "🚫 触らない",
+   "prev_close": 35700.0,
+   "reference_basis": "anchor(前場レンジ36,020〜36,120円。11:30時点の株価そのものは未取得だが日経平均寄与度+359円で押し上げトップと確認済み。判定には保守的にレンジ上限36,120円を採用)値",
+   "anchor_time": "9:00台〜11:30（レンジ）",
+   "anchor": 36120.0,
+   "anchor_change_pct": 1.18,
+   "close": 34610.0,
+   "close_change_yen": -1090.0,
+   "close_change_pct": -3.05,
+   "anchor_to_close_pct": -4.18,
+   "close_verdict": "WIN（anchor相当(36,120円、レンジ上限で保守的に採用)から大引け34,610円まで-4.18%とデッドバンドを超えて反落、失速警戒＝後場は反転の想定が的中。日経平均寄与度も前引け時点+359円の押し上げトップから大引け-263.08円の押し下げトップへ完全に逆転しており、株価そのもののクロスチェックが取れない中でも寄与度の逆転という間接証拠で反転を強く裏付けている）",
+   "day_open": 36020.0,
+   "day_open_time": "9:00",
+   "day_high": 36120.0,
+   "day_high_time": "9:00",
+   "day_low": 34330.0,
+   "day_low_time": "14:20",
+   "stretch_verdict": "達成（anchor相当比で14:20の安値34,330円は-4.95%、二次基準-2%を上回って下落）",
+   "note": "前日8/26は同様の『材料不明の急伸』に失速警戒を当てて外れた(伸び切った)経緯があったが、本日は一転して後場に急速に失速し日経平均の押し下げ役に転じた。🚫触らないとしていたため実損はないが、見立て自体が的中し8/26の外れを取り返す形。材料不明のまま2日連続で急伸した後の反落という値動きは、根拠の薄い上昇はいつ失速してもおかしくないという昼の警戒がそのまま当たった",
+   "data_quality": "終値34,610.0円はnikkei.com個別ページ・松井証券・財経新聞・Investing.comの複数ソース一致。ただしanchor(前引け時点の株価そのもの)は未取得のため、寄与度データからの間接推定を判定の主根拠に用いた点は留意（憲法③）",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=6857",
+    "https://finance.matsui.co.jp/stock/6857/index",
+    "https://www.zaikei.co.jp/article/20260827/867612.html"
+   ]
+  },
+  {
+   "code": "9519",
+   "name": "レノバ",
+   "newface": true,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "🚫 触らない",
+   "prev_close": 976.0,
+   "reference_basis": "anchor(11:20、前場安値・ほぼ前引け直前)値。nikkei.com個別ページ・松井証券・GOLD ONLINEの複数ソース一致",
+   "anchor_time": "11:20",
+   "anchor": 914.0,
+   "anchor_change_pct": -6.35,
+   "close": 924.0,
+   "close_change_yen": -52.0,
+   "close_change_pct": -5.33,
+   "anchor_to_close_pct": 1.09,
+   "close_verdict": "LOSE（anchor(11:20)の914円から大引け924円まで+1.09%とデッドバンドを超えて反発。底なし＝後場も下げ続ける想定に反し、下落幅を-6.35%→-5.33%までやや縮めて引けた）",
+   "day_open": 950.0,
+   "day_open_time": "9:03",
+   "day_high": 951.0,
+   "day_high_time": "9:05",
+   "day_low": 914.0,
+   "day_low_time": "11:20（anchorと同時刻）",
+   "stretch_verdict": "該当外（anchor(11:20)自体が本日安値であり、anchor以降に新安値を更新した形跡はない。二次基準の『anchor以降に-2%を超えて下げる瞬間』は発生していない）",
+   "note": "アナリスト格下げというガイダンス毀損型の材料そのものは変わらないが、前場のうちに底値を付けた後は緩やかな買い戻しが入った形。🚫触らないとしていたため実損はない。値下がり率はプライム1位を維持したままの反発であり、悪材料の一巡が確認できたわけではなく戻りの持続性には引き続き懐疑的",
+   "data_quality": "終値924.0円はnikkei.com個別ページ・松井証券・GOLD ONLINEの複数ソース一致（いずれも2026/8/27 15:30時点データと明記）",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=9519",
+    "https://finance.matsui.co.jp/stock/9519/index",
+    "https://gentosha-go.com/articles/-/81312"
+   ]
+  }
+ ],
+ "score_today": {
+  "win": 2,
+  "lose": 2,
+  "draw": 0,
+  "pending": 0,
+  "candidates": 4,
+  "note": "WIN=キオクシアHD(285A、押せ押せ的中・寄与度も押し上げ首位で裏付け)・アドバンテスト(6857、失速警戒的中・寄与度が押し上げトップから押し下げトップへ逆転)。LOSE=第一稀元素化学工業(4082、押せ押せ外れ・過熱の反動でanchor比-3.07%)・レノバ(9519、底なし外れ・悪材料一巡は未確認ながら下げ幅縮小)。押せ押せ・失速警戒・底なしそれぞれ1勝1敗ずつが混在し、明確な偏りのない一日だった（憲法③：負けは負けと書く）"
+ },
+ "score_cumulative": {
+  "win": 68,
+  "lose": 36,
+  "draw": 33,
+  "unverified": 1,
+  "excluded_20260716": 7,
+  "as_of": "2026-08-27 18:30確定スイープ時点（確定）。8/26 18:30確定スイープ時点(66勝34敗33分)に本日4銘柄分(2勝2敗0分、pendingゼロ)を反映",
+  "note": "累計勝率＝68/(68+36+33)=49.6%（引き分け除く分母では68/104=65.4%）。本日の2勝2敗0分で引き分け除く勝率は66.0%→65.4%にやや低下、全体勝率は49.6%でほぼ横ばい。1日の結果で一喜一憂せず、数十日単位での評価を継続する（憲法4b）",
+  "calibration_by_confidence": {
+   "確信4": {
+    "win": 22,
+    "lose": 13,
+    "draw": 7,
+    "n": 42,
+    "win_rate_pct": 52.4
+   },
+   "確信3": {
+    "win": 34,
+    "lose": 17,
+    "draw": 21,
+    "n": 72,
+    "win_rate_pct": 47.2
+   },
+   "確信2": {
+    "win": 12,
+    "lose": 6,
+    "draw": 5,
+    "n": 23,
+    "win_rate_pct": 52.2
+   },
+   "note": "確信4は本日該当なしのため変化なし。確信3はレノバの1LOSEが加わり47.9%→47.2%にやや低下。確信2はキオクシアHD・アドバンテストの2WINと第一稀元素化学工業の1LOSEが加わり50.0%→52.2%に上昇"
+  },
+  "win_rate_by_quadrant": {
+   "押せ押せ": {
+    "win": 34,
+    "lose": 13,
+    "draw": 15,
+    "n": 62,
+    "win_rate_pct": 54.8
+   },
+   "失速警戒": {
+    "win": 11,
+    "lose": 8,
+    "draw": 6,
+    "n": 25,
+    "win_rate_pct": 44.0
+   },
+   "底なし": {
+    "win": 19,
+    "lose": 12,
+    "draw": 9,
+    "n": 40,
+    "win_rate_pct": 47.5
+   },
+   "下げすぎ": {
+    "win": 4,
+    "lose": 3,
+    "draw": 3,
+    "n": 10,
+    "win_rate_pct": 40.0
+   },
+   "note": "押せ押せはキオクシアHDの1WINと第一稀元素化学工業の1LOSEが加わり55.0%→54.8%にほぼ横ばい。失速警戒はアドバンテストの1WINが加わり41.7%→44.0%に上昇（8/26の外れを取り返した）。底なしはレノバの1LOSEが加わり48.7%→47.5%に低下"
+  }
+ },
+ "yaskawa_watch": {
+  "code": "6506",
+  "prev_close": 4949.0,
+  "anchor_time": "10:58（単一ソース、11:30ちょうどの値ではない近似値）",
+  "anchor_price": 4906.0,
+  "anchor_change_pct": -0.87,
+  "open": 5067.0,
+  "open_time": "9:03",
+  "high": 5086.0,
+  "high_time": "9:06",
+  "low": 4864.0,
+  "low_time": "10:12",
+  "close": 4883.0,
+  "close_change_yen": -66.0,
+  "close_change_pct": -1.33,
+  "anchor_to_close_pct": -0.47,
+  "conditions": {
+   "A": false,
+   "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は43営業日連続でユーザー未確認。本日終値4,883円もこの仮置き帯を大きく下回っている）",
+   "C": "true（間接証拠。GOLD ONLINEの大引け寄与度下位リストに安川電機の名前はなし。ただしプライム値下がり率ランキングそのものの直接確認は本バッチのデータルートでは未取得）"
+  },
+  "unlock": false,
+  "data_quality": "終値4,883円はnikkei.com個別ページ・松井証券の2ソース完全一致（いずれも2026/8/27 15:30時点データと明記）",
+  "note": "条件Aが確定不成立（前日終値4,949円→終値4,883円、-1.33%）。anchor(10:58、-0.87%)からは大引けにかけてさらにやや下げ幅を拡大し引けた（anchor→close -0.47%はデッドバンド内でほぼ横ばいの下げ継続）。寄り付きの窓開け高(+2.38%)から一貫して失速する荒い値動きで、下げ止まりの一次証拠（条件A）は本日も得られず。条件Bが43営業日連続でユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要がさらに長期化している",
+  "sources": [
+   "https://www.nikkei.com/nkd/company/?scode=6506",
+   "https://finance.matsui.co.jp/stock/6506/index"
+  ]
+ },
+ "fastretailing_watch": {
+  "code": "9983",
+  "prev_close": 72120.0,
+  "anchor_time": "未取得（前引け11:30時点の値・時刻とも本バッチのデータルートでは確認できず）",
+  "open": 72800.0,
+  "open_time": "時刻不明（寄り付きとみられる）",
+  "high": 72840.0,
+  "high_time": "時刻不明",
+  "low": 71320.0,
+  "low_time": "時刻不明",
+  "close": 71540.0,
+  "close_change_yen": -580.0,
+  "close_change_pct": -0.80,
+  "unlock_condition_reference": "前日終値を上回って引ける",
+  "unlock_status": "寄り付きは前日終値を上回る72,800円台とみられ反発の芽はあったが、後場にかけて失速し安値71,320円まで下押し、終値71,540円は前日終値を580円下回って引けた。『前日終値超え』条件は本日も不成立で、軟調が7営業日連続に伸びた（8/26時点で6営業日連続不成立だったのに本日も不成立が続いたための延長）",
+  "note": "日経平均寄与度ランキングでも押し下げ2位(-46.66円)として明記され、値がさグロース株の重さが指数の下げにも直接寄与した形。5営業日ぶりの反発シナリオは本日も持ち越されず不成立",
+  "data_quality": "終値71,540円はnikkei.com個別ページ・松井証券・seventietwo.comの3ソース一致（前日比・高値安値は2ソース一致）。高値安値の正確な時刻は未取得",
+  "sources": [
+   "https://www.nikkei.com/nkd/company/?scode=9983",
+   "https://finance.matsui.co.jp/stock/9983/index",
+   "https://www.seventietwo.com/ja/business/SVTFashionBeautyIndex_FastRetailing_20260827"
+  ]
+ },
+ "regulars_close_13": {
+  "note": "常連13銘柄の大引け値。昼バッチ時点で取得していた個別ページの値がすでに市場閉場後の大引け(15:30)値に置き換わっていたものであり（候補データの品質注記参照）、本確定スイープでの再取得でも同一値を複数ソースで再確認できたため、昼バッチ時点の記載を確定値として維持する",
+  "up": [
+   {"code": "3994", "name": "マネーフォワード", "close": 6428.0, "prev_close": 6170.0, "chg_pct": 4.18},
+   {"code": "8136", "name": "サンリオ", "close": 1248.5, "prev_close": 1210.0, "chg_pct": 3.18},
+   {"code": "215A", "name": "タイミー", "close": 1767.0, "prev_close": 1714.0, "chg_pct": 3.09},
+   {"code": "3697", "name": "SHIFT", "close": 966.8, "prev_close": 928.7, "chg_pct": 4.10},
+   {"code": "8306", "name": "三菱UFJ FG", "close": 3608.0, "prev_close": 3579.0, "chg_pct": 0.81},
+   {"code": "9984", "name": "ソフトバンクグループ", "close": 5200.0, "prev_close": 5163.0, "chg_pct": 0.72},
+   {"code": "4385", "name": "メルカリ", "close": 4593.0, "prev_close": 4568.0, "chg_pct": 0.55},
+   {"code": "7203", "name": "トヨタ自動車", "close": 3077.0, "prev_close": 3070.0, "chg_pct": 0.23}
+  ],
+  "down": [
+   {"code": "7269", "name": "スズキ", "close": 2134.0, "prev_close": 2153.0, "chg_pct": -0.88},
+   {"code": "6902", "name": "デンソー", "close": 1903.5, "prev_close": 1919.0, "chg_pct": -0.81},
+   {"code": "9997", "name": "ベルーナ", "close": 1076.0, "prev_close": 1078.0, "chg_pct": -0.19},
+   {"code": "7453", "name": "良品計画", "close": 4297.0, "prev_close": 4297.0, "chg_pct": 0.00},
+   {"code": "6954", "name": "ファナック", "close": 6023.0, "prev_close": 6023.0, "chg_pct": 0.00}
+  ]
+ },
+ "data_quality_note": "本セッションの実行が日本時間翌28日04:50頃までずれ込んだため、市場は完全に大引け済みで翌朝公開のGOLD ONLINE総括記事も利用できる有利な状況だった。候補4銘柄・常連13銘柄・安川電機・ファーストリテイリング・日経平均・TOPIXとも複数ソース一致で大引け確定値を取得しpendingゼロ。アドバンテスト(6857)のみ、前引け(11:30)時点の株価そのものは未取得のままだったため、判定には前場レンジ上限36,120円を保守的なanchorとして採用し、日経平均寄与度ランキングの逆転（+359円→-263.08円）を補強証拠として用いた（憲法③：取れない数値は無理に確定を装わず、代替の根拠を明記）。東証プライム市場全体の値上がり値下がり実数・S高S安の正確な銘柄リストの2点は本バッチのデータルートでは確定できず未取得のまま。翌朝バッチへの持ち越しはなし",
+ "sources_summary": [
+  "https://www.zaikei.co.jp/article/20260827/867596.html",
+  "https://www.zaikei.co.jp/article/20260827/867602.html",
+  "https://www.zaikei.co.jp/article/20260827/867612.html",
+  "https://jp.investing.com/news/forex-news/article-1662585",
+  "https://jp.investing.com/news/stock-market-news/article-1662661",
+  "https://jp.investing.com/indices/topix-historical-data",
+  "https://stock.f-frontier.com/2026/08/27/234764/",
+  "https://stock.f-frontier.com/2026/08/27/234771/",
+  "https://stock.f-frontier.com/2026/08/27/234770/",
+  "https://gentosha-go.com/articles/-/81312",
+  "https://gentosha-go.com/articles/-/81306",
+  "https://www.nikkei.com/nkd/company/?scode=4082",
+  "https://www.nikkei.com/nkd/company/?scode=285A",
+  "https://www.nikkei.com/nkd/company/?scode=6857",
+  "https://www.nikkei.com/nkd/company/?scode=9519",
+  "https://www.nikkei.com/nkd/company/?scode=6506",
+  "https://www.nikkei.com/nkd/company/?scode=9983",
+  "https://finance.matsui.co.jp/stock/4082/index",
+  "https://finance.matsui.co.jp/stock/285A/index",
+  "https://finance.matsui.co.jp/stock/6857/index",
+  "https://finance.matsui.co.jp/stock/9519/index",
+  "https://finance.matsui.co.jp/stock/6506/index",
+  "https://finance.matsui.co.jp/stock/9983/index",
+  "https://www.seventietwo.com/ja/business/SVTFashionBeautyIndex_FastRetailing_20260827"
+ ]
+}
