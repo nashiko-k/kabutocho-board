@@ -1,0 +1,312 @@
+{
+ "date": "2026-08-28",
+ "phase": "18:30確定スイープ（繰越確定）",
+ "judged_at": "2026-09-01T02:27:00+09:00",
+ "confirmed_at": "2026-09-01T02:27:00+09:00",
+ "batch_note": "8/28（金）の候補4銘柄は、同日の15:45速報（8/31 15:45セッション時点でも8/31自体の候補が存在しなかったため着手見送り・スコープ外）を経ないまま3営業日（8/29・8/30は休日、8/31は昼バッチ未実行）にわたり未確定で持ち越されていた。本セッションは名目上「18:30確定スイープ」だが、実際の起動時点（2026-09-01 02:27 JST、火曜）では9/1当日の昼バッチ・風向き・速報がまだ実行されておらず（市場開場前）、9/1向けに新規に判定すべき予想は存在しない。そのため本セッションの実質的な役割は、OPERATIONS.md§1の『残りの終値確定』に基づき、2営業日以上未確定のまま残っていた8/28分の終値確定に充てた。終値はnikkei.com個別ページの日次四本値推移（過去1か月）と、GOLD ONLINE『8月28日の国内株式市場概況』記事（Yahoo!ニュースミラー経由）の2ソースで4銘柄全て完全一致を確認済み（憲法④）。9/1当日分は候補ゼロのため答え合わせ対象なし。",
+ "market": {
+  "nikkei_close": 66405.56,
+  "nikkei_close_change": 273.58,
+  "nikkei_close_change_pct": 0.41,
+  "nikkei_prev_close": 66131.98,
+  "nikkei_close_note": "GOLD ONLINE『8月28日の国内株式市場概況』（Yahoo!ニュースミラー）で確認。同記事内の値上がり率・値下がり率上位銘柄の終値・騰落率が、nikkei.com個別ページの四本値推移（過去1か月）と4銘柄全て完全一致したため、日経平均終値についても同記事を信頼できるソースとして採用",
+  "topix_close": null,
+  "topix_note": "本セッションのデータルートでは未取得（未取得）",
+  "sources": [
+   "https://news.yahoo.co.jp/articles/a401c581176428e4c3e7e18254520c6de88c4b5b",
+   "https://www.nikkei.com/nkd/company/history/dprice/?scode=2492"
+  ]
+ },
+ "results": [
+  {
+   "code": "2492",
+   "name": "インフォマート",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 605.0,
+   "anchor_time": "前場中盤（値上がり率ランキング記事ベース、掲載時刻の表記なし。単一ソースにつき概算）",
+   "anchor": 676.0,
+   "anchor_change_pct": 11.74,
+   "day_open": 665.0,
+   "day_high": 689.0,
+   "day_low": 648.0,
+   "close": 685.0,
+   "close_change_yen": 80.0,
+   "close_change_pct": 13.22,
+   "anchor_to_close_pct": 1.33,
+   "close_verdict": "WIN（anchorの676円から大引け685円まで+1.33%とデッドバンド±0.5%を超えて続伸。押せ押せ＝後場も続く想定が的中。アクティビスト買い増しという需給インパクトの大きい材料が終日を通じて評価された）",
+   "stretch_verdict": "未達（僅差）（anchor(676円)から日中高値689円まで+1.92%と二次基準+2%にわずかに届かず。ただし高値の発生時刻は本ルートでは特定できず、anchor以前の可能性も残る）",
+   "action_note": "『待ち推奨・高値を追わず押し目を確認できたら』としていた判断について、日中安値648円（前日終値比+7.1%）まで押す場面があった可能性があり、押し目待ちが結果的に有効な入り方になり得た一日だった",
+   "data_quality": "終値685円はnikkei.com個別ページ（四本値推移）とGOLD ONLINE（8月28日の国内株式市場概況、+13.22%/+80円）の2ソース完全一致",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=2492",
+    "https://news.yahoo.co.jp/articles/a401c581176428e4c3e7e18254520c6de88c4b5b"
+   ]
+  },
+  {
+   "code": "4776",
+   "name": "サイボウズ",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "🟢 乗るなら今日",
+   "prev_close": 3110.0,
+   "anchor_time": "前場中盤（値上がり率ランキング記事ベース、掲載時刻の表記なし。単一ソースにつき概算）",
+   "anchor": 3330.0,
+   "anchor_change_pct": 7.07,
+   "day_open": 3175.0,
+   "day_high": 3375.0,
+   "day_low": 3170.0,
+   "close": 3345.0,
+   "close_change_yen": 235.0,
+   "close_change_pct": 7.56,
+   "anchor_to_close_pct": 0.45,
+   "close_verdict": "DRAW（anchorの3,330円から大引け3,345円まで+0.45%とデッドバンド±0.5%以内。前日終値比では+7.56%まで伸ばしたが、前場中盤からの追加の伸びはほぼなくほぼ横ばいで引けたため見立て単体としては引き分け）",
+   "stretch_verdict": "未達（anchor(3,330円)から日中高値3,375円まで+1.35%と二次基準+2%に届かず）",
+   "action_note": "『乗るなら今日・高値掴みは避けて押し目待ちで』としていた判断は、結果的にはanchor時点からほぼ横ばいで終えており、押し目を待てていれば大きな損得はつかなかった一日",
+   "data_quality": "終値3,345円はnikkei.com個別ページ（四本値推移）とGOLD ONLINE（8月28日の国内株式市場概況、+7.56%/+235円）の2ソース完全一致",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4776",
+    "https://news.yahoo.co.jp/articles/a401c581176428e4c3e7e18254520c6de88c4b5b"
+   ]
+  },
+  {
+   "code": "4443",
+   "name": "Ｓａｎｓａｎ",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "👀 観察のみ",
+   "prev_close": 2179.0,
+   "anchor_time": "9:46（前場高値）。値上がり率ランキング記事ベースでは+6.88%との記載もあり近い水準",
+   "anchor": 2345.0,
+   "anchor_change_pct": 7.62,
+   "day_open": 2279.0,
+   "day_high": 2345.0,
+   "day_low": 2263.0,
+   "close": 2315.0,
+   "close_change_yen": 136.0,
+   "close_change_pct": 6.24,
+   "anchor_to_close_pct": -1.28,
+   "close_verdict": "LOSE（anchor(9:46の前場高値2,345円)から大引け2,315円まで-1.28%とデッドバンドを超えて反落。押せ押せ＝後場も続く想定に反し、前場の値上がり率上位ランクイン（値上がり率3位）からの過熱がやや剥落した形。前日終値比では+6.24%を維持しており行き過ぎの調整の域は出ないが、見立て単体としてはLOSE）",
+   "stretch_verdict": "該当外（anchor(9:46)自体が本日高値のため、anchor以降に上振れは発生していない）",
+   "action_note": "『観察のみ・個別新規開示がないため後場も地合い次第』としていた判断は、結果的に前場高値からの反落を回避できた形で、見立て外れによる損失を出さずに済んだ一日（機会損失ではなく損失回避に分類）",
+   "data_quality": "終値2,315円はnikkei.com個別ページ（四本値推移）とGOLD ONLINE（8月28日の国内株式市場概況、+6.24%/+136円）の2ソース完全一致",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4443",
+    "https://news.yahoo.co.jp/articles/a401c581176428e4c3e7e18254520c6de88c4b5b"
+   ]
+  },
+  {
+   "code": "285A",
+   "name": "キオクシアホールディングス",
+   "newface": false,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "🚫 触らない",
+   "prev_close": 52500.0,
+   "anchor_time": "前場（値上がり率（値下がり率）ランキング記事ベースの-4.78%、掲載時刻の表記なし。単一ソースにつき概算）",
+   "anchor": 49990.0,
+   "anchor_change_pct": -4.78,
+   "day_open": 51780.0,
+   "day_high": 52190.0,
+   "day_low": 47800.0,
+   "close": 47900.0,
+   "close_change_yen": -4600.0,
+   "close_change_pct": -8.76,
+   "anchor_to_close_pct": -4.18,
+   "close_verdict": "WIN（anchorの49,990円から大引け47,900円まで-4.18%とデッドバンドを大きく超えて続落。底なし＝後場も続く想定が的中。サンディスクとの5兆円投資計画という好材料にもかかわらず下げ止まらず、⑤期待剥落型の読み解きが裏付けられた）",
+   "stretch_verdict": "達成（anchor(49,990円)から日中安値47,800円まで-4.38%と二次基準-2%を超えて下落）",
+   "action_note": "『触らない・下げ止まりを確認できるまでは様子見』としていた判断は、続落が続いたことで結果的に損失回避になった一日。好材料での下げは戻りにくいという質の読み解き（⑤期待剥落型）がそのまま値動きに表れた",
+   "data_quality": "終値47,900円はnikkei.com個別ページ（四本値推移）とGOLD ONLINE（8月28日の国内株式市場概況、-8.76%/-4,600円）の2ソース完全一致",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A",
+    "https://news.yahoo.co.jp/articles/a401c581176428e4c3e7e18254520c6de88c4b5b"
+   ]
+  }
+ ],
+ "score_today": {
+  "win": 2,
+  "lose": 1,
+  "draw": 1,
+  "pending": 0,
+  "candidates": 4,
+  "note": "WIN=インフォマート(2492、押せ押せ的中)・キオクシアHD(285A、底なし的中・好材料での下げが戻らず⑤期待剥落型を裏付け)。LOSE=Sansan(4443、押せ押せ外れ・前場高値からの反落)。DRAW=サイボウズ(4776、anchor→close+0.45%でデッドバンド内)。4銘柄とも新顔枠かつ確信度2〜3の中位判定だったが、アクション示唆は結果的に4件中3件（待ち推奨・観察のみ・触らない）が損失回避または妥当な様子見として機能し、『乗るなら今日』としたサイボウズも大きな損失にはならなかった（憲法③：負けは負けと書く）"
+ },
+ "score_cumulative": {
+  "win": 70,
+  "lose": 37,
+  "draw": 34,
+  "unverified": 1,
+  "excluded_20260716": 7,
+  "as_of": "2026-08-28 18:30確定スイープ時点（3営業日越しに確定・実際の確定作業は2026-09-01 02:27 JST実施）。8/27 18:30確定スイープ時点(68勝36敗33分)に8/28分4銘柄(2勝1敗1分、pendingゼロ)を反映",
+  "note": "累計勝率＝70/(70+37+34)=49.6%（引き分け除く分母では70/107=65.4%）。8/28の2勝1敗1分により、引き分け除く勝率は65.4%でほぼ横ばい（65.42%→65.42%、四捨五入で変化なし）、全体勝率も49.6%でほぼ横ばい。1日の結果で一喜一憂せず、数十日単位での評価を継続する（憲法4b）。なお8/29・8/30は休日、8/31（月）は昼バッチ未実行のため候補ゼロ・答え合わせ対象なし（累計に影響なし）。9/1（火）は本セッション実行時点（02:27 JST、市場開場前）でまだ昼バッチが実行されておらず、9/1向けの新規候補・判定はなし",
+  "calibration_by_confidence": {
+   "確信4": {
+    "win": 22,
+    "lose": 13,
+    "draw": 7,
+    "n": 42,
+    "win_rate_pct": 52.4
+   },
+   "確信3": {
+    "win": 35,
+    "lose": 17,
+    "draw": 21,
+    "n": 73,
+    "win_rate_pct": 47.9
+   },
+   "確信2": {
+    "win": 13,
+    "lose": 7,
+    "draw": 6,
+    "n": 26,
+    "win_rate_pct": 50.0
+   },
+   "note": "確信4は8/28該当なしのため変化なし。確信3はキオクシアHD(285A)の1WINが加わり47.2%→47.9%に上昇。確信2はインフォマートの1WIN・サイボウズの1DRAW・Sansanの1LOSEが加わり52.2%→50.0%にやや低下"
+  },
+  "win_rate_by_quadrant": {
+   "押せ押せ": {
+    "win": 35,
+    "lose": 14,
+    "draw": 16,
+    "n": 65,
+    "win_rate_pct": 53.8
+   },
+   "失速警戒": {
+    "win": 11,
+    "lose": 8,
+    "draw": 6,
+    "n": 25,
+    "win_rate_pct": 44.0
+   },
+   "底なし": {
+    "win": 20,
+    "lose": 12,
+    "draw": 9,
+    "n": 41,
+    "win_rate_pct": 48.8
+   },
+   "下げすぎ": {
+    "win": 4,
+    "lose": 3,
+    "draw": 3,
+    "n": 10,
+    "win_rate_pct": 40.0
+   },
+   "note": "押せ押せはインフォマートの1WIN・サイボウズの1DRAW・Sansanの1LOSEが加わり54.8%→53.8%にやや低下。底なしはキオクシアHDの1WINが加わり47.5%→48.8%に上昇。失速警戒・下げすぎは8/28該当なしのため変化なし"
+  }
+ },
+ "yaskawa_checklist_note": "本日(9/1)分のanchorエントリなし（昼バッチ未実行のため）。8/28分は本セッションでdata/yaskawa_entry_checklist.jsonのdaily_logを更新済み（条件A=false確定、close=4,811円/-1.47%、unlock=false）",
+ "fastretailing_checklist_note": "8/28終値71,260円(-0.39%)で前日終値割れが確定。『前日終値超え』条件は8/28も不成立で、軟調が8営業日連続に伸びた",
+ "regulars_close_13": {
+  "note": "常連13銘柄の8/28大引け値。nikkei.com個別ページ（四本値推移）で全銘柄を確認、うち三菱UFJ FGのみ検索スニペットで3,655円/+47円という僅差の異なる値も見られたが、日経一次データ（四本値推移）を採用",
+  "up": [
+   {
+    "code": "3994",
+    "name": "マネーフォワード",
+    "close": 6712.0,
+    "prev_close": 6428.0,
+    "chg_pct": 4.42
+   },
+   {
+    "code": "215A",
+    "name": "タイミー",
+    "close": 1818.0,
+    "prev_close": 1767.0,
+    "chg_pct": 2.89
+   },
+   {
+    "code": "8136",
+    "name": "サンリオ",
+    "close": 1268.0,
+    "prev_close": 1248.5,
+    "chg_pct": 1.56
+   },
+   {
+    "code": "7269",
+    "name": "スズキ",
+    "close": 2170.0,
+    "prev_close": 2134.0,
+    "chg_pct": 1.69
+   },
+   {
+    "code": "7453",
+    "name": "良品計画",
+    "close": 4375.0,
+    "prev_close": 4297.0,
+    "chg_pct": 1.81
+   },
+   {
+    "code": "8306",
+    "name": "三菱UFJ FG",
+    "close": 3658.0,
+    "prev_close": 3608.0,
+    "chg_pct": 1.39
+   },
+   {
+    "code": "7203",
+    "name": "トヨタ自動車",
+    "close": 3116.0,
+    "prev_close": 3077.0,
+    "chg_pct": 1.27
+   },
+   {
+    "code": "6902",
+    "name": "デンソー",
+    "close": 1915.5,
+    "prev_close": 1903.5,
+    "chg_pct": 0.63
+   },
+   {
+    "code": "4385",
+    "name": "メルカリ",
+    "close": 4617.0,
+    "prev_close": 4593.0,
+    "chg_pct": 0.52
+   },
+   {
+    "code": "6954",
+    "name": "ファナック",
+    "close": 6052.0,
+    "prev_close": 6023.0,
+    "chg_pct": 0.48
+   }
+  ],
+  "down": [
+   {
+    "code": "9984",
+    "name": "ソフトバンクグループ",
+    "close": 5161.0,
+    "prev_close": 5200.0,
+    "chg_pct": -0.75
+   },
+   {
+    "code": "3697",
+    "name": "SHIFT",
+    "close": 963.3,
+    "prev_close": 966.8,
+    "chg_pct": -0.36
+   },
+   {
+    "code": "9997",
+    "name": "ベルーナ",
+    "close": 1074.0,
+    "prev_close": 1076.0,
+    "chg_pct": -0.19
+   }
+  ]
+ },
+ "data_quality_note": "8/28分の終値はすべてnikkei.com個別ページ（四本値推移・過去1か月）を一次ソースとし、候補4銘柄はGOLD ONLINE『8月28日の国内株式市場概況』（Yahoo!ニュースミラー）で完全一致を確認（憲法④）。TOPIX大引け値は本セッションのデータルートでは未取得。安川電機(6506)の条件C（値下がり率上位からの消失）は間接証拠（値下がり率上位3位以内に名前がないことをGOLD ONLINE記事で確認）に留まり、値下がり率ランキング全体は未取得のため未検証のまま",
+ "sources_summary": [
+  "https://news.yahoo.co.jp/articles/a401c581176428e4c3e7e18254520c6de88c4b5b",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=2492",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=4776",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=4443",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
+ ]
+}
