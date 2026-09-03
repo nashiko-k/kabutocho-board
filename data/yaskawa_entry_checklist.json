@@ -1489,6 +1489,28 @@
     "https://www.nikkei.com/nkd/company/?scode=9983",
     "https://finance.matsui.co.jp/stock/9983/index"
    ]
+  },
+  {
+   "date": "2026-09-03",
+   "batch": "18:30確定スイープ。15:45速報時点の終値4,500円（nikkei.com・松井証券の2ソース完全一致）は本スイープでも変更なし。追加で日経平均自体の位置づけを株探・tbladvisory.comの2ソースで再確認したところ、本日は『4営業日ぶり反落』ではなく『4日続落』（8/31・9/1・9/2に続く4営業日連続安）だったと判明し、data/results_20260903.json・index.html・archive/2026-09-03.htmlの当該記述を訂正した（憲法③）",
+   "prev_close": 4475.0,
+   "close": 4500.0,
+   "close_change_yen": 25.0,
+   "close_change_pct": 0.56,
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は51回目の記録でユーザー未確認）",
+    "C": "true（本日プラス圏で引け、値下がり・マイナス寄与ランキングのいずれにも掲載なし）"
+   },
+   "unlock": false,
+   "data_quality": "終値4,500円は15:45速報時点からnikkei.com・松井証券の2ソース完全一致で変更なし",
+   "note": "18:30確定スイープでの再確認により数値・条件判定に変更なし。3条件同時成立には至らず解除通知は見送り継続。条件Bの再定義案（5,150〜5,420円）の追認をユーザーに促す必要が51回目の記録でもなお長期化している",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index",
+    "https://s.kabutan.jp/news/n202609030941/",
+    "https://tbladvisory.com/20260903nk/"
+   ]
   }
  ]
 }
