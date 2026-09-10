@@ -1677,7 +1677,7 @@
    "low": 4456.0,
    "close": 4456.0,
    "close_change_yen": -205.0,
-   "close_change_pct": -4.40,
+   "close_change_pct": -4.4,
    "conditions": {
     "A": false,
     "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は59回目の記録でユーザー未確認）",
@@ -1773,6 +1773,29 @@
    "sources": [
     "https://www.nikkei.com/nkd/company/chart/?scode=6506",
     "https://www.zaikei.co.jp/article/20260910/869423.html"
+   ]
+  },
+  {
+   "date": "2026-09-10",
+   "batch": "15:45速報答え合わせ（本セッションの実際の起動は20:55 JSTまでずれ込んだ）",
+   "prev_close": 4503.0,
+   "open": 4420.0,
+   "high": 4437.0,
+   "low": 4354.0,
+   "close": 4432.0,
+   "close_change_yen": -71.0,
+   "close_change_pct": -1.58,
+   "conditions": {
+    "A": false,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は64回目の記録でユーザー未確認）",
+    "C": "true（本日の日経平均寄与度ランキング大引け版〈zaikei 869491、上位・下位いずれも〉に安川電機の記載なし。値下がり率上位銘柄としても本データルートでは言及を確認できず）"
+   },
+   "unlock": false,
+   "data_quality": "終値4,432円は日経電子版（www.nikkei.com/nkd/company/history/dprice/?scode=6506）の四本値推移テーブルと松井証券（finance.matsui.co.jp/stock/6506/index、2026/9/10 15:30時点表記）の2ソースで完全一致を確認（憲法③）",
+   "note": "前日終値4,503円→4,432円で続落（-1.58%）。昼バッチ時点(10:40、-2.91%)からは下げ幅を縮小して引けた。条件Aは前日終値を下回って引けたためfalse。条件Cは間接証拠ながら成立の形。条件Bが64回目の記録でもユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index"
    ]
   }
  ]
