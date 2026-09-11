@@ -1,0 +1,262 @@
+{
+ "date": "2026-09-11",
+ "phase": "15:45速報答え合わせ",
+ "judged_at": "2026-09-11T21:05:00+09:00",
+ "batch_note": "本セッションの実際の起動は20:50 JSTまでずれ込んだ（既に大引け後）。夕刊話題株ルート（財経新聞の日経平均寄与度ランキング大引け版・本日の注目個別銘柄、日経電子版の四本値テーブル、松井証券の個別ページ）で候補6銘柄・ウォッチ2銘柄すべてについて大引け確定値を2ソース以上でクロスチェックできたため、pendingは0件。判定はダブル基準（終値ベース＋後場高値/安値+-2%ベース）、±0.5%はデッドバンドで引き分け（設計書§3・OPERATIONS§3準拠）。前営業日9/10は18:30確定スイープで2勝3敗1分・累計86勝50敗48分（判定不能1・恒久除外7）まで確定しており、9/11昼バッチからの持ち越し(pending)はなかった",
+ "market": {
+  "nikkei_close": 64011.34,
+  "nikkei_close_change": -1259.61,
+  "nikkei_close_change_pct": -1.93,
+  "nikkei_close_note": "前引け63,469.39円(-1,801.56円、-2.76%)からさらに下げ幅を拡大し後場寄り63,361.04円で始まったが、後場中盤にかけて下げ渋り64,011.34円で大引け。前引け段階で見込んでいた『安値圏でのもみ合い継続』通りとなり、12:15風向きフェーズの見立て（下げがやや深まる方向で継続）とも整合的。米長期金利急伸（米10年債利回り4.96%）と原油急伸（WTI+7.27%で103ドル台）を受けたリスクオフが終日響いた",
+  "breadth_note": "東証プライム値上がり少数・値下がり優勢（財経新聞869722クロージング記事）。TOPIXは4,028.30(-26.28、-0.65%)、売買代金8兆7,129億円。セクターは保険・海運・輸送用機器が上昇、非鉄金属・電気機器・石油石炭が下落（財経新聞869718・869722）",
+  "sources": [
+   "https://www.zaikei.co.jp/article/20260911/869711.html",
+   "https://www.zaikei.co.jp/article/20260911/869724.html",
+   "https://www.zaikei.co.jp/article/20260911/869718.html",
+   "https://www.zaikei.co.jp/article/20260911/869722.html"
+  ]
+ },
+ "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース：押せ押せ想定は後場高値がanchor比+2%以上、底なし想定は後場安値がanchor比-2%以下だったかを併記（設計書§3準拠）。累計成績には終値ベースの判定のみを計上。なお本日の日中高値・安値の発生時刻（前場か後場か）は日経電子版の四本値テーブルからは特定できないため、ストレッチ判定はあくまで参考情報として扱う",
+ "results": [
+  {
+   "code": "6857",
+   "name": "アドバンテスト",
+   "newface": false,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "🚫 触らない",
+   "prev_close": 33920.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 31360.0,
+   "anchor_change_pct": -7.55,
+   "close": 31720.0,
+   "close_change_yen": -2200.0,
+   "close_change_pct": -6.49,
+   "anchor_to_close_pct": 1.148,
+   "close_verdict": "LOSE（前引け31,360円→大引け31,720円で+1.15%とデッドバンドを超えて反発。底なし＝後場も下げ続ける想定に反し、値幅は依然大きいものの下げ渋って引けた）",
+   "day_high": 32220.0,
+   "day_low": 30980.0,
+   "stretch_verdict": "未達（日中安値30,980円はanchor比-1.21%で-2%基準に届かず）",
+   "note": "9/10は地合いに対する逆行高でWINだったが、本日は金利ショックを最も強く受ける値がさ株として日経平均の下げを単独牽引（値下がり寄与度1位、-530.99）。それでも前引けの急落値からは下げ渋る形で引け、底なしの見立ては外れた。🚫触らないで新規建玉なしのため実損はない",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260911/869724.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857"
+   ]
+  },
+  {
+   "code": "285A",
+   "name": "キオクシアホールディングス",
+   "newface": true,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "🚫 触らない",
+   "prev_close": 58090.0,
+   "anchor_time": "11:31時点（前引け）",
+   "anchor": 53420.0,
+   "anchor_change_pct": -8.04,
+   "close": 54030.0,
+   "close_change_yen": -4060.0,
+   "close_change_pct": -6.99,
+   "anchor_to_close_pct": 1.142,
+   "close_verdict": "LOSE（前引け53,420円→大引け54,030円で+1.14%とデッドバンドを超えて反発。底なし＝後場も下げ続ける想定に反し、下げ渋って引けた）",
+   "day_high": 55360.0,
+   "day_low": 53150.0,
+   "stretch_verdict": "未達（日中安値53,150円はanchor比-0.51%で-2%基準に届かず）",
+   "note": "個別材料は見当たらず地合い全体のリスクオフが主因とみていた通り、半導体メモリ株全体の反発力に連れて下げ渋った。🚫触らないで新規建玉なしのため実損はない",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260911/869724.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A"
+   ]
+  },
+  {
+   "code": "9984",
+   "name": "ソフトバンクグループ",
+   "newface": false,
+   "quadrant": "底なし",
+   "confidence": 2,
+   "action": "🚫 触らない",
+   "prev_close": 6810.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 6430.0,
+   "anchor_change_pct": -5.58,
+   "close": 6540.0,
+   "close_change_yen": -270.0,
+   "close_change_pct": -3.96,
+   "anchor_to_close_pct": 1.711,
+   "close_verdict": "LOSE（前引け6,430円→大引け6,540円で+1.71%とデッドバンドを超えて反発。底なし＝後場も下げ続ける想定に反し、下げ渋って引けた）",
+   "day_high": 6555.0,
+   "day_low": 6358.0,
+   "stretch_verdict": "未達（日中安値6,358円はanchor比-1.12%で-2%基準に届かず）",
+   "note": "昼バッチ時点で『この銘柄については直近の見立て自体の的中率が低い』と確信度を抑えていた通り、本日も底なしは外れた。AI・半導体セクター全体が後場にかけて下げ渋った流れに連れた形。🚫触らないで新規建玉なしのため実損はない",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260911/869724.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984"
+   ]
+  },
+  {
+   "code": "4194",
+   "name": "ビジョナル",
+   "newface": true,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 8794.0,
+   "anchor_time": "11:14時点（前引け前）",
+   "anchor": 8354.0,
+   "anchor_change_pct": -5.0,
+   "close": 8028.0,
+   "close_change_yen": -766.0,
+   "close_change_pct": -8.71,
+   "anchor_to_close_pct": -3.902,
+   "close_verdict": "WIN（前引け8,354円→大引け8,028円で-3.90%とデッドバンドを超えて続落。底なし＝後場も下げ続ける想定が的中）",
+   "day_high": 8366.0,
+   "day_low": 7915.0,
+   "stretch_verdict": "WIN（日中安値7,915円はanchor比-5.26%で-2%基準を達成）",
+   "note": "27年7月期ガイダンスが市場コンセンサス未達という②ガイダンス毀損型の典型パターンとみた見立てが的中。戻り売りが後場も続き、終値ベース・ストレッチベースの両方でWIN。⏸待ち推奨で新規建玉なしのため実損はない",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260911/869716.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4194"
+   ]
+  },
+  {
+   "code": "7832",
+   "name": "バンダイナムコホールディングス",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 5236.0,
+   "anchor_time": "11:31〜12:24時点（前引け）",
+   "anchor": 5355.0,
+   "anchor_change_pct": 2.27,
+   "close": 5359.0,
+   "close_change_yen": 123.0,
+   "close_change_pct": 2.35,
+   "anchor_to_close_pct": 0.075,
+   "close_verdict": "DRAW（前引け5,355円→大引け5,359円で+0.07%とデッドバンド内。押せ押せ＝後場も続く想定に対し、伸びも失速もせず高値圏でほぼ横ばいで引けた）",
+   "day_high": 5394.0,
+   "day_low": 5208.0,
+   "stretch_verdict": "未達（日中高値5,394円はanchor比+0.73%で+2%基準に届かず）",
+   "note": "SMBC日興証券の目標株価上げを受けた玩具セクター単独のテーマ買いは地合い総崩れの中でも崩れずに引けたが、上げ幅自体はさらに拡大せず高値圏での横ばい。日経平均値上がり寄与度3位（+12.37）は維持",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260911/869724.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=7832"
+   ]
+  },
+  {
+   "code": "7867",
+   "name": "タカラトミー",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 3513.0,
+   "anchor_time": "11:31時点（前引け）",
+   "anchor": 3647.0,
+   "anchor_change_pct": 3.81,
+   "close": 3639.0,
+   "close_change_yen": 126.0,
+   "close_change_pct": 3.59,
+   "anchor_to_close_pct": -0.219,
+   "close_verdict": "DRAW（前引け3,647円→大引け3,639円で-0.22%とデッドバンド内。押せ押せ＝後場も続く想定に対し、伸びも失速もせず高値圏でほぼ横ばいで引けた）",
+   "day_high": 3720.0,
+   "day_low": 3526.0,
+   "stretch_verdict": "WIN（日中高値3,720円はanchor比+2.00%でぎりぎり+2%基準を達成）",
+   "note": "バンダイナムコと同時多発的な玩具セクター格上げ買いが持続。終値ベースはデッドバンド内の引き分けだが、日中には僅かに+2%基準に達する伸びの瞬間があった",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=7867",
+    "https://finance.matsui.co.jp/stock/7867/index"
+   ]
+  }
+ ],
+ "quadrant_note_shissoku": "失速警戒（急騰×後場反転）は本日も該当なしのまま（昼バッチの見立てを維持）。地合い総崩れの中で急騰を維持した銘柄自体が乏しく、上昇したバンダイナムコ・タカラトミーも上げ幅は+2〜4%程度にとどまり過熱感のある急騰ではなかった",
+ "quadrant_note_sagesugi": "下げすぎ（急落×後場は反発）は本日も該当なしのまま（昼バッチの見立てを維持）。結果的にアドバンテスト・キオクシアHD・ソフトバンクGはいずれも前引けから下げ渋る反発を見せ、この象限の定義（一時的な悪材料からの明確な反発）に近い値動きだったが、昼バッチ時点でその確証を得られる材料はなく、マクロ主導の底なしとして見立てていた。この3銘柄の反発を見誤ったことが本日の主因",
+ "watch": {
+  "yaskawa_6506": {
+   "prev_close": 4432.0,
+   "close": 4301.0,
+   "close_change_yen": -131.0,
+   "close_change_pct": -2.96,
+   "day_high": 4315.0,
+   "day_low": 4207.0,
+   "anchor_time": "未取得（昼バッチのデータルートでは前引け時点の具体的株価を発見できず、anchor未確定のため終値ベースの見立て判定は不可）",
+   "data_quality": "終値4,301円は日経電子版（四本値推移テーブル）と松井証券（'2026/9/11 15:30'時点表記）の2ソースで完全一致を確認",
+   "conditions": {
+    "A": false,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は67回目の記録でユーザー未確認）",
+    "C": "true（本日の日経平均寄与度ランキング大引け版〈zaikei 869724〉の値下がり寄与度上位・値上がり寄与度上位いずれにも安川電機の記載なし。間接証拠のみ）"
+   },
+   "unlock": false,
+   "note": "前日終値4,432円→4,301円(-131円、-2.96%)で続落。前引けanchorは未取得のため今日は終値ベースの方向判定（見立てとの突合）はできないが、条件Aは前日終値を下回って引けたためfalse。条件Cは間接証拠ながら成立の形。条件Bが67回目の記録でもユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index"
+   ]
+  },
+  "fastretailing_9983": {
+   "prev_close": 66810.0,
+   "anchor": 66220.0,
+   "anchor_change_pct": -0.88,
+   "close": 66480.0,
+   "close_change_yen": -330.0,
+   "close_change_pct": -0.49,
+   "anchor_to_close_pct": 0.393,
+   "day_high": 66760.0,
+   "day_low": 65010.0,
+   "note": "前引け66,220円(-0.88%)→大引け66,480円(-0.49%)で、デッドバンド内のほぼ横ばい。9/3発表の8月既存店売上高-1.3%以来続く調整局面の範囲内で、9/10に一旦止まった下落基調は本日もさらなる悪化はせず、明確な反発とも言えない足踏み状態が継続",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260911/869724.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
+   ]
+  }
+ },
+ "pending_carried_over": [],
+ "score_today": {
+  "win": 1,
+  "lose": 3,
+  "draw": 2,
+  "pending": 0,
+  "candidates": 6,
+  "note": "終値ベースの判定で集計。WIN=ビジョナル(4194、底なし的中、ストレッチ基準も的中)。LOSE=アドバンテスト(6857、底なし外れ)・キオクシアHD(285A、底なし外れ)・ソフトバンクG(9984、底なし外れ)。DRAW=バンダイナムコHD(7832、終値はデッドバンド内だが+0.07%)・タカラトミー(7867、終値はデッドバンド内だが日中は僅かに+2%基準達成)。米長期金利急伸・原油急伸というマクロ要因主導で前引けに急落した半導体3銘柄（アドバンテスト・キオクシアHD・ソフトバンクG）が軒並み後場に下げ渋り、底なし象視が3連敗する一方、個別のガイダンス毀損材料が明確だったビジョナルは底なしが的中。6銘柄すべてが⏸待ち推奨／🚫触らないで新規建玉なしの想定だった"
+ },
+ "score_cumulative": {
+  "win": 87,
+  "lose": 53,
+  "draw": 50,
+  "unverified": 1,
+  "excluded_20260716": 7,
+  "as_of": "2026-09-11 15:45速報答え合わせ時点（候補6銘柄・ウォッチ2銘柄すべて大引け確定値。日経平均は財経新聞2記事で一致、個別6銘柄は財経新聞・日経電子版・松井証券等の2ソース以上で一致。pendingなし）",
+  "note": "累計勝率＝87/(87+53+50)=45.8%（引き分け除く分母では87/140=62.1%）。9/10時点の46.7%(63.2%)からやや低下。前引けで急落した銘柄が後場に下げ渋るパターンが3日連続で見られ（9/10はフジクラ・イビデン・任天堂、本日はアドバンテスト・キオクシアHD・ソフトバンクG）、底なし象限の見立て精度が課題として浮上している。1日の結果で一喜一憂せず数十日単位での評価を継続する（憲法4b）"
+ },
+ "calibration_by_confidence": {
+  "確信4": {"win": 25, "lose": 14, "draw": 8, "n": 47, "win_rate_pct": 53.2},
+  "確信3": {"win": 40, "lose": 26, "draw": 30, "n": 96, "win_rate_pct": 41.7},
+  "確信2": {"win": 22, "lose": 13, "draw": 12, "n": 47, "win_rate_pct": 46.8},
+  "note": "確信3はアドバンテスト(LOSE)・キオクシアHD(LOSE)・ビジョナル(WIN)・バンダイナムコHD(DRAW)が加わりn92→96、42.4%→41.7%にやや低下。確信2はソフトバンクG(LOSE)・タカラトミー(DRAW)が加わりn45→47、48.9%→46.8%に低下。確信4は本日該当なしで変化なし"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": {"win": 41, "lose": 22, "draw": 25, "n": 88, "win_rate_pct": 46.6},
+  "失速警戒": {"win": 14, "lose": 9, "draw": 8, "n": 31, "win_rate_pct": 45.2},
+  "底なし": {"win": 27, "lose": 19, "draw": 14, "n": 60, "win_rate_pct": 45.0},
+  "下げすぎ": {"win": 5, "lose": 3, "draw": 3, "n": 11, "win_rate_pct": 45.5},
+  "note": "押せ押せはバンダイナムコHD(DRAW)・タカラトミー(DRAW)が加わりn86→88、47.7%→46.6%にやや低下。底なしはアドバンテスト・キオクシアHD・ソフトバンクGの3LOSEとビジョナルの1WINが加わりn56→60、46.4%→45.0%に低下。失速警戒・下げすぎは本日該当なしで変化なし"
+ },
+ "data_quality_note": "候補6銘柄の終値は財経新聞（zaikei.co.jp/article/20260911/869724.html、日経平均寄与度ランキング大引け版、16:43配信 および 869716.html、本日の注目個別銘柄、15:52配信）と日経電子版（四本値推移テーブル、nikkei.com/nkd/company/history/dprice/）の2ソースで完全一致を確認（アドバンテスト・キオクシアHD・ソフトバンクG・ビジョナル・バンダイナムコHD）。タカラトミーは日経電子版と松井証券（'2026/9/11 15:30'時点表記）の2ソースで一致。日経平均終値64,011.34円(-1,259.61円)は財経新聞2記事（869711・869724）で一致を確認。安川電機・ファーストリテイリングも日経電子版・松井証券の2ソースで一致。なお本日序盤のWebSearchで『話題株ピックアップ夕刊』のタカラトミー株価として3,322円(+1.10%)という値が一度返ったが、前日終値と逆算が整合せず（3,322-36=3,286円は9/10終値3,513円と不一致）、キャッシュ罠として不採用とした（設計書§9・OPERATIONS§2の教訓通り）",
+ "sources_summary": [
+  "https://www.zaikei.co.jp/article/20260911/869711.html",
+  "https://www.zaikei.co.jp/article/20260911/869724.html",
+  "https://www.zaikei.co.jp/article/20260911/869718.html",
+  "https://www.zaikei.co.jp/article/20260911/869722.html",
+  "https://www.zaikei.co.jp/article/20260911/869716.html",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=4194",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=7832",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=7867",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+  "https://finance.matsui.co.jp/stock/7867/index",
+  "https://finance.matsui.co.jp/stock/6506/index"
+ ]
+}

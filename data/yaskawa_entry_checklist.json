@@ -1840,6 +1840,29 @@
     "https://www.zaikei.co.jp/article/20260911/869650.html",
     "https://s.kabutan.jp/news/marketnews/?date=20260911"
    ]
+  },
+  {
+   "date": "2026-09-11",
+   "batch": "15:45速報答え合わせ（本セッションの実際の起動は20:50 JSTまでずれ込んだ）",
+   "prev_close": 4432.0,
+   "close": 4301.0,
+   "close_change_yen": -131.0,
+   "close_change_pct": -2.96,
+   "high": 4315.0,
+   "low": 4207.0,
+   "anchor_time": "未取得（昼バッチのデータルートでは前引け時点の具体的株価を発見できず、anchor未確定のため終値ベースの見立て判定は不可）",
+   "conditions": {
+    "A": false,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は67回目の記録でユーザー未確認）",
+    "C": "true（本日の日経平均寄与度ランキング大引け版〈zaikei 869724〉の値下がり寄与度上位・値上がり寄与度上位いずれにも安川電機の記載なし。間接証拠のみ）"
+   },
+   "unlock": false,
+   "data_quality": "終値4,301円は日経電子版（www.nikkei.com/nkd/company/history/dprice/?scode=6506）の四本値推移テーブルと松井証券（finance.matsui.co.jp/stock/6506/index、2026/9/11 15:30時点表記）の2ソースで完全一致を確認（憲法③）",
+   "note": "前日終値4,432円→4,301円で続落（-2.96%）。前引けanchorは未取得のため今日は終値ベースの方向判定（見立てとの突合）はできないが、条件Aは前日終値を下回って引けたためfalse。条件Cは間接証拠ながら成立の形。条件Bが67回目の記録でもユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index"
+   ]
   }
  ]
 }
