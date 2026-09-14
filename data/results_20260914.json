@@ -1,0 +1,270 @@
+{
+ "date": "2026-09-14",
+ "phase": "15:45速報答え合わせ",
+ "judged_at": "2026-09-14T22:35:00+09:00",
+ "batch_note": "本セッションの実際の起動は22:22 JSTまでずれ込んだ（市場は大引け済み）が、指定により本セッションでは15:45速報答え合わせフェーズのみを実施し18:30確定スイープは行わない（自己予約・commit・pushも行わない）。候補5銘柄・ウォッチ2銘柄とも大引け確定値を財経新聞（寄与度ランキング大引け版869973・17:04配信）とnikkei.com個別ページの2ソースで取得し全銘柄完全一致を確認、pendingはゼロ。日経平均・TOPIXは財経新聞869962・investing.com(Fisco配信・同内容のため実質1系統)・WebSearchの複数経路で63,492.99円/4,058.21ptの一致を確認。プライム騰落・業種別動向は株探記事(16:16配信)で確認。18:30確定スイープでの独立再検証を推奨",
+ "market": {
+  "nikkei_close": 63492.99,
+  "nikkei_close_change": -518.35,
+  "nikkei_close_change_pct": -0.81,
+  "nikkei_close_note": "前引け63,498.61円(-512.73円、-0.80%)から、後場寄り12:30時点では一時-449.91円まで下げ幅を縮める場面があったが、終盤にかけて再び下げ幅を広げ-518.35円で大引け。前引けからほぼ横ばいで着地した形。財経新聞869962・869973、investing.com(Fisco)、WebSearchの複数経路で63,492.99円(-518.35円)の完全一致を確認",
+  "topix_close": 4058.21,
+  "topix_close_change": 29.91,
+  "topix_close_change_pct": 0.74,
+  "topix_close_note": "財経新聞869962・investing.com(Fisco)ともに前引け値と同値(4,058.21pt、+29.91)を掲載しており、後場を通じてTOPIXがほぼ動かなかった可能性が高い。ただしFisco系配信は実質同一ソースのため、WebSearch経由の第三者言及（個人ブログ）でも同値を確認し単純なキャッシュ罠ではないと判断したが、複数の独立した一次情報源による確証ではない点は明示しておく",
+  "breadth_prime_close_pct": {
+   "up_pct": 78.5,
+   "down_pct": 19.8,
+   "note": "株探記事(16:16配信)より、東証プライム値上がり銘柄比率78.5%・値下がり19.8%（残りは変わらず等）。前引け時点の日経225採用銘柄ベース(172up/51down/2flat)と単純比較はできないが、値上がり優勢という方向感は一致"
+  },
+  "nikkei225_breadth_close": {
+   "up": 158,
+   "down": 66,
+   "note": "財経新聞869973（寄与度ランキング大引け版、17:04配信）より。前引け時点(172up/51down/2flat)からは値下がり銘柄がやや増加"
+  },
+  "up_sectors_close": ["サービス業", "保険業", "その他製品"],
+  "down_sectors_close": ["非鉄金属", "情報・通信業", "ゴム製品"],
+  "push_up_top": [
+   {"code": "6098", "name": "リクルートHD", "contribution": 99.06},
+   {"code": "7832", "name": "バンダイナムコHD", "contribution": 25.95},
+   {"code": "9983", "name": "ファーストリテイリング", "contribution": 22.53}
+  ],
+  "push_down_top": [
+   {"code": "9984", "name": "ソフトバンクグループ", "contribution": -563.98},
+   {"code": "6857", "name": "アドバンテスト", "contribution": -154.47},
+   {"code": "285A", "name": "キオクシアホールディングス", "contribution": -80.72}
+  ],
+  "mood_verdict": "日経平均は前日比-518.35円(-0.81%)の63,492.99円で続落し約1カ月半ぶりの安値。前引け(-512.73円)からほぼ横ばいで終了し、後場寄り直後の下げ幅縮小(-449.91円、12:15風向き参照)も長くは続かなかった。ソフトバンクG(寄与度-563.98)・アドバンテスト(-154.47)・キオクシアHD(-80.72)の3銘柄でおよそ800円分を押し下げる一方、TOPIXは前引けからほぼ変わらず+29.91(+0.74%)を維持しプラス圏で終了、値上がり銘柄が78.5%を占めるなど二極化構図は大引けまで崩れなかった。リクルートHD(+99.06)・バンダイナムコHD(+25.95)・ファーストリテイリング(+22.53)が押し上げ上位",
+  "sources": [
+   "https://www.zaikei.co.jp/article/20260914/869973.html",
+   "https://www.zaikei.co.jp/article/20260914/869962.html",
+   "https://jp.investing.com/news/forex-news/article-1678607",
+   "https://kabutan.jp/news/marketnews/?b=n202609140899"
+  ]
+ },
+ "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース：押せ押せ想定は日中高値がanchor比+2%以上、底なし想定は日中安値がanchor比-2%以下だったかを参考情報として併記（設計書§3の後場高値+2%基準を下落方向にも対称適用）。日中高値・安値の発生時刻(前場か後場か)は本データルートでは特定できないため、累計成績には終値ベースの判定のみを計上しストレッチは参考扱いとする",
+ "results": [
+  {
+   "code": "9984",
+   "name": "ソフトバンクグループ",
+   "newface": false,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "🚫 触らない",
+   "prev_close": 6540.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 5846.0,
+   "anchor_change_pct": -10.61,
+   "close": 5839.0,
+   "close_change_yen": -701.0,
+   "close_change_pct": -10.72,
+   "anchor_to_close_pct": -0.12,
+   "close_verdict": "DRAW（前引け5,846円→大引け5,839円で-0.12%と±0.5%デッドバンド内につき引き分け。底なし＝後場も下げ続ける想定に対し、前引け水準からほぼ動かず高値でも安値でもない位置でこう着したまま引けた）",
+   "day_open": 5887.0,
+   "day_high": 5953.0,
+   "day_low": 5678.0,
+   "stretch_verdict": "参考：日中安値5,678円はanchor比-2.87%で-2%基準を超える下げを記録したが、日中高値5,953円(anchor比+1.83%)もあり値動きが荒く、発生時刻が前場か後場か本データルートでは特定できないため断定はしない",
+   "note": "9/11の底なし3連敗（アドバンテスト・キオクシアHD・ソフトバンクG自身）を踏まえ確信度を抑えていた通り、今回も方向感の乏しいこう着で引け分け。値幅そのものは-10%超と極めて大きいが、後場に入ってからの新たな下げ加速も明確な戻りも見られなかった。🚫触らないで新規建玉なしのため実損はない",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260914/869973.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984"
+   ]
+  },
+  {
+   "code": "6857",
+   "name": "アドバンテスト",
+   "newface": false,
+   "quadrant": "底なし",
+   "confidence": 2,
+   "action": "🚫 触らない",
+   "prev_close": 31720.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 30980.0,
+   "anchor_change_pct": -2.33,
+   "close": 31080.0,
+   "close_change_yen": -640.0,
+   "close_change_pct": -2.02,
+   "anchor_to_close_pct": 0.32,
+   "close_verdict": "DRAW（前引け30,980円→大引け31,080円で+0.32%と±0.5%デッドバンド内につき引き分け。底なし想定に対し、下げ渋ってはいるが明確な反発とまでは言えない横ばいで引けた）",
+   "day_open": 30330.0,
+   "day_high": 31360.0,
+   "day_low": 30010.0,
+   "stretch_verdict": "参考：日中安値30,010円はanchor比-3.13%で-2%基準を超える下げを記録。発生時刻は本データルートでは特定できず断定はしない",
+   "note": "9/11に続き2営業日連続で底なしの見立てが伸びなかったが、9/11のような明確な反発(LOSE)ではなくデッドバンド内のDRAWにとどまり、下げ渋りの強さ自体は前回より弱かった",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260914/869973.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857"
+   ]
+  },
+  {
+   "code": "285A",
+   "name": "キオクシアホールディングス",
+   "newface": true,
+   "quadrant": "底なし",
+   "confidence": 2,
+   "action": "🚫 触らない",
+   "prev_close": 54030.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 50510.0,
+   "anchor_change_pct": -6.51,
+   "close": 50590.0,
+   "close_change_yen": -3440.0,
+   "close_change_pct": -6.37,
+   "anchor_to_close_pct": 0.16,
+   "close_verdict": "DRAW（前引け50,510円→大引け50,590円で+0.16%と±0.5%デッドバンド内につき引き分け）",
+   "day_open": 49500.0,
+   "day_high": 51180.0,
+   "day_low": 48730.0,
+   "stretch_verdict": "参考：日中安値48,730円はanchor比-3.52%で-2%基準を超える下げを記録。発生時刻は本データルートでは特定できず断定はしない",
+   "note": "9/11も底なしLOSEだったが、本日はデッドバンド内のDRAWにとどまり前回ほどの反発ではなかった。個別の新規材料は本データルートでは確認できず、引き続き半導体メモリ株全般安に連れた値動き",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260914/869973.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A"
+   ]
+  },
+  {
+   "code": "7832",
+   "name": "バンダイナムコホールディングス",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 5359.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 5616.0,
+   "anchor_change_pct": 4.80,
+   "close": 5617.0,
+   "close_change_yen": 258.0,
+   "close_change_pct": 4.81,
+   "anchor_to_close_pct": 0.02,
+   "close_verdict": "DRAW（前引け5,616円→大引け5,617円で+0.02%と±0.5%デッドバンド内につき引き分け。押せ押せ想定に対し、伸びも失速もせず高値圏で完全に横ばいのまま引けた）",
+   "day_open": 5530.0,
+   "day_high": 5678.0,
+   "day_low": 5494.0,
+   "stretch_verdict": "未達（日中高値5,678円はanchor比+1.10%で+2%基準に届かず）",
+   "note": "東海東京証券が投資判断を「ニュートラル」→「アウトパフォーム」に格上げ、目標株価4,130円→6,350円と伝わった（gamebiz.jp）。9/11のSMBC日興証券格上げに続き複数証券会社の評価が重なる形だが、株価自体は前引け水準で足踏み。2日連続の上昇で高値圏もみ合いという結果は⏸待ち推奨が妥当だったことを示す",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260914/869973.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=7832",
+    "https://gamebiz.jp/news/432714"
+   ]
+  },
+  {
+   "code": "6098",
+   "name": "リクルートホールディングス",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 15500.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 16340.0,
+   "anchor_change_pct": 5.42,
+   "close": 16485.0,
+   "close_change_yen": 985.0,
+   "close_change_pct": 6.35,
+   "anchor_to_close_pct": 0.89,
+   "close_verdict": "WIN（前引け16,340円→大引け16,485円で+0.89%とデッドバンドを超えて上昇継続。押せ押せ＝後場も続く想定が的中。大引けが日中高値と一致しており終値ベースでも強い形で引けた）",
+   "day_open": 15900.0,
+   "day_high": 16485.0,
+   "day_low": 15830.0,
+   "stretch_verdict": "未達（日中高値＝終値16,485円はanchor比+0.89%で+2%基準には届かず）",
+   "note": "好決算＋アナリスト格上げという実質材料が後場も評価され続け、値上がり寄与度トップを維持したまま高値引け。⏸待ち推奨としていたため見立て的中に対しては機会損失側の判断だった",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260914/869973.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6098"
+   ]
+  }
+ ],
+ "quadrant_note_shissoku": "失速警戒（急騰×後場反転）は本日も該当なしのまま（昼バッチの見立てを維持）",
+ "quadrant_note_sagesugi": "下げすぎ（急落×後場は反発）は本日も該当なしのまま（昼バッチの見立てを維持）。結果的にソフトバンクG・アドバンテスト・キオクシアHDはいずれもデッドバンド内の小幅な戻りにとどまり、9/11ほどの明確な反発ではなかった",
+ "watch": {
+  "yaskawa_6506": {
+   "prev_close": 4301.0,
+   "anchor_time": "未取得（本データルートでは前引け時点の具体的株価を発見できず）",
+   "anchor_price": null,
+   "anchor_change_pct": null,
+   "day_open": 4205.0,
+   "day_high": 4325.0,
+   "day_low": 4179.0,
+   "close": 4299.0,
+   "close_change_yen": -2.0,
+   "close_change_pct": -0.05,
+   "data_quality": "終値4,299円はnikkei.com個別ページで確認。昼バッチで取得した13:20時点の参考値(4,299円、単一ソース概算)と完全一致しており信頼度は高いが、2ソース目のクロスチェックは18:30スイープで実施推奨",
+   "conditions": {
+    "A": false,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は69回目の記録でユーザー未確認）",
+    "C": "true（本日の日経平均寄与度ランキング大引け版〈zaikei 869973〉の押し上げ・押し下げ上位いずれにも安川電機の記載なし。ただし変化幅自体が-0.05%とごく小さく上位ランキングに入らないのは当然の面もあり、間接証拠にとどまる）"
+   },
+   "unlock": false,
+   "note": "前日終値4,301円→終値4,299円(-2円、-0.05%)とほぼ横ばいで続落。条件Aは前日終値を2円下回って引けたため不成立（false）。条件Cは間接証拠ながら成立の形。条件Bが69回目の記録でもユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506"
+   ]
+  },
+  "fastretailing_9983": {
+   "prev_close": 66480.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 67070.0,
+   "anchor_change_pct": 0.88,
+   "day_open": 67000.0,
+   "day_high": 67330.0,
+   "day_low": 66330.0,
+   "close": 66760.0,
+   "close_change_yen": 280.0,
+   "close_change_pct": 0.42,
+   "anchor_to_close_pct": -0.46,
+   "note": "前引けの+0.88%からやや上げ幅を縮小し+0.42%で引け。anchor比-0.46%は±0.5%デッドバンド内でマイナス転換はしておらず明確な反転とは言えないが、値上がり寄与度上位からは陥落（当日押し上げ上位3銘柄には非掲載）。9/3発表の8月既存店売上高-1.3%以来の調整局面のなかでは底堅い推移が継続",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260914/869973.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
+   ]
+  }
+ },
+ "pending_carried_over": [],
+ "score_today": {
+  "win": 1,
+  "lose": 0,
+  "draw": 4,
+  "pending": 0,
+  "candidates": 5,
+  "note": "終値ベースの判定で集計。WIN=リクルートHD(6098、押せ押せ的中、終値が日中高値と一致する強い形)。DRAW=ソフトバンクG(9984)・アドバンテスト(6857)・キオクシアHD(285A)・バンダイナムコHD(7832)の4銘柄すべてが±0.5%デッドバンド内。底なし3銘柄は前引けの急落水準からほぼ動かずこう着し、押せ押せのバンダイナムコHDも高値圏で完全に横ばい。LOSEはゼロ。5銘柄すべてが⏸待ち推奨／🚫触らないで新規建玉なしの想定だった"
+ },
+ "score_cumulative": {
+  "win": 88,
+  "lose": 53,
+  "draw": 54,
+  "unverified": 1,
+  "excluded_20260716": 7,
+  "as_of": "2026-09-14 15:45速報答え合わせ時点（未確定、18:30確定スイープで最終確認予定）。9/11 18:30確定スイープ時点(87勝53敗50分)に本日5銘柄分(1勝0敗4分、pendingゼロ)を反映",
+  "note": "累計勝率＝88/(88+53+54)=45.1%（引き分け除く分母では88/141=62.4%）。9/11時点の45.8%(62.1%)からわずかに上昇。本日はLOSEがゼロだった一方、デッドバンド内のDRAWが4件と過半を占め、前引けの大きな値動きに対して後場は方向感に乏しいこう着が目立つ一日だった"
+ },
+ "calibration_by_confidence": {
+  "確信4": {"win": 25, "lose": 14, "draw": 8, "n": 47, "win_rate_pct": 53.2},
+  "確信3": {"win": 41, "lose": 26, "draw": 32, "n": 99, "win_rate_pct": 41.4},
+  "確信2": {"win": 22, "lose": 13, "draw": 14, "n": 49, "win_rate_pct": 44.9},
+  "note": "確信4は本日該当なしで変化なし。確信3はリクルートHD(WIN)・ソフトバンクG(DRAW)・バンダイナムコHD(DRAW)が加わりn96→99、41.7%→41.4%にわずかに低下。確信2はアドバンテスト(DRAW)・キオクシアHD(DRAW)が加わりn47→49、46.8%→44.9%に低下"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": {"win": 42, "lose": 22, "draw": 26, "n": 90, "win_rate_pct": 46.7},
+  "失速警戒": {"win": 14, "lose": 9, "draw": 8, "n": 31, "win_rate_pct": 45.2},
+  "底なし": {"win": 27, "lose": 19, "draw": 17, "n": 63, "win_rate_pct": 42.9},
+  "下げすぎ": {"win": 5, "lose": 3, "draw": 3, "n": 11, "win_rate_pct": 45.5},
+  "note": "押せ押せはリクルートHD(WIN)・バンダイナムコHD(DRAW)が加わりn88→90、46.6%→46.7%にほぼ横ばい。底なしはソフトバンクG・アドバンテスト・キオクシアHDの3DRAWが加わりn60→63、45.0%→42.9%に低下。失速警戒・下げすぎは本日該当なしで変化なし"
+ },
+ "data_quality_note": "候補5銘柄の終値は財経新聞（zaikei.co.jp/article/20260914/869973.html、日経平均寄与度ランキング大引け版、17:04配信）とnikkei.com個別ページ（四本値推移テーブル）の2ソースで完全一致を確認。日経平均終値63,492.99円(-518.35円)・TOPIX終値4,058.21pt(+29.91pt)は財経新聞2記事・investing.com(Fisco配信)・WebSearchの複数経路で一致を確認したが、TOPIXは前引け値と完全に同値であり、Fisco系配信が実質同一ソースである点は留保として明示する。安川電機は終値4,299円をnikkei.com単独で確認（2ソース目は18:30スイープ推奨）。ファーストリテイリングは財経新聞・nikkei.comの2ソースで一致確認",
+ "sources_summary": [
+  "https://www.zaikei.co.jp/article/20260914/869973.html",
+  "https://www.zaikei.co.jp/article/20260914/869962.html",
+  "https://jp.investing.com/news/forex-news/article-1678607",
+  "https://kabutan.jp/news/marketnews/?b=n202609140899",
+  "https://gamebiz.jp/news/432714",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=7832",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6098",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
+ ]
+}
