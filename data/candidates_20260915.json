@@ -153,5 +153,18 @@
     "https://www.zaikei.co.jp/article/20260915/870101.html",
     "https://jp.investing.com/news/stock-market-news/article-1680117",
     "https://www.nikkei.com/article/DGXZQOUB151010V10C26A9000000/"
-  ]
+  ],
+  "wind_1215": {
+    "checked_at": "2026-09-15T12:54:00+09:00（記事配信時刻ベース。本セッションの実際の起動は17:37 JSTと遅延したが、見立てには後場寄り前後の値のみを使用）",
+    "nikkei_gobayori": 63815.18,
+    "nikkei_gobayori_change": 322.19,
+    "nikkei_fade_from_maehiike": -267.18,
+    "note": "後場は+322.19円の63,815.18円でスタートし、前引け(+589.37円)から上げ幅を267.18円縮めて始まった。ランチタイム日経225先物も63,660〜63,910円のレンジで軟化方向。ドル円は154.21〜154.89円でしっかり（米10年債利回り5%台でドル買い）。地合いの反転ではなく、SBG主導の反発がやや息切れし始めている程度の変化で、昼の見立て（新規追随は待ち推奨）を覆すほどの材料ではないと判断。後場の作戦3行は据え置き",
+    "verdict": "小さな変化（見立ては覆らず）。notify.txtは発行せず",
+    "sources": [
+      "https://www.zaikei.co.jp/article/20260915/870100.html",
+      "https://www.zaikei.co.jp/article/20260915/870110.html",
+      "https://jp.investing.com/news/stock-market-news/article-1680130"
+    ]
+  }
 }
