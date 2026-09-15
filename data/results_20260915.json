@@ -1,0 +1,275 @@
+{
+ "date": "2026-09-15",
+ "phase": "15:45速報答え合わせ",
+ "judged_at": "2026-09-15T21:30:00+09:00",
+ "batch_note": "指定により本セッションでは15:45速報答え合わせフェーズのみ実施（18:30確定スイープは別セッション）。本セッションの実際の起動は21:11 JSTまでずれ込んだが、東証は15:30に引けており候補5銘柄・ウォッチ2銘柄とも大引け確定値が取得できたためpendingはゼロ。日経平均は前引け+589.37円(64,082.36円)から一転して大引け-8.89円(63,484.10円)とほぼ完全に失速し、後場に取り上げた4銘柄中3銘柄が反転LOSEとなる荒い一日だった。18:30確定スイープでの独立ソースによる再検証は別セッションに委ねる",
+ "market": {
+  "nikkei_close": 63484.10,
+  "nikkei_close_change": -8.89,
+  "nikkei_close_change_pct": -0.01,
+  "nikkei_close_note": "前引け64,082.36円(+589.37円、+0.93%)から一転、大引けは63,484.10円(-8.89円、-0.01%)とほぼ完全に上げ幅を失って引けた。日中値幅は1,033.82円(安値63,067円・9:05 → 高値64,101円・11:26)に達し、高値は前引け直後の11:26に記録されていた。後場は10年国債利回りの上昇(3.030%台、約30年ぶり高水準)と原油高(WTI103.44ドル、+2.02%)、韓国株安が重しとなり再びマイナス圏に沈んだ。財経新聞870147・870155、投資.com(Fisco配信、article-1680252)、日本経済新聞本紙記事(nikkei.com、DGXZQOUB150ICTV10C26A9000000、Fisco系とは別系統)、tbladvisory.comの独立まとめ記事で63,484.10円(-8.89円)の完全一致を確認(Fisco系統と日経本紙系統の2系統一致)",
+  "topix_close": 4037.16,
+  "topix_close_change": -21.05,
+  "topix_close_change_pct": -0.52,
+  "topix_close_note": "財経新聞870147より。WebSearchの複数言及でも同値が確認できたが、いずれも同一系統(Fisco/財経新聞)にとどまり真に独立した第三者ソースでの確認はできなかったため、TOPIXの値自体は確度中程度の扱いとする（憲法③）。前引け比-1.15pt(-0.03%)からさらに下げ幅を広げており、日経平均以上に軟調だった",
+  "breadth_prime_close_pct": {
+   "up_pct": 51.5,
+   "down_pct": 44.1,
+   "note": "財経新聞870155(東証プライム全体)より。売買高18億8,588万株・売買代金7兆4,384億円。前引け時点の日経225採用銘柄ベース(91up/133down)より値上がり比率は改善して見えるが、母集団が異なる点に留意"
+  },
+  "nikkei225_breadth_close": {
+   "up": 67,
+   "down": 157,
+   "flat": 1,
+   "note": "財経新聞870160（日経平均寄与度ランキング大引け版）より。合計225で構成銘柄数と整合。前引け時点(91up/133down/1flat)から値下がり銘柄がさらに大きく増加(157)しており、後場の失速が銘柄数ベースでも裏付けられる"
+  },
+  "up_sectors_close": ["情報・通信業(+2.07%)", "医薬品(+1.12%)"],
+  "down_sectors_close": ["石油・石炭製品(-2.24%)", "銀行業(-1.85%)"],
+  "push_up_top": [
+   {"code": "9984", "name": "ソフトバンクグループ", "contribution": 353.99},
+   {"code": "6098", "name": "リクルートHD", "contribution": 36.20},
+   {"code": "285A", "name": "キオクシアHD", "contribution": 27.22},
+   {"code": "6981", "name": "村田製作所", "contribution": 18.67},
+   {"code": "6976", "name": "太陽誘電", "contribution": 16.19}
+  ],
+  "push_down_top": [
+   {"code": "6857", "name": "アドバンテスト", "contribution": -222.05},
+   {"code": "8035", "name": "東京エレクトロン", "contribution": -28.16},
+   {"code": "5803", "name": "フジクラ", "contribution": -18.10},
+   {"code": "8015", "name": "豊田通商", "contribution": -17.90},
+   {"code": "9983", "name": "ファーストリテイリング", "contribution": -11.26}
+  ],
+  "mood_verdict": "日経平均は前引け+589.37円の急反発から一転、大引けは-8.89円の63,484.10円とほぼ完全に上げ幅を吐き出して3日続落。ソフトバンクGは前日-10.72%の反動で寄与度+353.99(株価+7.54%)と大幅高を維持したが、アドバンテスト(-222.05)・東エレク(-28.16)ら半導体株の売りに大きく相殺された。値上がり銘柄はわずか67に対し値下がりは157と、前引け(91up/133down)からさらに買いの広がりを欠く展開となり、10年国債利回り上昇(3.030%台)・原油高・韓国株安という後場の新規材料が『SBG主導の反発』というストーリーを崩した。日中値幅1,033円82銭という荒い値動きの中、高値(64,101円)は前引け直後の11:26に記録されており、そこから大引けにかけて一貫して下げ続けた形",
+  "sources": [
+   "https://www.zaikei.co.jp/article/20260915/870147.html",
+   "https://www.zaikei.co.jp/article/20260915/870155.html",
+   "https://www.zaikei.co.jp/article/20260915/870160.html",
+   "https://jp.investing.com/news/forex-news/article-1680252",
+   "https://www.nikkei.com/article/DGXZQOUB150ICTV10C26A9000000/",
+   "https://tbladvisory.com/20260915nk/"
+  ]
+ },
+ "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース：押せ押せ想定は日中高値がanchor比+2%以上だったかを参考情報として併記。今回はいずれの候補も日中高値の発生時刻が前引け直後(市場全体の高値は11:26)に集中しており、anchor自体が高値圏に近かったため、ストレッチ基準を満たした銘柄はゼロだった。累計成績には終値ベースの判定のみを計上する",
+ "results": [
+  {
+   "code": "9984",
+   "name": "ソフトバンクグループ",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 5839.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 6372.0,
+   "anchor_change_pct": 9.13,
+   "close": 6279.0,
+   "close_change_yen": 440.0,
+   "close_change_pct": 7.54,
+   "anchor_to_close_pct": -1.46,
+   "close_verdict": "LOSE（前引け6,372円→大引け6,279円で-1.46%とデッドバンドを超えて反落。押せ押せ＝後場も上げ続ける想定に対し、後場に入って失速し明確に下押しした）",
+   "day_open": 5828.0,
+   "day_high": 6398.0,
+   "day_low": 5775.0,
+   "stretch_verdict": "未達（日中高値6,398円はanchor比+0.41%で+2%基準に届かず。市場全体の高値(日経平均64,101円)が前引け直後11:26に記録されていることから、この銘柄の高値も前引け前後に集中していたとみられる）",
+   "note": "『新規追随は後場も上げ幅を維持できるか確認してから』としていた⏸待ち推奨の判断は結果的に正解。前日-10.72%→本日+7.54%の反発自体は残ったが、前引けの+9.13%からは大きく後退し、懸念していた『昨日同様の荒い値動み』の一部が現実になった",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+    "https://www.zaikei.co.jp/article/20260915/870160.html"
+   ]
+  },
+  {
+   "code": "3994",
+   "name": "マネーフォワード",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 5941.0,
+   "anchor_time": "11:30時点近辺（単一ソース・株探。概算扱い）",
+   "anchor": 6365.0,
+   "anchor_change_pct": 7.10,
+   "close": 6136.0,
+   "close_change_yen": 195.0,
+   "close_change_pct": 3.28,
+   "anchor_to_close_pct": -3.60,
+   "close_verdict": "LOSE（前引け(概算)6,365円→大引け6,136円で-3.60%と明確にデッドバンドを超えて反落。候補5銘柄中もっとも値を崩した）",
+   "day_open": 6394.0,
+   "day_high": 6417.0,
+   "day_low": 6136.0,
+   "stretch_verdict": "未達（日中高値6,417円はanchor比+0.82%で+2%基準に届かず）。安値=終値であり、後場は一貫して下げ続けた形",
+   "note": "セクター全体の反発に乗っただけで個別の実質材料が確認できていなかった通り、地合いの悪化(10年金利上昇・半導体安)にもっとも敏感に反応し、値上がり率+7.1%(前引け)→+3.28%(終値)まで大きく縮小。⏸待ち推奨だったため新規建玉なしの前提では実損はない",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=3994"
+   ]
+  },
+  {
+   "code": "285A",
+   "name": "キオクシアホールディングス",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "👀 観察のみ",
+   "prev_close": 50590.0,
+   "anchor_time": "11:30時点（前引け）",
+   "anchor": 51970.0,
+   "anchor_change_pct": 2.73,
+   "close": 51750.0,
+   "close_change_yen": 1160.0,
+   "close_change_pct": 2.29,
+   "anchor_to_close_pct": -0.42,
+   "close_verdict": "DRAW（前引け51,970円→大引け51,750円で-0.42%と±0.5%デッドバンド内につき引き分け。他の押せ押せ候補ほど崩れず、ADR上場・資金調達検討という個別材料の厚みが下支えした形）",
+   "day_open": 49920.0,
+   "day_high": 52690.0,
+   "day_low": 49700.0,
+   "stretch_verdict": "未達（日中高値52,690円はanchor比+1.39%で+2%基準にはわずかに届かず。ただし候補5銘柄の中では最もストレッチ基準に近かった）",
+   "note": "👀観察のみとしていた判断通り、半導体メモリセクター全体は軟調(アドバンテスト・東エレクが値下がり寄与度上位)だったが、キオクシアHD自身はADR上場・大型資金調達という個別材料の厚みでデッドバンド内の踏みとどまりにとどめた",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A"
+   ]
+  },
+  {
+   "code": "6981",
+   "name": "村田製作所",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 7167.0,
+   "anchor_time": "11:30時点近辺（複数ソースほぼ整合）",
+   "anchor": 7507.0,
+   "anchor_change_pct": 4.74,
+   "close": 7399.0,
+   "close_change_yen": 232.0,
+   "close_change_pct": 3.24,
+   "anchor_to_close_pct": -1.44,
+   "close_verdict": "LOSE（前引け7,507円→大引け7,399円で-1.44%とデッドバンドを超えて反落。SOX急落を跳ね返す逆行高としていたが、後場の半導体株安（アドバンテスト・東エレク）に引きずられた）",
+   "day_open": 6970.0,
+   "day_high": 7516.0,
+   "day_low": 6967.0,
+   "stretch_verdict": "未達（日中高値7,516円はanchor比+0.12%で+2%基準に届かず）",
+   "note": "『実需の裏付けが薄い分、地合いが再度崩れれば失速しやすい』という懸念通りの展開。前引けの+4.74%から終値+3.24%まで縮小し、⏸待ち推奨の判断は結果的に妥当だった",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6981"
+   ]
+  },
+  {
+   "code": "6976",
+   "name": "太陽誘電",
+   "newface": true,
+   "quadrant": "失速警戒",
+   "confidence": 2,
+   "action": "🚫 触らない",
+   "prev_close": 8714.0,
+   "anchor_time": "11:30時点近辺（単一ソース・財経新聞につき概算扱い）",
+   "anchor": 9294.0,
+   "anchor_change_pct": 6.66,
+   "close": 9197.0,
+   "close_change_yen": 483.0,
+   "close_change_pct": 5.54,
+   "anchor_to_close_pct": -1.04,
+   "close_verdict": "WIN（前引け(概算)9,294円→大引け9,197円で-1.04%とデッドバンドを超えて反落。失速警戒＝急騰した銘柄が後場に反転する想定が的中）",
+   "day_open": 8597.0,
+   "day_high": 9319.0,
+   "day_low": 8527.0,
+   "stretch_verdict": "参考：日中安値8,527円は寄り付き付近(始値8,597円を下回る)で記録されたとみられ、前引け9,294円到達後の押し戻しがどこまで進んだかは本データルートでは特定できない。値上がり寄与度ランキング上位10位以内には終日入らずセンチメント連動の戻りという読みは維持",
+   "note": "『材料の薄い戻りは失速しやすい典型パターン』という見立て通り、後場に入って上げ幅を縮小。🚫触らないで新規建玉なしのため見立て的中も実利には直結しない想定だったが、失速警戒象限の判定としては的中",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6976",
+    "https://www.zaikei.co.jp/article/20260915/870160.html"
+   ]
+  }
+ ],
+ "quadrant_note_sokonashi": "底なし（急落×後場も下げる）は本日該当なし（昼バッチの見立てを維持）",
+ "quadrant_note_sagesugi": "下げすぎ（急落×後場は反発）は本日該当なし（昼バッチの見立てを維持）",
+ "watch": {
+  "yaskawa_6506": {
+   "prev_close": 4299.0,
+   "anchor_time": "未取得（本データルートでは前引け時点の具体的株価を発見できず。日経平均寄与度ランキング前引け版・大引け版いずれにも安川電機の記載なし）",
+   "anchor_price": null,
+   "anchor_change_pct": null,
+   "day_open": 4244.0,
+   "day_high": 4360.0,
+   "day_low": 4220.0,
+   "close": 4296.0,
+   "close_change_yen": -3.0,
+   "close_change_pct": -0.07,
+   "volume": 3038200,
+   "data_quality": "終値4,296円はnikkei.com個別ページの四本値テーブルで取得。本データルートでは日経(nikkei.com)系統以外の真に独立した第三者ソースを発見できず、単一系統にとどまる点を明記する（憲法③）。18:30確定スイープでの再検証を推奨",
+   "conditions": {
+    "A": false,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は72回目の記録でユーザー未確認）",
+    "C": "true（本日の日経平均寄与度ランキング大引け版〈zaikei 870160〉の値上がり・値下がり上位いずれにも安川電機の記載なし。変化幅-0.07%とごく小さく上位ランキングに入らないのは当然の面もあり、間接証拠にとどまる）"
+   },
+   "unlock": false,
+   "note": "前日終値4,299円→終値4,296円(-3円、-0.07%)とほぼ横ばいで続落。条件Aは前日終値をわずかに下回って引けたため不成立（false）。条件Cは間接証拠ながら成立の形。条件Bが72回目の記録でもユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506"
+   ]
+  },
+  "fastretailing_9983": {
+   "prev_close": 66760.0,
+   "anchor_time": "11:13時点（単一ソース・概算）",
+   "anchor": 66540.0,
+   "anchor_change_pct": -0.33,
+   "day_open": 67350.0,
+   "day_high": 67350.0,
+   "day_low": 66320.0,
+   "close": 66620.0,
+   "close_change_yen": -140.0,
+   "close_change_pct": -0.21,
+   "anchor_to_close_pct": 0.12,
+   "note": "前引け近辺(概算)-0.33%からやや下げ渋り-0.21%で引け。anchor比+0.12%は±0.5%デッドバンド内でほぼ変わらず。日経平均寄与度ランキング大引け版では値下がり寄与度5位(-11.26)にとどまり、値下がり幅自体は縮小方向",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+    "https://www.zaikei.co.jp/article/20260915/870160.html"
+   ]
+  }
+ },
+ "pending_carried_over": [],
+ "score_today": {
+  "win": 1,
+  "lose": 3,
+  "draw": 1,
+  "pending": 0,
+  "candidates": 5,
+  "note": "終値ベースの判定で集計。WIN=太陽誘電(6976、失速警戒的中)。DRAW=キオクシアHD(285A、デッドバンド内)。LOSE=ソフトバンクG(9984)・マネーフォワード(3994)・村田製作所(6981)の押せ押せ3銘柄すべてが後場に失速し反落。押せ押せ4銘柄中3敗1分と、前引けの急伸がことごとく後場の金利上昇・半導体安・韓国株安で巻き戻された一日。5銘柄すべて⏸待ち推奨／👀観察のみ／🚫触らないで新規建玉なしの想定だったため実損はない"
+ },
+ "score_cumulative": {
+  "win": 89,
+  "lose": 56,
+  "draw": 55,
+  "unverified": 1,
+  "excluded_20260716": 7,
+  "as_of": "2026-09-15 15:45速報答え合わせ時点（暫定。18:30確定スイープで独立ソースによる再検証待ち）。9/14 18:30確定スイープ時点(88勝53敗54分)に本日5銘柄分(1勝3敗1分、pendingゼロ)を反映",
+  "note": "累計勝率＝89/(89+56+55)=44.5%（引き分け除く分母では89/145=61.4%）。9/14時点の45.1%(62.4%)からやや低下。本日は押せ押せの見立てが後場の地合い悪化でことごとく崩れ、LOSEが3件と目立った一日だった"
+ },
+ "calibration_by_confidence": {
+  "確信4": {"win": 25, "lose": 14, "draw": 8, "n": 47, "win_rate_pct": 53.2},
+  "確信3": {"win": 41, "lose": 27, "draw": 33, "n": 101, "win_rate_pct": 40.6},
+  "確信2": {"win": 23, "lose": 15, "draw": 14, "n": 52, "win_rate_pct": 44.2},
+  "note": "確信4は本日該当なしで変化なし。確信3はソフトバンクG(LOSE)・キオクシアHD(DRAW)が加わりn99→101、41.4%→40.6%にわずかに低下。確信2はマネーフォワード(LOSE)・村田製作所(LOSE)・太陽誘電(WIN)が加わりn49→52、44.9%→44.2%にわずかに低下"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": {"win": 42, "lose": 25, "draw": 27, "n": 94, "win_rate_pct": 44.7},
+  "失速警戒": {"win": 15, "lose": 9, "draw": 8, "n": 32, "win_rate_pct": 46.9},
+  "底なし": {"win": 27, "lose": 19, "draw": 17, "n": 63, "win_rate_pct": 42.9},
+  "下げすぎ": {"win": 5, "lose": 3, "draw": 3, "n": 11, "win_rate_pct": 45.5},
+  "note": "押せ押せはソフトバンクG・マネーフォワード・村田製作所の3LOSEとキオクシアHDの1DRAWが加わりn90→94、46.7%→44.7%に低下。失速警戒は太陽誘電のWINが加わりn31→32、45.2%→46.9%に上昇。底なし・下げすぎは本日該当なしで変化なし"
+ },
+ "data_quality_note": "日経平均終値63,484.10円(-8.89円)はFisco系統(財経新聞・investing.com)と日本経済新聞本紙記事(nikkei.com、別系統)の2系統で一致確認。TOPIX終値4,037.16pt(-21.05pt)は財経新聞のみで、WebSearchでも同値以外は発見できなかったが真に独立した第三者ソースでの確認はできていない。候補5銘柄・ウォッチ2銘柄の個別終値はいずれもnikkei.com個別ページ（四本値テーブル）を主ソースとし、広範なWebSearchで矛盾する数値は発見できなかったが、日経(nikkei.com)系統以外の真に独立した第三者ソースでの直接確認はできていない点を正直に明記する（憲法③）。日経平均寄与度ランキング大引け版(財経新聞870160)は候補銘柄の寄与度確認に使用し、breadth(67up/157down/1flat)は構成銘柄数225と整合",
+ "sources_summary": [
+  "https://www.zaikei.co.jp/article/20260915/870147.html",
+  "https://www.zaikei.co.jp/article/20260915/870155.html",
+  "https://www.zaikei.co.jp/article/20260915/870160.html",
+  "https://jp.investing.com/news/forex-news/article-1680252",
+  "https://www.nikkei.com/article/DGXZQOUB150ICTV10C26A9000000/",
+  "https://tbladvisory.com/20260915nk/",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=3994",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=285A",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6981",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6976",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
+ ]
+}
