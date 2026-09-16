@@ -1,0 +1,125 @@
+{
+  "date": "2026-09-16",
+  "phase": "18:30確定スイープ",
+  "judged_at": "2026-09-16T23:30:00+09:00",
+  "status": "no_candidates_today",
+  "batch_note": "本日分のdata/candidates_20260916.jsonが存在せず、archive/2026-09-16.htmlもindex.htmlの更新履歴（git log）も9/15の確定スイープ（2026-09-15 23:33 JST）が最新のままだった。すなわち本日11:30の昼バッチ・12:15の風向きバッチ・15:45の速報答え合わせのいずれも見立てを生成・記録した形跡がない（システム側の欠落・未実行の可能性が高い。原因はこのセッションの権限では特定できず＝憲法③の『未確認の数字は使わない』に準じ、原因断定は避ける）。18:30確定スイープは前提として『昼バッチの見立てを大引け確定値と突合する』作業であり、突合対象の見立てが存在しないため、○×判定できる銘柄はゼロ。過去に遡って見立てを捏造することは憲法①（迎合の禁止）②（冷静時のルール優先）に反するため行わない。保留(pending)もゼロ＝翌朝バッチへの持ち越しなし。独立ウォッチ（安川電機・ファストリテイリング）は昼バッチの生成状況に関係なく毎日判定できる設計のため、本日分も18:30スイープで直接大引け確定値を取得し記録した",
+  "market_reference_only": {
+    "note": "見立ての答え合わせとは無関係の参考情報として、本日の日経平均・TOPIXの動きのみクロスチェックのうえ記録する（判定対象なし）",
+    "nikkei_close": 63923.0,
+    "nikkei_close_change_yen": 438.9,
+    "nikkei_close_change_pct": 0.69,
+    "nikkei_close_note": "4営業日ぶりに反発。FOMC・日銀金融政策決定会合を控えた様子見ムードの中、朝方はAI・半導体株に持ち高調整の売りが優勢だったが、後場にかけてアドバンテスト(寄与度+130.33)・東エレク(+104.59)が切り返してけん引役となり、9月末の中間配当権利取りの買いも支えとなった。日経平均自体の記事(nikkei.com、DGXZQOFL161GITW6A910C2000000)とフィスコ配信(財経新聞870343/みんかぶ経由870352)の独立2系統で63,923.00円(+438.90円、+0.69%)の完全一致を確認",
+    "nikkei_close_source_systems": ["nikkei.com本紙記事", "フィスコ配信(財経新聞/みんかぶ)"],
+    "topix_close": 4061.72,
+    "topix_close_change": 24.56,
+    "topix_close_change_pct": 0.61,
+    "topix_close_note": "財経新聞870343より。複数のWebSearch言及でも同値だったが、いずれも同一系統(Fisco/財経新聞)にとどまり真に独立した第三者ソースでの確認はできなかったため、確度中程度の扱いとする（憲法③）。検索で見つかったnsjournal.jp記事は本文が2026-08-10付けの古いキャッシュを返しており(TOPIX4,100pt等、本日の値と不整合)、使用しなかった",
+    "breadth_prime_close_pct": {
+      "up_pct": 67.4,
+      "down_pct": 29.0,
+      "note": "財経新聞870348(東証プライム全体)より。売買高17億6,909万株・売買代金6兆7,075億円"
+    },
+    "up_sectors_close": ["石油・石炭製品", "鉱業", "繊維製品"],
+    "down_sectors_close": ["医薬品", "情報・通信業", "空運業"],
+    "push_up_top": [
+      {"code": "6857", "name": "アドバンテスト", "contribution": 130.33},
+      {"code": "8035", "name": "東京エレクトロン", "contribution": 104.59},
+      {"code": "9983", "name": "ファーストリテイリング", "contribution": 32.99},
+      {"code": "6098", "name": "リクルートHD", "contribution": 31.18},
+      {"code": "4063", "name": "信越化学", "contribution": 21.29}
+    ],
+    "push_down_top": [
+      {"code": "9984", "name": "ソフトバンクグループ", "contribution": -77.23},
+      {"code": "285A", "name": "キオクシアHD", "contribution": -22.76},
+      {"code": "9766", "name": "コナミグループ", "contribution": -20.45},
+      {"code": "4578", "name": "大塚HD", "contribution": -17.43},
+      {"code": "4062", "name": "イビデン", "contribution": -11.06}
+    ],
+    "sources": [
+      "https://www.nikkei.com/article/DGXZQOFL161GITW6A910C2000000/",
+      "https://www.zaikei.co.jp/article/20260916/870343.html",
+      "https://www.zaikei.co.jp/article/20260916/870348.html",
+      "https://www.zaikei.co.jp/article/20260916/870352.html",
+      "https://s.minkabu.jp/news/4618852"
+    ]
+  },
+  "results": [],
+  "watchlist_confirmed": {
+    "note": "候補銘柄の判定とは別枠の独立ウォッチ2件。11:30昼バッチ・15:45速報のいずれも実行されなかったため、anchor（前引け時点）値は取得できず、18:30確定スイープで大引け確定値のみ直接取得し記録",
+    "yaskawa_6506": {
+      "prev_close": 4296.0,
+      "anchor_time": "未取得（本日は昼バッチ・速報とも未実行のためanchor自体が存在しない）",
+      "anchor_price": null,
+      "anchor_change_pct": null,
+      "day_open": 4287.0,
+      "day_high": 4404.0,
+      "day_low": 4279.0,
+      "close": 4360.0,
+      "close_change_yen": 64.0,
+      "close_change_pct": 1.49,
+      "volume": 2581400,
+      "data_quality": "終値4,360円はnikkei.com個別ページ（四本値推移テーブル、データ時点2026/9/16 15:30表記）と松井証券（同時点表記）の2ソースで完全一致を確認（独立2系統）",
+      "detail": "data/yaskawa_entry_checklist.jsonの2026-09-16エントリー参照。条件A成立(true)・条件Bは73回目の記録でユーザー未確認・条件C true（間接証拠）。3条件未成立のため解除通知は見送り",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+        "https://finance.matsui.co.jp/stock/6506/index"
+      ]
+    },
+    "fastretailing_9983": {
+      "prev_close": 66620.0,
+      "anchor_time": "未取得（本日は昼バッチ・速報とも未実行のためanchor自体が存在しない）",
+      "anchor": null,
+      "anchor_change_pct": null,
+      "day_open": 66620.0,
+      "day_high": 67380.0,
+      "day_low": 65990.0,
+      "close": 67030.0,
+      "close_change_yen": 410.0,
+      "close_change_pct": 0.62,
+      "unlock_condition_reference": "前日終値を上回って引ける",
+      "unlock_status": "本日は条件成立（前日終値66,620円を上回る67,030円で引け）。日経平均寄与度ランキング大引け版では値上がり寄与度3位(+32.99)にランクインし、9/3発表の8月既存店売上高-1.3%以来観察してきた『反発シナリオ』のポジティブな材料として記録するが、1日だけでの明確な反転宣言は時期尚早",
+      "data_quality": "終値67,030円はnikkei.com個別ページと松井証券の2ソースで完全一致を確認（独立2系統）",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+        "https://finance.matsui.co.jp/stock/9983/index"
+      ]
+    }
+  },
+  "score_today": {
+    "win": 0,
+    "lose": 0,
+    "draw": 0,
+    "pending": 0,
+    "candidates": 0,
+    "not_applicable": true,
+    "note": "本日は候補銘柄自体が記録されていないため『勝敗』の対象がゼロ。pending（判定保留）とも異なる状態（判定保留は見立てはあるが終値未取得の状態を指すが、本日は見立てそのものが存在しない）"
+  },
+  "score_cumulative": {
+    "win": 89,
+    "lose": 56,
+    "draw": 55,
+    "unverified": 1,
+    "excluded_20260716": 7,
+    "as_of": "2026-09-15 18:30確定スイープ時点の数値をそのまま繰り越し。本日(9/16)は見立てが存在しないため累計成績に増減なし",
+    "note": "累計勝率＝89/(89+56+55)=44.5%（引き分け除く分母では89/145=61.4%）。9/15時点から変化なし"
+  },
+  "calibration_by_confidence": {
+    "確信4": {"win": 25, "lose": 14, "draw": 8, "n": 47, "win_rate_pct": 53.2},
+    "確信3": {"win": 41, "lose": 27, "draw": 33, "n": 101, "win_rate_pct": 40.6},
+    "確信2": {"win": 23, "lose": 15, "draw": 14, "n": 52, "win_rate_pct": 44.2},
+    "note": "本日は候補銘柄なしのため9/15時点から変化なし"
+  },
+  "win_rate_by_quadrant": {
+    "押せ押せ": {"win": 42, "lose": 25, "draw": 27, "n": 94, "win_rate_pct": 44.7},
+    "失速警戒": {"win": 15, "lose": 9, "draw": 8, "n": 32, "win_rate_pct": 46.9},
+    "底なし": {"win": 27, "lose": 19, "draw": 17, "n": 63, "win_rate_pct": 42.9},
+    "下げすぎ": {"win": 5, "lose": 3, "draw": 3, "n": 11, "win_rate_pct": 45.5},
+    "note": "本日は候補銘柄なしのため9/15時点から変化なし"
+  },
+  "learnings": [
+    "本日は昼バッチ・風向きバッチ・速報答え合わせバッチの実行記録（candidates_20260916.json・当日archive・当日commit）が一切残っておらず、18:30確定スイープの時点で答え合わせ対象が存在しないことが判明した。原因（トリガー未実行／実行失敗／権限エラー等）はこのセッションの範囲では特定できない",
+    "発注者への確認事項として、GitHub Actionsの実行履歴（Actionsタブ）で9/16 02:30 UTC（昼バッチ）・03:15 UTC（風向き）・06:45 UTC（速報）が正常に起動・完了したかどうかの確認を推奨する。8/4・8/12に続き3回目の同様の欠落であり、パターン化している可能性がある",
+    "18:30確定スイープでは候補銘柄の判定対象こそゼロだったが、独立ウォッチ（安川電機・ファストリ）は昼バッチの生成状況に関係なく毎日判定できる設計のため、本日分も欠かさず記録した。累計成績（89勝56敗55分）は本日の増減なしで据え置き"
+  ]
+}
