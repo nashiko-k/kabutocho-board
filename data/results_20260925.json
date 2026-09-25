@@ -1,0 +1,301 @@
+{
+  "date": "2026-09-25",
+  "phase": "15:45速報答え合わせ",
+  "judged_at": "2026-09-25T21:30:00+09:00",
+  "confirmed": false,
+  "batch_note": "本来15:45起動のところ、本セッションの実際の起動は21:18 JST頃までずれ込んだ。ただし東証は15:30に引けており大引け確定値は変動しないため、速報答え合わせ作業に支障はない。11:38昼バッチ時点で前引け株価が未取得だったアドバンテスト(6857)・イビデン(4062)・海運3社については、独立系統の記事(株探/フィスコ寄与度ランキング記事n202609250734、13:31配信、データ時点11:30)で前引け値を新たに確認できたため、本フェーズの終値ベース判定ではcandidates_20260925.json記載の速報anchor(10:20時点や10:27時点など前引け前のスナップショット)ではなく、この11:30公式値をanchorとして採用した（設計書§3の『前引け(anchor)→大引け』の定義に忠実であるため）。ソフトバンクグループ(9984)も同様に、候補選定時の10:27時点値(6,105円)ではなく11:30公式値(6,185円)をanchorとして採用している。海運3社(9101/9104/9107)は本データルートのいずれでも前引け値を確認できず、anchor自体が存在しないため終値ベースの厳密な判定は不能（憲法③：無理に確定を装わない）。ただし前日比ベースでは3社とも本日プラスで引けており、想定していた『地政学リスク後退による軟調継続』という底なしの見立てとは逆方向の結果だったことは付記する",
+  "data_quality_note": "東京エレクトロン(8035)・アドバンテスト(6857)・イビデン(4062)・ソフトバンクグループ(9984)の終値は日本経済新聞個別ページ(nikkei.com/nkd/company/history/dprice)と財経新聞の日経平均寄与度ランキング記事(zaikei.co.jp/article/20260925/871256.html、17:00配信)の独立2系統で完全一致を確認。三菱UFJ(8306)・安川電機(6506)・ファーストリテイリング(9983)・海運3社は日本経済新聞個別ページと松井証券マーケット情報の独立2系統で完全一致を確認。日経平均終値66,364.20円(+850.21円、+1.30%)は日本経済新聞の2記事（9:08配信15:45更新版、15:45配信の大引け専用記事）で完全一致し、値上がり1,118銘柄・値下がり382銘柄という東証プライム全体の騰落内訳もこの記事に基づく。財経新聞の寄与度ランキング記事による日経平均225構成銘柄のみの騰落数(値上がり171・値下がり51・変わらず3)は母数が異なるため単純な一致比較はできないが、値上がりが値下がりを大きく上回るという方向性は整合している",
+  "market": {
+    "nikkei_close": 66364.20,
+    "nikkei_close_change_yen": 850.21,
+    "nikkei_close_change_pct": 1.30,
+    "nikkei_close_note": "5日続伸。前引け66,318.14円(+1.23%)からさらに上げ幅を拡大して引けた。日本経済新聞の2記事（DGXZQOFL250I60V20C26A9000000＝9:08配信15:45更新、DGXZQOFL254TF0V20C26A9000000＝15:45配信）で850.21円・66,364.20円の完全一致を確認",
+    "topix_close": 4128.59,
+    "topix_close_change": 53.29,
+    "topix_close_change_pct": 1.31,
+    "topix_close_note": "前引け+1.19%からさらに上げ幅拡大。日経平均+1.30%とほぼ同水準で、値がさ半導体だけでなく銀行株など裾野の広い上げ方が大引けまで継続したことを示唆",
+    "breadth_close": {
+      "up": 1118,
+      "down": 382,
+      "flat": 54,
+      "note": "東証プライム全体。日本経済新聞記事より。値上がり銘柄が7割超と、前引け時点(1069/425)からさらに値上がり優勢が強まった"
+    },
+    "push_up_top": ["東京エレクトロン", "アドバンテスト", "イビデン", "TDK", "ソフトバンクグループ"],
+    "sector_note": "AI・半導体関連の一角が大幅高で日経平均を押し上げたほか、日米長期金利が30年ぶり高水準まで上昇する中、利ざや改善期待の銀行株（三菱UFJ等）も物色。9/28の配当権利付き最終日接近も幅広い買いを下支えしたとみられる。ソフトバンクグループは外債発行・オラクルAIデータセンター遅延の悪材料が重なり日経平均の押し下げ首位で終えた",
+    "sources": [
+      "https://www.nikkei.com/article/DGXZQOFL250I60V20C26A9000000/",
+      "https://www.nikkei.com/article/DGXZQOFL254TF0V20C26A9000000/",
+      "https://www.zaikei.co.jp/article/20260925/871256.html"
+    ]
+  },
+  "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース（参考情報）：押せ押せ想定は日中高値がanchor比+2%以上、底なし想定は日中安値がanchor比-2%以下だったかを併記する。日中高値・安値の発生時刻（前場か後場か）は本データルートでは特定できないため、累計成績には終値ベースの判定のみを計上しストレッチは参考扱いとする",
+  "results": [
+    {
+      "code": "8035",
+      "name": "東京エレクトロン",
+      "newface": false,
+      "quadrant": "押せ押せ",
+      "confidence": 4,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 53920.0,
+      "anchor_time": "11:30時点（前引け、株探/フィスコ寄与度ランキング記事n202609250734・13:31配信で確認。候補選定時の速報値56,440円・10:20時点からは修正）",
+      "anchor": 56100.0,
+      "anchor_change_pct": 4.04,
+      "close": 56520.0,
+      "close_change_yen": 2600.0,
+      "close_change_pct": 4.82,
+      "anchor_to_close_pct": 0.749,
+      "close_verdict": "WIN（前引け56,100円→大引け56,520円で+0.749%と±0.5%デッドバンドを超えて上昇継続。押せ押せ＝後場も伸びる想定通り、9/24のイビデン・レゾナックのような失速パターンを免れた）",
+      "day_open": 54330.0,
+      "day_high": 56560.0,
+      "day_low": 54200.0,
+      "stretch_verdict": "参考：日中高値56,560円はanchor比+0.82%にとどまり+2%基準には届かず。伸びは緩やかだった",
+      "note": "確信4・待ち推奨だったため新規建玉があれば利益機会を一部逃した形（機会損失側）。9/24に同テーマ銘柄が軒並み失速した中での連日高でも本日は伸びを維持しており、値がさ半導体の中でも相対的に底堅い銘柄という位置づけが補強された",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+        "https://www.zaikei.co.jp/article/20260925/871256.html",
+        "https://s.kabutan.jp/news/n202609250734/"
+      ]
+    },
+    {
+      "code": "6857",
+      "name": "アドバンテスト",
+      "newface": false,
+      "quadrant": "押せ押せ",
+      "confidence": 3,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 33060.0,
+      "anchor_time": "11:30時点（前引け、株探/フィスコ寄与度ランキング記事n202609250734・13:31配信で新規確認。候補選定時は前引け株価そのものが未取得だった）",
+      "anchor": 33870.0,
+      "anchor_change_pct": 2.45,
+      "close": 34000.0,
+      "close_change_yen": 940.0,
+      "close_change_pct": 2.84,
+      "anchor_to_close_pct": 0.384,
+      "close_verdict": "DRAW（前引け33,870円→大引け34,000円で+0.384%と±0.5%デッドバンド内。方向はやや上だが判定上は引き分け）",
+      "day_open": 33130.0,
+      "day_high": 34000.0,
+      "day_low": 33020.0,
+      "stretch_verdict": "参考：日中高値=大引け値34,000円。anchor比+0.38%で+2%基準には届かず",
+      "note": "確信3・待ち推奨だったため実損益は限定的。候補選定時は前引け株価が未取得だったが、事後的に判明した前引け(+2.45%)から大引け(+2.84%)までの伸びは小幅で、過熱感からの反動リスクという見立ての懸念は結果的に的中しなかった",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+        "https://www.zaikei.co.jp/article/20260925/871256.html",
+        "https://s.kabutan.jp/news/n202609250734/"
+      ]
+    },
+    {
+      "code": "4062",
+      "name": "イビデン",
+      "newface": false,
+      "quadrant": "押せ押せ",
+      "confidence": 3,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 22405.0,
+      "anchor_time": "11:30時点（前引け、株探/フィスコ寄与度ランキング記事n202609250734・13:31配信で新規確認。候補選定時は前引け株価そのものが未取得だった）",
+      "anchor": 23660.0,
+      "anchor_change_pct": 5.60,
+      "close": 23345.0,
+      "close_change_yen": 940.0,
+      "close_change_pct": 4.20,
+      "anchor_to_close_pct": -1.331,
+      "close_verdict": "LOSE（前引け23,660円→大引け23,345円で-1.331%と±0.5%デッドバンドを超える反落。押せ押せ想定に反し後場に利益確定売りで伸び悩んだ）",
+      "day_open": 22480.0,
+      "day_high": 23760.0,
+      "day_low": 22305.0,
+      "stretch_verdict": "参考：日中高値23,760円はanchor比+0.42%にとどまり+2%基準には届かず。伸びる瞬間も確認できなかった",
+      "note": "カード本文で警戒していた『9/24と同じ轍を踏まないか』という懸念がそのまま的中し2日連続のLOSE。9/24(+15.5%→-0.775%)、9/25(+5.60%→-1.331%)と2日連続で前引けの伸びを後場に消しており、値上がり率上位まで伸び切った値がさ半導体銘柄は後場の利益確定売りに遭いやすいという自己分析の傾向がさらに補強された",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=4062",
+        "https://www.zaikei.co.jp/article/20260925/871256.html",
+        "https://s.kabutan.jp/news/n202609250734/"
+      ]
+    },
+    {
+      "code": "8306",
+      "name": "三菱UFJ フィナンシャル・グループ",
+      "newface": false,
+      "quadrant": "押せ押せ",
+      "confidence": 3,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 3573.0,
+      "anchor_time": "前場（候補選定時に取得した値。正確な時刻・11:30ちょうどの値は本データルートでは確認できず、寄与度ランキング記事にも8306の記載がなかったため候補選定時のanchorをそのまま使用）",
+      "anchor": 3704.0,
+      "anchor_change_pct": 3.67,
+      "close": 3714.0,
+      "close_change_yen": 141.0,
+      "close_change_pct": 3.95,
+      "anchor_to_close_pct": 0.270,
+      "close_verdict": "DRAW（前場3,704円→大引け3,714円で+0.270%と±0.5%デッドバンド内。方向はやや上だが判定上は引き分け）",
+      "day_open": 3610.0,
+      "day_high": 3719.0,
+      "day_low": 3608.0,
+      "stretch_verdict": "参考：日中高値3,719円はanchor比+0.40%で+2%基準には届かず",
+      "note": "確信3・待ち推奨だったため実損益は限定的。値がさ半導体ほどの過熱感がない分、後場も値を消さずに終値まで小幅ながら伸びを維持した。日経電子版・松井証券の独立2系統で終値完全一致",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=8306",
+        "https://finance.matsui.co.jp/stock/8306/index"
+      ]
+    }
+  ],
+  "quadrant_sokonashi": [
+    {
+      "code": "9984",
+      "name": "ソフトバンクグループ",
+      "newface": false,
+      "quadrant": "底なし",
+      "confidence": 2,
+      "action": "🚫 触らない",
+      "prev_close": 6352.0,
+      "anchor_time": "11:30時点（前引け、株探/フィスコ寄与度ランキング記事n202609250734・13:31配信で確認。候補選定時の速報値6,105円・10:27時点からは修正）",
+      "anchor": 6185.0,
+      "anchor_change_pct": -2.63,
+      "close": 6150.0,
+      "close_change_yen": -202.0,
+      "close_change_pct": -3.18,
+      "anchor_to_close_pct": -0.566,
+      "close_verdict": "WIN（前引け6,185円→大引け6,150円で-0.566%と±0.5%デッドバンドをわずかに超えるさらなる下落。底なし＝後場も下げ止まらない想定通りだが、デッドバンド境界に極めて近い僅差の的中である点は明記する）",
+      "day_open": 6180.0,
+      "day_high": 6242.0,
+      "day_low": 6040.0,
+      "stretch_verdict": "参考：日中安値6,040円はanchor比-2.345%で-2%基準を超える下げを記録。底なし（下げ止まらない）という見立ての裏付けは終値ベースより強い",
+      "note": "確信2・触らないだったため実損益はゼロ。外債発行・オラクルAIデータセンター遅延という2つの悪材料は後場も株価の重しとして残った形。ただし終値ベースの判定はデッドバンドぎりぎりの僅差であり、次に同種の見立てをする際は『的中はしたが薄氷』という較正情報として扱うべき",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+        "https://www.zaikei.co.jp/article/20260925/871256.html",
+        "https://s.kabutan.jp/news/n202609250734/"
+      ]
+    },
+    {
+      "code": "9101/9104/9107",
+      "name": "海運3社（日本郵船・商船三井・川崎汽船）",
+      "newface": true,
+      "quadrant": "底なし",
+      "confidence": 2,
+      "action": "🚫 触らない",
+      "anchor_time": "未取得（本データルートのいずれでも3社とも前引け値を確認できず、anchor自体が存在しない）",
+      "anchor": null,
+      "close_verdict": "判定不能（anchor欠如のため設計書§3の『前引け→大引け』の終値ベース判定は実施できない。憲法③に従い無理に確定を装わない。累計成績の勝敗分母には含めない）",
+      "detail": [
+        {"code": "9101", "name": "日本郵船", "prev_close": 7255.0, "close": 7365.0, "change_yen": 110.0, "change_pct": 1.52, "day_open": 7315.0, "day_high": 7393.0, "day_low": 7275.0},
+        {"code": "9104", "name": "商船三井", "prev_close": 7104.0, "close": 7106.0, "change_yen": 2.0, "change_pct": 0.03, "day_open": 7142.0, "day_high": 7199.0, "day_low": 7047.0},
+        {"code": "9107", "name": "川崎汽船", "prev_close": 3406.0, "close": 3451.0, "change_yen": 45.0, "change_pct": 1.32, "day_open": 3445.0, "day_high": 3460.0, "day_low": 3386.0}
+      ],
+      "note": "見立ての前提（トランプ大統領のホルムズ海峡機雷『全て除去』発言による地政学リスクプレミアム低下→運賃高騰の巻き戻しで軟調）自体は9/25当日の実在の発言（複数の報道機関で確認）に基づいており材料の実在性は確かだったが、結果は3社とも前日比プラスで引け（日本郵船+1.52%・川崎汽船+1.32%は明確な上昇、商船三井+0.03%はデッドバンド内でほぼ横ばい）、想定していた『地政学リスク後退による軟調継続』という底なしの方向感とは逆になった。9/28の配当権利付き最終日接近による幅広い買いが、個別の弱気材料を上回った可能性がある。前引け値が未取得で正式な終値ベース判定はできないため累計成績には含めないが、自己分析上は見立てが外れた事例として記録する",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=9101",
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=9104",
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=9107",
+        "https://finance.matsui.co.jp/stock/9101/index",
+        "https://finance.matsui.co.jp/stock/9104/index",
+        "https://finance.matsui.co.jp/stock/9107/index"
+      ]
+    }
+  ],
+  "quadrant_note_shissoku": "失速警戒象限は本日候補なしのため判定対象外",
+  "quadrant_note_sagesugi": "下げすぎ象限は本日候補なしのため判定対象外",
+  "regulars_note": "常連13銘柄のうち9984・8306は上記カードで判定済み。ファナック(6954)は昼バッチで寄与度データのみの『partial』扱いで正式な候補カードにならなかったため判定対象外。残り10銘柄は本日終日データ未取得のため対象外",
+  "watchlist": {
+    "note": "候補銘柄の判定とは別枠の独立ウォッチ2件。data/yaskawa_entry_checklist.jsonの当日エントリも本フェーズで更新済み",
+    "yaskawa_6506": {
+      "prev_close": 4507.0,
+      "anchor_time": "未取得（本日は昼バッチ・風向きとも安川電機の前引け値を取得できず、anchorは存在しない）",
+      "anchor_price": null,
+      "open": 4487.0,
+      "high": 4512.0,
+      "low": 4425.0,
+      "close": 4480.0,
+      "close_change_yen": -27.0,
+      "close_change_pct": -0.60,
+      "volume": 2961700,
+      "data_quality": "終値4,480円は日本経済新聞個別ページと松井証券マーケット情報の独立2系統で完全一致",
+      "conditions": {
+        "A": false,
+        "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は78回目の記録でユーザー未確認。本日終値4,480円はこの仮置き帯を依然大きく下回っている）",
+        "C": "true（間接証拠。本日の値下がり率上位5＝生化学工業・インソース・日本ケミコン・清水建設・ディアライフに安川電機の名はなく、値下がり方向の売り圧の兆候はない。ただし値下がり率ランキングの厳密な個別順位までは未取得）"
+      },
+      "unlock": false,
+      "detail": "前日終値4,507円→終値4,480円(-27円、-0.60%)で3営業日ぶりに前日終値を下回り反落。日経平均が5日続伸(+1.30%)・値上がり1,118銘柄という幅広高の地合いの中での独歩安で、値がさ半導体・銀行株中心の物色から外れた形。条件Aは不成立、条件B（未定義）は78回目の記録でユーザー未確認のまま継続しており3条件同時成立には至らず解除通知は見送り",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+        "https://finance.matsui.co.jp/stock/6506/index"
+      ]
+    },
+    "fastretailing_9983": {
+      "prev_close": 67920.0,
+      "anchor_time": "未取得（本日は昼バッチ・風向きとも前引け値を取得できず、anchorは存在しない）",
+      "anchor": null,
+      "open": 68700.0,
+      "high": 68700.0,
+      "low": 67840.0,
+      "close": 68620.0,
+      "close_change_yen": 700.0,
+      "close_change_pct": 1.03,
+      "unlock_condition_reference": "前日終値を上回って引ける",
+      "unlock_status": "前日終値67,920円を700円(+1.03%)上回って引け、2営業日連続で条件成立",
+      "data_quality": "終値68,620円は日本経済新聞個別ページと松井証券マーケット情報の独立2系統で完全一致",
+      "sources": [
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+        "https://finance.matsui.co.jp/stock/9983/index"
+      ]
+    }
+  },
+  "score_today": {
+    "win": 2,
+    "lose": 1,
+    "draw": 2,
+    "pending": 0,
+    "undetermined": 1,
+    "candidates": 6,
+    "note": "本日は2勝1敗2分（判定不能1＝海運3社、anchor欠如のため累計に非計上）。押せ押せ4件中1勝1敗2分、底なし2件中1勝・1判定不能"
+  },
+  "score_cumulative": {
+    "win": 93,
+    "lose": 60,
+    "draw": 57,
+    "unverified": 2,
+    "excluded_20260716": 7,
+    "as_of": "2026-09-25 15:45速報答え合わせ時点（実行は21:18 JSTにずれ込んだが大引け確定値には影響なし）。9/24 18:30確定スイープ時点(91勝59敗55分)から本日分(2勝1敗2分)を反映",
+    "note": "累計勝率＝93/(93+60+57)=44.3%（引き分け除く分母では93/153=60.8%）。unverified=2は7/15判定不能1件（設計書起草時からの繰り越し）＋本日の海運3社（anchor欠如で判定不能）の合計"
+  },
+  "calibration_by_confidence": {
+    "確信4": {"win": 26, "lose": 15, "draw": 8, "n": 49, "win_rate_pct": 53.1},
+    "確信3": {"win": 42, "lose": 29, "draw": 35, "n": 106, "win_rate_pct": 39.6},
+    "確信2": {"win": 25, "lose": 16, "draw": 14, "n": 55, "win_rate_pct": 45.5},
+    "note": "本日分（確信4:8035WIN／確信3:6857DRAW・4062LOSE・8306DRAW／確信2:9984WIN）を反映。海運3社(確信2)は判定不能のため非計上"
+  },
+  "win_rate_by_quadrant": {
+    "押せ押せ": {"win": 44, "lose": 28, "draw": 29, "n": 101, "win_rate_pct": 43.6},
+    "失速警戒": {"win": 16, "lose": 10, "draw": 8, "n": 34, "win_rate_pct": 47.1},
+    "底なし": {"win": 28, "lose": 19, "draw": 17, "n": 64, "win_rate_pct": 43.8},
+    "下げすぎ": {"win": 5, "lose": 3, "draw": 3, "n": 11, "win_rate_pct": 45.5},
+    "note": "本日分（押せ押せ:1WIN1LOSE2DRAW／底なし:1WIN・海運3社は判定不能のため非計上）を反映"
+  },
+  "learnings": [
+    "イビデン(4062)は9/24(+15.5%→-0.775%)・9/25(+5.60%→-1.331%)と2営業日連続で前引けの伸びを後場に消してLOSE。値上がり率上位まで伸び切った値がさ半導体銘柄は後場の利益確定売りに遭いやすいという自己分析の傾向が、同一銘柄で2日連続再現された点は特筆に値する。一方で同じ値がさ半導体でも東京エレクトロン(8035)は2日連続の連日高でも本日は伸びを維持しWINしており、寄与度が大きいこと自体が失速の予兆にはならず、個別の値幅・過熱度合いで見極める必要がある",
+    "ソフトバンクグループ(9984)は候補選定時に取得した速報anchor(10:27時点、-3.88%)と、事後的に確認できた公式な前引け値(11:30時点、-2.63%)が乖離しており、この乖離が終値ベース判定の結果を左右しかねない事例だった（速報anchorのままなら anchor→close は+0.737%でLOSE、公式anchorなら-0.566%でWIN）。前引け前の速報値をカードのanchorとして採用すること自体は昼バッチのリアルタイム性維持のためやむを得ないが、夕方の答え合わせでは可能な限り公式な11:30値に置き換えてから判定すべきという教訓",
+    "海運3社（新顔）は前引け値が未取得のまま『底なし』の判定候補として掲載され、結果的に前日比では3社ともプラスで引けて見立てと逆行した。地政学ニュース自体は実在したが、市場の受け止め方（配当権利取り接近による幅広い買い優勢）を読み違えた可能性がある。anchor未取得の銘柄をどの段階で候補カード化するかは今後の検討課題——確信度を下げるだけでなく、anchor未確認である旨をカードの目立つ位置により強調する運用に倣うべき"
+  ],
+  "sources_summary": [
+    "https://www.nikkei.com/article/DGXZQOFL250I60V20C26A9000000/",
+    "https://www.nikkei.com/article/DGXZQOFL254TF0V20C26A9000000/",
+    "https://www.zaikei.co.jp/article/20260925/871256.html",
+    "https://s.kabutan.jp/news/n202609250734/",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4062",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=8306",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9101",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9104",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9107",
+    "https://finance.matsui.co.jp/stock/8306/index",
+    "https://finance.matsui.co.jp/stock/6506/index",
+    "https://finance.matsui.co.jp/stock/9983/index",
+    "https://finance.matsui.co.jp/stock/9101/index",
+    "https://finance.matsui.co.jp/stock/9104/index",
+    "https://finance.matsui.co.jp/stock/9107/index"
+  ]
+}
