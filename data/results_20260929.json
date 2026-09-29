@@ -1,0 +1,290 @@
+{
+  "date": "2026-09-29",
+  "phase": "15:45速報答え合わせ",
+  "judged_at": "2026-09-29T22:44:00+09:00",
+  "confirmed": true,
+  "batch_note": "本来15:45起動のところ、本セッションの実際の起動は22:21 JST頃までずれ込んだ。ただし東証は15:30に引けており大引け確定値は変動しないため、答え合わせ作業に支障はない。11:38昼バッチ（candidates_20260929.json）時点では候補5件とも前引け(11:30)anchorが『方向のみ確認』にとどまっていたが、本フェーズで日経平均寄与度ランキング（前引け）記事のinvesting.com/Fiscoミラー版（jp.investing.com/news/stock-market-news/article-1694670）を発見し、5候補全ての11:30時点の正確な株価を直接取得できた。同記事の寄与度と価格変化の比（銘柄固有のウエイト係数）が前引け・大引けで一定であることを利用し、東京エレクトロン(8035)のanchor推定値(寄与度逆算で11,470円)が記事記載の実測値(11,470円)と完全一致することも確認済み。候補5件は終値ベースで4勝0敗1分、pending・判定不能ゼロで確定（18:30相当の追加スイープは不要）",
+  "data_quality_note": "日経平均終値65,481.27円(-396.35円、-0.60%)は日本経済新聞記事(DGXZQOFL294ND0Z20C26A9000000)・investing.com経由のFisco記事(article-1694846)・THE GOLD ONLINE記事(Yahoo!ニュース転載)の独立3系統で完全一致。TOPIX終値4,041.13pt(-70.87pt、-1.72%)も日本経済新聞記事とWebSearch経由の値で一致。候補5件の前引け(11:30)株価はinvesting.com経由のFisco記事「日経平均寄与度ランキング（前引け）」の表から直接取得し、5銘柄とも同記事内のprev_close逆算値（表の前日比から算出した前日終値）がcandidates_20260929.json記載のprev_closeと完全一致することで内的整合性を確認した。大引け株価は日本経済新聞個別ページ(nikkei.com/nkd/company/history/dprice)とinvesting.com経由のFisco記事「日経平均寄与度ランキング（大引け）」の独立2系統で5銘柄全て完全一致。安川電機(6506)の終値4,528円は日本経済新聞個別ページと松井証券マーケット情報の2系統で完全一致（11:38昼バッチ時点で既に確認済み、本フェーズで再確認し変更なし）。ファーストリテイリング(9983)の終値68,710円もinvesting.com経由のFisco記事と日本経済新聞個別ページの2系統で完全一致",
+  "market": {
+    "nikkei_prev_close": 65877.62,
+    "nikkei_maehiike": 65307.0,
+    "nikkei_maehiike_change_pct": -0.87,
+    "nikkei_close": 65481.27,
+    "nikkei_close_change_yen": -396.35,
+    "nikkei_close_change_pct": -0.6,
+    "nikkei_intraday_low": 64699.49,
+    "nikkei_intraday_low_time": "14:37",
+    "nikkei_close_note": "続落（前日65,877.62円比-396.35円、-0.60%）。前引け65,307.00円(-0.87%)からは後場寄りにかけて一段安となり、14:37に日中安値64,699.49円（前日比-1178円超、下げ幅一時1100円超）まで急落する場面があったが、大引けにかけて+780円超戻して引けた。前日28日の米国株安（インフレ懸念）とソフトバンクグループの大幅売りが押し下げの主因。日経電子版は『6万6000円台の厚い需給の壁を超える買い材料が乏しく、戻り待ちの売りに押された』と分析",
+    "topix_maehiike": 4049.34,
+    "topix_maehiike_change_pct": -1.52,
+    "topix_close": 4041.13,
+    "topix_close_change": -70.87,
+    "topix_close_change_pct": -1.72,
+    "breadth_close_prime": {
+      "up": 170,
+      "down": 1318,
+      "flat": 21,
+      "note": "東証プライム全体。前引け時点(up153/down1329/flat27)からは値上がり銘柄がやや増えたが、依然として値下がりが値上がりの7倍超という幅広い下げが続いた"
+    },
+    "breadth_close_nikkei225": {
+      "up": 36,
+      "down": 188,
+      "flat": 2,
+      "note": "日経平均225構成銘柄のみの内訳（プライム全体とは母集団が異なる）。東京エレクトロン・大塚HD・ディスコ・スクリン・ファーストリテイリングなど半導体製造装置・内需の一角が押し上げ役、ソフトバンクグループ・中外製薬・イビデン・トヨタ通商・TDKなどが押し下げ役"
+    },
+    "sources": [
+      "https://www.nikkei.com/article/DGXZQOFL294ND0Z20C26A9000000/",
+      "https://jp.investing.com/news/stock-market-news/article-1694846",
+      "https://news.yahoo.co.jp/articles/ae700be36094c3e81cafd7e2676924d4f9acc3b4",
+      "https://www.nikkei.com/article/DGXZQOFL291HATZ20C26A9000000/"
+    ]
+  },
+  "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース（参考情報）：日中高値・安値がanchor比+2%/-2%以上だったか併記。anchorはinvesting.com経由のFisco記事『日経平均寄与度ランキング（前引け）』の実測株価を採用（寄与度と価格変化の比が銘柄固有ウエイト係数として前引け・大引けで一定であることを東京エレクトロンの逆算値と実測値の完全一致で検証済み）",
+  "results": [
+    {
+      "code": "8035",
+      "name": "東京エレクトロン",
+      "newface": false,
+      "quadrant": "押せ押せ",
+      "confidence": 2,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 11264.0,
+      "anchor_time": "11:30時点",
+      "anchor": 11470.0,
+      "anchor_change_pct": 1.828,
+      "close": 11505.0,
+      "close_change_yen": 241.0,
+      "close_change_pct": 2.14,
+      "anchor_to_close_pct": 0.305,
+      "close_verdict": "DRAW（前引け11,470円→大引け11,505円で+0.305%と±0.5%デッドバンド内。前引け時点で既に+1.83%まで買われており、後場はその水準からほぼ横ばいで上乗せは小幅にとどまった。『押せ押せ＝後場も伸びる』想定に対しては明確な伸びとまでは言えない）",
+      "day_open": 11355.0,
+      "day_high": 11580.0,
+      "day_low": 11270.0,
+      "stretch_verdict": "参考：日中高値11,580円はanchor比+0.96%にとどまり+2%基準に届かず。後場に強く伸びる瞬間はなかった",
+      "note": "確信2・待ち推奨だったため実損益はゼロ。『地合い全体が崩れれば巻き込まれるリスク』を懸念していたが、実際には地合いの弱さに巻き込まれることはなかった一方、後場の新規の伸びも乏しく、前引けの上昇分をほぼ維持しただけの一日だった",
+      "sources": [
+        "https://jp.investing.com/news/stock-market-news/article-1694670",
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+        "https://jp.investing.com/news/stock-market-news/article-1694846"
+      ]
+    }
+  ],
+  "quadrant_shissoku": [],
+  "quadrant_sokonashi": [
+    {
+      "code": "9984",
+      "name": "ソフトバンクグループ",
+      "newface": false,
+      "quadrant": "底なし",
+      "confidence": 3,
+      "action": "🚫 触らない",
+      "prev_close": 6244.0,
+      "anchor_time": "11:30時点",
+      "anchor": 6108.0,
+      "anchor_change_pct": -2.178,
+      "close": 6035.0,
+      "close_change_yen": -209.0,
+      "close_change_pct": -3.35,
+      "anchor_to_close_pct": -1.195,
+      "close_verdict": "WIN（前引け6,108円→大引け6,035円で-1.195%と±0.5%デッドバンドを超えてさらに下落。Arm株安への懸念が構造的な重石とみて『後場も軟調継続』とした見立てが的中。日経平均のマイナス寄与度でも前引け-109.42円→大引け-168.15円へと押し下げ役が拡大した）",
+      "day_open": 6139.0,
+      "day_high": 6362.0,
+      "day_low": 5931.0,
+      "stretch_verdict": "参考：日中安値5,931円はanchor比-2.90%と-2%基準を明確に超えて下押しした。後場に一段安となった値動きと整合",
+      "note": "確信3・触らないだったため実損益はゼロ。9/28の反発(押せ押せLOSE)から一夜明け、9/25急落の懸念材料（外債発行・DC遅延）が再び意識される形で底なし想定が的中した",
+      "sources": [
+        "https://jp.investing.com/news/stock-market-news/article-1694670",
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+        "https://jp.investing.com/news/stock-market-news/article-1694846"
+      ]
+    },
+    {
+      "code": "4519",
+      "name": "中外製薬",
+      "newface": true,
+      "quadrant": "底なし",
+      "confidence": 4,
+      "action": "🚫 触らない",
+      "prev_close": 6362.0,
+      "anchor_time": "11:30時点",
+      "anchor": 6203.0,
+      "anchor_change_pct": -2.499,
+      "close": 6096.0,
+      "close_change_yen": -266.0,
+      "close_change_pct": -4.18,
+      "anchor_to_close_pct": -1.725,
+      "close_verdict": "WIN（前引け6,203円→大引け6,096円で-1.725%とデッドバンドを超えてさらに下落。前日夕刻発表の肥満症薬候補GYM329開発中止というガイダンス毀損型の悪材料を受け、前引けの下げが後場も継続した）",
+      "day_open": 6300.0,
+      "day_high": 6340.0,
+      "day_low": 6086.0,
+      "stretch_verdict": "参考：日中安値6,086円はanchor比-1.89%で-2%基準にわずかに届かず。終値=日中安値に近く、戻りらしい戻りのないまま安値引け",
+      "note": "確信4・触らないだったため実損益はゼロ。②ガイダンス毀損型の判定通り、戻りの目処が立たないまま安値圏で引けた。新顔カードとしては初日から確信4・WINと質の高い判定になった",
+      "sources": [
+        "https://jp.investing.com/news/stock-market-news/article-1694670",
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=4519",
+        "https://jp.investing.com/news/stock-market-news/article-1694846"
+      ]
+    }
+  ],
+  "quadrant_sagesugi": [
+    {
+      "code": "6857",
+      "name": "アドバンテスト",
+      "newface": false,
+      "quadrant": "下げすぎ",
+      "confidence": 2,
+      "action": "⏸ 待ち推奨",
+      "prev_close": 33730.0,
+      "anchor_time": "11:30時点",
+      "anchor": 33280.0,
+      "anchor_change_pct": -1.334,
+      "close": 33910.0,
+      "close_change_yen": 180.0,
+      "close_change_pct": 0.53,
+      "anchor_to_close_pct": 1.893,
+      "close_verdict": "WIN（前引け33,280円→大引け33,910円で+1.893%とデッドバンドを大きく超えて反発。カードで示した解除条件『後場に前日終値33,730円を回復する値動きが出るか』が実際に成立し、下げすぎ＝信用買い候補の想定が的中）",
+      "day_open": 33820.0,
+      "day_high": 34230.0,
+      "day_low": 33050.0,
+      "stretch_verdict": "参考：日中高値34,230円はanchor比+2.86%と+2%基準を明確に超えた。前引け安値圏(33,050円=日中安値)から後場にかけて大きく切り返す値動き",
+      "note": "確信2・待ち推奨だったため実損益はゼロ。半導体テスト装置大手が前引けの軟調（寄与度-108.61円）から後場に切り返し、日経平均のプラス寄与に転じる(寄与度+43.44円)明確な反転パターンとなった",
+      "sources": [
+        "https://jp.investing.com/news/stock-market-news/article-1694670",
+        "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+        "https://jp.investing.com/news/stock-market-news/article-1694846"
+      ]
+    }
+  ],
+  "quadrant_note_sagesugi_extra": "下げすぎ象限は本日1件で判定対象。4営業日ぶりに候補ありとなった",
+  "regulars_note": "常連13銘柄は11:38昼バッチ(candidates_20260929.json)のregulars_check_13で大引け15:30時点の値が既に単一ソース（松井証券）で記録済み（9984のみ本フェーズで2ソース目のnikkei.com個別ページと突合し6,035円・-3.35%の完全一致を確認）。他12銘柄は候補カード化されていないため勝敗判定の対象外（設計書§3の常連チェックは日次の定点記録が主目的）",
+  "watchlist": {
+    "note": "候補銘柄の判定とは別枠の独立ウォッチ2件",
+    "yaskawa_6506": {
+      "prev_close": 4453.0,
+      "open": 4444.0,
+      "high": 4552.0,
+      "low": 4431.0,
+      "close": 4528.0,
+      "close_change_yen": 75.0,
+      "close_change_pct": 1.68,
+      "data_quality": "終値4,528円は日本経済新聞個別ページと松井証券マーケット情報の独立2系統で完全一致（11:38昼バッチ時点で確認済み。本フェーズで投資判断・値の変更なしを再確認）",
+      "conditions": {
+        "A": true,
+        "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は82営業日連続でユーザー未確認）",
+        "C": "true（間接証拠。本日の値下がり率上位はソフトバンクG・三菱UFJ・トヨタ・デンソー等で安川電機の名はなく、そもそも本日はプラスで引けている）"
+      },
+      "unlock": false,
+      "detail": "前日終値4,453円→終値4,528円(+75円、+1.68%)で反発、条件Aは成立。日経平均が続落（配当権利落ち・米半導体株安・原油高）する中、電気機器が東証33業種で唯一の上昇セクターとなった流れに乗った形（東京エレクトロン+2.14%・ディスコ堅調など半導体製造装置・FA関連への物色が波及）。条件Bが82営業日連続でユーザー未確認のまま長期化しており、3条件同時成立には至らず解除通知は見送り継続"
+    },
+    "fastretailing_9983": {
+      "prev_close": 67850.0,
+      "close": 68710.0,
+      "close_change_yen": 860.0,
+      "close_change_pct": 1.27,
+      "data_quality": "終値68,710円はinvesting.com経由のFisco記事（日経平均寄与度ランキング大引け、押し上げ2位・+69.19円分）と日本経済新聞個別ページの独立2系統で完全一致",
+      "unlock_condition_reference": "前日終値を上回って引ける",
+      "unlock_status": "前日終値67,850円を860円(+1.27%)上回って反発。9/28に一度途切れた『前日終値超え』の反発シナリオが本日は成立し直した"
+    }
+  },
+  "score_today": {
+    "win": 4,
+    "lose": 0,
+    "draw": 1,
+    "pending": 0,
+    "undetermined": 0,
+    "candidates": 5,
+    "note": "候補5件は4勝0敗1分・判定不能ゼロ・pendingなしで確定（大引け確定値ベース）。押せ押せ1件中1分（東エレク、前引けで既に伸び切り後場は横ばい）、底なし2件中2勝（SBG・中外製薬とも後場も下げ継続）、下げすぎ1件中1勝（アドバンテスト、後場に前日終値を回復する反発）"
+  },
+  "score_cumulative": {
+    "win": 100,
+    "lose": 61,
+    "draw": 59,
+    "unverified": 2,
+    "excluded_20260716": 7,
+    "as_of": "2026-09-29 15:45速報答え合わせ時点（実行は22:21 JSTにずれ込んだが大引け確定値には影響なし）。9/28 18:30確定スイープ時点(96勝61敗58分)から本日分(4勝0敗1分)を反映",
+    "note": "累計勝率＝100/(100+61+59)=45.5%（引き分け除く分母では100/161=62.1%）。unverified=2は7/15判定不能1件＋9/25海運3社1件の合計（変更なし）"
+  },
+  "calibration_by_confidence": {
+    "確信5": {
+      "win": 1,
+      "lose": 0,
+      "draw": 0,
+      "n": 1,
+      "win_rate_pct": 100.0
+    },
+    "確信4": {
+      "win": 27,
+      "lose": 15,
+      "draw": 8,
+      "n": 50,
+      "win_rate_pct": 54.0
+    },
+    "確信3": {
+      "win": 43,
+      "lose": 29,
+      "draw": 35,
+      "n": 107,
+      "win_rate_pct": 40.2
+    },
+    "確信2": {
+      "win": 29,
+      "lose": 17,
+      "draw": 16,
+      "n": 62,
+      "win_rate_pct": 46.8
+    },
+    "note": "本日分（確信4:中外製薬WIN／確信3:SBG WIN／確信2:東エレクDRAW・大塚HD WIN・アドバンテストWIN）を反映"
+  },
+  "win_rate_by_quadrant": {
+    "押せ押せ": {
+      "win": 45,
+      "lose": 29,
+      "draw": 30,
+      "n": 104,
+      "win_rate_pct": 43.3
+    },
+    "失速警戒": {
+      "win": 17,
+      "lose": 10,
+      "draw": 8,
+      "n": 35,
+      "win_rate_pct": 48.6
+    },
+    "底なし": {
+      "win": 32,
+      "lose": 19,
+      "draw": 18,
+      "n": 69,
+      "win_rate_pct": 46.4
+    },
+    "下げすぎ": {
+      "win": 6,
+      "lose": 3,
+      "draw": 3,
+      "n": 12,
+      "win_rate_pct": 50.0
+    },
+    "note": "本日分（押せ押せ:1DRAW／底なし:2WIN／下げすぎ:1WIN）を反映。下げすぎは4営業日ぶりの候補で勝率50.0%に回復"
+  },
+  "learnings": [
+    "アドバンテスト(6857)は前引け時点で日経平均マイナス寄与度2位（-108.61円、価格換算で概算-1.33%）と大きく崩れていたが、後場にかけて切り返しプラス寄与（+43.44円、+0.53%）まで戻した。前日終値回復という明示的な解除条件を後場に満たす教科書的な『下げすぎ→信用買い候補』のパターンで、値がさ半導体でも前場の崩れが必ずしも終日続くわけではないことを示した",
+    "東京エレクトロン(8035)は前引け(+1.83%)時点で既に上昇の大半を織り込んでおり、後場の上乗せは+0.3%程度にとどまってデッドバンド内のDRAWとなった。『押せ押せ』の質にも強弱があり、前引けの伸びが緩やかだった大塚HD(+2.12%→+2.89%、後場も+0.75%上乗せでWIN)と比べ、伸びが急だった銘柄ほど後場は息切れしやすい可能性は今後の観察対象",
+    "日経平均寄与度ランキング記事には『前引け版』と『大引け版』の2本があり、investing.com経由のFisco配信ミラー（jp.investing.com/news/stock-market-news/article-番号）は表形式で個別銘柄の実際の株価まで掲載していることを確認した。これまで『前引けは方向のみ確認』としてanchor欠如の候補が多かったが、このミラー記事ルートを優先的に探索すれば前引けの正確なanchor株価が高確率で取得できる可能性がある。データルートのカタログ（OPERATIONS.md §2）に追記する価値がある発見",
+    "寄与度(contribution_yen)と価格変化(price_change_yen)の比は銘柄固有のウエイト係数として前引け・大引けを通じて一定である（東京エレクトロンで寄与度から逆算したanchor推定値11,470円が、investing.comミラー記事の実測値11,470円と完全一致で検証）。前引けの寄与度だけが分かり実際の株価が取得できない場合でも、同一銘柄の大引け時点の寄与度・価格変化の比が分かれば、前引け株価を精度良く逆算できる"
+  ],
+  "sources_summary": [
+    "https://www.nikkei.com/article/DGXZQOFL294ND0Z20C26A9000000/",
+    "https://www.nikkei.com/article/DGXZQOFL291HATZ20C26A9000000/",
+    "https://jp.investing.com/news/stock-market-news/article-1694846",
+    "https://jp.investing.com/news/stock-market-news/article-1694670",
+    "https://news.yahoo.co.jp/articles/ae700be36094c3e81cafd7e2676924d4f9acc3b4",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4578",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4519",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+    "https://finance.matsui.co.jp/stock/6506/index"
+  ]
+}
