@@ -1,0 +1,309 @@
+{
+ "date": "2026-09-30",
+ "phase": "15:45速報答え合わせ",
+ "judged_at": "2026-09-30T22:05:00+09:00",
+ "confirmed": true,
+ "batch_note": "本来15:45起動のところ、本セッションの実際の起動は22:02 JST頃までずれ込んだ。東証は15:30に引けており大引け確定値には影響しないため、答え合わせ作業に支障はない。11:38昼バッチ（candidates_20260930.json）時点では、実行自体が17:53 JST（大引け後）にずれ込んでいたため候補5件とも前引け(11:30)anchorが未確定または概算にとどまっていた（TDKはanchor自体が『null』・太陽誘電は『概算・単一系統』フラグ付き）。本フェーズでzaikei.co.jp/article/20260930/871745.html（日経平均寄与度ランキング・前引け）を再取得したところ、同記事に5候補全銘柄（9984・8035・6976・6762・6981）の前引け(11:30)実測値が掲載されていることを確認し、TDKのanchor欠落と太陽誘電anchorの概算フラグを解消できた。太陽誘電の新anchor(9,450円)は、同記事のprev_close逆算値(9,450-333=9,117円)がcandidates_20260930.json記載のprev_close(9,117円)と完全一致するため、昼バッチ時点の概算値(9,301円・別検索経由)より信頼度が高いと判断しこちらを採用した。同様にTDKの新anchor(2,950円)もprev_close逆算値(2,919円)がcandidates_20260930.json記載のprev_closeと完全一致し、採用した",
+ "data_quality_note": "日経平均大引け66,753.72円(+1,272.45円、+1.94%)は日本経済新聞記事(DGXZQOFL305E90Q6A930C2000000)とinvesting.com経由のFisco記事「日経平均寄与度ランキング（大引け）」(article-1696515)の独立2系統で完全一致。TOPIX大引け4,108.65pt(+67.52pt、+1.67%)は日本経済新聞記事に記載（11:38昼バッチ時点でも参考値として把握済みの値と一致）。候補5件の大引け株価は、日本経済新聞個別ページ(nikkei.com/nkd/company/history/dprice)とinvesting.com経由のFisco記事の独立2系統で、ソフトバンクグループ・東京エレクトロン・TDK・村田製作所の4銘柄が完全一致（太陽誘電は日経個別ページとFisco「強弱材料9/30」記事(article-1696241)の2系統で一致）。候補5件の前引け(11:30)anchorはzaikei.co.jpミラー記事(871745.html)の単一系統から取得（ソフトバンクグループ・東京エレクトロン・村田製作所の3銘柄はcandidates_20260930.json記載の値と完全一致し内的整合性を確認、太陽誘電・TDKの2銘柄は上記batch_note記載の通りprev_close逆算値の一致で確認）。安川電機の終値4,633円は松井証券マーケット情報と日本経済新聞個別ページの独立2系統で完全一致（昼バッチ時点は松井証券の単一系統のみだったため、本フェーズで実質2系統目を確認）。ファーストリテイリングの終値70,860円はFisco大引け記事の寄与度欄(+2,150円)とcandidates_20260930.json記載の前日終値68,710円から算出した値が一致",
+ "market": {
+  "nikkei_prev_close": 65481.27,
+  "nikkei_maehiike": 66318.81,
+  "nikkei_maehiike_change_pct": 1.28,
+  "nikkei_close": 66753.72,
+  "nikkei_close_change_yen": 1272.45,
+  "nikkei_close_change_pct": 1.94,
+  "nikkei_close_note": "3営業日ぶりの大幅反発。前引け+1.28%からさらに上げ幅を拡大して引けた。米SOX指数高によるAI・半導体買いに加え、TDK・太陽誘電の電子部品提携発表が新テーマとして電子部品セクター全体に波及。9月月間でも上昇して終えた",
+  "topix_close": 4108.65,
+  "topix_close_change": 67.52,
+  "topix_close_change_pct": 1.67,
+  "breadth_close_prime": {
+   "up": 1127,
+   "down": 368,
+   "flat": 55,
+   "note": "東証プライム全体。前引け時点(up768/down726/flat55、ほぼ拮抗)からは値上がり銘柄が大きく増え、後場にかけて上昇が広がったことを示す。前引けの『一部テーマ株への資金集中』的な構図から、後場は指数の反発がより全面的な物色に広がった"
+  },
+  "breadth_close_nikkei225": {
+   "up": 206,
+   "down": 18,
+   "flat": 1,
+   "note": "日経平均225構成銘柄のみの内訳。値上がり寄与トップはソフトバンクグループ・ファーストリテイリング・東京エレクトロン・アドバンテスト・フジクラ。値下がり寄与では村田製作所・京セラ・日東電工・オリンパス・エムスリーが上位"
+  },
+  "sources": [
+   "https://www.nikkei.com/article/DGXZQOFL305E90Q6A930C2000000/",
+   "https://jp.investing.com/news/stock-market-news/article-1696515",
+   "https://www.zaikei.co.jp/article/20260930/871800.html"
+  ]
+ },
+ "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース（参考情報）：日中高値・安値がanchor比+2%/-2%以上だったかを併記。anchorはzaikei.co.jpミラー記事『日経平均寄与度ランキング（前引け）』の実測株価を採用し、prev_close逆算値がcandidates_20260930.json記載のprev_closeと完全一致することで5銘柄全てを検証済み",
+ "results": [
+  {
+   "code": "9984",
+   "name": "ソフトバンクグループ",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 6035.0,
+   "anchor_time": "11:30時点",
+   "anchor": 6393.0,
+   "anchor_change_pct": 5.93,
+   "close": 6430.0,
+   "close_change_yen": 395.0,
+   "close_change_pct": 6.55,
+   "anchor_to_close_pct": 0.579,
+   "close_verdict": "WIN（前引け6,393円→大引け6,430円で+0.579%と±0.5%デッドバンドをわずかに超えて上昇継続。OpenAIの大型資金調達というSBG固有の実質的な好材料が後場も効き、『押せ押せ＝後場も伸びる』の想定が的中。ただし待ち推奨で見送った通り前引け時点で既に+5.93%まで買われており、後場の上乗せ自体は小幅だった）",
+   "day_open": 6335.0,
+   "day_high": 6477.0,
+   "day_low": 6225.0,
+   "stretch_verdict": "参考：日中高値6,477円はanchor比+1.31%で+2%基準には届かず。後場に大きく伸びる瞬間まではなかった",
+   "note": "確信3・待ち推奨だったため実損益はゼロ。『待ち推奨＝新規で追いかけるのは高値掴みリスクが高い』という判断は結果的に妥当で、後場の伸びは限定的だった",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260930/871745.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+    "https://jp.investing.com/news/stock-market-news/article-1696515"
+   ]
+  },
+  {
+   "code": "6976",
+   "name": "太陽誘電",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 9117.0,
+   "anchor_time": "11:30時点",
+   "anchor": 9450.0,
+   "anchor_change_pct": 3.65,
+   "close": 9324.0,
+   "close_change_yen": 207.0,
+   "close_change_pct": 2.27,
+   "anchor_to_close_pct": -1.333,
+   "close_verdict": "LOSE（前引け9,450円→大引け9,324円で-1.333%と±0.5%デッドバンドを超えて反転下落。『押せ押せ＝後場も伸びる』の想定に反し、前引け後は利益確定売りに押される展開となった。ただし前日比では+2.27%を維持しており値崩れしたわけではない）",
+   "day_open": 9740.0,
+   "day_high": 9955.0,
+   "day_low": 9270.0,
+   "stretch_verdict": "参考：日中高値9,955円(anchor比+5.35%)は関連記事の『寄り付き直後に+9%超まで買われる場面があった』という記述と符合し、前引け(11:30)より前の寄り付き直後に付けた高値とみられる。つまり後場に新たに+2%基準を超えて伸びる場面はなく、後場を通じてanchor水準からむしろ切り下がる一方の値動きだった",
+   "note": "確信3・待ち推奨だったため実損益はゼロ。カードのmitateで『寄り付き直後の急伸から前引けにかけて上げ幅を削っている様子』を既に懸念材料として指摘しており、action『大幅上昇後は利益確定売りが出やすい局面』という読みが的中し、新規追随を避けたことが結果的に損失回避になった",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260930/871745.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6976",
+    "https://jp.investing.com/news/stock-market-news/article-1696241"
+   ]
+  },
+  {
+   "code": "8035",
+   "name": "東京エレクトロン",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 11505.0,
+   "anchor_time": "11:30時点",
+   "anchor": 11770.0,
+   "anchor_change_pct": 2.3,
+   "close": 11815.0,
+   "close_change_yen": 310.0,
+   "close_change_pct": 2.69,
+   "anchor_to_close_pct": 0.382,
+   "close_verdict": "DRAW（前引け11,770円→大引け11,815円で+0.382%と±0.5%デッドバンド内。9/29の東エレク(前引けで伸び切りDRAW)と酷似したパターンが本日も繰り返された）",
+   "day_open": 11970.0,
+   "day_high": 12060.0,
+   "day_low": 11690.0,
+   "stretch_verdict": "参考：日中高値12,060円はanchor比+2.46%で+2%基準を明確に超えた。終値ベースでは伸び悩んだが、後場のどこかで一時的に大きく伸びる瞬間はあった（デイ中に利確するスタイルなら評価が変わりうる一例）",
+   "note": "確信2・待ち推奨だったため実損益はゼロ。終値ベースはDRAWだが参考のストレッチベースではプラス方向の伸びを記録しており、ダブル基準の併記が効く典型例",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260930/871745.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+    "https://jp.investing.com/news/stock-market-news/article-1696515"
+   ]
+  }
+ ],
+ "quadrant_shissoku": [
+  {
+   "code": "6762",
+   "name": "TDK",
+   "newface": true,
+   "quadrant": "失速警戒",
+   "confidence": 2,
+   "action": "🚫 触らない",
+   "prev_close": 2919.0,
+   "anchor_time": "11:30時点",
+   "anchor": 2950.0,
+   "anchor_change_pct": 1.06,
+   "close": 2981.0,
+   "close_change_yen": 62.0,
+   "close_change_pct": 2.12,
+   "anchor_to_close_pct": 1.051,
+   "close_verdict": "LOSE（前引け2,950円→大引け2,981円で+1.051%と±0.5%デッドバンドを超えてさらに上昇。『失速警戒＝後場は反転』の想定に反し、後場も上げ幅を拡大した。太陽誘電（提携当事者・本丸）が後場に失速したのとは対照的に、連れ高側のTDKの方が最後まで底堅かった）",
+   "day_open": 3003.0,
+   "day_high": 3066.0,
+   "day_low": 2940.0,
+   "stretch_verdict": "参考：日中高値3,066円はanchor比+3.93%で+2%基準を明確に超えた。始値3,003円→前引け2,950円（一時軟化）→後場に高値3,066円まで切り返しており、後場に伸びる場面があったこと自体は明確",
+   "note": "確信2・触らないだったため実損益はゼロ。自己分析として記録：本カードは昼バッチ時点でanchor(前引け値)自体が未取得(null)のまま『連れ高は先に失速するはず』という材料面の類推だけで失速警戒に分類していた。実際のanchorは+1.06%と『前場急騰』と呼べるほどの伸びではなく、そもそも4象限（急騰×反転）の前提条件が弱かった可能性がある。anchor未確定のまま象限を確定させるリスクの実例として次回以降の材料判断に活かす",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260930/871745.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6762",
+    "https://jp.investing.com/news/stock-market-news/article-1696515"
+   ]
+  }
+ ],
+ "quadrant_sokonashi": [
+  {
+   "code": "6981",
+   "name": "村田製作所",
+   "newface": true,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "🚫 触らない",
+   "prev_close": 8089.0,
+   "anchor_time": "11:30時点",
+   "anchor": 7882.0,
+   "anchor_change_pct": -2.56,
+   "close": 7851.0,
+   "close_change_yen": -238.0,
+   "close_change_pct": -2.94,
+   "anchor_to_close_pct": -0.393,
+   "close_verdict": "DRAW（前引け7,882円→大引け7,851円で-0.393%と±0.5%デッドバンド内。方向自体は見立て通り下げ継続だったが、デッドバンドの範囲内にとどまり明確な『底なし』とまでは言えない結果）",
+   "day_open": 8200.0,
+   "day_high": 8248.0,
+   "day_low": 7825.0,
+   "stretch_verdict": "参考：日中安値7,825円はanchor比-0.72%で-2%基準には届かず。後場に急激に売り込まれる場面まではなかった",
+   "note": "確信3・触らないだったため実損益はゼロ。日経平均225の値下がり寄与トップに終日とどまり(寄与度-19.15)、地合いが大幅高の中での逆行安という構図自体は最後まで崩れなかった。ただし下げ幅の拡大は前引け時点からは緩やかだった",
+   "sources": [
+    "https://www.zaikei.co.jp/article/20260930/871745.html",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6981",
+    "https://jp.investing.com/news/stock-market-news/article-1696515"
+   ]
+  }
+ ],
+ "quadrant_sagesugi": [],
+ "quadrant_note_sagesugi_extra": "下げすぎ象限は本日候補なし（11:38昼バッチ時点で『前引け値上がり768・値下がり726と拮抗し、急落からの戻りを演じる銘柄自体が乏しい日だった』と明記済み）",
+ "watchlist": {
+  "note": "候補銘柄の判定とは別枠の独立ウォッチ2件（判定不要な事実記録）",
+  "yaskawa_6506": {
+   "prev_close": 4528.0,
+   "open": 4586.0,
+   "high": 4649.0,
+   "low": 4558.0,
+   "close": 4633.0,
+   "close_change_yen": 105.0,
+   "close_change_pct": 2.32,
+   "data_quality": "終値4,633円は松井証券マーケット情報と日本経済新聞個別ページの独立2系統で完全一致（昼バッチ時点は松井証券の単一系統のみだったため、本フェーズで実質2系統目を確認できた）",
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は85営業日連続でユーザー未確認）",
+    "C": "true（本日は日経平均225構成銘柄の値下がりが18銘柄のみで、安川電機自身も+2.32%とプラス圏。値下がり率上位・日経マイナス寄与上位のいずれにも該当せず）"
+   },
+   "unlock": false,
+   "detail": "前日終値4,528円→終値4,633円(+105円、+2.32%)で3営業日連続の反発。AI・半導体全面高（電子部品提携テーマ含む）の地合いに乗った形。条件Bが85営業日連続でユーザー未確認のまま長期化しており、条件A・C成立でも3条件同時成立には至らず解除通知は見送り継続"
+  },
+  "fastretailing_9983": {
+   "prev_close": 68710.0,
+   "close": 70860.0,
+   "close_change_yen": 2150.0,
+   "close_change_pct": 3.13,
+   "data_quality": "終値70,860円はinvesting.com経由のFisco記事（日経平均寄与度ランキング大引け、押し上げ2位・+172.98円分）で確認。同記事のprev_close逆算値がcandidates_20260930.json記載の値と整合",
+   "unlock_condition_reference": "前日終値を上回って引ける",
+   "unlock_status": "前日終値68,710円を2,150円(+3.13%)上回って3営業日連続の反発。投資判断への言及はなく事実記録のみ"
+  }
+ },
+ "score_today": {
+  "win": 1,
+  "lose": 2,
+  "draw": 2,
+  "pending": 0,
+  "undetermined": 0,
+  "candidates": 5,
+  "note": "候補5件は1勝2敗2分・pending/判定不能ゼロで確定（大引け確定値ベース）。押せ押せ3件中1勝1敗1分（SBG WIN／太陽誘電 LOSE／東エレク DRAW）、失速警戒1件中1敗（TDK）、底なし1件中1分（村田製作所）、下げすぎは候補なし"
+ },
+ "score_cumulative": {
+  "win": 101,
+  "lose": 63,
+  "draw": 61,
+  "unverified": 2,
+  "excluded_20260716": 7,
+  "as_of": "2026-09-30 15:45速報答え合わせ時点（実行は22:05 JSTにずれ込んだが大引け確定値には影響なし）。9/29 15:45時点(100勝61敗59分)から本日分(1勝2敗2分)を反映",
+  "note": "累計勝率＝101/(101+63+61)=44.9%（引き分け除く分母では101/164=61.6%）。unverified=2は7/15判定不能1件＋9/25海運3社1件の合計（変更なし）"
+ },
+ "calibration_by_confidence": {
+  "確信5": {
+   "win": 1,
+   "lose": 0,
+   "draw": 0,
+   "n": 1,
+   "win_rate_pct": 100.0
+  },
+  "確信4": {
+   "win": 27,
+   "lose": 15,
+   "draw": 8,
+   "n": 50,
+   "win_rate_pct": 54.0
+  },
+  "確信3": {
+   "win": 44,
+   "lose": 30,
+   "draw": 36,
+   "n": 110,
+   "win_rate_pct": 40.0
+  },
+  "確信2": {
+   "win": 29,
+   "lose": 18,
+   "draw": 17,
+   "n": 64,
+   "win_rate_pct": 45.3
+  },
+  "note": "本日分（確信3:SBG WIN・太陽誘電LOSE・村田DRAW／確信2:東エレクDRAW・TDK LOSE）を反映"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": {
+   "win": 46,
+   "lose": 30,
+   "draw": 31,
+   "n": 107,
+   "win_rate_pct": 43.0
+  },
+  "失速警戒": {
+   "win": 17,
+   "lose": 11,
+   "draw": 8,
+   "n": 36,
+   "win_rate_pct": 47.2
+  },
+  "底なし": {
+   "win": 32,
+   "lose": 19,
+   "draw": 19,
+   "n": 70,
+   "win_rate_pct": 45.7
+  },
+  "下げすぎ": {
+   "win": 6,
+   "lose": 3,
+   "draw": 3,
+   "n": 12,
+   "win_rate_pct": 50.0
+  },
+  "note": "本日分（押せ押せ:1WIN・1LOSE・1DRAW／失速警戒:1LOSE／底なし:1DRAW）を反映"
+ },
+ "learnings": [
+  "太陽誘電(6976)は寄り付き直後に前日比+9%超（高値9,955円）まで買われた後、前引け時点では+3.65%まで上げ幅を削り、後場はさらに反転して終値+2.27%（前引け比-1.33%）で引けた。カードのmitateで『寄り付き直後の急伸から前引けにかけて上げ幅を削っている様子』と既に懸念を示しており、その読み通りの展開になった。⑤期待剥落型に近い『材料は本物だが値幅が先行しすぎ』のパターンとして、今後も前引け時点で既に高値から数%削っている銘柄は押せ押せでも待ち推奨を優先する根拠になる",
+  "TDK(6762)は太陽誘電の提携報道への『連れ高』として失速警戒に分類したが、前引け(+1.06%)はそもそも『前場急騰』と呼べるほどの伸びではなく、後場はむしろ太陽誘電より底堅く上げ幅を拡大して引けた(+2.12%、日中高値+3.93%)。本カードは昼バッチ実行時点でanchor(前引け値)自体が未取得(null)のまま材料面の類推だけで象限を確定させており、anchor欠如のまま象限判定を行うリスクの実例。今後、anchorが未確定の候補は象限確定を翌フェーズに持ち越す運用も検討に値する",
+  "東京エレクトロン(8035)は終値ベースでは前引け比+0.382%とデッドバンド内のDRAWだったが、日中高値12,060円はanchor比+2.46%とストレッチ基準を超えた。終値ベースとストレッチベースの評価が分かれる典型例で、デイ中に利確するスタイルではこの銘柄は『後場に伸びる瞬間があった』と評価できる"
+ ],
+ "sources_summary": [
+  "https://www.nikkei.com/article/DGXZQOFL305E90Q6A930C2000000/",
+  "https://jp.investing.com/news/stock-market-news/article-1696515",
+  "https://jp.investing.com/news/stock-market-news/article-1696241",
+  "https://www.zaikei.co.jp/article/20260930/871745.html",
+  "https://www.zaikei.co.jp/article/20260930/871800.html",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6976",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6762",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6981",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+  "https://s.kabutan.jp/news/n202609300879/"
+ ]
+}
