@@ -1,0 +1,317 @@
+{
+ "date": "2026-10-01",
+ "phase": "15:45速報答え合わせ",
+ "judged_at": "2026-10-01T22:56:00+09:00",
+ "batch_note": "本来15:45起動のところ、本セッションの実際の起動は22:56 JST頃までずれ込んだ。東証は15:30に引けており大引け確定値には影響しないため答え合わせ作業に支障はない。11:38昼バッチ（candidates_20261001.json）・12:15風向きの両フェーズは前引け(11:30)〜後場寄り直後(12:29〜13:00配信)の記事のみを情報源とし候補7件は未判定のまま終了していたため、本フェーズが候補7件の初回判定となる。夕刊の話題株ルート（株探大引け市況・話題株ピックアップ夕刊・S高S安引け一覧）およびnikkei.com個別ページ・松井証券マーケット情報を用いて大引け確定値を取得し、独立2〜3系統でのクロスチェックを行った上で終値ベース判定を確定した。pending・判定不能は0件",
+ "data_quality_note": "日経平均大引け68,956.72円(+2,203.00円、+3.30%)・TOPIX大引け4,131.98pt(+23.33pt、+0.57%)は株探・日本経済新聞・zaikei.co.jpの3系統で完全一致。東証プライムbreadth（値上がり750・値下がり747・変わらず53）も3系統一致。候補7件のうちソフトバンクグループ(9984)・アドバンテスト(6857)・村田製作所(6981)・京セラ(6971)・ディスコ(6146)の終値は3系統一致（再検証済）で信頼度が高い。太陽誘電(6976)・ニデック(6594)は2系統一致。安川電機(6506)はWebSearchのAI要約が誤情報（3,067円等のハルシネーション）を繰り返し生成したため、WebFetchによる一次ソース直接取得（日本経済新聞個別ページ・松井証券）の独立2系統のみを採用した。ファーストリテイリング(9983)の終値・前日比は3系統一致だが、始値・高値・安値は松井証券の単一ソース。なお京セラのanchor(前引け値)は候補選定時点でzaikei.co.jp単一系統の概算、ディスコのanchorは前引け(11:30)ちょうどでなく10:18時点の概算値だった点は終値ベース判定の前提として留意が必要（いずれも方向・値幅ともデッドバンドを明確に超えるか内に収まるかには影響しない範囲と判断）",
+ "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース（参考情報）：日中高値がanchor比+2%以上だったかを併記",
+ "market": {
+  "nikkei_prev_close": 66753.72,
+  "nikkei_close": 68956.72,
+  "nikkei_close_change_yen": 2203.00,
+  "nikkei_close_change_pct": 3.30,
+  "nikkei_close_note": "前引け+2.40%→後場寄り+2.49%→大引け+3.30%と後場にかけてさらに上げ幅を拡大し、1カ月半ぶりに68,000円台を回復したのみならず69,000円目前まで上伸。米マイクロン好決算を起点とした半導体・電子部品全面高が最後まで衰えなかった",
+  "topix_close": 4131.98,
+  "topix_close_change": 23.33,
+  "topix_close_change_pct": 0.57,
+  "topix_note": "前引け+0.13%からは上げ幅を拡大したが、日経平均+3.30%との乖離は依然大きく、値がさ半導体株中心の指数押し上げという『狭い相場』の構図自体は後場も基本的に継続した",
+  "breadth_close_prime": {
+   "up": 750,
+   "down": 747,
+   "flat": 53,
+   "note": "東証プライム全体。前引け時点(up515/down992/flat42)からは値上がり銘柄が大きく増え値下がりとほぼ拮抗する水準まで改善したが、日経平均の大幅高に比べると『全面高』と呼べるほどではなく、後場も物色は一部に偏ったままだった"
+  },
+  "sources": [
+   "https://s.kabutan.jp/news/n202610011009/",
+   "https://www.nikkei.com/article/DGXZQOFL012RF0R01C26A0000000/",
+   "https://www.zaikei.co.jp/article/20261001/871964.html",
+   "https://www.zaikei.co.jp/article/20261001/871990.html"
+  ]
+ },
+ "results": [
+  {
+   "code": "9984",
+   "name": "ソフトバンクグループ",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 6430.0,
+   "anchor_time": "前引け(11:30)時点",
+   "anchor": 6642.0,
+   "anchor_change_pct": 3.29,
+   "close": 6701.0,
+   "close_change_yen": 271.0,
+   "close_change_pct": 4.21,
+   "anchor_to_close_pct": 0.888,
+   "close_verdict": "WIN（前引け6,642円→大引け6,701円で+0.888%と±0.5%デッドバンドを超えて上昇継続。OpenAIへの追加出資第3弾実行というSBG固有の実質材料が後場も効き、2日連続急伸(9/30+6.55%)の高値圏からさらに一段伸ばした）",
+   "day_open": 6402.0,
+   "day_high": 6739.0,
+   "day_low": 6393.0,
+   "stretch_verdict": "参考：日中高値6,739円はanchor比+1.46%で+2%基準には届かず。後場に大きく伸びる瞬間まではなかった",
+   "note": "確信3・待ち推奨だったため実損益はゼロ。前引け時点で既に+3.29%まで買われていた中での様子見判断自体は妥当だった",
+   "sources": [
+    "https://s.kabutan.jp/news/n202610011009/",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+    "https://finance.matsui.co.jp/stock/9984/index"
+   ]
+  },
+  {
+   "code": "6857",
+   "name": "アドバンテスト",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 34260.0,
+   "anchor_time": "前引け(11:30)時点",
+   "anchor": 36930.0,
+   "anchor_change_pct": 7.78,
+   "close": 37610.0,
+   "close_change_yen": 3350.0,
+   "close_change_pct": 9.78,
+   "anchor_to_close_pct": 1.841,
+   "close_verdict": "WIN（前引け36,930円→大引け37,610円で+1.841%と±0.5%デッドバンドを超えて上昇継続、終値=日中高値の高値引け。マイクロン好決算によるAI向けHBMテスター需要拡大という実質材料が後場も途切れず、東証プライム値上がり寄与度トップを終日維持した）",
+   "day_open": 34950.0,
+   "day_high": 37610.0,
+   "day_low": 34940.0,
+   "stretch_verdict": "参考：日中高値（=終値）37,610円はanchor比+1.84%で+2%基準にはわずかに届かず。ただし高値引けという形自体が後場の勢いの強さを示す",
+   "note": "確信2・待ち推奨だったため実損益はゼロ。『新規追随は高値掴みリスク』という懸念は結果的には当たらず、前引け時点の伸びが実需材料に支えられていたことを示す一例",
+   "sources": [
+    "https://s.kabutan.jp/news/n202610011009/",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+    "https://finance.matsui.co.jp/stock/6857/index"
+   ]
+  },
+  {
+   "code": "6981",
+   "name": "村田製作所",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 7851.0,
+   "anchor_time": "前引け(11:30)時点",
+   "anchor": 8470.0,
+   "anchor_change_pct": 7.88,
+   "close": 8513.0,
+   "close_change_yen": 662.0,
+   "close_change_pct": 8.43,
+   "anchor_to_close_pct": 0.508,
+   "close_verdict": "WIN（前引け8,470円→大引け8,513円で+0.508%と±0.5%デッドバンドをわずか0.008ptの差で上回り、辛うじて上昇継続。半導体・電子部品セクター全体への資金流入が後場も途切れなかったが、デッドバンドのほぼ境界線上の結果であり『明確な続伸』と『実質的な足踏み』は紙一重だった）",
+   "day_open": 8100.0,
+   "day_high": 8557.0,
+   "day_low": 8089.0,
+   "stretch_verdict": "参考：日中高値8,557円はanchor比+1.03%で+2%基準には届かず",
+   "note": "確信3・待ち推奨だったため実損益はゼロ。判定はWINだがデッドバンド境界線上の僅差であり、較正評価で過大評価しないよう留意する",
+   "sources": [
+    "https://s.kabutan.jp/news/n202610011009/",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6981",
+    "https://finance.matsui.co.jp/stock/6981/index"
+   ]
+  },
+  {
+   "code": "6971",
+   "name": "京セラ",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "👀 観察のみ",
+   "prev_close": 3646.0,
+   "anchor_time": "前引け(11:30)時点・概算（zaikei.co.jp単一系統）",
+   "anchor": 3723.0,
+   "anchor_change_pct": 2.11,
+   "close": 3728.0,
+   "close_change_yen": 82.0,
+   "close_change_pct": 2.25,
+   "anchor_to_close_pct": 0.134,
+   "close_verdict": "DRAW（前引け3,723円→大引け3,728円で+0.134%と±0.5%デッドバンド内。『指数連動色が強い』という見立て通り、自社固有の新たな材料も出ず方向感のない小動きで終日を終えた）",
+   "day_open": 3659.0,
+   "day_high": 3767.0,
+   "day_low": 3656.0,
+   "stretch_verdict": "参考：日中高値3,767円はanchor比+1.18%で+2%基準には届かず",
+   "note": "確信2・観察のみだったため実損益はゼロ。anchor自体が単一系統の概算値だった点は留意だが、終値3,728円は3系統一致で確認済みで、DRAWという結論はanchorの多少の誤差があっても動かないとみられる",
+   "sources": [
+    "https://s.kabutan.jp/news/n202610011009/",
+    "https://www.nikkei.com/nkd/company/?scode=6971",
+    "https://finance.matsui.co.jp/stock/6971/index"
+   ]
+  },
+  {
+   "code": "6146",
+   "name": "ディスコ",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 57450.0,
+   "anchor_time": "10:18時点・概算（前引けちょうどの値は昼バッチ時点のデータルートでは取得できず）",
+   "anchor": 59240.0,
+   "anchor_change_pct": 3.11,
+   "close": 60440.0,
+   "close_change_yen": 2990.0,
+   "close_change_pct": 5.20,
+   "anchor_to_close_pct": 2.026,
+   "close_verdict": "WIN（10:18時点概算のanchor59,240円→大引け60,440円で+2.026%と±0.5%デッドバンドを大きく超えて上昇継続。マイクロン好決算によるAI半導体向け設備投資拡大期待が後場も効いた。anchorが前引け11:30ちょうどでなく10:18時点の概算値である点は判定の前提として留意が必要だが、値幅がデッドバンドを明確に超えているため結論への影響は小さいとみられる）",
+   "day_open": 59220.0,
+   "day_high": 60550.0,
+   "day_low": 58620.0,
+   "stretch_verdict": "参考：日中高値60,550円はanchor比+2.21%で+2%基準を超過。後場に伸びる場面があったことは終値ベースの判定とも整合",
+   "note": "確信2・待ち推奨だったため実損益はゼロ。anchorが概算だったにもかかわらず方向・値幅ともデッドバンドを明確に超えており、判定の頑健性は比較的高いとみられる",
+   "sources": [
+    "https://s.kabutan.jp/news/n202610011009/",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6146",
+    "https://traders.co.jp/stocks/61_6146/"
+   ]
+  }
+ ],
+ "quadrant_shissoku": [
+  {
+   "code": "6976",
+   "name": "太陽誘電",
+   "newface": false,
+   "quadrant": "失速警戒",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 9324.0,
+   "anchor_time": "前引け(11:30)時点",
+   "anchor": 10185.0,
+   "anchor_change_pct": 9.21,
+   "close": 10100.0,
+   "close_change_yen": 776.0,
+   "close_change_pct": 8.32,
+   "anchor_to_close_pct": -0.835,
+   "close_verdict": "WIN（前引け10,185円→大引け10,100円で-0.835%と±0.5%デッドバンドを超えて反転下落。『失速警戒＝後場は反転』の想定が方向としては的中した。ただし9/30のような大崩れ（前引け比-1.33%）までは至らず、終値も前日比+8.32%の大幅高を維持しており『失速』というより『高値圏での小幅な伸び悩み』に近い）",
+   "day_open": 9474.0,
+   "day_high": 10245.0,
+   "day_low": 9368.0,
+   "stretch_verdict": "参考：日中高値10,245円はanchor比+0.59%で、前引け後も一時的にわずかに上値を伸ばす場面があった。9/30に見られた『寄り付き直後の急伸→前引けにかけ息切れ』という劇的な反転パターンは本日は確認されず、2日連続のテーマ化という材料の持続力の方が優勢だった",
+   "note": "確信3・待ち推奨だったため実損益はゼロ。機械的な終値ベース判定ではWINだが昨日ほど明確な失速ではなく、カードのアクション示唆で示した『一方的な決め付けは禁物』という留保の方が実態に近い。読みが的中したと過度に誇るべきではない",
+   "sources": [
+    "https://s.kabutan.jp/news/n202610011009/",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6976",
+    "https://www.zaikei.co.jp/article/20261001/871990.html"
+   ]
+  }
+ ],
+ "quadrant_sokonashi": [
+  {
+   "code": "6594",
+   "name": "ニデック",
+   "newface": false,
+   "quadrant": "底なし",
+   "confidence": 4,
+   "action": "🚫 触らない",
+   "prev_close": 2355.0,
+   "anchor_time": "前引け(11:30)時点",
+   "anchor": 2100.0,
+   "anchor_change_pct": -10.83,
+   "close": 2100.0,
+   "close_change_yen": -255.0,
+   "close_change_pct": -10.83,
+   "anchor_to_close_pct": 0.000,
+   "close_verdict": "DRAW（前引け2,100円→大引け2,100円で変化なし。監査意見不表明・減損6,321億円という重大材料の深刻さに変わりはなく、前引け時点で既に大きく売り込まれていたため後場は方向感の出にくい膠着状態になった。『底なし＝継続下落』の見立てを否定も肯定もしない結果）",
+   "day_open": 1972.0,
+   "day_high": 2154.0,
+   "day_low": 1888.0,
+   "stretch_verdict": "参考：日中安値1,888円（前日比-19.83%）は寄り付き直後の急落時の値とみられ、前引け(11:30)にかけて既に2,100円まで戻していたため今回の判定には反映されない。日中高値2,154円はanchor比+2.57%で、後場に一時的な戻り（下げすぎ的な反発）を試す場面もあった",
+   "note": "確信4・触らないだったため実損益はゼロ。終値ベースはDRAWだが、anchor比±2%を超える振れ幅が寄り付き直後の急落・後場の戻りの両方で発生しており、材料の重さの割に方向感が定まらない一日だった。『底なし』としての確信度は材料面では変わらず高いが、本日の値動きだけで継続下落を裏付ける結果にはならなかった点は正直に記録する",
+   "sources": [
+    "https://s.kabutan.jp/news/n202610011009/",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6594",
+    "https://jp.investing.com/news/stock-market-news/article-1697975"
+   ]
+  }
+ ],
+ "quadrant_sagesugi": [],
+ "watchlist": {
+  "note": "候補銘柄の判定とは別枠の独立ウォッチ2件（判定不要な事実記録）",
+  "yaskawa_6506": {
+   "prev_close": 4633.0,
+   "open": 4614.0,
+   "high": 4779.0,
+   "low": 4605.0,
+   "close": 4779.0,
+   "close_change_yen": 146.0,
+   "close_change_pct": 3.15,
+   "data_quality": "終値4,779円は日本経済新聞個別ページと松井証券マーケット情報の独立2系統で完全一致。WebSearchのAI要約には3,067円等の誤情報（ハルシネーション）が繰り返し混入したため不採用とし、WebFetchによる一次ソース直接取得のみを採用した。11:38昼バッチ時点の速報値(4,752円前後・概算)から確定値(4,779円)に上方修正",
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は86営業日連続でユーザー未確認）",
+    "C": "true（東証プライムbreadthはup750/down747とほぼ拮抗、安川電機自身は+3.15%とプラス圏で値下がり上位・日経マイナス寄与上位のいずれにも該当せず）"
+   },
+   "unlock": false,
+   "detail": "高値引け（安値4,605円→終値4,779円=日中高値）。前日比+146円(+3.15%)で4営業日連続の反発(9/26終値4,453円起点)。条件Bが86営業日連続でユーザー未確認のまま長期化しており、条件A・C成立でも3条件同時成立には至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index"
+   ]
+  },
+  "fastretailing_9983": {
+   "prev_close": 70860.0,
+   "open": 70720.0,
+   "high": 73440.0,
+   "low": 70320.0,
+   "close": 72750.0,
+   "close_change_yen": 1890.0,
+   "close_change_pct": 2.67,
+   "data_quality": "終値72,750円・前日比は3系統一致。始値70,720円・高値73,440円・安値70,320円は松井証券の単一ソース",
+   "unlock_condition_reference": "前日終値を上回って引ける",
+   "unlock_status": "前日終値70,860円を1,890円(+2.67%)上回って4営業日連続の反発。投資判断への言及はなく事実記録のみ"
+  }
+ },
+ "score_today": {
+  "win": 5,
+  "lose": 0,
+  "draw": 2,
+  "pending": 0,
+  "undetermined": 0,
+  "candidates": 7,
+  "note": "候補7件は5勝0敗2分・pending/判定不能ゼロで確定（大引け確定値ベース）。押せ押せ5件中4勝1分(SBG・アドバンテスト・村田製作所・ディスコがWIN、京セラがDRAW)、失速警戒1件中1勝(太陽誘電)、底なし1件中1分(ニデック)、下げすぎは候補なし。全敗ゼロという結果だが、該当銘柄の大半がマイクロン好決算を起点とする半導体・電子部品セクター全面高という単一テーマに乗っており、見立ての精度というより地合いそのものの強さが押せ押せ判定を後押しした可能性が高い。憲法④（好成績の日ほど疑う）に照らし、素直に『見立てが冴えた日』と評価すべきではない"
+ },
+ "score_cumulative": {
+  "win": 106,
+  "lose": 63,
+  "draw": 63,
+  "unverified": 2,
+  "excluded_20260716": 7,
+  "as_of": "2026-10-01 15:45速報答え合わせ時点（本セッションの実際の起動は22:56 JST頃までずれ込んだが、東証は15:30に引けており大引け確定値には影響なし）。9/30 18:30確定スイープ時点(101勝63敗61分)から本日分(5勝0敗2分)を反映",
+  "note": "累計勝率＝106/(106+63+63)=45.7%（引き分け除く分母では106/169=62.7%）。unverified=2は7/15判定不能1件＋9/25海運3社1件の合計（変更なし）"
+ },
+ "calibration_by_confidence": {
+  "確信5": { "win": 1, "lose": 0, "draw": 0, "n": 1, "win_rate_pct": 100.0 },
+  "確信4": { "win": 27, "lose": 15, "draw": 9, "n": 51, "win_rate_pct": 52.9 },
+  "確信3": { "win": 47, "lose": 30, "draw": 36, "n": 113, "win_rate_pct": 41.6 },
+  "確信2": { "win": 31, "lose": 18, "draw": 18, "n": 67, "win_rate_pct": 46.3 },
+  "note": "本日分（確信3:SBG WIN・村田 WIN・太陽誘電 WIN／確信2:アドバンテスト WIN・ディスコ WIN・京セラ DRAW／確信4:ニデック DRAW）を反映"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": { "win": 50, "lose": 30, "draw": 32, "n": 112, "win_rate_pct": 44.6 },
+  "失速警戒": { "win": 18, "lose": 11, "draw": 8, "n": 37, "win_rate_pct": 48.6 },
+  "底なし": { "win": 32, "lose": 19, "draw": 20, "n": 71, "win_rate_pct": 45.1 },
+  "下げすぎ": { "win": 6, "lose": 3, "draw": 3, "n": 12, "win_rate_pct": 50.0 },
+  "note": "本日分（押せ押せ:4WIN・1DRAW／失速警戒:1WIN／底なし:1DRAW）を反映"
+ },
+ "learnings": [
+  "太陽誘電(6976)は9/30に見られた『寄り付き直後の急伸→前引けにかけ息切れ』という劇的な反転パターンが本日は再現されず、前引け+9.21%から終値+8.32%とごく緩やかな伸び悩みにとどまった。同一材料(TDK提携)でも2日連続のテーマ化は材料の持続力を示しており、『前日に失速したから今日も失速する』という単純な連想だけで象限・確信度を決めるのは危険という教訓",
+  "村田製作所(6981)はanchor比+0.508%と±0.5%デッドバンドのほぼ境界線上でWIN判定になった。デッドバンドぎりぎりの結果を額面通り積み上げるだけでなく、こうした僅差の判定は確信度較正で過大評価しないよう注意が必要",
+  "本日は候補7件が5勝0敗2分と全敗ゼロの結果だったが、該当銘柄の大半がマイクロン好決算を起点とする半導体・電子部品セクター全面高という単一テーマに集中しており、個別の見立ての精度というより地合いそのものの強さが押せ押せ判定を後押しした可能性が高い。憲法④の通り、好成績の日こそ『たまたまでは』と疑う視点を次回以降も維持する"
+ ],
+ "sources_summary": [
+  "https://s.kabutan.jp/news/n202610011009/",
+  "https://s.kabutan.jp/news/n202610010940/",
+  "https://www.nikkei.com/article/DGXZQOFL012RF0R01C26A0000000/",
+  "https://www.zaikei.co.jp/article/20261001/871964.html",
+  "https://www.zaikei.co.jp/article/20261001/871990.html",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6981",
+  "https://www.nikkei.com/nkd/company/?scode=6971",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6146",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6976",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6594",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+  "https://jp.investing.com/news/stock-market-news/article-1697975",
+  "https://traders.co.jp/stocks/61_6146/"
+ ]
+}
