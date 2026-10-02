@@ -2418,6 +2418,25 @@
     "https://www.nikkei.com/nkd/company/?scode=6506",
     "https://finance.matsui.co.jp/stock/6506/index"
    ]
+  },
+  {
+   "date": "2026-10-02",
+   "batch": "15:45速報答え合わせ（本来15:45起動のところ本セッションの実際の起動は22:13 JST頃までずれ込んだ）",
+   "close": 4806.0,
+   "prev_close": 4779.0,
+   "close_change_yen": 27.0,
+   "close_change_pct": 0.56,
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は87営業日連続でユーザー未確認）",
+    "C": true
+   },
+   "unlock": false,
+   "note": "11:38昼バッチが17:48 JST起動と大幅遅延したため、昼バッチ時点で既に大引け確定値(nikkei.com個別ページ・松井証券の独立2系統一致、データ時点15:30)を取得済みだった。本15:45フェーズで再確認した結果、値の変更なし。条件Bが87営業日連続でユーザー未確認のまま3条件同時成立に至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index"
+   ]
   }
  ]
 }

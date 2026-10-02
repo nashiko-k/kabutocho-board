@@ -1,0 +1,264 @@
+{
+ "date": "2026-10-02",
+ "phase": "15:45速報答え合わせ",
+ "judged_at": "2026-10-02T22:20:00+09:00",
+ "confirmed": false,
+ "batch_note": "本来15:45起動のところ、本セッションの実際の起動は22:13 JST頃までずれ込んだ。東証は15:30に引けており大引け確定値には影響しないため答え合わせ作業に支障はない。11:38昼バッチ（candidates_20261002.json）・12:15風向きフェーズは前引け(11:30)〜後場早め(13時台)の記事のみを情報源とし候補5件は未判定のまま終了していたため、本フェーズが候補5件の初回判定となる。夕刊の話題株ルート（株探大引け市況・日経平均寄与度ランキング記事）およびnikkei.com個別ページを用いて大引け確定値を取得し、独立2系統以上でのクロスチェックを行った上で終値ベース判定を確定した。pending・判定不能は0件。18:30確定スイープでの再点検は別セッションに委ねる（confirmed:falseのまま）",
+ "data_quality_note": "日経平均大引け68,309.46円(-647.26円、-0.94%)・TOPIX大引け4,091.00pt(-40.98pt、-0.99%)はzaikei.co.jp(872180)・tbladvisory.com・WebSearch要約の3系統で一致。値上がり215・値下がり1,306銘柄(東証全体、概算)はtbladvisory.com記事に基づく。候補5件のうちクスリのアオキ(3549)・神戸物産(3038)・プロクレアHD(7384)・アドバンテスト(6857)・ソフトバンクグループ(9984)の終値はいずれもnikkei.com個別ページとWebSearch複数系統(zaikei記事等)の独立2系統以上で完全一致を確認した。【重要な訂正】神戸物産(3038)について、11:38昼バッチのcandidates_20261002.jsonでは前日終値を2,933円と記載していたが、本フェーズでnikkei.com個別ページの日次四本値(過去3日分)を直接確認した結果、正しい前日(10/1)終値は3,010円であることが判明した。2,933円がどの時点のデータの混入かは特定できていないが、昼バッチ時点のanchor変化率(+6.8%)の算出基礎が誤っていたことになる。幸い終値ベース判定の方向性（前引け水準からの反落）は訂正後の前日終値を使っても変わらないが、憲法③に従い誤りを正直に記録する。クスリのアオキ(3549)の高値4,411円は前日終値3,711円に対するTSE日々値幅制限(3,000円以上5,000円未満の制限値幅=700円)の上限と一致し、ストップ高（特別気配からの貼り付け引け）であったことを計算上確認した",
+ "judgment_method_note": "終値ベース：前引け(anchor)→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース（参考情報）：後場高値がanchor比+2%以上伸びる瞬間があったか",
+ "market": {
+  "nikkei_prev_close": 68956.72,
+  "nikkei_close": 68309.46,
+  "nikkei_close_change_yen": -647.26,
+  "nikkei_close_change_pct": -0.94,
+  "nikkei_close_note": "前引け-0.91%→大引け-0.94%とほぼ同水準で反落を終えた。前日までの2営業日+3,400円超の急伸に対する利益確定売り（値がさ半導体株中心）が終日優勢だったが、悪化は小幅にとどまった",
+  "topix_close": 4091.0,
+  "topix_close_change": -40.98,
+  "topix_close_change_pct": -0.99,
+  "topix_note": "日経平均(-0.94%)よりやや大きい下落率。値がさ株だけでなく幅広い銘柄が売られた地合いを示す",
+  "breadth_close_all": {
+   "up": 215,
+   "down": 1306,
+   "flat": null,
+   "note": "東証全体（概算、tbladvisory.com記事ベース）。値下がりが8割超と片寄りの大きい日だった。東証プライムのみの内訳は本データルートでは未取得"
+  },
+  "sources": [
+   "https://www.zaikei.co.jp/article/20261002/872180.html",
+   "https://tbladvisory.com/20261002nk"
+  ]
+ },
+ "results": [
+  {
+   "code": "6857",
+   "name": "アドバンテスト",
+   "newface": false,
+   "quadrant": "失速警戒",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 37610.0,
+   "anchor_time": "12:11時点",
+   "anchor": 39340.0,
+   "anchor_change_pct": 4.6,
+   "close": 38630.0,
+   "close_change_yen": 1020.0,
+   "close_change_pct": 2.71,
+   "anchor_to_close_pct": -1.8,
+   "close_verdict": "WIN（前引け過ぎ39,340円→大引け38,630円で-1.80%と±0.5%デッドバンドを超えて反落、見立て通り失速。4日続伸・ボリンジャー+3σという過熱シグナルの通りに後場で伸びきれなかった）",
+   "day_open": 37700.0,
+   "day_high": 39580.0,
+   "day_high_time": "09:23時点（anchorより前）",
+   "day_low": 37310.0,
+   "stretch_verdict": "参考：日中高値39,580円は09:23時点でanchorより前の値であり後場の伸びではない。後場はむしろ安値37,310円(anchor比-5.16%)まで売られる場面があった後、38,630円まで戻して引けた",
+   "note": "確信3・待ち推奨だったため実損益はゼロ。『新規の飛び乗りは待ち』という判断がそのまま的中した形",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=6857",
+    "https://jp.investing.com/news/stock-market-news/article-1699495"
+   ]
+  },
+  {
+   "code": "3549",
+   "name": "クスリのアオキホールディングス",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 4,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 3711.0,
+   "anchor_time": "前引け(11:30)前後",
+   "anchor": 4411.0,
+   "anchor_change_pct": 18.4,
+   "close": 4411.0,
+   "close_change_yen": 700.0,
+   "close_change_pct": 18.86,
+   "anchor_to_close_pct": 0.0,
+   "close_verdict": "引き分け（デッドバンド：前引け4,411円→大引け4,411円で変動0.00%）。ただし実質的にはストップ高(前日終値3,711円+制限値幅700円=4,411円)に12:30時点で貼り付き、日経平均が終日軟調な中でも引けまで一切値を崩さなかった。機械的なデッドバンド判定では引き分けだが、内容としては『押せ押せ』の継続を裏付ける強い結果",
+   "day_open": 4157.0,
+   "day_high": 4411.0,
+   "day_low": 4126.0,
+   "stretch_verdict": "参考：既にanchor自体がストップ高水準だったため、後場に+2%さらに伸びる余地がそもそもなかった（anchor比+0.00%）",
+   "note": "確信4・待ち推奨（高値掴みリスクを警戒）だったため実損益はゼロ。結果的には新規飛び乗りも最後まで持ち堪えた形で、警戒が『外れ』た面はあるが、ストップ高locked状態への新規参入は値決め機会自体が乏しい点は変わらない",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=3549",
+    "https://news.yahoo.co.jp/articles/d659e6f8697d737e93ba83e1722bc444d6ca9539"
+   ]
+  },
+  {
+   "code": "7384",
+   "name": "プロクレアホールディングス",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 2,
+   "action": "👀 観察のみ",
+   "prev_close": 5400.0,
+   "anchor_time": "売買停止再開後(13時台)",
+   "anchor": 5720.0,
+   "anchor_change_pct": 5.93,
+   "close": 5720.0,
+   "close_change_yen": 320.0,
+   "close_change_pct": 5.93,
+   "anchor_to_close_pct": 0.0,
+   "close_verdict": "引き分け（デッドバンド：再開値5,720円→大引け5,720円で変動0.00%。後場に一段高・一段安のどちらにも振れずanchor値で固まった）",
+   "day_open": 5600.0,
+   "day_high": 5880.0,
+   "day_low": 5580.0,
+   "stretch_verdict": "参考：後場高値5,880円はanchor比+2.80%で+2%基準を満たした。ただし引けにかけてanchor値まで戻し『伸びる瞬間はあったが長続きしなかった』という結果。なお青森みちのく銀行・岩手銀行・秋田銀行3社は本日15:30から盛岡市内で共同記者会見を開き、経営統合協議を正式に発表（2028年4月の持株会社方式での統合を目指す）。朝の『報道段階・決定事実なし』から『公式確認』に material が格上げされたが、会見自体が大引け時刻と同時のため本日の株価には未反映で、翌営業日の試金石として持ち越し",
+   "note": "確信2・観察のみだったため実損益はゼロ。売買停止を伴う特殊な一日であり物理的に入れない時間帯があったため、観察に留めた判断は妥当だった",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=7384",
+    "https://www.nikkei.com/article/DGXZQOCC023FX0S6A001C2000000/",
+    "https://www.sakigake.jp/news/article/20261002AK0027/"
+   ]
+  },
+  {
+   "code": "9984",
+   "name": "ソフトバンクグループ",
+   "newface": false,
+   "quadrant": "下げすぎ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 6701.0,
+   "anchor_time": "前引け(11:30)前後",
+   "anchor": 6331.0,
+   "anchor_change_pct": -5.52,
+   "close": 6310.0,
+   "close_change_yen": -391.0,
+   "close_change_pct": -5.83,
+   "anchor_to_close_pct": -0.33,
+   "close_verdict": "引き分け（デッドバンド：前引け6,331円→大引け6,310円で変動-0.33%。『下げすぎ→後場反転』の見立てが想定した反発は確認できず、ほぼ横ばいで引けた）",
+   "day_open": 6649.0,
+   "day_high": 6695.0,
+   "day_high_time": "開値近辺（午前、anchorより前と推定）",
+   "day_low": 6247.0,
+   "stretch_verdict": "参考：日中安値6,247円はanchor比-1.33%までさらに売られる場面があった後、6,310円まで戻して引けた。anchor比+2%の反発は後場に確認できず、『企業体力は強い』という見立ての前提自体は崩れていないが反発のタイミングはまだ来ていない",
+   "note": "確信3・待ち推奨（二番底を確認せず逆張りで入るのは分が悪い）だったため実損益はゼロ。判断としては『待ち』を継続すべき状態が続いている。明確な反発シグナルはまだ出ていないため、このシナリオは引き続き観察対象",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=9984",
+    "https://www.zaikei.co.jp/article/20261002/872180.html"
+   ]
+  },
+  {
+   "code": "3038",
+   "name": "神戸物産",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 3010.0,
+   "prev_close_correction_note": "11:38昼バッチのcandidates_20261002.jsonでは前日終値を2,933円と記載していたが誤り。nikkei.com個別ページの日次四本値で10/1終値3,010円を確認し訂正（詳細はdata_quality_note参照）",
+   "anchor_time": "前場中（時点不明・概算、2系統の平均値）",
+   "anchor": 3133.0,
+   "anchor_range_note": "取得元により3,077円〜3,190円の幅があった概算値（昼バッチの記載を維持）",
+   "anchor_change_pct": 6.8,
+   "close": 2995.0,
+   "close_change_yen": -15.0,
+   "close_change_pct": -0.5,
+   "anchor_to_close_pct": -4.4,
+   "close_verdict": "LOSE（前引け付近3,133円(概算、幅3,077〜3,190円)→大引け2,995円で-4.4%と±0.5%デッドバンドを大きく超えて反落。前日終値比でも-0.50%とマイナスで引け、前場の+6〜7%高はほぼ全戻しで消失した。消費税減税『思惑』先行のテーマ性の脆さが出た）",
+   "day_open": 3017.0,
+   "day_high": 3031.0,
+   "day_low": 2990.0,
+   "stretch_verdict": "参考：日中高値3,031円でもanchor推定値(3,077〜3,190円)に届いておらず、後場に+2%伸びる瞬間は確認できなかった（終日anchorを上回れなかった）",
+   "note": "確信3・待ち推奨（法案提出前の思惑段階であることへの慎重姿勢）だった判断が結果的に的中。『待ち』にしたことで実損益はゼロ。前場の急伸を追いかけていた場合は手痛い逆張られ方になっていた",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=3038",
+    "https://finance.matsui.co.jp/stock/3038/index",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=3038"
+   ]
+  }
+ ],
+ "quadrant_shissoku": ["6857"],
+ "quadrant_sokonashi": [],
+ "quadrant_sagesugi": ["9984"],
+ "watchlist": {
+  "note": "候補銘柄の判定とは別枠の独立ウォッチ2件（判定不要な事実記録）",
+  "yaskawa_6506": {
+   "prev_close": 4779.0,
+   "open": 4714.0,
+   "high": 4819.0,
+   "low": 4703.0,
+   "close": 4806.0,
+   "close_change_yen": 27.0,
+   "close_change_pct": 0.56,
+   "data_quality": "11:38昼バッチが17:48 JST起動と大幅遅延したため、昼バッチ時点で既に大引け確定値(nikkei.com個別ページ・松井証券の独立2系統一致)を取得済み。本フェーズでの再取得・変更なし",
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は87営業日連続でユーザー未確認）",
+    "C": true
+   },
+   "unlock": false,
+   "detail": "前日終値4,779円→4,806円(+27円、+0.56%)で5営業日連続の反発(9/26終値4,453円起点)。条件Bが87営業日連続で未確認のまま3条件同時成立に至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/?scode=6506",
+    "https://finance.matsui.co.jp/stock/6506/index"
+   ]
+  },
+  "fastretailing_9983": {
+   "prev_close": 72750.0,
+   "open": 72180.0,
+   "high": 72290.0,
+   "low": 70960.0,
+   "close": 71770.0,
+   "close_change_yen": -980.0,
+   "close_change_pct": -1.35,
+   "data_quality": "nikkei.com個別ページ単一系統（データ時点2026-10-02 15:30表記）。本日は時間に制約があり複数系統でのクロスチェックは実施できていない（概算扱い）",
+   "unlock_condition_reference": "前日終値を上回って引ける",
+   "unlock_status": "前日終値72,750円を980円(-1.35%)下回って引け、4営業日続いた反発が本日で途切れた。投資判断への言及はなく事実記録のみ"
+  }
+ },
+ "score_today": {
+  "win": 1,
+  "lose": 1,
+  "draw": 3,
+  "pending": 0,
+  "undetermined": 0,
+  "candidates": 5,
+  "note": "候補5件は1勝1敗3分・pending/判定不能ゼロで確定（大引け確定値ベース）。失速警戒1件中1勝(アドバンテスト)、押せ押せ3件中1敗2分(神戸物産が唯一の敗、クスリのアオキ・プロクレアHDはデッドバンドで分だが実質的には値を保った内容)、下げすぎ1件中1分(ソフトバンクG、反発未確認)。全体として『待ち推奨』を選んだ4件は結果的にいずれも実損益ゼロで、読み自体のアクション示唆は手堅かった一日"
+ },
+ "score_cumulative": {
+  "win": 107,
+  "lose": 64,
+  "draw": 66,
+  "unverified": 2,
+  "excluded_20260716": 7,
+  "as_of": "2026-10-02 15:45速報フェーズ時点（実行は22:20 JSTにずれ込んだが大引け確定値には影響なし）。10/1 18:30確定スイープ時点(106勝63敗63分)から本日分(1勝1敗3分)を反映。18:30確定スイープでの再点検は別セッションに委ねる",
+  "note": "累計勝率＝107/(107+64+66)=45.1%（引き分け除く分母では107/171=62.6%）。unverified=2は7/15判定不能1件＋9/25海運3社1件の合計（変更なし）"
+ },
+ "calibration_by_confidence": {
+  "確信5": {"win": 1, "lose": 0, "draw": 0, "n": 1, "win_rate_pct": 100.0},
+  "確信4": {"win": 27, "lose": 15, "draw": 10, "n": 52, "win_rate_pct": 51.9},
+  "確信3": {"win": 48, "lose": 31, "draw": 37, "n": 116, "win_rate_pct": 41.4},
+  "確信2": {"win": 31, "lose": 18, "draw": 19, "n": 68, "win_rate_pct": 45.6},
+  "note": "本日分（確信4:クスリのアオキ DRAW／確信3:アドバンテスト WIN・ソフトバンクG DRAW・神戸物産 LOSE／確信2:プロクレアHD DRAW）を反映"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": {"win": 50, "lose": 31, "draw": 34, "n": 117, "win_rate_pct": 42.7},
+  "失速警戒": {"win": 19, "lose": 11, "draw": 8, "n": 38, "win_rate_pct": 50.0},
+  "底なし": {"win": 32, "lose": 19, "draw": 20, "n": 71, "win_rate_pct": 45.1},
+  "下げすぎ": {"win": 6, "lose": 3, "draw": 4, "n": 13, "win_rate_pct": 46.2},
+  "note": "本日分（押せ押せ:1LOSE・2DRAW／失速警戒:1WIN／下げすぎ:1DRAW）を反映"
+ },
+ "learnings": [
+  "神戸物産(3038)は前場+6〜7%から大引け-0.50%へほぼ全戻しした典型的な『思惑剥落型』。消費税減税は法案提出方針段階という制度化前の思惑に過ぎず、確信度3・待ち推奨に留めた判断が結果的に正しかった。前場の値幅の大きさだけで追いかける危険性を改めて示す一例",
+  "クスリのアオキ(3549)は前日終値+700円の制限値幅上限(4,411円)でストップ高に貼り付き、終日軟調な地合いの中でも値を全く崩さなかった。好決算＋アクティビスト増株という複数の独立材料が重なった銘柄がストップ高で特別気配ロックした場合、後場も値を保持しやすい傾向が示唆される一方、新規参入の機会自体が乏しいため『待ち推奨』の判断自体は合理的だった",
+  "プロクレアHD(7384)は青森みちのく銀行・岩手銀行・秋田銀行の経営統合協議が本日15:30の会見で『報道段階』から『公式確認』に格上げされたが、会見が大引けと同時刻のため株価には未反映。地銀再編というテーマの広がりを見極める試金石として翌営業日に持ち越し",
+  "ソフトバンクグループ(9984)の『下げすぎ→後場反転』シナリオは、日中安値6,247円から6,310円へのわずかな戻しに留まり、anchor比+2%の明確な反発はまだ確認できていない。見立ての前提（企業体力自体の悪化なし）は崩れていないが、二番底確認を待つ『待ち推奨』の姿勢を継続する材料に乏しい一日だった",
+  "本日は『待ち推奨』4件・『観察のみ』1件で『乗るなら今日』はゼロだったため、見立ての当否とは別にアクション示唆の結果はいずれも実損益ゼロ。1勝1敗3分という五分五分の結果は、迷ったら保守側に倒すという設計方針（§4b）が機能した日と評価できる"
+ ],
+ "sources_summary": [
+  "https://www.nikkei.com/nkd/company/?scode=6857",
+  "https://www.nikkei.com/nkd/company/?scode=3549",
+  "https://www.nikkei.com/nkd/company/?scode=7384",
+  "https://www.nikkei.com/nkd/company/?scode=9984",
+  "https://www.nikkei.com/nkd/company/?scode=3038",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=3038",
+  "https://www.nikkei.com/nkd/company/?scode=6506",
+  "https://www.nikkei.com/nkd/company/?scode=9983",
+  "https://finance.matsui.co.jp/stock/3038/index",
+  "https://finance.matsui.co.jp/stock/6506/index",
+  "https://www.zaikei.co.jp/article/20261002/872180.html",
+  "https://tbladvisory.com/20261002nk",
+  "https://jp.investing.com/news/stock-market-news/article-1699495",
+  "https://news.yahoo.co.jp/articles/d659e6f8697d737e93ba83e1722bc444d6ca9539",
+  "https://www.nikkei.com/article/DGXZQOCC023FX0S6A001C2000000/",
+  "https://www.sakigake.jp/news/article/20261002AK0027/"
+ ]
+}
