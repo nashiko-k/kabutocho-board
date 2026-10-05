@@ -1,0 +1,229 @@
+{
+ "date": "2026-10-05",
+ "phase": "15:45速報答え合わせ",
+ "judged_at": "2026-10-06T00:40:00+09:00",
+ "confirmed": false,
+ "batch_note": "本来15:45起動のところ、本セッションの実際の起動は10/6 00:21 JST頃までずれ込んだ（東証大引け15:30からは約9時間後）。東証は既に引けており大引け確定値には影響しないため答え合わせ作業に支障はない。11:38昼バッチ（candidates_20261005.json）は起動自体が大引け後3時間という遅延のため候補選定時点で既に大引け確定値を把握していた（盲検性なし、blind_integrity_noteの通り較正の重みは下げて解釈）。本フェーズでは候補5件についてnikkei.com個別ページの日次四本値（時刻なし）を主系統とし、WebSearchによる独立ソース（Yahoo!ニュース・フィスコ配信記事等）で値を再クロスチェックした上で終値ベース判定（±0.5%デッドバンド）を確定した。候補5件中4件は判定確定、1件（第一工業製薬4461）は前引け基準値(anchor)がそもそも未取得のため機械的な終値ベース判定ができず判定不能とした。pendingの終値未確定銘柄はゼロ（全5件の大引け確定値は取得済み）。18:30確定スイープでの再点検・4461のanchor再調査は別セッションに委ねる",
+ "data_quality_note": "日経平均大引け69,946.86円(+1,637.40円、+2.40%)・TOPIX大引け4,145pt(+54pt、+1.32%、概算)は11:38昼バッチ時点で日本経済新聞・zaikei.co.jp・株探の3系統一致済み（再確認、変更なし）。候補5件の終値（四本値）はいずれもnikkei.com個別ページ（history/dprice）で取得し、東京エレクトロン(8035)・TDK(6762)はWebSearch経由の独立ソース（Yahoo!ニュース要約記事・ウエルスアドバイザー配信）で終値・騰落率が完全一致することを確認した。アドバンテスト(6857)・塩野義製薬(4507)は終値の独立2系統目クロスチェックが取得できず単一ソース（nikkei.com）扱い（概算ではなく、始値・高値・安値との内的整合性は確認済み）。第一工業製薬(4461)は終値16,220円(+9.23%)自体はWebSearch独立ソース（+1,370円の上昇率トップという報道）と一致するが、見立て時に使った前引け基準値(anchor)そのものが本バッチ・前回バッチともに未取得のため、終値ベースのダブル基準判定が適用できない",
+ "judgment_method_note": "終値ベース：anchor（各候補カードの見立て時基準値・時点は銘柄ごとに異なる）→大引けの方向が見立て通りか（±0.5%はデッドバンドで引き分け）。ストレッチベース（参考情報）：日中高値・安値がanchor比+2%/-2%以上伸びる瞬間が後場にあったか",
+ "market": {
+  "nikkei_close": 69946.86,
+  "nikkei_close_change_yen": 1637.4,
+  "nikkei_close_change_pct": 2.4,
+  "topix_close": 4145.0,
+  "topix_close_change_pct": 1.32,
+  "note": "11:38昼バッチ時点の確定値を再確認。変更なし"
+ },
+ "results": [
+  {
+   "code": "8035",
+   "name": "東京エレクトロン",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 4,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 12100.0,
+   "anchor_time": "前場高値12:30時点",
+   "anchor": 12820.0,
+   "open": 12400.0,
+   "high": 12820.0,
+   "low": 12295.0,
+   "close": 12765.0,
+   "close_change_yen": 665.0,
+   "close_change_pct": 5.5,
+   "anchor_to_close_pct": -0.43,
+   "close_verdict": "DRAW（anchor12,820円(前場高値12:30)→大引け12,765円で-0.43%とデッドバンド内）",
+   "stretch_verdict": "参考：本日高値12,820円はanchor自体（12:30時点）と同値で、後場に新たな高値更新はなかった。むしろ安値12,295円まで売られる場面もあったが終日高値圏（+5.5%）は維持して引けた",
+   "note": "指数連動・セクター全面高に素直に乗った動きで、後場も値を大きく崩さなかったという点では見立て通りだが、機械判定ではデッドバンド内の僅差でDRAW",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035"
+   ]
+  },
+  {
+   "code": "6857",
+   "name": "アドバンテスト",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 38630.0,
+   "anchor_time": "早朝高値9:22時点",
+   "anchor": 40700.0,
+   "open": 40000.0,
+   "high": 40700.0,
+   "low": 39730.0,
+   "close": 40300.0,
+   "close_change_yen": 1670.0,
+   "close_change_pct": 4.32,
+   "anchor_to_close_pct": -0.98,
+   "close_verdict": "LOSE（anchor40,700円(早朝高値9:22)→大引け40,300円で-0.98%とデッドバンドを超えて反落）",
+   "stretch_verdict": "参考：本日高値40,700円はanchor自体（9:22時点）と同値で後場の新高値なし。安値39,730円まで売られる場面もあり、終日+4.32%の上げ幅は維持したが早朝の高値から後場にかけて値を消していく『朝高後ジリ安』のパターンだった",
+   "note": "10/2に同じ過熱感を理由に失速警戒→WINだった銘柄が、本日は押せ押せ予想で逆にLOSE。早朝に値幅を使い切り後場は伸びないという値動きのクセが連続して出ている",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857"
+   ]
+  },
+  {
+   "code": "6762",
+   "name": "TDK",
+   "newface": false,
+   "quadrant": "押せ押せ",
+   "confidence": 4,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 3198.0,
+   "anchor_time": "前場高値10:32時点",
+   "anchor": 3499.0,
+   "open": 3367.0,
+   "high": 3499.0,
+   "low": 3336.0,
+   "close": 3447.0,
+   "close_change_yen": 249.0,
+   "close_change_pct": 7.79,
+   "anchor_to_close_pct": -1.49,
+   "close_verdict": "LOSE（anchor3,499円(前場高値10:32)→大引け3,447円で-1.49%とデッドバンドを超えて反落）",
+   "stretch_verdict": "参考：本日高値3,499円もanchor自体（10:32時点）と同値で後場の新高値なし。終日+7.79%の高い上げ幅は維持したが、前場の高値から後場にかけて上げ幅を縮小する展開だった",
+   "note": "AI需要上振れという個社固有の実質材料は本物だったが、値幅としては前場で出尽くし後場は伸びなかった。『材料の厚み』と『後場の続伸』は別物という典型例",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6762"
+   ]
+  },
+  {
+   "code": "4461",
+   "name": "第一工業製薬",
+   "newface": true,
+   "quadrant": "押せ押せ",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 14850.0,
+   "anchor_time": "未取得（11:38昼バッチ・本フェーズともに前引け基準値を確認できず）",
+   "anchor": null,
+   "open": 15500.0,
+   "high": 16240.0,
+   "high_time": "15:24時点（大引け直前）",
+   "low": 15360.0,
+   "close": 16220.0,
+   "close_change_yen": 1370.0,
+   "close_change_pct": 9.23,
+   "anchor_to_close_pct": null,
+   "close_verdict": "判定不能（前引け基準値(anchor)が未取得のため終値ベースのダブル基準を機械的に適用できない。WebSearchで11:30時点の具体値を追加調査したが本データルートでは取得できなかった）",
+   "stretch_verdict": "参考（anchor不在のため厳密な+2%基準は計算不可）：本日高値16,240円は大引け直前の15:24に付けており、始値15,500円から終値16,220円まで終日を通じて値を崩さず上値を追い続けた値動き。後場に失速した形跡はなく、定性的には『押せ押せ継続』を裏付ける内容",
+   "note": "機械的な判定は保留とするが、終日高値を更新し続けて引けたという事実は正直に記録する。anchor未確定という同種の課題が過去にも散発しており、昼バッチでの前引け値取得を徹底する必要がある",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4461"
+   ]
+  },
+  {
+   "code": "4507",
+   "name": "塩野義製薬",
+   "newface": true,
+   "quadrant": "底なし",
+   "confidence": 3,
+   "action": "⏸ 待ち推奨",
+   "prev_close": 2786.0,
+   "anchor_time": "前場高値10:27時点",
+   "anchor": 2784.0,
+   "open": 2767.5,
+   "high": 2784.0,
+   "low": 2649.0,
+   "low_time": "15:20時点",
+   "close": 2661.0,
+   "close_change_yen": -125.0,
+   "close_change_pct": -4.49,
+   "anchor_to_close_pct": -4.42,
+   "close_verdict": "WIN（anchor2,784円(前場高値10:27)→大引け2,661円で-4.42%とデッドバンドを大きく超えて続落、底なし型の見立て通り）",
+   "stretch_verdict": "参考：本日安値2,649円(15:20時点、後場)はanchor比-4.85%とさらに2%超の下振れで、『後場にかけて売りが加速する』という見立ての読みが値動きでも裏付けられた",
+   "note": "日経平均が全面高となる中で地合いに逆らって後場に売りが加速し年初来安値を更新。政策懸念という構造的な悪材料の読みが数値でも的中した",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=4507"
+   ]
+  }
+ ],
+ "quadrant_oshioshi": ["8035", "6857", "6762", "4461"],
+ "quadrant_shissoku": [],
+ "quadrant_sokonashi": ["4507"],
+ "quadrant_sagesugi": [],
+ "watchlist": {
+  "note": "候補銘柄の判定とは別枠の独立ウォッチ（判定不要な事実記録）。いずれも11:38昼バッチ時点で既に大引け確定値を取得済みのため、本フェーズは再確認のみで変更なし",
+  "yaskawa_6506": {
+   "prev_close": 4806.0,
+   "open": 4876.0,
+   "high": 4931.0,
+   "high_time": "15:30時点（大引け値が本日高値）",
+   "low": 4811.0,
+   "low_time": "10:03時点",
+   "close": 4931.0,
+   "close_change_yen": 125.0,
+   "close_change_pct": 2.6,
+   "data_quality": "nikkei.com個別ページ（history/dprice）で再取得し、11:38昼バッチ時点の値と完全一致",
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は88営業日連続でユーザー未確認）",
+    "C": true
+   },
+   "unlock": false,
+   "detail": "前日終値4,806円→4,931円(+125円、+2.60%)で6営業日連続の反発(9/26終値4,453円起点)。終値=本日高値(15:30)で引けるという強い値動き。条件Bが88営業日連続でユーザー未確認のまま3条件同時成立に至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506"
+   ]
+  },
+  "fastretailing_9983": {
+   "prev_close": 71770.0,
+   "open": 73010.0,
+   "high": 74690.0,
+   "low": 72580.0,
+   "close": 74690.0,
+   "close_change_yen": 2920.0,
+   "close_change_pct": 4.07,
+   "data_quality": "nikkei.com個別ページ（history/dprice）単一系統。データ時点明記なし（日次終値データ）",
+   "unlock_condition_reference": "前日終値を上回って引ける",
+   "unlock_status": "前日終値71,770円を2,920円(+4.07%)上回り、かつ終値=本日高値で引けた。10/2に途切れた反発が再開した形（投資判断への言及はなく事実記録のみ）"
+  }
+ },
+ "score_today": {
+  "win": 1,
+  "lose": 2,
+  "draw": 1,
+  "pending": 0,
+  "undetermined": 1,
+  "candidates": 5,
+  "note": "候補5件は1勝2敗1分1判定不能で確定（大引け確定値ベース、pending持ち越しなし）。押せ押せ4件中1敗(6857)1敗(6762)1分(8035)1判定不能(4461、anchor未取得)。底なし1件中1勝(4507)。全5件が『待ち推奨』で乗るなら今日はゼロだったため、見立ての当否とは別にアクション示唆の結果はいずれも実損益ゼロ"
+ },
+ "score_cumulative": {
+  "win": 108,
+  "lose": 66,
+  "draw": 67,
+  "unverified": 3,
+  "excluded_20260716": 7,
+  "as_of": "2026-10-05 15:45速報フェーズ時点（実行は10/6 00:21 JSTにずれ込んだが大引け確定値には影響なし）。10/2 15:45速報時点(107勝64敗66分)から本日分(1勝2敗1分、判定不能1件はunverifiedに計上)を反映。18:30確定スイープでの再点検は別セッションに委ねる",
+  "note": "累計勝率＝108/(108+66+67)=44.8%（引き分け除く分母では108/174=62.1%）。unverified=3は7/15判定不能1件＋9/25海運3社1件＋本日4461(anchor未取得)1件の合計。4461は後日anchor値が判明すれば遡及訂正を検討する"
+ },
+ "calibration_by_confidence": {
+  "確信5": {"win": 1, "lose": 0, "draw": 0, "n": 1, "win_rate_pct": 100.0},
+  "確信4": {"win": 27, "lose": 16, "draw": 11, "n": 54, "win_rate_pct": 50.0},
+  "確信3": {"win": 49, "lose": 32, "draw": 37, "n": 118, "win_rate_pct": 41.5},
+  "確信2": {"win": 31, "lose": 18, "draw": 19, "n": 68, "win_rate_pct": 45.6},
+  "note": "本日分（確信4:東京エレクトロンDRAW・TDK LOSE／確信3:アドバンテストLOSE・塩野義製薬WIN）を反映。第一工業製薬(確信3・判定不能)は較正対象から除外"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": {"win": 50, "lose": 33, "draw": 35, "n": 118, "win_rate_pct": 42.4},
+  "失速警戒": {"win": 19, "lose": 11, "draw": 8, "n": 38, "win_rate_pct": 50.0},
+  "底なし": {"win": 33, "lose": 19, "draw": 20, "n": 72, "win_rate_pct": 45.8},
+  "下げすぎ": {"win": 6, "lose": 3, "draw": 4, "n": 13, "win_rate_pct": 46.2},
+  "note": "本日分（押せ押せ:1DRAW・2LOSE、4461判定不能は除外／底なし:1WIN）を反映"
+ },
+ "learnings": [
+  "アドバンテスト(6857)・TDK(6762)はいずれも『前場に高値をつけ後場は伸びずに終わる』という同一パターンでLOSE。本日高値=anchor値という事実は、半導体・AI関連の急伸銘柄が前場で値幅を使い切りやすい地合いだったことを示唆する。東京エレクトロンも同様の値動きだったがデッドバンド内でDRAWにとどまった",
+  "塩野義製薬(4507)は日経平均全面高の地合いに逆らって後場に売りが加速し年初来安値を更新、底なし型の見立てが数値でも裏付けられた。『厳密な前場急落ではなく後場に弱さが表面化したケース』という昼バッチの分類注記通りの展開になった",
+  "第一工業製薬(4461)は終値ベースでは終日高値更新という強い値動きだったが、前引け基準値(anchor)がそもそも取得できず機械的などの判定もできなかった。新顔銘柄で前場の具体的な時刻付き値が取れないケースは今後も起こりうるため、昼バッチ時点でのanchor取得を優先課題とする",
+  "本日は『待ち推奨』5件・『乗るなら今日』ゼロで、見立ての当否（1勝2敗1分1判定不能）とは別にアクション示唆の結果はいずれも実損益ゼロ。半導体・AI関連3銘柄（確信4中心）が軒並み『後場伸び悩み』だった一方、新顔の塩野義製薬（確信3）の空売り型見立てが的中しており、確信度の高さと的中率が必ずしも比例しない一日だった"
+ ],
+ "sources_summary": [
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6857",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6762",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=4461",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=4507",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506"
+ ]
+}
