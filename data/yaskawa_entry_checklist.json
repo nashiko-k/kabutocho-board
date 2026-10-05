@@ -2486,6 +2486,30 @@
     "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
     "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
    ]
+  },
+  {
+   "date": "2026-10-05",
+   "batch": "18:30確定スイープ（本来18:30起動のところ、本セッションの実際の起動は10/6 03:36 JST頃までずれ込んだ。11:38昼バッチ・15:45速報の2フェーズで既に大引け確定値を取得・再確認済みのため、本フェーズはWebSearchでの最終再確認のみ）",
+   "prev_close": 4806.0,
+   "open": 4876.0,
+   "high": 4931.0,
+   "high_time": "15:30時点（大引け値が本日高値）",
+   "low": 4811.0,
+   "low_time": "10:03時点",
+   "close": 4931.0,
+   "close_change_yen": 125.0,
+   "close_change_pct": 2.60,
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は88営業日連続でユーザー未確認）",
+    "C": true
+   },
+   "unlock": false,
+   "data_quality": "WebSearchで再確認した結果、11:38昼バッチ・15:45速報時点の値（始値4,876円・高値4,931円・安値4,811円・終値4,931円）と完全一致。変更なし。これで本日の判定は最終確定",
+   "note": "前日終値4,806円→4,931円(+125円、+2.60%)で6営業日連続の反発(9/26終値4,453円起点)を最終確認。条件Bが88営業日連続でユーザー未確認のまま3条件同時成立には至らず解除通知は見送り継続",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506"
+   ]
   }
  ]
 }
