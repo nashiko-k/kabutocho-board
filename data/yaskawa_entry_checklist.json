@@ -2533,6 +2533,29 @@
     "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
     "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
    ]
+  },
+  {
+   "date": "2026-10-06",
+   "batch": "18:30確定スイープ（最終確定。本来18:30起動のところ実際の起動は10/7 01:03 JST頃までずれ込んだ。東証は既に引けており大引け確定値には影響しない。nikkei.com個別ページ（history/dprice）を再取得し、11:38・15:45時点の値と完全一致を確認。日経平均終値70,683.98円(+737.12円、+1.04%)・TOPIX終値4,183.56(+38.34pt、+0.92%)もgentosha-go.com「10月6日の国内株式市場概況」およびinvesting.com系統の独立2系統でクロスチェック済み）",
+   "prev_close": 4931.0,
+   "open": 4900.0,
+   "high": 4959.0,
+   "low": 4813.0,
+   "close": 4936.0,
+   "close_change_yen": 5.0,
+   "close_change_pct": 0.1,
+   "conditions": {
+    "A": true,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は90営業日連続でユーザー未確認）",
+    "C": true
+   },
+   "unlock": false,
+   "data_quality": "nikkei.com個別ページ（history/dprice）で再取得した結果、11:38昼バッチ・15:45速報時点の値（始値4,900円・高値4,959円・安値4,813円・終値4,936円）と完全一致。変更なし。これで本日の判定は最終確定",
+   "note": "前日終値4,931円→4,936円(+5円、+0.10%)で7営業日連続の反発(9/26終値4,453円起点)を最終確認。条件Bが90営業日連続でユーザー未確認のまま3条件同時成立には至らず解除通知は見送り継続。ファーストリテイリング(9983)も終値75,590円(+900円、+1.20%)で変更なしを確認（候補カードとは別枠の事実記録）",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983"
+   ]
   }
  ]
 }
