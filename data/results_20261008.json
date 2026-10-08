@@ -1,0 +1,115 @@
+{
+ "date": "2026-10-08",
+ "phase": "18:30確定スイープ（最終確定）",
+ "generated_at": "2026-10-09T01:55:00+09:00",
+ "confirmed": true,
+ "batch_note": "【正直な告白・憲法③、最終確定】本来18:30起動のところ、本セッションの実際の起動は10/9 01:39 JST頃までずれ込んだ（東証大引け15:30からは約10時間後）。東証は既に引けており大引け確定値そのものには影響しない。10/8は11:38昼バッチの実際の起動が18:18〜18:27 JST（大引け後）、12:15風向きの実際の起動が19:30 JST（いずれも大引け後）となり、候補選定・材料調査・quadrant分類の時点で日経平均・個別銘柄の大引け確定値が検索結果に不可避的に含まれていた（data/candidates_20261008.jsonのblind_integrity_noteに明記済み）。15:45速報答え合わせの単独フェーズは本ワークフロー系列では実行されず、本18:30確定スイープが実質的に初回かつ最終の判定機会となった。2026-07-16に発生した同型の構造的問題（batch_delayed_full_day_data）と同じ扱いとし、本日の候補6件（4704・9984・6762・8035・8058・6954）は『前引け→大引けの方向判定』という通常の採点方式を適用せず、全件を採点対象外として累計成績には加算しない（憲法③：未確認の較正を装わない。見立て自体が結果を知った状態で事後生成されているため、的中/不的中を勝敗スコアに算入すると較正指標を歪める）。ウォッチ2銘柄（安川電機6506・ファーストリテイリング9983）は候補カードとは別枠の事実記録のため影響を受けず、本スイープでnikkei.com個別ページから四本値（始値・高値・安値・終値・出来高）を再取得して最終確定した。pendingとして翌朝に持ち越す項目はゼロ。",
+ "methodology_note": "10/8の候補6件は11:38昼バッチが18:18 JST起動（大引け後約2時間48分）となり、前引け値ではなく大引け後の全日データを元に事後生成された（2026-07-16と同型のbatch_delayed_full_day_data）。『前引け→大引け』の方向判定という通常の採点方式が適用できず、見立て自体が結果を知った状態で書かれているため、的中/不的中を勝敗スコアに算入すると較正指標を歪める。よって6件は採点対象外とし、累計成績には加算しない。",
+ "market": {
+  "nikkei_close": 69042.11,
+  "nikkei_close_change_yen": -993.60,
+  "nikkei_close_change_pct": -1.42,
+  "topix_close": 4091.46,
+  "topix_close_change_pct": -1.51,
+  "note": "11:38昼バッチ時点でnikkei.com記事・zaikei.co.jp記事・Yahoo!ニュース(時事通信配信)の3系統一致を確認済み。18:30確定スイープで変更なしを再確認。2営業日続落、東証プライムの76.1%が値下がりする全面安だった"
+ },
+ "predictions_excluded_from_score": [
+  {"code": "4704", "name": "トレンドマイクロ", "newface": true, "quadrant": "押せ押せ", "confidence": 4, "action": "⏸ 待ち推奨", "prev_close": 6961.0, "close": 7232.0, "change_pct": 3.89, "note": "採点対象外（batch_delayed_full_day_data）。サイバーセキュリティ関連の物色集中を受け年初来高値更新"},
+  {"code": "9984", "name": "ソフトバンクグループ", "newface": false, "quadrant": "底なし", "confidence": 3, "action": "⏸ 待ち推奨", "prev_close": 6310.0, "close": 6040.0, "change_pct": -4.28, "note": "採点対象外（batch_delayed_full_day_data）。値下がり寄与トップ"},
+  {"code": "6762", "name": "TDK", "newface": false, "quadrant": "底なし", "confidence": 3, "action": "⏸ 待ち推奨", "prev_close": 3530.0, "close": 3353.0, "change_pct": -5.01, "note": "採点対象外（batch_delayed_full_day_data）。値下がり寄与2位"},
+  {"code": "8035", "name": "東京エレクトロン", "newface": false, "quadrant": "底なし", "confidence": 3, "action": "⏸ 待ち推奨", "prev_close": 12500.0, "close": 12190.0, "change_pct": -2.48, "note": "採点対象外（batch_delayed_full_day_data）。TSMC9月売上高の小幅未達を受けた売り"},
+  {"code": "8058", "name": "三菱商事", "newface": true, "quadrant": "底なし", "confidence": 2, "action": "👀 観察のみ", "prev_close": 4676.0, "close": 4590.0, "change_pct": -1.84, "note": "採点対象外（batch_delayed_full_day_data）。新TOPIX銘柄入れ替えに伴う需給要因、分類自体も便宜的"},
+  {"code": "6954", "name": "ファナック", "newface": false, "quadrant": "底なし", "confidence": 2, "action": "⏸ 待ち推奨", "prev_close": 6164.0, "close": 6019.0, "change_pct": -2.35, "note": "採点対象外（batch_delayed_full_day_data）。機械セクター全体の軟調に沿った下げ"}
+ ],
+ "quadrant_oshioshi_excluded": ["4704"],
+ "quadrant_shissoku_excluded": [],
+ "quadrant_sokonashi_excluded": ["9984", "6762", "8035", "8058", "6954"],
+ "quadrant_sagesugi_excluded": [],
+ "watchlist": {
+  "note": "候補判定とは別枠の独立ウォッチ（判定不要な事実記録）。18:30確定スイープでnikkei.com個別ページの四本値を再取得し最終確定",
+  "yaskawa_6506": {
+   "prev_close": 4946.0,
+   "open": 4882.0,
+   "high": 4885.0,
+   "low": 4750.0,
+   "close": 4789.0,
+   "close_change_yen": -157.0,
+   "close_change_pct": -3.17,
+   "volume": 3545500,
+   "data_quality": "nikkei.com個別ページ（history/dprice）の四本値を18:30確定スイープで取得、11:38昼バッチ時点の終値4,789円(-3.17%)と完全一致を確認（最終確定）。WebSearchのAI要約は本日も誤情報（始値3,586円・終値3,680円等）を生成したため不採用、直接WebFetchの表データのみ採用（過去からの継続方針）",
+   "conditions": {
+    "A": false,
+    "B": "未定義のまま（7/23提示の5,150〜5,420円再定義案は93営業日連続でユーザー未確認）",
+    "C": "true（推定）。値下がり寄与トップはソフトバンクグループ・TDKで、安川電機の名前は本データルートで確認した値下がり上位・日経マイナス寄与上位の報道には現れなかった。ただし網羅的なランキング全件は確認できておらず推定にとどまる"
+   },
+   "unlock": false,
+   "detail": "前日終値4,946円→終値4,789円(-157円、-3.17%)で8営業日連続の反発がストップ。日経平均が前引け-0.95%→大引け-1.42%と下げ幅を拡大する全面安の地合いに沿った下げで、個社固有の悪材料は本データルートでは確認できなかった。条件Aが崩れ、条件Bも93営業日連続でユーザー未確認のまま3条件同時成立に至らず解除通知は見送り継続。重要な前方情報：明日10/9に第2四半期決算発表を予定（第1四半期は基幹システム移行の影響で純利益が前年同期比22%減）。株探『明日の株式相場に向けて』記事は『安川電が好決算を示せば日経平均は最高値を奪還することになるに違いない』との市場の見方を紹介",
+   "sources": [
+    "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506"
+   ]
+  },
+  "fastretailing_9983": {
+   "prev_close": 74780.0,
+   "open": 74970.0,
+   "high": 75640.0,
+   "low": 74320.0,
+   "close": 74800.0,
+   "close_change_yen": 20.0,
+   "close_change_pct": 0.03,
+   "volume": 922900,
+   "data_quality": "nikkei.com個別ページ（history/dprice）の四本値を18:30確定スイープで取得。11:38昼バッチ時点では『現在値』表記で記録していた74,800円が実際の終値と完全一致することを確認（最終確定）",
+   "unlock_condition_reference": "前日終値を上回って引ける",
+   "unlock_status": "前日終値74,780円を20円(+0.03%)上回って引け、全面安の地合いの中でほぼ変わらずで踏みとどまった（投資判断への言及はなく事実記録のみ）"
+  }
+ },
+ "score_today": {
+  "win": 0,
+  "lose": 0,
+  "draw": 0,
+  "pending": 0,
+  "undetermined": 0,
+  "excluded": 6,
+  "candidates": 6,
+  "note": "候補6件（押せ押せ1・底なし5）は全件採点対象外で確定（2026-07-16と同型のbatch_delayed_full_day_data）。11:38昼バッチの実際の起動が大引け後となり、見立てそのものが結果を知った状態で事後生成されたため、的中/不的中を勝敗スコアに算入しない。『0勝0敗』ではなく『採点対象外6件』として扱う"
+ },
+ "score_cumulative": {
+  "win": 108,
+  "lose": 66,
+  "draw": 67,
+  "unverified": 3,
+  "excluded_20260716": 7,
+  "excluded_20261008": 6,
+  "as_of": "2026-10-07 18:30確定スイープ時点から変化なし（10/8分6件は採点対象外のため加算なし。18:30確定スイープで最終確定）",
+  "note": "累計勝率＝108/(108+66+67)=44.8%（引き分け除く分母では108/174=62.1%）。10/8分は構造的に採点対象外のため10/7確定時点の値をそのまま維持。象限別勝率も10/7時点と変化なし：押せ押せ42.4%(n118)／失速警戒50.0%(n38)／底なし45.8%(n72)／下げすぎ46.2%(n13)"
+ },
+ "calibration_by_confidence": {
+  "確信5": {"win": 1, "lose": 0, "draw": 0, "n": 1, "win_rate_pct": 100.0},
+  "確信4": {"win": 27, "lose": 16, "draw": 11, "n": 54, "win_rate_pct": 50.0},
+  "確信3": {"win": 49, "lose": 32, "draw": 37, "n": 118, "win_rate_pct": 41.5},
+  "確信2": {"win": 31, "lose": 18, "draw": 19, "n": 68, "win_rate_pct": 45.6},
+  "note": "10/8分（確信4:4704、確信3:9984・6762・8035、確信2:8058・6954）は全件採点対象外のため較正対象から除外。10/7時点から変化なし"
+ },
+ "win_rate_by_quadrant": {
+  "押せ押せ": {"win": 50, "lose": 33, "draw": 35, "n": 118, "win_rate_pct": 42.4},
+  "失速警戒": {"win": 19, "lose": 11, "draw": 8, "n": 38, "win_rate_pct": 50.0},
+  "底なし": {"win": 33, "lose": 19, "draw": 20, "n": 72, "win_rate_pct": 45.8},
+  "下げすぎ": {"win": 6, "lose": 3, "draw": 4, "n": 13, "win_rate_pct": 46.2},
+  "note": "10/8分（押せ押せ1件・底なし5件）は全件採点対象外のため算入せず。10/7時点から変化なし"
+ },
+ "learnings": [
+  "10/8は11:38昼バッチの実際の起動が大引け後（18:18 JST）となったため、候補選定時点で既に全日の値動きを知っていた状態になり、見立て（quadrant分類）が事実上『事後の説明』になってしまった。2026-07-16に続き2度目のこの種の構造的欠落で、起動タイミングのずれが較正の質に直接影響する実例として記録する",
+  "構造的に事後生成となった日の候補は、無理に勝敗を機械判定して累計に混ぜるより『採点対象外』として明示的に除外する方が、較正指標の誠実さを保てる（憲法③）。7/16の前例を踏襲したことで、今後同種の事態が起きた際の運用ルールが再確認できた",
+  "ウォッチ銘柄（安川電機・ファーストリテイリング）は候補パイプラインと独立しているため、昼バッチの起動遅延による影響を受けずに毎日継続して記録できている。候補カードとウォッチを別枠で管理する設計の利点が今回も現れた",
+  "安川電機は8営業日連続の反発が本日ストップ(-3.17%)し、条件Aも崩れた。明日10/9の第2四半期決算発表が目先の最大の試金石であり、条件Bが94営業日目もユーザー未確認のまま続いている点は改めて申し添える"
+ ],
+ "sources_summary": [
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6506",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9983",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=9984",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6762",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=8035",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=8058",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=6954",
+  "https://www.nikkei.com/nkd/company/history/dprice/?scode=4704"
+ ]
+}
